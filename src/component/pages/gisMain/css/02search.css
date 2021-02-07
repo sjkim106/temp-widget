@@ -1,0 +1,252 @@
+/*02 search style*/
+.search_wrap{
+
+}
+.search_wrap .dash_body{
+    padding-top: 2.32vh;
+}
+.search_wrap .search_frame{
+    width: 100%;
+    height: auto;
+}
+.search_wrap .search_row{
+    width: 100%;
+    height: 2.9vh;
+    max-height: 30px;
+    margin-bottom: 1.06vh;
+}
+.search_wrap .search_row .search_name{
+    width: 4.375vw;
+    height: 100%;
+    padding-top: 0.58vh;
+    padding-left: 0.5vw;
+    font-family: "NotoSansCJKB";
+    font-size: 0.67vw;
+    letter-spacing: -0.03vw;
+    text-align: left;
+    color: #828698;
+    float: left;
+    position: relative;
+}
+.search_wrap .search_row .search_name::before{
+    content:"";
+    display: block;
+    width: 0.26vw;
+    height: 0.48vh;
+    max-height: 5px;
+    background-color: #7355e0;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.37vh;
+    left: 0;
+}
+.search_wrap .search_row .search_input{
+    width: 16.38vw;
+    height: 2.9vh;
+    max-height: 30px;
+    padding: 0 0.92vw;
+    border-radius: 0.3125vw;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.015625vw;
+    text-align: left;
+    color: #dddeed;
+    border: solid 0.05vw #393b42;
+    background-color: #17181c;
+}
+.search_wrap .search_row .search_input:focus{
+    border: solid 0.05vw #7e4cff;
+    background-color: #101114;
+}
+.search_wrap .search_row .search_input::-webkit-input-placeholder { /* Edge */
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.015625vw;
+    color: #707182;
+    font-size: 0.625vw;
+}  
+.search_wrap .search_row .search_input::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.015625vw;
+    color: #707182;
+    font-size: 0.625vw;
+}  
+.search_wrap .search_row .search_input::placeholder {
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.015625vw;
+    color: #707182;
+    font-size: 0.625vw;
+}
+.search_wrap .btn_search{    
+    width: 20.83vw;
+    height: 3.48vh;
+    max-height: 36px;
+    border-radius: 0.9375vw;
+    box-shadow: 0 0.15625vw 0.46875vw 0 rgba(123, 26, 255, 0.27);
+    border: solid 0.05vw #9c5eff;
+    background-color: #7a45ff;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: left;
+    color: #ffffff;
+    margin-top: 0.29vh;
+    margin-bottom: 1.74vh;
+    padding-left: 10.0625vw;
+    position: relative;
+}
+.search_wrap .btn_search:hover{
+    border: solid 0.05vw #a56eff;
+    background-color: #7c5bf5;
+}
+.search_wrap .btn_search::before{
+    content:"";
+    display: block;
+    width: 0.67vw;
+    height: 1.4vh;
+    max-height: 13px;
+    background: url("../../../../static/image/dark/page/gis/main/icon/icon_search.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.95vh;
+    left: 9.21875vw;
+}
+.search_wrap .list_head_row{
+    width: 20.83vw;
+    height: 3.48vh;
+    max-height: 36px;
+    padding-left: 0.52vw;
+}
+.search_wrap .list_head_row .list_head{
+    width: 2.6045vw;
+    height: 100%;
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.03125vw;
+    color: #707182;
+    text-align: center;
+    font-size: 0.625vw;
+    padding-top: 0.92vh;
+    float: left;
+}
+.search_wrap .list_head_row .list_head:nth-child(2){
+   width: 3.645vw;
+}
+.search_wrap .list_head_row .list_head:nth-child(3){
+    width: 9.79vw;
+}
+.search_wrap .list_body{
+    width: 20.83vw;
+    height: auto;
+}
+.search_wrap .list_body .list_card{
+    width: 20.83vw;
+    height: 4.65vh;
+    max-height: 48px;
+    border-radius: 0.41vw;
+    border: solid 0.15vw #1a1b1e;
+    background-color: #2e3036;
+    margin-bottom: 0.38vh;
+    padding-left: 0.52vw;
+    cursor: pointer;
+    position: relative;
+}
+.search_wrap .list_body .list_card:hover{
+    background-color: #3b3e52;
+}
+.search_wrap .list_body .list_card.active{
+    border: solid 0.15vw #7e4cff;
+    background-image: linear-gradient(to right,#5a47ba, #4a339e);
+}
+.search_wrap .list_body .list_card .card_txt{
+    width: 2.6045vw;
+    height: 100%;
+    font-family: "NotoSansCJKM";
+    letter-spacing: -0.03125vw;
+    color: #dddeed;
+    text-align: center;
+    font-size: 0.625vw;
+    padding-top: 1.4vh;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+}
+.search_wrap .list_body .list_card .card_txt:nth-child(2){
+    width: 3.645vw;
+}
+.search_wrap .list_body .list_card .card_txt:nth-child(3){
+    width: 9.79vw;
+    padding-right: 0.7vw;
+    padding-left: 0.7vw;
+}
+.search_wrap .list_body .btn_cctvnet{
+    width: 1.25vw;
+    height: 2.6vh;
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_cctvNet_normal.png") no-repeat;
+    background-size: 100%;
+    margin: 0.9vh 0.3125vw 0 0.3125vw;
+    float: left;
+}
+.search_wrap .list_body .btn_cctvnet:hover{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_cctvNet_hover.png") no-repeat;
+    background-size: 100%;
+}
+.search_wrap .list_body .btn_expansion{
+    width: 1.25vw;
+    height: 2.6vh;
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_expansion_normal.png") no-repeat;
+    background-size: 100%;
+    margin: 0.9vh 0.3125vw 0 0.3125vw;
+    float: left;
+}
+.search_wrap .list_body .btn_expansion:hover{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_expansion_hover.png") no-repeat;
+    background-size: 100%;
+}
+
+/**lightmode style**/
+.lightmode .search_wrap .search_row .search_name{
+    color: #828698;
+}
+.lightmode .search_wrap .search_row .search_input{
+    color: #4e4875;
+    border: solid 0.05vw #d7dade;
+    background-color: #e9edf2;
+}
+.lightmode .search_wrap .search_row .search_input:focus{
+    border: solid 0.05vw #7e4cff;
+    background-color: #ffffff;
+}
+.lightmode .search_wrap .list_head_row .list_head{
+    color: #828699;
+}
+.lightmode .search_wrap .list_body .list_card{
+    border: solid 0.15vw #d7dade;
+    background-color: #ffffff;
+}
+.lightmode .search_wrap .list_body .list_card:hover{
+    border: solid 0.15vw #9f83fa;
+    background-color: #fbfaff;
+}
+.lightmode .search_wrap .list_body .list_card.active{
+    border: solid 0.15vw #7e4cff;
+    background-image: linear-gradient(278deg, #e5e1fc, #f4f2ff 93.7%);
+}
+.lightmode .search_wrap .list_body .list_card .card_txt{
+    color: #4e4875;
+}
+.lightmode .search_wrap .list_body .btn_cctvnet{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_cctvNet_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .search_wrap .list_body .btn_cctvnet:hover{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_cctvNet_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .search_wrap .list_body .btn_expansion{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_expansion_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .search_wrap .list_body .btn_expansion:hover{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_expansion_hover.png") no-repeat;
+    background-size: 100%;
+}

@@ -1,0 +1,466 @@
+/*01 broadcast style*/
+.broadcast_wrap{
+    /* display: none; */   
+    z-index: 5000;
+}
+.broadcast_wrap .new_broadcast_wrap{
+    padding-right: 1.5625vw;
+}
+.broadcast_wrap .broadcast_list_wrap{
+    display: none;
+}
+.broadcast_wrap .tab_area{
+    width: 20.83vw;
+    height: 3.1vh;
+    max-height: 32px;      
+}
+.broadcast_wrap .tab_area .btn_tab{
+    width: 10.41vw;
+    height: 3.1vh;
+    max-height: 32px;
+    border: solid 0.05vw #393b42;
+    background-color: #1e1f22;
+    font-family: "NotoSansCJKM";
+    font-size: 0.72vw;
+    letter-spacing: -0.01vw;
+    text-align: center;
+    color: #6c6c7d;
+    float: left;
+}
+.broadcast_wrap .tab_area .btn_tab:hover{
+    background-color: #2e2f38;
+    color: #a0a1b8;
+}
+.broadcast_wrap .tab_area .btn_tab.active{
+    border: solid 0.05vw #7e4cff;
+    background-color: #563bb8;
+    color: #ffffff;
+}
+.broadcast_wrap .tab_area .btn_tab:first-child{
+    border-top-left-radius: 0.3125vw;
+    border-bottom-left-radius: 0.3125vw;
+}
+.broadcast_wrap .tab_area .btn_tab:last-child{
+    border-top-right-radius: 0.3125vw;
+    border-bottom-right-radius: 0.3125vw;
+}
+.broadcast_wrap .tab_info{
+    width: 100%;
+    height: auto;
+}
+.broadcast_wrap .tab_info.new_broadcast_wrap{
+    padding-top: 1.06vh;
+}
+/*신규 방송 전파 영역*/
+.broadcast_wrap .info_header{
+    width: 100%;
+    height: 3.1vh;
+    max-height: 32px;
+    margin-bottom: 0.48vh;
+}
+.broadcast_wrap .info_title{
+    width: auto;
+    height: 1.93vh;
+    max-height: 20px;
+    font-family: "NotoSansCJKR";
+    font-size: 0.72vw;
+    letter-spacing: -0.03vw;
+    text-align: left;
+    color: #e1e2f0;
+    line-height: 1.8vh;
+    float: left;
+    margin-top: 0.7vh;
+}
+.broadcast_wrap .btn_write{
+    width: 5vw;
+    height: 3.1vh;
+    max-height: 32px;
+    border-radius: 0.3125vw;
+    background-color: #7a45ff;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.03vw;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 1.59375vw;
+    position: relative;
+    float: right;
+}
+.broadcast_wrap .btn_write:hover{
+    background-color: #7c5bf5;
+}
+.broadcast_wrap .btn_write::before{
+    content:"";
+    display: block;
+    width: 0.625vw;
+    height: 1.16vh;
+    max-height: 12px;
+    background: url("../../../../static/image/dark/page/broadcast/icon/icon_btn_write.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.96vh;
+    left: 0.78125vw;
+}
+.broadcast_wrap .btn_listen{
+    width: 5vw;
+    height: 3.1vh;
+    max-height: 32px;
+    border-radius: 0.3125vw;
+    background-color: #5c5ce5;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.03vw;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 1.67vw;
+    position: relative;
+    float: right;
+}
+.broadcast_wrap .btn_listen:hover{
+    background-color: #7171f5;
+}
+.broadcast_wrap .btn_listen::before{
+    content:"";
+    display: block;
+    width: 0.625vw;
+    height: 1.5vh;
+    max-height: 12px;
+    background: url("../../../../static/image/dark/page/broadcast/icon/icon_btn_listen.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.96vh;
+    left: 0.88vw;
+}
+.broadcast_wrap .btn_broadcast{
+    width: 20.83vw;
+    height: 3.87vh;
+    max-height: 40px;
+    border-radius: 1.04vw;
+    box-shadow: 0 0.15625vw 0.46875vw 0 rgba(123, 26, 255, 0.27);
+    border: solid 0.05vw #9c5eff;
+    background-color: #7a45ff;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #ffffff;
+}
+.broadcast_wrap .btn_broadcast:hover{
+    border: solid 0.05vw #a56eff;
+    background-color: #7c5bf5;
+}
+.broadcast_wrap .broadcast_frame{
+    width: 20.83vw;
+    height: 19.37vh;
+    max-height: 200px;
+    border-radius: 0.52vw;
+    border: solid 0.05vw #313136;
+    background-color: #1b1b1f;
+    padding: 1.93vh 0 1.93vh 1.25vw;
+    margin-bottom: 1.35vh;
+}
+.broadcast_wrap .broadcast_frame.large_size{
+    height: 22.28vh;
+    max-height: 230px;
+    padding: 1.16vh 0 1.16vh 0.52vw;
+    margin-bottom: 1.16vh;
+}
+.broadcast_wrap .tree_in{
+    width: 100%;
+    height: 100%;
+}
+.broadcast_wrap .type_box{
+    width: 18.54vw;
+    height: 3.68vh;
+    max-height: 38px;
+    border-radius: 0.3125vw;
+    background-color: #2e3036;
+    font-family: "NotoSansCJKR";
+    font-size: 0.72vw;
+    letter-spacing: -0.03vw;
+    text-align: left;
+    color: #ffffff;
+    padding:0.95vh 0 0 2.27vw;
+    border: solid 0.15vw transparent;
+    margin-bottom: 0.38vh;
+    cursor: pointer;
+    position: relative;
+}
+.broadcast_wrap .type_box:hover{
+    background-color: #3f4152;
+}
+.broadcast_wrap .type_box.active{
+    border: solid 0.15vw #7e4cff;
+    background-image: linear-gradient(278deg, #4a339e, #5a47ba 88.12%);
+}
+.broadcast_wrap .type_box::before{
+    content:"";
+    display: block;
+    width: 0.9375vw;
+    height: 1.74vh;
+    max-height: 18px;
+    background: url("../../../../static/image/dark/page/broadcast/icon/icon_doc.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.8vh;
+    left: 1.09375vw;
+}
+.broadcast_wrap .effect_area{
+    width: 20.83vw;
+    height: 22.38vh;
+    max-height: 231px;
+    border-top: 0.05vw solid #3c3e45;
+    border-bottom: 0.05vw solid #3c3e45;
+    margin-bottom: 2.32vh;
+    padding-top: 2.03vh;
+}
+.broadcast_wrap .effect_area .effect_row{
+    width: 100%;
+    height: 2.9vh;
+    max-height: 30px;
+    margin-bottom: 0.87vh;
+    position: relative;
+}
+.broadcast_wrap .effect_area .effect_row .effect_title{
+    width: 5.2vw;
+    height: 2.9vh;
+    max-height: 30px;
+    padding-left: 0.5vw;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.03125vw;
+    text-align: left;
+    color: #9194a8;
+    float: left;
+    line-height: 3vh;
+}
+.broadcast_wrap .effect_area .effect_row .effect_input{
+    width: 15.57vw;
+    height: 2.9vh;
+    max-height: 30px;
+    padding: 0 0.92vw;
+    border-radius: 0.3125vw;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.015625vw;
+    text-align: left;
+    color: #dddeed;
+    border: solid 0.05vw #393b42;
+    background-color: #17181c;
+    float: left;
+}
+.broadcast_wrap .effect_area .effect_row .effect_input:focus{
+    border: solid 0.05vw #7e4cff;
+    background-color: #101114;
+}
+.broadcast_wrap .effect_area .effect_row .speaker_icon{
+    width: 0.78125vw;
+    height: 1.4vh;
+    max-height: 13px;
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_speaker.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.9vh;
+    left: 5.5vw;
+}
+/*방송 전파 내역 영역*/
+.broadcast_wrap .list_area{
+    width: 100%;
+    height: 89.24vh;
+    max-height: 921px;
+    padding-top: 2.13vh;
+}
+.broadcast_wrap .list_area .list_box{
+    width: 20.83vw;
+    height: 13.37vh;
+    max-height: 138px;
+    border-radius: 0.625vw;
+    border: solid 0.15vw #1a1b1e;
+    background-color: #2e3036;
+    margin-bottom: 0.52vw;
+    cursor: pointer;
+    padding: 2vh 0 0 1.66vw;
+}
+.broadcast_wrap .list_area .list_box:hover{
+    background-color: #383b4f;
+}
+.broadcast_wrap .list_area .list_box.active{
+    height: 26.93vh;
+    max-height: 278px;
+    border: solid 0.15vw #7e4cff;
+    background-image: linear-gradient(278deg, #4a339e, #5a47ba 96.4%);
+}
+.broadcast_wrap .list_area .list_row{
+    width: 100%;
+    height: 1.84vh;
+    max-height: 19px;
+    margin-bottom: 0.48vh;
+}
+.broadcast_wrap .list_area .list_row .list_title{
+    width: 4.63vw;
+    height: 100%;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    line-height: 1.7vh;
+    color: #c6c7cf;
+    float: left;
+}
+.broadcast_wrap .list_area .list_row .list_txt{
+    width: 12.8125vw;
+    height: 100%;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    line-height: 1.7vh;
+    color: #ffffff;
+    float: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.broadcast_wrap .effect_info{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.broadcast_wrap .list_area .list_box.active .effect_info{
+    display: block;
+}
+.broadcast_wrap .effect_info .effect_info_title{
+    width: 17.5vw;
+    height: 2.9vh;
+    max-height: 30px;
+    border-top: 0.05vw solid rgba(255,255,255,0.2);
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.03125vw;
+    text-align: left;
+    line-height: 2.8vh;
+    color: #ffffff;
+    margin-top: 1.55vh;
+    margin-bottom: 0.4vh;
+    position: relative;
+}
+.broadcast_wrap .effect_info .effect_info_title::before{
+    content:"";
+    display: block;
+    width: 1.04vw;
+    height: 0.09vh;
+    max-height: 1px;
+    background-color: rgba(255,255,255,0.66);
+    position: absolute;
+    top: -0.1vh;
+    left: 0;
+}
+
+/*scroll style*/
+.broadcast_wrap .broadcast_frame .mCSB_scrollTools .mCSB_draggerContainer,
+.list_area .mCSB_scrollTools .mCSB_draggerContainer {
+    top: -1vh;
+    left: -1vw;
+    z-index: 0;
+}
+.broadcast_wrap .broadcast_frame .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.list_area .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 0.26vw;
+    border-radius: 0.13vw;
+    background-color: #63606e;
+    height: 98%;
+}
+.broadcast_wrap .broadcast_frame .mCSB_scrollTools .mCSB_draggerRail,
+.list_area .mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #00ff0000;
+    height: 100%;
+}
+
+/**lightmode style**/
+.lightmode .broadcast_wrap .tab_area .btn_tab{
+    border: solid 0.05vw #d7dade;
+    background-color: #f6f9fd;
+    color: #9596a1;
+}
+.lightmode .broadcast_wrap .tab_area .btn_tab:hover{
+    border: solid 0.05vw #9f83fa;
+    background-color: #ffffff;
+    color: #484752;
+}
+.lightmode .broadcast_wrap .tab_area .btn_tab.active{
+    border: solid 0.05vw #563bb8;
+    background-color: #7e4cff;
+    color: #ffffff;
+}
+/*신규 방송 전파 영역*/
+.lightmode .broadcast_wrap .info_title{
+    color: #484752;
+}
+.lightmode .broadcast_wrap .broadcast_frame{
+    border: solid 0.05vw #dcdfe3;
+    background-color: #e9edf2;
+}
+.lightmode .broadcast_wrap .type_box{
+    background-color: #ffffff;
+    color: #676382;
+}
+.lightmode .broadcast_wrap .type_box:hover{
+    border: solid 0.15vw #9f83fa;
+    background-color: #fbfaff;
+}
+.lightmode .broadcast_wrap .type_box.active{
+    border: solid 0.15vw #7e4cff;
+    background-image: linear-gradient(278deg, #e5e1fc, #f4f2ff 88.12%);
+}
+.lightmode .broadcast_wrap .type_box::before{
+    background: url("../../../../static/image/light/page/broadcast/icon/icon_doc.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .broadcast_wrap .effect_area{
+    border-top: 0.05vw solid #d7dade;
+    border-bottom: 0.05vw solid #d7dade;
+}
+.lightmode .broadcast_wrap .effect_area .effect_row .effect_title{
+    color: #828698;
+}
+.lightmode .broadcast_wrap .effect_area .effect_row .effect_input{
+    color: #4e4875;
+    border: solid 0.05vw #d7dade;
+    background-color: #e9edf2;
+}
+.lightmode .broadcast_wrap .effect_area .effect_row .effect_input:focus{
+    border: solid 0.05vw #7e4cff;
+    background-color: #ffffff;
+}
+/*방송 전파 내역 영역*/
+.lightmode .broadcast_wrap .list_area .list_box{
+    border: solid 0.15vw #d7dade;
+    background-color: #ffffff;
+}
+.lightmode .broadcast_wrap .list_area .list_box:hover{
+    border: solid 0.15vw #9f83fa;
+    background-color: #fbfaff;
+}
+.lightmode .broadcast_wrap .list_area .list_box.active{
+    border: solid 0.15vw #7e4cff;
+    background-image: linear-gradient(278deg, #e5e1fc, #f4f2ff 96.4%);
+}
+.lightmode .broadcast_wrap .list_area .list_row .list_title{
+    color: #867fa8;
+}
+.lightmode .broadcast_wrap .list_area .list_row .list_txt{
+    color: #4e4875;
+}
+.lightmode .broadcast_wrap .effect_info .effect_info_title{
+    border-top: 0.05vw solid rgba(126, 76, 255,0.4);
+    color: #7e4cff;
+}
+.lightmode .broadcast_wrap .effect_info .effect_info_title::before{
+    background-color: #7e4cff;
+}
+
+/*scroll style*/
+.lightmode .broadcast_wrap .broadcast_frame .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.lightmode .list_area .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #a5a7b5
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../component/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../component/jquery/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="../component/jquery/selectric.css" />
+    <link rel="stylesheet" href="../component/jquery/simTree.css" />
+    <link rel="stylesheet" href="../common/css/reset.css" />
+    <link rel="stylesheet" href="../common/css/fontStyle.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/seletBox.css" />
+    <link rel="stylesheet" href="css/gisIcon.css" />
+    <link rel="stylesheet" href="css/04smartLamp.css" />
+    <link rel="stylesheet" href="css/tree.css" />
+  </head>
+  <body class="namhae">
+    <section class="dashWrap">
+      <!--gis 삽입-->
+      <div class="gis_area"></div>
+
+      <!--gis icon 영역-->
+      <div class="gis_icon_area">
+        <div class="gis_icon smartlamp_normal loc_1"></div>
+        <div class="gis_icon smartlamp_error loc_2"></div>
+      </div>
+
+      <!--gis widget 영역-->
+      <div class="gis_widget_area">
+        <!--loc box-->
+        <div class="loc_box">
+          <select class="select_loc" id="selectDo">
+            <option value="1">경상남도</option>
+            <option value="1">경상북도</option>
+            <option value="1">충청북도</option>
+          </select>
+          <select class="select_loc" id="selectGun">
+            <option value="1">남해군</option>
+            <option value="1">남해군</option>
+            <option value="1">남해군</option>
+          </select>
+          <select class="select_loc" id="selectEup">
+            <option value="1">남해읍</option>
+            <option value="1">남해읍</option>
+            <option value="1">남해읍</option>
+          </select>
+        </div>      
+        <!--facil select area-->
+        <div class="facil_select_area">
+          <div class="facil_select_head">
+            <div class="select_title">시설물 선택</div>
+            <div class="select_num">2</div>
+            <!--button open-->
+            <button type="button" class="btn_open"></button>
+          </div>
+          <div class="facil_select_body">
+            <!--tree 삽입-->
+            <div class="tree_in" id="tree"></div>
+          </div>
+        </div>        
+        <!--gis func frame-->
+        <div class="gis_func_frame">
+          <!--view box-->
+          <div class="view_box">
+            <button type="button" class="btn_view map_view active">지도</button>
+            <button type="button" class="btn_view sky_view">스카이뷰</button>
+          </div>
+          <!--zoom box-->
+          <div class="zoom_box">
+            <button type="button" class="btn_plus active"></button>
+            <button type="button" class="btn_minus"></button>
+          </div>
+          <!--func box-->
+          <div class="func_box">
+            <button type="button" class="btn_area"></button>
+            <button type="button" class="btn_length"></button>
+            <button type="button" class="btn_radius"></button>
+          </div>
+        </div>
+      </div>
+
+      <!--menu buttons-->
+      <ul class="menu_btn_area">
+        <li class="btn_menu btn_waterlevel"></li>
+        <li class="btn_menu btn_counter"></li>
+        <li class="btn_menu btn_wifi"></li>
+        <li class="btn_menu btn_lamp active"></li>
+        <li class="btn_menu btn_weak"></li>
+        <li class="btn_menu btn_tidal"></li>
+        <li class="btn_menu btn_earthquake"></li>
+      </ul>
+
+      <!----content start---->
+      <!--dashboard-->
+      <section class="dash_info_wrap">               
+        <!--04smartLamp--> 
+        <div class="menu_info smartlamp_wrap">
+          <header class="dash_header">
+            <div class="dash_title">스마트 가로등</div>
+            <div class="dash_sub_title">Smart Street Lamp</div>
+          </header> 
+          <div class="dash_body">
+            <!--list box-->
+            <div class="list_box">
+              <div class="list_title">S-가로등 001</div>
+              <div class="list_row">
+                <div class="list_name loc_icon">위치</div>
+                <div class="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
+              </div>
+              <div class="list_row">
+                <div class="list_name sensor_icon">센서 상태</div>
+                <div class="list_txt normal_icon">정상</div>
+              </div>              
+            </div>
+            <!--list box-->
+            <div class="list_box">
+              <div class="list_title">S-가로등 001</div>
+              <div class="list_row">
+                <div class="list_name loc_icon">위치</div>
+                <div class="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
+              </div>
+              <div class="list_row">
+                <div class="list_name sensor_icon">센서 상태</div>
+                <div class="list_txt normal_icon">정상</div>
+              </div>              
+            </div>
+            <!--list box-->
+            <div class="list_box">
+              <div class="list_title">S-가로등 001</div>
+              <div class="list_row">
+                <div class="list_name loc_icon">위치</div>
+                <div class="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
+              </div>
+              <div class="list_row">
+                <div class="list_name sensor_icon">센서 상태</div>
+                <div class="list_txt error_icon">비정상</div>
+              </div>              
+            </div>
+            <!--list box-->
+            <div class="list_box">
+              <div class="list_title">S-가로등 001</div>
+              <div class="list_row">
+                <div class="list_name loc_icon">위치</div>
+                <div class="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
+              </div>
+              <div class="list_row">
+                <div class="list_name sensor_icon">센서 상태</div>
+                <div class="list_txt normal_icon">정상</div>
+              </div>              
+            </div>
+            <!--list box-->
+            <div class="list_box">
+              <div class="list_title">S-가로등 001</div>
+              <div class="list_row">
+                <div class="list_name loc_icon">위치</div>
+                <div class="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
+              </div>
+              <div class="list_row">
+                <div class="list_name sensor_icon">센서 상태</div>
+                <div class="list_txt normal_icon">정상</div>
+              </div>              
+            </div>
+            <!--list box-->
+            <div class="list_box">
+              <div class="list_title">S-가로등 001</div>
+              <div class="list_row">
+                <div class="list_name loc_icon">위치</div>
+                <div class="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
+              </div>
+              <div class="list_row">
+                <div class="list_name sensor_icon">센서 상태</div>
+                <div class="list_txt normal_icon">정상</div>
+              </div>              
+            </div>
+            <!--list box-->
+            <div class="list_box">
+              <div class="list_title">S-가로등 001</div>
+              <div class="list_row">
+                <div class="list_name loc_icon">위치</div>
+                <div class="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
+              </div>
+              <div class="list_row">
+                <div class="list_name sensor_icon">센서 상태</div>
+                <div class="list_txt normal_icon">정상</div>
+              </div>              
+            </div>
+          </div>
+        </div>  
+      </section>
+    </section>
+  </body>
+  <script src="../component/jquery/jquery-3.3.1.min.js"></script>
+  <script src="../component/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../component/jquery/jquery.selectric.js"></script>
+  <script src="../component/jquery/simTree.js"></script>
+  <script src="../component/highchart/highcharts.js"></script>
+  <script src="../component/bootstrap/bootstrap.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/gisIcon.js"></script>
+  <script src="js/treeSample.js"></script>
+</html>

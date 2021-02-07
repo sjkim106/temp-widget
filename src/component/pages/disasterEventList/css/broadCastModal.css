@@ -1,0 +1,94 @@
+/*broadCastModal style*/
+.broadcast_modal .modal-content {
+    width: 34.375vw;
+    height: 54.06vh;
+    max-height: 558px;
+    border-radius: 0.78125vw;
+    margin: 25.29vh 0 0 32.8125vw;
+    border: none;
+    position: relative;
+    box-shadow: 0 0.3125vw 0.625vw 0 rgba(0, 0, 0, 0.12);
+    border-radius: 0.41vw;
+}
+.broadcast_modal .modal-body {
+    width: 100%;
+    height: 50.58vh;
+    max-height: 522px;
+    position: relative;
+    padding: 2.4vh 1.04vw 0 1.04vw;   
+}
+.broadcast_modal .modal-body .broadcast_frame{
+    width: 14.58vw;
+    height: 40.69vh;
+    max-height: 420px;
+    border-radius: 0.625vw;
+    border: solid 0.05vw #26253b;
+    background-color: #444369;
+    padding: 2.51vh 0 0 1.04vw;
+}
+.broadcast_modal .modal-body::after{
+    content:"";
+    display: block;
+    width: 2.29vw;
+    height: 4.8vh;
+    max-height: 44px;
+    background: url("../../../../static/image/dark/page/disasterList/img/img_move_arrow_pop.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-45%,-50%);
+}
+.broadcast_modal .modal-body .object_txt{
+    width: auto;
+    height: 2.9vh;
+    max-height: 30px;
+    border-radius: 0.3125vw;
+    background-color: #7a45ff;
+    margin: 0 0.3125vw 0.58vh 0;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.017vw;
+    text-align: center;
+    line-height: 3vh;
+    padding: 0 0.59vw;
+    color: #fefefe;
+    float: left;
+}
+.broadcast_modal .spread{
+    top: 90%;
+}
+
+/*scroll style*/
+.broadcast_frame .mCSB_scrollTools .mCSB_draggerContainer  {
+    top: -1vh;
+    left: -0.2vw;
+    z-index: 0;
+}
+.broadcast_frame .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 0.26vw;
+    border-radius: 0.13vw;
+    background-color: #6a6987;
+    height: 98%;
+}
+.broadcast_frame .mCSB_scrollTools .mCSB_draggerRail{
+    background-color: #00ff0000;
+    height: 100%;
+}
+
+/**lightmode style**/
+.lightmode .broadcast_modal .modal-header{
+    background-color: #7f4cff;
+}
+.lightmode .broadcast_modal .modal-body .broadcast_frame{
+    border: solid 0.05vw #dfe0e8;
+    background-color: #ebecf5;
+}
+.lightmode .broadcast_modal .modal-body::after{
+    background: url("../../../../static/image/light/page/disasterList/img/img_move_arrow_pop.png") no-repeat;
+    background-size: 100%;
+}
+/*scroll style*/
+.lightmode .broadcast_frame .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #a5a7b5;
+}

@@ -1,0 +1,168 @@
+/*dashboard common style*/
+.dashWrap{
+    background-color: rgba(0,0,0,0.2);
+}
+.dash_info_wrap {
+    width: 23.959vw;
+    height: 100vh;
+    max-height: 1032px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: left 0.8s ease;
+    box-shadow: 0.1vw 0 0.625vw 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to bottom, #1d1e21, #1d1e21);
+    position: absolute;
+    left: 0;
+    z-index: 5000;
+}
+.dash_info_wrap .btn_tab {
+    width: 1.66vw;
+    height: 6.39vh;    
+    background: url("../../../../static/image/dark/page/gis/common/btn_slider_left_close_normal.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 46.6vh;
+    left: 23.54vw;
+}
+.dash_info_wrap .btn_tab:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_slider_left_close_hover.png") no-repeat;
+    background-size: 100%;
+}
+.dash_info_wrap .open_tab {
+    background: url("../../../../static/image/dark/page/gis/common/btn_slider_left_open_normal.png") no-repeat;
+    background-size: 100%;
+}
+.dash_info_wrap .open_tab:hover {
+    background: url("../../../../static/image/dark/page/gis/common/btn_slider_left_open_hover.png") no-repeat;
+    background-size: 100%;
+}
+.dash_info_wrap .btn_dash_close {
+    width: 1.875vw;
+    height: 3.6vh;    
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_close_window_normal.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.16vh;
+    right: 0.625vw;
+    z-index: 1;
+}
+.dash_info_wrap .btn_dash_close:hover{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_close_window_hover.png") no-repeat;
+    background-size: 100%;
+}
+.dash_info_wrap .dash_header{
+    width: 100%;
+    height: 8.62vh;
+    max-height: 89px;
+    padding: 4.65vh 0 0 1.92vw;
+    font-family: "NotoSansCJKB";
+    font-size: 0.98vw;
+    letter-spacing: -0.04vw;
+    border-bottom: 0.05vw solid #14151c;
+    text-align: left;
+    color: #dddeed;
+    position: relative;
+}
+.dash_info_wrap .dash_header::after{
+    content:"Dashboard";
+    display: block;
+    font-family: "NotoSansR";
+    font-size: 1.14vw;
+    letter-spacing: -0.02vw;
+    text-align: left;
+    color: #8878ff;
+    position: absolute;
+    top: 4.45vh;
+    left: 5.67vw;
+}
+.dash_info_wrap .menu_btn_area{
+    width: 100%;
+    height: 3.97vh;
+    max-height: 41px;
+    background-color: #18191f;
+    border-bottom: 0.05vw solid #313238;
+    padding: 0 1.8vw 0 2vw;
+    display: flex;
+    justify-content: space-between;
+}
+.dash_info_wrap .menu_btn_area li{
+    width: auto;
+    height: 3.87vh;
+    max-height: 40px;
+    font-family: "NotoSansCJKB";
+    font-size: 0.72vw;
+    letter-spacing: -0.036vw;
+    text-align: left;
+    color: #707182;
+    padding: 1.4vh 1.71875vw 0 1.71875vw;
+    border-bottom: 0.3vh solid transparent;
+    float: left;
+    cursor: pointer;
+}
+.dash_info_wrap .menu_btn_area li:hover{
+    color: #9396c2;
+}
+.dash_info_wrap .menu_btn_area li.active,
+.dash_info_wrap .menu_btn_area li.active:hover{
+    border-bottom: 0.3vh solid #7e4cff;
+    color: #e1e2f0;
+}
+.dash_info_wrap .dash_body{
+    width: 100%;
+    height: 87.4vh;
+    max-height: 902px;
+    padding-left: 1.5625vw;
+}
+
+/**lightmode style**/
+.lightmode .dash_info_wrap {
+    box-shadow: 0.1vw 0 0.625vw 0 rgba(0, 0, 0, 0.16);
+    background-image: none;
+    background-color: #f6f9fd;
+}
+.lightmode .dash_info_wrap .btn_tab {
+    background: url("../../../../static/image/light/page/gis/common/btn_slider_left_close_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .dash_info_wrap .btn_tab:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_slider_left_close_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .dash_info_wrap .open_tab {
+    background: url("../../../../static/image/light/page/gis/common/btn_slider_left_open_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .dash_info_wrap .open_tab:hover {
+    background: url("../../../../static/image/light/page/gis/common/btn_slider_left_open_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .dash_info_wrap .btn_dash_close {
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_close_window_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .dash_info_wrap .btn_dash_close:hover{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_close_window_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .dash_info_wrap .dash_header{
+    border-bottom: 0.05vw solid #dcdfe3;
+    color: #484752;
+}
+.lightmode .dash_info_wrap .dash_header::after{
+    color: #7e4cff;
+}
+.lightmode .dash_info_wrap .menu_btn_area{
+    background-color: #e9edf2;
+    border-bottom: 0.05vw solid #ffffff;
+}
+.lightmode .dash_info_wrap .menu_btn_area li{
+    color: #9596a1;
+}
+.lightmode .dash_info_wrap .menu_btn_area li:hover{
+    color: #7269b8;
+}
+.lightmode .dash_info_wrap .menu_btn_area li.active,
+.lightmode .dash_info_wrap .menu_btn_area li.active:hover{
+    color: #7643f7;
+}

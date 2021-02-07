@@ -1,0 +1,198 @@
+/*data relation 달력 스타일*/
+.ui-widget.ui-widget-content {
+    width: 254px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.15);
+    border: solid 1px #7e4cff;
+    background-color: #1a1a21;
+    left: 363px;
+}
+#ui-datepicker-div {
+  position: absolute;
+  top: 286.5px;
+  left: 373.5px;
+}
+.ui-datepicker .ui-datepicker-header {
+  border-radius: 5px;
+  border: solid 1px #7e4cff;
+  background-color: #7e4cff;
+}
+.ui-datepicker .ui-datepicker-title {
+  font-family: "NotoSansCJKB";
+  font-size: 14px;
+  letter-spacing: -0.35px;
+  text-align: center;
+  color: #ffffff;
+}
+.ui-datepicker th {
+  font-family: "NotoSansCJKM";
+  font-size: 13px;
+  letter-spacing: -0.33px;
+  color: #7175a8;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  border: solid 1px #363842;
+  background-color: #262630;
+  font-family: "NotoSansCJKM";
+  font-size: 13px;
+  color: #ffffff;
+  width: 32px;
+  height: 25px;
+  line-height: 1.8;
+}
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-content .ui-state-highlight:hover {
+  border: solid 1px #363842;
+  background-color: #464854;
+  font-family: "NotoSansCJKM";
+  font-size: 13px;
+  color: #ffffff;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-content .ui-state-active:hover {
+  border: solid 1px #9c5eff;
+  background-color: #7e4cff;
+  font-family: "NotoSansCJKM";
+  font-size: 13px;
+  color: #ffffff;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover {
+  border: solid 1px #7e4cff;
+  background-color: #301f59;
+  font-family: "NotoSansCJKM";
+  font-size: 13px;
+  color: #ffffff;
+}
+.ui-datepicker .ui-datepicker-prev {
+  width: 24px;
+  height: 24px;
+  background: url("../../../../static/image/dark/page/disasterList/btn/btn_calendar_prev_normal.png")
+    no-repeat;
+  display: block;
+  position: absolute;
+  top: 3.5px;
+  left: 3.5px;
+  cursor: pointer;
+}
+.ui-datepicker .ui-datepicker-next {
+  width: 24px;
+  height: 24px;
+  background: url("../../../../static/image/dark/page/disasterList/btn/btn_calendar_next_normal.png")
+  no-repeat;
+  display: block;
+  position: absolute;
+  top: 3.5px;
+  right: 3.5px;
+  cursor: pointer;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+  width: 24px;
+  height: 24px;
+  background: url("../../../../static/image/dark/page/disasterList/btn/btn_calendar_prev_hover.png")
+    no-repeat;
+  display: block;
+  position: absolute;
+  top: 3.5px;
+  left: 3.5px;
+  cursor: pointer;
+  border: none !important;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+  width: 24px;
+  height: 24px;
+  background: url("../../../../static/image/dark/page/disasterList/btn/btn_calendar_next_hover.png")
+  no-repeat;
+  display: block;
+  position: absolute;
+  top: 3.5px;
+  right: 3.5px;
+  cursor: pointer;
+  border: none !important;
+}
+
+/**lightmode style**/
+.lightmode .ui-widget.ui-widget-content {
+  box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px #7e4cff;
+  background-color: #ffffff;
+}
+.lightmode .ui-datepicker th {
+  color: #9596a1;
+}
+.lightmode .ui-state-default,
+.lightmode .ui-widget-content .ui-state-default {
+  border: solid 1px #e4e6eb;
+  background-color: #f0f2f7;
+  color: #484752;
+}
+.lightmode .ui-state-highlight,
+.lightmode .ui-widget-content .ui-state-highlight,
+.lightmode .ui-widget-content .ui-state-highlight:hover {
+  border: solid 1px #d7d9de;
+  background-color: #d7d9de;
+  color: #7643f7;
+}
+.lightmode .ui-state-active,
+.lightmode .ui-widget-content .ui-state-active,
+.lightmode .ui-widget-content .ui-state-active:hover {
+  border: solid 1px #9c5eff;
+  background-color: #7e4cff;
+  color: #ffffff;
+}
+.lightmode .ui-state-hover,
+.lightmode .ui-widget-content .ui-state-hover {
+  border: solid 1px #7e4cff;
+  background-color: #e5defa;
+  color: #7643f7;
+}
+.lightmode .ui-datepicker .ui-datepicker-prev {
+  width: 24px;
+  height: 24px;
+  background: url("../../../../static/image/dark/page/disasterList/btn/btn_calendar_prev_normal.png")
+    no-repeat;
+  display: block;
+  position: absolute;
+  top: 3.5px;
+  left: 3.5px;
+  cursor: pointer;
+}
+.lightmode .ui-datepicker .ui-datepicker-next {
+  width: 24px;
+  height: 24px;
+  background: url("../../../../static/image/dark/page/disasterList/btn/btn_calendar_next_normal.png")
+  no-repeat;
+  display: block;
+  position: absolute;
+  top: 3.5px;
+  right: 3.5px;
+  cursor: pointer;
+}
+.lightmode .ui-datepicker .ui-datepicker-prev-hover {
+  width: 24px;
+  height: 24px;
+  background: url("../../../../static/image/dark/page/disasterList/btn/btn_calendar_prev_hover.png")
+    no-repeat;
+  display: block;
+  position: absolute;
+  top: 3.5px;
+  left: 3.5px;
+  cursor: pointer;
+  border: none !important;
+}
+.lightmode .ui-datepicker .ui-datepicker-next-hover {
+  width: 24px;
+  height: 24px;
+  background: url("../../../../static/image/dark/page/disasterList/btn/btn_calendar_next_hover.png")
+  no-repeat;
+  display: block;
+  position: absolute;
+  top: 3.5px;
+  right: 3.5px;
+  cursor: pointer;
+  border: none !important;
+}

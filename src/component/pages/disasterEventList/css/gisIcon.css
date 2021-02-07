@@ -1,0 +1,89 @@
+/*gisIcon style*/
+.gis_area .gis_icon{
+    width: 1.875vw;
+    height: 4.5vh;
+    max-height: 46px;
+    position: absolute;
+    z-index: 1;
+}
+.gis_area .gis_icon.history_icon{
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_history_location.png") no-repeat;
+    background-size: 100%;    
+} 
+.gis_area .history_icon_bg{
+    width: 24.6875vw;
+    height: 48vh;
+    max-width: 474px;
+    background: url("../../../../static/image/dark/page/disasterList/img/img_gis_circles_history.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+}
+.gis_area .gis_icon.event_icon{
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_event_location.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_area .event_icon_bg{
+    width: 24.6875vw;
+    height: 48vh;
+    max-width: 474px;
+    background: url("../../../../static/image/dark/page/disasterList/img/img_gis_circles_event.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+}
+
+/*cctvModal gisIcon*/
+.cctv_modal .gis_area .gis_icon{
+    width: 2.23vw;
+    height: 5.6vh;
+    max-height: 52px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+.cctv_modal .gis_area .gis_icon.cctv_normal{
+    background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_normality_normal.png") no-repeat;
+    background-size: 100%;    
+} 
+.cctv_modal .gis_area .gis_icon.cctv_normal.active{
+    background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_normality_selected.png") no-repeat;
+    background-size: 100%;    
+} 
+.url_content_area .gis_area .gis_icon{
+    width: 43px;
+    height: 47px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/*urlWeb gisIcon*/
+.url_content_area .gis_area .gis_icon.event_icon{
+    width: 36px;
+    height: 46px;
+}
+.url_content_area .gis_area .gis_icon.cctv_normal{
+    background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_normality_normal.png") no-repeat;
+    background-size: 100%;    
+} 
+.url_content_area .gis_area .gis_icon.cctv_normal.active{
+    background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_normality_selected.png") no-repeat;
+    background-size: 100%;    
+} 
+
+/*임시위치*/
+.loc_1{
+    top: 63%;
+    left: 60%;
+}
+.loc_2{
+    top: 34%;
+    left: 25%;
+}
+.loc_3{
+    top: 29%;
+    left: 35%;
+}
+.loc_4{
+    top: 0%;
+    left: 0%;
+}

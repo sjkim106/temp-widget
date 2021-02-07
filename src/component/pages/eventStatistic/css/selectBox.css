@@ -1,0 +1,221 @@
+/*selectBox style*/
+.selectric-wrapper {
+    margin: 0;
+}
+.selectric-select_period .selectric-items ul{
+    padding: 0;
+}
+.selectric-select_period .button:after {
+    border-top-color: transparent;
+    width: 0;
+    height: 0;
+    border: none;
+}
+.selectric-select_period .selectric-items .selectric-scroll {
+    overflow-x: hidden;
+}
+
+/*select_period*/
+.selectric-wrapper.selectric-select_period{
+    position: absolute;
+    top: 2.61vh;
+    right: 1.92vw;
+    z-index: 5;
+}
+.selectric-select_period .selectric {
+    width: 4.375vw;
+    height: 3.1vh;
+    max-height: 37px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.72vw;
+    text-align: left;
+    color: #dddfed;
+    border: solid 0.05vw #666873;
+    background-color: #2b2e36;
+    border-radius: 0.3125vw;
+    padding-left: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.selectric-select_period .selectric:hover,
+.selectric-select_period.selectric-open .selectric{
+    border: solid 0.05vw #7e4cff;
+    background-color: #1c1e24;
+}
+.selectric-select_period .selectric-items {
+    width: 4.375vw;
+    border-radius: 0.3125vw;
+    margin: 0.2vh 0 0 0;
+    box-shadow: 0 0 0.2vw 0 rgba(0, 0, 0, 0.2);
+    border: solid 0.05vw #7e4cff;
+    background-color: #1c1e24;
+    padding: 0.58vh 0;
+}
+.selectric-select_period .selectric-items li {
+    font-family: "NotoSansCJKR";
+    font-size: 0.72vw;
+    text-align: left;
+    color: #abadc4;
+    line-height: 2.8vh;
+    padding: 0 0.65625vw 0 0.65625vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 4.27vw;
+    height: 2.9vh;
+    max-height: 30px;
+}
+.selectric-select_period .selectric-items li:hover {
+    width: 4.27vw;
+    height: 2.9vh;
+    font-family: "NotoSansCJKR";
+    font-size: 0.72vw;
+    background-color: #2b204f;
+}
+.selectric-select_period .selectric-items li.selected,
+.selectric-select_period .selectric-items li.selected:hover {
+    width: 4.27vw;
+    height: 2.9vh;
+    font-family: "NotoSansCJKR";
+    font-size: 0.72vw;
+    color:#ffffff;
+    background-color: #7e4cff;
+}
+.selectric-select_period .selectric .label {
+    font-family: "NotoSansCJKL";
+    font-size: 0.72vw;
+    color: #dddfed;
+    text-align: left;
+    padding: 0 1.4vw 0 0.65625vw;
+    line-height: 2.8vh;
+    height: 3.1vh;
+    max-height: 37px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.selectric-select_period .button {
+    width: 0.625vw;
+    height: 0.77vh;
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_down_normal.png") no-repeat;
+    background-size: 100%;
+    top: 1.16vh;
+    right: 0.625vw;
+}
+.selectric-select_period .button:hover{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_down_hover.png") no-repeat;
+    background-size: 100%;
+}
+.selectric-select_period.selectric-open .button{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_up_normal.png") no-repeat;
+    background-size: 100%;
+}
+.selectric-select_period.selectric-open .button:hover{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_up_hover.png") no-repeat;
+    background-size: 100%;
+}
+
+/**lightmode style**/
+/*select_period*/
+.lightmode .selectric-select_period .selectric {
+    color: #6f717d;
+    border: solid 0.05vw #666873;
+    background-color: #ffffff;
+}
+.lightmode .selectric-select_period .selectric:hover,
+.lightmode .selectric-select_period.selectric-open .selectric{
+    border: solid 0.05vw #7e4cff;
+    background-color: #ffffff;
+}
+.lightmode .selectric-select_period .selectric-items {
+    box-shadow: none;
+    border: solid 0.05vw #7e4cff;
+    background-color: #ffffff;
+}
+.lightmode .selectric-select_period .selectric-items li {
+    color: #6f717d;
+}
+.lightmode .selectric-select_period .selectric-items li:hover {
+    background-color: #f2f0fa;
+}
+.lightmode .selectric-select_period .selectric-items li.selected,
+.lightmode .selectric-select_period .selectric-items li.selected:hover {
+    color:#ffffff;
+    background-color: #7e4cff;
+}
+.lightmode .selectric-select_period .selectric .label {
+    color: #6f717d;
+}
+
+/*960x516 & 640x344 pc size 부분 커스텀*/
+@media only screen and (min-height: 10px) and (max-height: 516px) {
+    .selectric-wrapper.selectric-select_period{
+        position: absolute;
+        top: 3.13vh;
+        right: 2.3125vw;
+    }
+    .selectric-select_period .selectric {
+        width: 7.875vw;
+        height: 5.58vh;
+        font-size: 0.875vw;
+        border: solid 0.1vw #666873;
+        border-radius: 0.41vw;       
+    }
+    .selectric-select_period .selectric:hover,
+    .selectric-select_period.selectric-open .selectric{
+        border: solid 0.1vw #7e4cff;
+    }
+    .selectric-select_period .selectric-items {
+        width: 7.875vw;
+        border-radius: 0.41vw;         
+        border: solid 0.1vw #7e4cff;
+    }
+    .selectric-select_period .selectric-items li {
+        font-size: 0.875vw;       
+        padding: 0 0.65625vw 0 0.65625vw;      
+        width: 7.875vw;
+        height: 5.58vh;
+        line-height: 5vh;
+    }
+    .selectric-select_period .selectric-items li:hover {
+        width: 7.875vw;
+        height: 5.58vh;
+        font-size: 0.875vw;  
+    }
+    .selectric-select_period .selectric-items li.selected,
+    .selectric-select_period .selectric-items li.selected:hover {
+        width: 7.875vw;
+        height: 5.58vh;
+        font-size: 0.875vw;  
+    }
+    .selectric-select_period .selectric .label {
+        font-size: 0.875vw;
+        height: 5.58vh;
+        line-height: 5vh;
+    }
+    .selectric-select_period .button {
+        width: 1.09375vw;
+        height: 1.45vh;
+        top: 2vh;
+        right: 0.8125vw;
+    }
+
+    /**lightmode style**/
+    .lightmode .selectric-select_period .selectric {
+        border: solid 0.1vw #a1a4b3;   
+    }
+}
+
+/*selectric scroll style*/
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.26vw;
+}
+::-webkit-scrollbar-track {
+    background-color:transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color:#7a7499;
+    border-radius: 0.13vw;
+}
+

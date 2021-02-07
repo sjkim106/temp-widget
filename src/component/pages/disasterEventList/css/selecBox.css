@@ -1,0 +1,555 @@
+/*selectBox style*/
+.selectric-wrapper {
+    margin: 0;
+    float: right;
+}
+.selectric-wrapper.selectric-select_depart {
+    margin: 0 2.72vw 0 0;
+    float: left;
+}
+.selectric-wrapper.selectric-select_time {
+    margin: 0 0 0 0.52vw;
+    float: left;
+}
+.selectric-select_type .selectric-items ul,
+.selectric-select_effect .selectric-items ul,
+.selectric-select_depart .selectric-items ul,
+.selectric-select_time .selectric-items ul{
+    padding: 0;
+}
+.selectric-select_type .button:after,
+.selectric-select_effect .button:after,
+.selectric-select_depart .button:after,
+.selectric-select_time .button:after {
+    border-top-color: transparent;
+    width: 0;
+    height: 0;
+    border: none;
+}
+.selectric-select_type .selectric-items .selectric-scroll,
+.selectric-select_effect .selectric-items .selectric-scroll,
+.selectric-select_depart .selectric-items .selectric-scroll,
+.selectric-select_effect .selectric-items .selectric-scroll,
+.selectric-select_time .selectric-items .selectric-scroll  {
+    overflow-x: hidden;
+}
+
+/*select_effect*/
+.selectric-select_effect .selectric {
+    width: 15.1vw;
+    height: 3.68vh;
+    max-height: 38px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    text-align: left;
+    color: #e6e7f5;
+    letter-spacing: -0.017vw;
+    border: solid 0.05vw #1f1f26;
+    border-radius: 0.41vw;
+    background-color: #1f1f26;
+    padding-left: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.selectric-select_effect.selectric-open .selectric{
+    border: solid 0.05vw #7e4cff;
+    background-color: #1a1a21;
+}
+.selectric-select_effect .selectric-items {
+    width: 15.1vw;
+    border-radius: 0.41vw;
+    margin: 0.2vh 0 0 0;
+    box-shadow: 0 0 0.2vw 0 rgba(0, 0, 0, 0.2);
+    border: solid 0.05vw #7e4cff;
+    background-color: #1f1f26;
+    padding: 0.77vh 0;
+}
+.selectric-select_effect .selectric-items li {
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    text-align: left;
+    color: #abadc4;
+    letter-spacing: -0.017vw;
+    line-height: 3.4vh;
+    padding: 0 1.08vw 0 1.08vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 15vw;
+    height: 3.48vh;
+    max-height: 36px;
+}
+.selectric-select_effect .selectric-items li:hover {
+    width: 15vw;
+    height: 3.48vh;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    background-color: #2b204f;
+}
+.selectric-select_effect .selectric-items li.selected,
+.selectric-select_effect .selectric-items li.selected:hover {
+    width: 15vw;
+    height: 3.48vh;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    color:#fdfdfd;
+    background-color: #7e4cff;
+}
+.selectric-select_effect .selectric .label {
+    font-family: "NotoSansCJKL";
+    font-size: 0.67vw;
+    color: #e6e7f5;
+    text-align: left;
+    padding: 0 2.13vw 0 1.13vw;
+    line-height: 3.4vh;
+    height: 3.68vh;
+    max-height: 38px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.selectric-select_effect .button {
+    width: 0.625vw;
+    height: 0.77vh;
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_down_normal.png") no-repeat;
+    background-size: 100%;
+    top: 1.4vh;
+    right: 1.09375vw;
+}
+.selectric-select_effect .button:hover{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_down_hover.png") no-repeat;
+    background-size: 100%;
+}
+.selectric-select_effect.selectric-open .button{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_up_normal.png") no-repeat;
+    background-size: 100%;
+}
+.selectric-select_effect.selectric-open .button:hover{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_up_hover.png") no-repeat;
+    background-size: 100%;
+}
+
+/*select_type*/
+.selectric-select_type .selectric {
+    width: 39.16vw;
+    height: 3.68vh;
+    max-height: 38px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    text-align: left;
+    color: #e6e7f5;
+    letter-spacing: -0.017vw;
+    border: solid 0.05vw #1f1f26;
+    border-radius: 0.41vw;
+    background-color: #1f1f26;
+    padding-left: 0;
+    margin: 0;
+    cursor: pointer;
+    float: left;
+}
+.selectric-select_type.selectric-open .selectric{
+    border: solid 0.05vw #7e4cff;
+    background-color: #1a1a21;
+}
+.selectric-select_type .selectric-items {
+    width: 39.16vw;
+    border-radius: 0.41vw;
+    margin: 0.2vh 0 0 0;
+    box-shadow: 0 0 0.2vw 0 rgba(0, 0, 0, 0.2);
+    border: solid 0.05vw #7e4cff;
+    background-color: #1f1f26;
+    padding: 0.77vh 0;
+}
+.selectric-select_type .selectric-items li {
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    text-align: left;
+    color: #abadc4;
+    letter-spacing: -0.017vw;
+    line-height: 3.4vh;
+    padding: 0 1.08vw 0 1.08vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 39.0625vw;
+    height: 3.48vh;
+    max-height: 36px;
+}
+.selectric-select_type .selectric-items li:hover {
+    width: 39.0625vw;
+    height: 3.48vh;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    background-color: #2b204f;
+}
+.selectric-select_type .selectric-items li.selected,
+.selectric-select_type .selectric-items li.selected:hover {
+    width: 39.0625vw;
+    height: 3.48vh;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    color:#fdfdfd;
+    background-color: #7e4cff;
+}
+.selectric-select_type .selectric .label {
+    font-family: "NotoSansCJKL";
+    font-size: 0.67vw;
+    color: #e6e7f5;
+    text-align: left;
+    padding: 0 1.13vw 0 1.13vw;
+    line-height: 3.4vh;
+    height: 3.68vh;
+    max-height: 38px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.selectric-select_type .button {
+    width: 0.625vw;
+    height: 0.77vh;
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_down_normal.png") no-repeat;
+    background-size: 100%;
+    top: 1.4vh;
+    right: 1.09375vw;
+}
+.selectric-select_type .button:hover{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_down_hover.png") no-repeat;
+    background-size: 100%;
+}
+.selectric-select_type.selectric-open .button{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_up_normal.png") no-repeat;
+    background-size: 100%;
+}
+.selectric-select_type.selectric-open .button:hover{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_up_hover.png") no-repeat;
+    background-size: 100%;
+}
+
+/*select_depart*/
+.selectric-select_depart .selectric {
+    width: 16.66vw;
+    height: 3.68vh;
+    max-height: 38px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    text-align: left;
+    color: #e6e7f5;
+    letter-spacing: -0.017vw;
+    border: solid 0.05vw #1f1f26;
+    border-radius: 0.41vw;
+    background-color: #1f1f26;
+    padding-left: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.selectric-select_depart.selectric-open .selectric{
+    border: solid 0.05vw #7e4cff;
+    background-color: #1a1a21;
+}
+.selectric-select_depart .selectric-items {
+    width: 16.66vw;
+    border-radius: 0.41vw;
+    margin: 0.2vh 0 0 0;
+    box-shadow: 0 0 0.2vw 0 rgba(0, 0, 0, 0.2);
+    border: solid 0.05vw #7e4cff;
+    background-color: #1f1f26;
+    padding: 0.77vh 0;
+}
+.selectric-select_depart .selectric-items li {
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    text-align: left;
+    color: #abadc4;
+    letter-spacing: -0.017vw;
+    line-height: 3.4vh;
+    padding: 0 1.08vw 0 1.08vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 16.5625vw;
+    height: 3.48vh;
+    max-height: 36px;
+}
+.selectric-select_depart .selectric-items li:hover {
+    width: 16.5625vw;
+    height: 3.48vh;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    background-color: #2b204f;
+}
+.selectric-select_depart .selectric-items li.selected,
+.selectric-select_depart .selectric-items li.selected:hover {
+    width: 16.5625vw;
+    height: 3.48vh;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    color:#fdfdfd;
+    background-color: #7e4cff;
+}
+.selectric-select_depart .selectric .label {
+    font-family: "NotoSansCJKL";
+    font-size: 0.67vw;
+    color: #e6e7f5;
+    text-align: left;
+    padding: 0 2.13vw 0 1.13vw;
+    line-height: 3.4vh;
+    height: 3.68vh;
+    max-height: 38px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.selectric-select_depart .button {
+    width: 0.625vw;
+    height: 0.77vh;
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_down_normal.png") no-repeat;
+    background-size: 100%;
+    top: 1.4vh;
+    right: 1.09375vw;
+}
+.selectric-select_depart .button:hover{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_down_hover.png") no-repeat;
+    background-size: 100%;
+}
+.selectric-select_depart.selectric-open .button{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_up_normal.png") no-repeat;
+    background-size: 100%;
+}
+.selectric-select_depart.selectric-open .button:hover{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_up_hover.png") no-repeat;
+    background-size: 100%;
+}
+
+/*select_time*/
+.selectric-select_time .selectric {
+    width: 13.22vw;
+    height: 3.68vh;
+    max-height: 38px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    text-align: left;
+    color: #e6e7f5;
+    letter-spacing: -0.017vw;
+    border: solid 0.05vw #1f1f26;
+    border-radius: 0.41vw;
+    background-color: #1f1f26;
+    padding-left: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.selectric-select_time.selectric-open .selectric{
+    border: solid 0.05vw #7e4cff;
+    background-color: #1a1a21;
+}
+.selectric-select_time .selectric-items {
+    width: 13.22vw;
+    border-radius: 0.41vw;
+    margin: 0.2vh 0 0 0;
+    box-shadow: 0 0 0.2vw 0 rgba(0, 0, 0, 0.2);
+    border: solid 0.05vw #7e4cff;
+    background-color: #1f1f26;
+    padding: 0.77vh 0;
+}
+.selectric-select_time .selectric-items li {
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    text-align: left;
+    color: #abadc4;
+    letter-spacing: -0.017vw;
+    line-height: 3.4vh;
+    padding: 0 1.08vw 0 1.08vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 13.125vw;
+    height: 3.48vh;
+    max-height: 36px;
+}
+.selectric-select_time .selectric-items li:hover {
+    width: 13.125vw;
+    height: 3.48vh;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    background-color: #2b204f;
+}
+.selectric-select_time .selectric-items li.selected,
+.selectric-select_time .selectric-items li.selected:hover {
+    width: 13.125vw;
+    height: 3.48vh;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    color:#fdfdfd;
+    background-color: #7e4cff;
+}
+.selectric-select_time .selectric .label {
+    font-family: "NotoSansCJKL";
+    font-size: 0.67vw;
+    color: #e6e7f5;
+    text-align: left;
+    padding: 0 2.13vw 0 1.13vw;
+    line-height: 3.4vh;
+    height: 3.68vh;
+    max-height: 38px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.selectric-select_time .button {
+    width: 0.625vw;
+    height: 0.77vh;
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_down_normal.png") no-repeat;
+    background-size: 100%;
+    top: 1.4vh;
+    right: 1.09375vw;
+}
+.selectric-select_time .button:hover{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_down_hover.png") no-repeat;
+    background-size: 100%;
+}
+.selectric-select_time.selectric-open .button{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_up_normal.png") no-repeat;
+    background-size: 100%;
+}
+.selectric-select_time.selectric-open .button:hover{
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_selectBox_up_hover.png") no-repeat;
+    background-size: 100%;
+}
+
+/*selectric scroll style*/
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.26vw;
+}
+::-webkit-scrollbar-track {
+    background-color:transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color:#7a7499;
+    border-radius: 0.13vw;
+}
+
+/**lightmode style**/
+/*select_effect*/
+.lightmode .selectric-select_effect .selectric {
+    color: #4e4875;
+    border: solid 0.05vw #e4e6eb;
+    background-color: #f0f2f7;
+}
+.lightmode .selectric-select_effect.selectric-open .selectric{
+    border: solid 0.05vw #7e4cff;
+    background-color: #f7f9fc;
+}
+.lightmode .selectric-select_effect .selectric-items {
+    box-shadow: none;
+    border: solid 0.05vw  #7e4cff;
+    background-color: #f7f9fc;
+}
+.lightmode .selectric-select_effect .selectric-items li {
+    color: #4e4875;
+}
+.lightmode .selectric-select_effect .selectric-items li:hover {
+    background-color: #ecebf0;
+}
+.lightmode .selectric-select_effect .selectric-items li.selected,
+.lightmode .selectric-select_effect .selectric-items li.selected:hover {
+    color:#fdfdfd;
+    background-color: #7e4cff;
+}
+.lightmode .selectric-select_effect .selectric .label {
+    color: #4e4875;
+}
+
+/*select_type*/
+.lightmode .selectric-select_type .selectric {
+    color: #4e4875;
+    border: solid 0.05vw #e4e6eb;
+    background-color: #f0f2f7;
+}
+.lightmode .selectric-select_type.selectric-open .selectric{
+    border: solid 0.05vw #7e4cff;
+    background-color: #f7f9fc;
+}
+.lightmode .selectric-select_type .selectric-items {
+    box-shadow: none;
+    border: solid 0.05vw #7e4cff;
+    background-color: #f7f9fc;
+}
+.lightmode .selectric-select_type .selectric-items li {
+    color: #4e4875;
+}
+.lightmode .selectric-select_type .selectric-items li:hover {
+    background-color: #ecebf0;
+}
+.lightmode .selectric-select_type .selectric-items li.selected,
+.lightmode .selectric-select_type .selectric-items li.selected:hover {
+    color:#fdfdfd;
+    background-color: #7e4cff;
+}
+.lightmode .selectric-select_type .selectric .label {
+    color: #4e4875;
+}
+
+/*select_depart*/
+.lightmode .selectric-select_depart .selectric {
+    color: #4e4875;
+    border: solid 0.05vw #e4e6eb;
+    background-color: #f0f2f7;
+}
+.lightmode .selectric-select_depart.selectric-open .selectric{
+    border: solid 0.05vw #7e4cff;
+    background-color: #f7f9fc;
+}
+.lightmode .selectric-select_depart .selectric-items {
+    box-shadow: none;
+    border: solid 0.05vw #7e4cff;
+    background-color: #f7f9fc;
+}
+.lightmode .selectric-select_depart .selectric-items li {
+    color: #4e4875;
+}
+.lightmode .selectric-select_depart .selectric-items li:hover {
+    background-color: #ecebf0;
+}
+.lightmode .selectric-select_depart .selectric-items li.selected,
+.lightmode .selectric-select_depart .selectric-items li.selected:hover {
+    color:#fdfdfd;
+    background-color: #7e4cff;
+}
+.lightmode .selectric-select_depart .selectric .label {
+    color: #4e4875;
+}
+
+/*select_time*/
+.lightmode .selectric-select_time .selectric {
+    color: #4e4875;
+    border: solid 0.05vw #e4e6eb;
+    background-color: #f0f2f7;
+}
+.lightmode .selectric-select_time.selectric-open .selectric{
+    border: solid 0.05vw #7e4cff;
+    background-color: #f7f9fc;
+}
+.lightmode .selectric-select_time .selectric-items {
+    box-shadow: none;
+    border: solid 0.05vw #7e4cff;
+    background-color: #f7f9fc;
+}
+.lightmode .selectric-select_time .selectric-items li {
+    color: #4e4875;
+}
+.lightmode .selectric-select_time .selectric-items li:hover {
+    background-color: #ecebf0;
+}
+.lightmode .selectric-select_time .selectric-items li.selected,
+.lightmode .selectric-select_time .selectric-items li.selected:hover {
+    color:#fdfdfd;
+    background-color: #7e4cff;
+}
+.lightmode .selectric-select_time .selectric .label {
+    color: #4e4875;
+}
+
+/*selectric scroll style*/
+.lightmode ::-webkit-scrollbar-thumb {
+    background-color:#a5a7b5;
+}

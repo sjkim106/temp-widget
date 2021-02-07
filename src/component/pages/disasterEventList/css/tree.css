@@ -1,0 +1,72 @@
+/*sim tree custom*/
+.sim-tree a {
+    width: 9.14vw;
+    font-size: 0.625vw;
+    font-family: "NotoSansCJKR";
+    color: #e1e2f0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.sim-tree .sim-tree-checkbox{
+    border: solid 0.05vw #7c7b8a;
+    background-color: transparent;
+    width: 0.83vw;
+    height: 1.819vh;
+    max-height: 16px;
+    border-radius: 0.15625vw;
+}
+.sim-tree .sim-tree-checkbox.sim-tree-semi, .sim-tree .sim-tree-checkbox.checked {
+    border-color: #7e4cff;
+    background-color: #563bb8; 
+}
+.sim-tree .sim-icon-d:before{
+    border-top-color:#563bb8;
+}
+.sim-tree .sim-icon-r:before{
+    border-left-color:#563bb8;
+}
+.sim-tree li.disabled > a .sim-tree-checkbox {
+    border: solid 0.05vw #7c7b8a;
+}
+.sim-tree .sim-tree-checkbox.sim-tree-semi:after {
+    width: 0.42vw;
+    height: 0.2vh;
+    top: 0.58vh;
+    left: 0.15625vw;
+}
+.broadcast_modal .sim-tree .sim-icon-d:before{
+    border-top-color:#babcd4;
+}
+.broadcast_modal .sim-tree .sim-icon-r:before{
+    border-left-color:#babcd4;
+}
+
+
+/**lightmode style**/
+.lightmode .sim-tree a {
+    color: #484752;
+}
+.lightmode .sim-tree .sim-tree-checkbox{
+    border: solid 0.05vw #7d838a;
+    background-color: #f7fafc;
+}
+.lightmode .sim-tree .sim-tree-checkbox.sim-tree-semi, .sim-tree .sim-tree-checkbox.checked {
+    border-color: #7e4cff;
+    background-color: #563bb8; 
+}
+.lightmode .sim-tree .sim-icon-d:before{
+    border-top-color:#7d838a;
+}
+.lightmode .sim-tree .sim-icon-r:before{
+    border-left-color:#7d838a;
+}
+.lightmode .sim-tree li.disabled > a .sim-tree-checkbox {
+    border: solid 0.05vw #7c7b8a;
+}
+.lightmode .broadcast_modal .sim-tree .sim-icon-d:before{
+    border-top-color:#7d838a;
+}
+.lightmode .broadcast_modal .sim-tree .sim-icon-r:before{
+    border-left-color:#7d838a;
+}

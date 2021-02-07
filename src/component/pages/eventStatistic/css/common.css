@@ -1,0 +1,10 @@
+/*commmon style*/
+html,
+body {
+  min-width: 640px;
+  min-height: 344px;
+}  
+.dashWrap {
+  min-width: 640px;
+  min-height: 344px;
+}

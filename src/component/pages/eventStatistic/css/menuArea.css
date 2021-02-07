@@ -1,0 +1,187 @@
+/*menuArea style*/
+.menu_area{
+    width: 13.646vw;
+    height: 100vh;
+    max-height: 1032px;
+    background-image: linear-gradient(to top, #17181c, #1f2024);
+    padding-top: 7.75vh;
+    float: left;
+}
+.menu_area::before{
+    content:"이벤트 타입별 발생 통계";
+    display: block;
+    font-family: "NotoSansCJKR";
+    font-size: 0.9375vw;
+    letter-spacing: -0.02vw;
+    text-align: left;
+    background-image: linear-gradient(to right, #6b43d1, #8c5eff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 4.08vh;
+    left: 2.38vw;
+}
+.menu_area li{
+    width: 100%;
+    height: 6.2vh;
+    max-height: 64px;
+    margin-bottom: 0.09vh;
+    cursor: pointer;
+}
+.menu_area .btn_112{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_1_112Service_normal.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_112:hover{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_1_112Service_hover.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_112.active{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_1_112Service_selected.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_vehicle{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_2_wantedVehicle_normal.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_vehicle:hover{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_2_wantedVehicle_hover.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_vehicle.active{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_2_wantedVehicle_selected.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_119{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_3_119Service_normal.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_119:hover{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_3_119Service_hover.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_119.active{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_3_119Service_selected.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_weak{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_4_sociallyWeak_normal.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_weak:hover{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_4_sociallyWeak_hover.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_weak.active{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_4_sociallyWeak_selected.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_fire{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_5_fire_normal.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_fire:hover{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_5_fire_hover.png") no-repeat;
+    background-size: 100%;
+}
+.menu_area .btn_fire.active{
+    background: url("../../../../static/image/dark/page/eventStatistics/btn/btn_menu_5_fire_selected.png") no-repeat;
+    background-size: 100%;
+}
+.content_area{
+    width: 86.3545vw;
+    height: 100vh;
+    max-height: 1032px;
+    background-color: #15161a;
+    float: left;
+}
+
+
+/*960x516 & 640x344 pc size 부분 커스텀*/
+@media only screen and (min-height: 10px) and (max-height: 516px) {
+    .menu_area{
+        width: 20.41vw;
+        max-height: 516px;
+        padding-top: 11.62vh;
+    }
+    .menu_area::before{
+        font-size: 1.40625vw;
+        letter-spacing: -0.03vw;       
+        top: 6.2vh;
+        left: 3.57vw;
+    }
+    .menu_area li{
+        width: 100%;
+        height: 9.24vh;
+        max-height: 47.7px;
+        margin-bottom: 0.19vh;
+    }
+}
+
+/**lightmode style**/
+.lightmode .menu_area{
+    background-image: linear-gradient(to top, #e6eaf0, #e6eaf0 80%, #f6f9fd);
+}
+.lightmode .menu_area .btn_112{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_1_112Service_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_112:hover{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_1_112Service_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_112.active{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_1_112Service_selected.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_vehicle{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_2_wantedVehicle_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_vehicle:hover{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_2_wantedVehicle_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_vehicle.active{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_2_wantedVehicle_selected.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_119{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_3_119Service_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_119:hover{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_3_119Service_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_119.active{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_3_119Service_selected.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_weak{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_4_sociallyWeak_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_weak:hover{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_4_sociallyWeak_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_weak.active{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_4_sociallyWeak_selected.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_fire{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_5_fire_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_fire:hover{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_5_fire_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .menu_area .btn_fire.active{
+    background: url("../../../../static/image/light/page/eventStatistics/btn/btn_menu_5_fire_selected.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .content_area{
+    background-color: #e9edf2;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../component/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../component/jquery/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="../component/jquery/selectric.css" />
+    <link rel="stylesheet" href="../component/jquery/simTree.css" />
+    <link rel="stylesheet" href="../common/css/reset.css" />
+    <link rel="stylesheet" href="../common/css/fontStyle.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/menuArea.css" />
+    <link rel="stylesheet" href="css/gisArea.css" />
+    <link rel="stylesheet" href="css/infoArea.css" />
+    <link rel="stylesheet" href="css/selectBox.css" />
+  </head>
+  <body class="namhae">
+    <section class="dashWrap">
+      <!--menu area-->
+      <ul class="menu_area">
+        <li class="btn_menu btn_112 active"></li>
+        <li class="btn_menu btn_vehicle"></li>
+        <li class="btn_menu btn_119"></li>
+        <li class="btn_menu btn_weak"></li>
+        <li class="btn_menu btn_fire"></li>
+      </ul>
+
+      <!--content area-->
+      <section class="content_area">
+        <!--gis area-->
+        <div class="gis_area">
+          <!--map box start-->
+          <div class="map_box loc_1" id="mapbg1">
+            <div class="count_txt">23</div>
+          </div>
+          <div class="map_box loc_2" id="mapbg2">
+            <div class="count_txt">16</div>
+          </div>
+          <div class="map_box loc_3" id="mapbg3">
+            <div class="count_txt">8</div>
+          </div>
+          <div class="map_box loc_4" id="mapbg4">
+            <div class="count_txt">31</div>
+          </div>
+          <div class="map_box loc_5" id="mapbg5">
+            <div class="count_txt">5</div>
+          </div>
+          <div class="map_box loc_6" id="mapbg6">
+            <div class="count_txt">49</div>
+          </div>
+          <div class="map_box loc_7" id="mapbg7">
+            <div class="count_txt">19</div>
+          </div>
+          <div class="map_box loc_8" id="mapbg8">
+            <div class="count_txt">28</div>
+          </div>
+          <div class="map_box loc_9" id="mapbg9">
+            <div class="count_txt">12</div>
+          </div>
+          <div class="map_box loc_10" id="mapbg10">
+            <div class="count_txt">9</div>
+          </div>
+        </div>
+
+        <!--info area-->
+        <div class="info_area">
+          <!--일 / 총 이벤트 현황-->
+          <div class="info_title event_icon">일 / 총 이벤트 현황</div>
+          <div class="count_num">31<span class="slash_txt">/</span><span class="total_num">109</span></div>
+          <div class="loc_area">
+            <div class="loc_row">
+              <div class="loc_box ftL" data-mapbg="mapbg1">설천면</div>
+            </div>
+            <div class="loc_row">
+              <div class="loc_box ftL" data-mapbg="mapbg2">고현면</div>
+              <div class="loc_box ftR" data-mapbg="mapbg7">창선면</div>
+            </div>
+            <div class="loc_row">
+              <div class="loc_box ftL" data-mapbg="mapbg3">서면</div>
+              <div class="loc_box ftL" data-mapbg="mapbg4">남해읍</div>
+            </div>
+            <div class="loc_row">
+              <div class="loc_box ftR" data-mapbg="mapbg8">삼동면</div>
+              <div class="loc_box ftR" data-mapbg="mapbg6">이동면</div>
+              <div class="loc_box ftR" data-mapbg="mapbg5">남면</div>      
+            </div>
+            <div class="loc_row">              
+              <div class="loc_box ftR" data-mapbg="mapbg10">미조면</div>
+              <div class="loc_box ftR" data-mapbg="mapbg9">상주면</div>
+            </div>
+          </div>
+
+          <!--기간별 이벤트 그래프-->
+          <div class="info_title chart_icon">기간별 이벤트 그래프</div>
+          <div class="evt_btn_area">
+            <button type="button" class="btn_evt active">이벤트 1</button>
+            <button type="button" class="btn_evt">이벤트 2</button>
+            <button type="button" class="btn_evt">이벤트 3</button>
+          </div>
+          <div class="chart_area">
+            <select class="select_period" id="selectPeriod">
+              <option value="1">월별</option>
+              <option value="1">일별</option>
+            </select>
+            <!--chart 삽입-->
+            <div class="chart_in" id="evtColumncht"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+  <script src="../component/jquery/jquery-3.3.1.min.js"></script>
+  <script src="../component/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../component/jquery/jquery.selectric.js"></script>
+  <script src="../component/jquery/simTree.js"></script>
+  <script src="../component/bootstrap/bootstrap.min.js"></script>
+  <script src="../component/highchart/highcharts.js"></script>
+  <script src="js/menuArea.js"></script>
+  <script src="js/gisArea.js"></script>
+  <script src="js/infoArea.js"></script>
+  <script src="js/eventChart.js"></script>
+</html>

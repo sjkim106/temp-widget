@@ -1,0 +1,66 @@
+/*01waterLevel style*/
+.waterlevel_wrap .legend_area{
+    width: 11vw;
+    height: 4.36vh;
+    max-height: 45px;
+    position: absolute;
+    top: 3.4vh;
+    right: -1.5vw;
+}
+.waterlevel_wrap .legend_area li{
+    width: 2.8vw;
+    height: 1.45vh;
+    max-height: 15px;
+    padding-left: 0.7vw;
+    font-family: "NotoSansCJKR";
+    font-size: 0.52vw;
+    letter-spacing: -0.02vw;
+    text-align: left;
+    color: #7e8189;
+    margin-right: 0.2vw;
+    position: relative;
+    float: left;
+}
+.waterlevel_wrap .legend_area .legend_icon::before{
+    content:"";
+    display: block;
+    width: 0.57vw;
+    height: 1.06vh;
+    max-height: 11px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.waterlevel_wrap .legend_area .legend_icon.icon_01::before{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/img_legend_graph_01.png") no-repeat;
+    background-size: 100%;
+}
+.waterlevel_wrap .legend_area .legend_icon.icon_02::before{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/img_legend_graph_02.png") no-repeat;
+    background-size: 100%;
+}
+.waterlevel_wrap .legend_area .legend_icon.icon_03::before{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/img_legend_graph_03.png") no-repeat;
+    background-size: 100%;
+}
+.waterlevel_wrap .legend_area .legend_icon.icon_04::before{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/img_legend_graph_04.png") no-repeat;
+    background-size: 100%;
+}
+.waterlevel_wrap .legend_area .legend_icon.icon_05::before{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/img_legend_graph_05.png") no-repeat;
+    background-size: 100%;
+}
+.waterlevel_wrap .legend_area .legend_icon.icon_06::before{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/img_legend_graph_06.png") no-repeat;
+    background-size: 100%;
+}
+.waterlevel_wrap .legend_area .legend_icon.icon_07::before{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/img_legend_graph_07.png") no-repeat;
+    background-size: 100%;
+}
+.waterlevel_wrap .legend_area .legend_icon.icon_08::before{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/img_legend_graph_08.png") no-repeat;
+    background-size: 100%;
+}
+

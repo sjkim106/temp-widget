@@ -1,0 +1,217 @@
+/*gisWidget style*/
+.gis_widget_area{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.gis_widget_area .loc_box{
+    width: 13.96vw;
+    height: 3.48vh;
+    max-height: 36px;
+    border-radius: 0.3125vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 1.06%;
+    left: 24.75vw;
+    cursor: pointer;
+}
+.gis_widget_area .gis_func_frame{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 1.06%;
+    right: 1.5625vw;
+}
+.gis_widget_area .gis_func_frame .view_box{
+    width: 7.6vw;
+    height: 3.48vh;
+    max-height: 36px;
+    padding: 0.21vh 0.108vw 0 0.108vw;
+    border-radius: 0.36vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 0;
+    right: 9.47vw;
+}
+.gis_widget_area .gis_func_frame .view_box .btn_view{
+    height: 2.9vh;
+    max-height: 30px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.03125vw;
+    border-radius: 0.26vw;
+    text-align: center;
+    color: #7e8189;
+}
+.gis_widget_area .gis_func_frame .view_box .btn_view:hover{
+    color: #7e4cff;
+}
+.gis_widget_area .gis_func_frame .view_box .btn_view.active{
+    background-color: #7e4cff;
+    color: #ffffff;
+}
+.gis_widget_area .gis_func_frame .view_box .btn_view.map_view{
+    width: 3.125vw;
+    float: left;
+}
+.gis_widget_area .gis_func_frame .view_box .btn_view.sky_view{
+    width: 4.01vw;
+    float: right;
+}
+.gis_widget_area .gis_func_frame .zoom_box{
+    width: 3.55vw;
+    height: 3.48vh;
+    max-height: 36px;
+    padding: 0.21vh 0.108vw 0 0.108vw;
+    border-radius: 0.36vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 0;
+    right: 5.52vw;
+}
+.gis_widget_area .gis_func_frame .zoom_box .btn_plus{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_plus_normal.png") no-repeat;
+    background-size: 100%;
+    float: left;
+}
+.gis_widget_area .gis_func_frame .zoom_box .btn_plus:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_plus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .zoom_box .btn_minus{
+    width: 1.5625vw;
+    height: 2.9vh;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_minus_normal.png") no-repeat;
+    background-size: 100%;
+    float: right;
+}
+.gis_widget_area .gis_func_frame .zoom_box .btn_minus:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_minus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box{
+    width: 5.1vw;
+    height: 3.48vh;
+    max-height: 36px;
+    padding: 0.21vh 0.108vw 0 0.108vw;
+    border-radius: 0.36vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_area{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_area_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_area:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_area_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_length{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_length_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_length:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_length_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_radius{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_radius_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_radius:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_radius_hover.png") no-repeat;
+    background-size: 100%;
+}
+
+/**lightmode style**/
+.lightmode .gis_widget_area .loc_box{
+    border: solid 0.05vw #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .gis_widget_area .gis_func_frame .view_box{
+    border: solid 0.05vw #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .gis_widget_area .gis_func_frame .view_box .btn_view{
+    color: #716d8f;
+}
+.lightmode .gis_widget_area .gis_func_frame .view_box .btn_view:hover{
+    color: #7e4cff;
+    background-color: rgba(126, 76, 255,0.08);
+}
+.lightmode .gis_widget_area .gis_func_frame .view_box .btn_view.active{
+    background-color: #7e4cff;
+    color: #ffffff;
+}
+.lightmode .gis_widget_area .gis_func_frame .zoom_box{
+    border: solid 0.05vw #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .gis_widget_area .gis_func_frame .zoom_box .btn_plus{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_plus_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .zoom_box .btn_plus:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_plus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .zoom_box .btn_minus{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_minus_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .zoom_box .btn_minus:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_minus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box{
+    border: solid 0.05vw #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_area{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_area_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_area:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_area_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_length{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_length_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_length:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_length_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_radius{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_radius_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_radius:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_radius_hover.png") no-repeat;
+    background-size: 100%;
+}

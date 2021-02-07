@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+    
+    <link rel="stylesheet" href="../component/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../component/jquery/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="../component/jquery/selectric.css" />
+    <link rel="stylesheet" href="../component/jquery/simTree.css" />
+    <link rel="stylesheet" href="../common/css/reset.css" />
+    <link rel="stylesheet" href="../common/css/fontStyle.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/monitoring.css" />
+    <link rel="stylesheet" href="css/gisIcon.css" />
+    <link rel="stylesheet" href="css/gisPopup.css" />
+    <link rel="stylesheet" href="css/seletBox.css" />
+    <link rel="stylesheet" href="css/01evtList.css" />
+    <link rel="stylesheet" href="css/02search.css" />
+    <link rel="stylesheet" href="css/03legend.css" />
+    <link rel="stylesheet" href="css/pagination.css" />
+    <link rel="stylesheet" href="css/tree.css" />
+  </head>
+  <body class="namhae">
+    <section class="dashWrap">
+      <!--gis 삽입-->
+      <div class="gis_area"></div>
+
+      <!--gis icon 영역-->
+      <div class="gis_icon_area">
+        <!--cctv icon-->
+        <div class="gis_icon cctv_normal loc_0">
+          <div class="cctv_camera_popup">
+            <header class="popup_header">
+              <div class="popup_title">생활방범 CCTV 049</div>
+              <button type="button" class="btn_close"></button>
+              <button type="button" class="btn_expansion"></button>
+            </header>
+            <div class="popup_body">
+              <div class="cctv_area"></div>
+              <div class="cctv_info_area">
+                <div class="cctv_row">
+                  <div class="cctv_info_name">법정동</div>
+                  <div class="cctv_info_txt">남해읍</div>
+                </div>
+                <div class="cctv_row">
+                  <div class="cctv_info_name">설치목적</div>
+                  <div class="cctv_info_txt">생활방범</div>
+                </div>
+                <div class="cctv_row wide_size">
+                  <div class="cctv_info_name">명칭</div>
+                  <div class="cctv_info_txt">방범-생활-남해읍-화천로-91-22<br>사거리 남서방향</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gis_icon cctv_ptz loc_1">
+          <div class="cctv_ptz_popup">
+            <header class="popup_header">
+              <div class="popup_title">생활방범 CCTV 049</div>
+              <button type="button" class="btn_close"></button>
+              <button type="button" class="btn_expansion"></button>
+            </header>
+            <div class="popup_body">
+              <div class="cctv_area"></div>
+              <div class="ptz_tab_area">
+                <button type="button" class="btn_ptztab active" data-ptztab="ptztab1">기본정보</button>
+                <button type="button" class="btn_ptztab" data-ptztab="ptztab2">Ptz 카메라 컨트롤러</button>
+              </div>
+              <!--cctv info area-->
+              <div class="ptz_tab cctv_info_area" id="ptztab1">
+                <div class="cctv_row">
+                  <div class="cctv_info_name">법정동</div>
+                  <div class="cctv_info_txt">남해읍</div>
+                </div>
+                <div class="cctv_row">
+                  <div class="cctv_info_name">설치목적</div>
+                  <div class="cctv_info_txt">생활방범</div>
+                </div>
+                <div class="cctv_row wide_size">
+                  <div class="cctv_info_name">명칭</div>
+                  <div class="cctv_info_txt">방범-생활-남해읍-화천로-91-22<br>사거리 남서방향</div>
+                </div>
+              </div>
+              <!--ptz camera controller-->
+              <div class="ptz_tab ptz_control_area" id="ptztab2">
+                <div class="ptz_control">
+                  <button type="button" class="btn_ptz ptz_up"></button>
+                  <button type="button" class="btn_ptz ptz_down"></button>
+                  <button type="button" class="btn_ptz ptz_left"></button>
+                  <button type="button" class="btn_ptz ptz_right"></button>
+                </div>
+                <button type="button" class="btn_zoomin"></button>
+                <button type="button" class="btn_zoomout"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gis_icon cctv_life loc_2">
+          <div class="cctv_name">생활방범 CCTV 001</div>
+          <div class="cctv_popup">
+            <header class="popup_header">
+              <button type="button" class="btn_close"></button>
+            </header>
+            <div class="popup_body">
+              <div class="cctv_title">생활방범 CCTV 001</div>
+              <button type="button" class="btn_cctvnet"></button>
+              <button type="button" class="btn_expansion"></button>
+            </div>
+          </div>
+        </div>
+        <div class="gis_icon cctv_error loc_00">
+          <div class="cctv_name error_state">생활방범 CCTV 001</div>
+          <div class="cctv_popup">
+            <header class="popup_header">
+              <button type="button" class="btn_close"></button>
+            </header>
+            <div class="popup_body">
+              <div class="cctv_title error_state">생활방범 CCTV 001</div>
+              <button type="button" class="btn_cctvnet"></button>
+              <button type="button" class="btn_expansion"></button>
+            </div>
+          </div>
+        </div>
+        <div class="gis_icon cctv_park loc_3"></div>
+        <div class="gis_icon cctv_carnumber loc_4"></div>
+        <div class="gis_icon cctv_safechild loc_5"></div>
+        <div class="gis_icon cctv_daycarechild loc_6"></div>
+        <div class="gis_icon cctv_school loc_7"></div>
+        <div class="gis_icon cctv_forestfire loc_8"></div>
+        <div class="gis_icon cctv_disaster loc_9"></div>
+        <div class="gis_icon cctv_nolittering loc_10"></div>
+        <div class="gis_icon cctv_marinegarbage loc_11"></div>
+        <div class="gis_icon cctv_facility loc_12"></div>
+        <div class="gis_icon cctv_parking loc_13"></div>
+
+        <!--cctv cluster icon-->
+        <div class="cluster_icon cctv_cluster loc_14">
+          <div class="cluster_num">49</div>
+          <div class="cluster_popup">
+            <header class="popup_header">
+              <div class="list_num_txt">49<span>개</span></div>
+              <button type="button" class="btn_close"></button>
+            </header>
+            <div class="popup_body">
+              <div class="list_row">
+                <div class="cctv_icon mini_01"></div>
+                <div class="list_txt">생활방범 CCTV 049</div>
+              </div>
+              <div class="list_row">
+                <div class="cctv_icon mini_03"></div>
+                <div class="list_txt">번호인식 CCTV 087</div>
+              </div>
+              <div class="list_row">
+                <div class="cctv_icon mini_05"></div>
+                <div class="list_txt">초등학교 CCTV 062</div>
+              </div>
+              <div class="list_row">
+                <div class="cctv_icon mini_06"></div>
+                <div class="list_txt">산불감시 CCTV 008</div>
+              </div>
+              <div class="list_row">
+                <div class="cctv_icon mini_11"></div>
+                <div class="list_txt">주정차감시 CCTV 129</div>
+              </div>
+              <div class="list_row">
+                <div class="cctv_icon mini_11"></div>
+                <div class="list_txt">주정차감시 CCTV 129</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--cctv castnet icon-->
+        <div class="castnet_icon cctv_castnet loc_15">#1</div>
+
+        <!--facility icon-->
+        <div class="facility_icon facility_waterlevel loc_16">
+          <div class="facility_popup">
+            <div class="facility_title">수위계측기 001</div>
+            <div class="facility_row">
+              <div class="facility_name">상태</div>
+              <div class="facility_txt normal_icon">정상</div>
+            </div>
+            <div class="facility_row">
+              <div class="facility_name">계측값</div>
+              <div class="facility_txt">54.4</div>
+            </div>
+          </div>
+        </div>
+        <div class="facility_icon facility_counter loc_17">
+          <div class="facility_popup">
+            <div class="facility_title">수위계측기 001</div>
+            <div class="facility_row">
+              <div class="facility_name">상태</div>
+              <div class="facility_txt error_icon">비정상</div>
+            </div>
+            <div class="facility_row">
+              <div class="facility_name">계측값</div>
+              <div class="facility_txt">54.4</div>
+            </div>
+          </div>
+        </div>
+        <div class="facility_icon facility_publicwifi loc_18"></div>
+        <div class="facility_icon facility_smartlamp loc_19"></div>
+        <div class="facility_icon facility_socialweak loc_20"></div>
+        <div class="facility_icon facility_tidalobserve loc_21"></div>
+        <div class="facility_icon facility_earthquake loc_22"></div>
+
+         <!--facility zoom icon-->
+        <div class="zoom_icon facility_waterlevel loc_23">
+          <div class="facility_popup">
+            <div class="facility_title">Wi-fi 001</div>
+            <div class="facility_row">
+              <div class="facility_name">위치</div>
+              <div class="facility_txt loc_txt">경남 남해군 남해읍 화천로 95번길 21</div>             
+            </div>
+            <div class="facility_row">
+              <div class="facility_name">상태</div>
+              <div class="facility_txt normal_icon">정상</div>
+            </div>
+            <div class="facility_row">
+              <div class="facility_name">접속자 수</div>
+              <div class="facility_txt">128</div>
+            </div>
+          </div>
+        </div>
+        <div class="zoom_icon facility_counter loc_24">
+          <div class="facility_popup">
+            <div class="facility_title">Wi-fi 001</div>
+            <div class="facility_row">
+              <div class="facility_name">위치</div>
+              <div class="facility_txt loc_txt">경남 남해군 남해읍 화천로 95번길 21</div>             
+            </div>
+            <div class="facility_row">
+              <div class="facility_name">상태</div>
+              <div class="facility_txt error_icon">비정상</div>
+            </div>
+            <div class="facility_row">
+              <div class="facility_name">접속자 수</div>
+              <div class="facility_txt">128</div>
+            </div>
+          </div>
+        </div>
+        <div class="zoom_icon facility_publicwifi loc_25"></div>
+        <div class="zoom_icon facility_smartlamp loc_26"></div>
+        <div class="zoom_icon facility_socialweak loc_27"></div>
+        <div class="zoom_icon facility_tidalobserve loc_28"></div>
+        <div class="zoom_icon facility_earthquake loc_29"></div>
+      </div>
+
+      <!--gis widget 영역-->
+      <div class="gis_widget_area">
+        <!--buttons-->
+        <button type="button" class="btn_evtlist"></button>
+        <button type="button" class="btn_search"></button>
+        <button type="button" class="btn_legend"></button>
+        <!--loc box-->
+        <div class="loc_box">
+          <select class="select_loc" id="selectDo">
+            <option value="1">경상남도</option>
+            <option value="1">경상북도</option>
+            <option value="1">충청북도</option>
+          </select>
+          <select class="select_loc" id="selectGun">
+            <option value="1">남해군</option>
+            <option value="1">남해군</option>
+            <option value="1">남해군</option>
+          </select>
+          <select class="select_loc" id="selectEup">
+            <option value="1">남해읍</option>
+            <option value="1">남해읍</option>
+            <option value="1">남해읍</option>
+          </select>
+        </div>            
+      </div>
+
+      <!----content start---->
+      <!--대시보드-->
+      <section class="dash_info_wrap">
+        <!--button tab-->
+        <button type="button" class="btn_tab"></button>
+        <!--button dash close-->
+        <button type="button" class="btn_dash_close"></button>
+
+        <header class="dash_header">재난관제</header>
+        <!--menu buttons-->
+        <ul class="menu_btn_area">
+          <li class="btn_menu btn_evtlist active" data-menu="menu1">이벤트 리스트</li>
+          <li class="btn_menu btn_search" data-menu="menu2">검색</li>
+          <li class="btn_menu btn_legend" data-menu="menu3">범례</li>
+        </ul>
+
+        <!--evtList01--> 
+        <div class="menu_info evtlist_wrap" id="menu1">
+          <div class="dash_body">
+              <div class="list_head_row">
+                <div class="list_head">종류</div>
+                <div class="list_head">상태</div>
+                <div class="list_head">주소</div>
+                <div class="list_head">발생일시</div>
+              </div>
+              <div class="list_body">
+                <!--list card-->
+                <div class="list_card">
+                  <!--button show-->
+                  <button type="button" class="btn_show"></button>
+                  <div class="card_head">
+                    <div class="card_head_txt">침수</div>
+                    <div class="card_head_txt">발생</div>
+                    <div class="card_head_txt">남해읍 망운로10번가길 3</div>
+                    <div class="card_head_txt">20-12-24  17:49</div>
+                  </div>
+                  <div class="card_body">
+                    <div class="card_row">
+                      <div class="card_title">위도</div>
+                      <div class="card_loc">34.840866</div>
+                      <div class="card_title">경도</div>
+                      <div class="card_loc">34.840866</div>
+                    </div>
+                    <div class="card_row card_info">
+                      <div class="card_title">내용</div>
+                      <div class="card_info_txt">OOOO 건물 침수발생 / 건물내 화재 발생 / 119 출동 요청 대기중<br>
+                        OOOO 건물 침수발생 / 건물내 화재 발생 / 119 출동 요청 대기중<br>
+                        OOOO 건물 침수발생 / 건물내 화재 발생 / 119 출동 요청 대기중<br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--list card-->
+                <div class="list_card">
+                  <!--button show-->
+                  <button type="button" class="btn_show"></button>
+                  <div class="card_head">
+                    <div class="card_head_txt">침수</div>
+                    <div class="card_head_txt">발생</div>
+                    <div class="card_head_txt">남해읍 망운로10번가길 3</div>
+                    <div class="card_head_txt">20-12-24  17:49</div>
+                  </div>
+                  <div class="card_body">
+                    <div class="card_row">
+                      <div class="card_title">위도</div>
+                      <div class="card_loc">34.840866</div>
+                      <div class="card_title">경도</div>
+                      <div class="card_loc">34.840866</div>
+                    </div>
+                    <div class="card_row card_info">
+                      <div class="card_title">내용</div>
+                      <div class="card_info_txt">OOOO 건물 침수발생 / 건물내 화재 발생 / 119 출동 요청 대기중</div>
+                    </div>
+                  </div>
+                </div>
+                <!--list card-->
+                <div class="list_card">
+                  <!--button show-->
+                  <button type="button" class="btn_show"></button>
+                  <div class="card_head">
+                    <div class="card_head_txt">침수</div>
+                    <div class="card_head_txt">발생</div>
+                    <div class="card_head_txt">남해읍 망운로10번가길 3</div>
+                    <div class="card_head_txt">20-12-24  17:49</div>
+                  </div>
+                  <div class="card_body">
+                    <div class="card_row">
+                      <div class="card_title">위도</div>
+                      <div class="card_loc">34.840866</div>
+                      <div class="card_title">경도</div>
+                      <div class="card_loc">34.840866</div>
+                    </div>
+                    <div class="card_row card_info">
+                      <div class="card_title">내용</div>
+                      <div class="card_info_txt">OOOO 건물 침수발생 / 건물내 화재 발생 / 119 출동 요청 대기중</div>
+                    </div>
+                  </div>
+                </div>
+                <!--list card-->
+                <div class="list_card">
+                  <!--button show-->
+                  <button type="button" class="btn_show"></button>
+                  <div class="card_head">
+                    <div class="card_head_txt">침수</div>
+                    <div class="card_head_txt">발생</div>
+                    <div class="card_head_txt">남해읍 망운로10번가길 3</div>
+                    <div class="card_head_txt">20-12-24  17:49</div>
+                  </div>
+                  <div class="card_body">
+                    <div class="card_row">
+                      <div class="card_title">위도</div>
+                      <div class="card_loc">34.840866</div>
+                      <div class="card_title">경도</div>
+                      <div class="card_loc">34.840866</div>
+                    </div>
+                    <div class="card_row card_info">
+                      <div class="card_title">내용</div>
+                      <div class="card_info_txt">OOOO 건물 침수발생 / 건물내 화재 발생 / 119 출동 요청 대기중</div>
+                    </div>
+                  </div>
+                </div>
+                <!--list card-->
+                <div class="list_card">
+                  <!--button show-->
+                  <button type="button" class="btn_show"></button>
+                  <div class="card_head">
+                    <div class="card_head_txt">침수</div>
+                    <div class="card_head_txt">발생</div>
+                    <div class="card_head_txt">남해읍 망운로10번가길 3</div>
+                    <div class="card_head_txt">20-12-24  17:49</div>
+                  </div>
+                  <div class="card_body">
+                    <div class="card_row">
+                      <div class="card_title">위도</div>
+                      <div class="card_loc">34.840866</div>
+                      <div class="card_title">경도</div>
+                      <div class="card_loc">34.840866</div>
+                    </div>
+                    <div class="card_row card_info">
+                      <div class="card_title">내용</div>
+                      <div class="card_info_txt">OOOO 건물 침수발생 / 건물내 화재 발생 / 119 출동 요청 대기중</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--pagination-->
+              <div class="paging_wrap">
+                <ul>
+                    <li><a href="#" class="btn_foremost"></a></li>
+                    <li><a href="#" class="btn_prev"></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#" class="btn_next"></a></li>
+                    <li><a href="#" class="btn_last"></a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+
+        <!--search02--> 
+        <div class="menu_info search_wrap" id="menu2">
+          <div class="dash_body">
+            <!--search frame-->
+            <div class="search_frame">
+              <div class="search_row">
+                <div class="search_name">분류타입</div>
+                <select class="select_search" id="selectType">
+                  <option value="1">CCTV(차량)</option>
+                  <option value="1">CCTV(방범)</option>
+                  <option value="1">CCTV(재난)</option>
+                  <option value="1">CCTV(방범)</option>
+                  <option value="1">CCTV(재난)</option>
+                </select>
+              </div>
+              <div class="search_row">
+                <div class="search_name">행정구역</div>
+                <select class="select_search" id="selectArea">
+                  <option value="1">남해읍</option>
+                  <option value="1">남해읍</option>
+                  <option value="1">남해읍</option>
+                </select>
+              </div>
+              <div class="search_row">
+                <div class="search_name">설치목적</div>
+                <select class="select_search" id="selectPurpose">
+                  <option value="1">방범</option>
+                  <option value="1">방범</option>
+                  <option value="1">방범</option>
+                </select>
+              </div>
+              <div class="search_row">
+                <div class="search_name">명칭</div>
+                <input type="text" class="search_input" placeholder="명칭 입력 란">
+              </div>
+              <!--button search-->
+              <button type="button" class="btn_search">검색</button>
+            </div>
+
+            <div class="list_head_row">
+              <div class="list_head">순서</div>
+              <div class="list_head">구분</div>
+              <div class="list_head">명칭</div>
+            </div>
+            <div class="list_body">
+              <!--list card-->
+              <div class="list_card">
+                <div class="card_txt">1</div>
+                <div class="card_txt">재난</div>
+                <div class="card_txt">재난 CCTV 남해읍 3FD-cvt-9610</div>
+                <button type="button" class="btn_cctvnet"></button>
+                <button type="button" class="btn_expansion"></button>
+              </div>
+              <!--list card-->
+              <div class="list_card">
+                <div class="card_txt">1</div>
+                <div class="card_txt">재난</div>
+                <div class="card_txt">재난 CCTV 남해읍 3FD-cvt-9610</div>
+                <button type="button" class="btn_cctvnet"></button>
+                <button type="button" class="btn_expansion"></button>
+              </div>
+              <!--list card-->
+              <div class="list_card">
+                <div class="card_txt">1</div>
+                <div class="card_txt">재난</div>
+                <div class="card_txt">재난 CCTV 남해읍 3FD-cvt-9610</div>
+                <button type="button" class="btn_cctvnet"></button>
+                <button type="button" class="btn_expansion"></button>
+              </div>
+              <!--list card-->
+              <div class="list_card">
+                <div class="card_txt">1</div>
+                <div class="card_txt">재난</div>
+                <div class="card_txt">재난 CCTV 남해읍 3FD-cvt-9610</div>
+                <button type="button" class="btn_cctvnet"></button>
+                <button type="button" class="btn_expansion"></button>
+              </div>
+              <!--list card-->
+              <div class="list_card">
+                <div class="card_txt">1</div>
+                <div class="card_txt">재난</div>
+                <div class="card_txt">재난 CCTV 남해읍 3FD-cvt-9610</div>
+                <button type="button" class="btn_cctvnet"></button>
+                <button type="button" class="btn_expansion"></button>
+              </div>
+            </div>
+            <!--pagination-->
+            <div class="paging_wrap">
+              <ul>
+                  <li><a href="#" class="btn_foremost"></a></li>
+                  <li><a href="#" class="btn_prev"></a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#" class="btn_next"></a></li>
+                  <li><a href="#" class="btn_last"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--legend03--> 
+        <div class="menu_info legend_wrap" id="menu3">
+          <div class="dash_body">
+            <div class="legend_title">지도 타입 선택</div>
+            <div class="map_btn_area">
+              <button type="button" class="btn_map_type active">카카오 지도</button>
+              <button type="button" class="btn_map_type">V world</button>
+            </div>
+            <div class="legend_title">시설물 선택</div>
+            <div class="facil_list_area">
+              <div class="tree_in" id="tree"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--투망모니터링 -->
+      <section class="monitor_wrap">
+        <!--button tab-->
+        <button type="button" class="btn_tab"></button>
+
+        <!--gis func frame-->
+        <div class="gis_func_frame">
+          <!--view box-->
+          <div class="view_box">
+            <button type="button" class="btn_view map_view active">지도</button>
+            <button type="button" class="btn_view sky_view">스카이뷰</button>
+          </div>
+          <!--zoom box-->
+          <div class="zoom_box">
+            <button type="button" class="btn_plus active"></button>
+            <button type="button" class="btn_minus"></button>
+          </div>
+          <!--func box-->
+          <div class="func_box">
+            <button type="button" class="btn_area"></button>
+            <button type="button" class="btn_length"></button>
+            <button type="button" class="btn_radius"></button>
+          </div>
+        </div>
+
+        <!--monitor area-->
+        <div class="monitor_area">
+          <header class="monitor_header">
+            <div class="monitor_title">투망</div>
+            <div class="monitor_loc">경남 남해군 남해읍 화전로95번길 21</div>
+          </header>
+          <!--small monitor area-->
+          <div class="small_monitor_area">
+            <div class="cctv_box">
+              <header class="cctv_header cctv_1">CCTV_A223CCTV_A223CCTV_A223CCTV_A223CCTV_A223</header>
+              <div class="cctv_view"></div>
+            </div>
+            <div class="cctv_box">
+              <header class="cctv_header cctv_2">CCTV 002</header>
+              <div class="cctv_view"></div>
+            </div>
+            <div class="cctv_box">
+              <header class="cctv_header cctv_3">CCTV 003</header>
+              <div class="cctv_view"></div>
+            </div>
+            <div class="cctv_box">
+              <header class="cctv_header cctv_4">CCTV 004</header>
+              <div class="cctv_view"></div>
+            </div>
+            <div class="cctv_box">
+              <header class="cctv_header cctv_5">CCTV 005</header>
+              <div class="cctv_view"></div>
+            </div>
+            <div class="cctv_box">
+              <header class="cctv_header cctv_6">CCTV 006</header>
+              <div class="cctv_view"></div>
+            </div>
+          </div>
+          <!--big monitor area-->
+          <div class="big_monitor_area">
+            <div class="enlarge_txt">확대 View</div>
+            <div class="cctv_box">
+              <header class="cctv_header cctv_4">CCTV 004</header>
+              <div class="cctv_view"></div>
+            </div>
+          </div> 
+        </div>
+      </section>     
+    </section>
+  </body>
+  <script src="../component/jquery/jquery-3.3.1.min.js"></script>
+  <script src="../component/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../component/jquery/jquery.selectric.js"></script>
+  <script src="../component/jquery/simTree.js"></script>
+  <script src="../component/bootstrap/bootstrap.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/gisIcon.js"></script>
+  <script src="js/gisPopup.js"></script>
+  <script src="js/01evtList.js"></script>
+  <script src="js/02search.js"></script>
+  <script src="js/03legend.js"></script>
+  <script src="js/monitor.js"></script>
+  <script src="js/treeSample.js"></script>
+</html>

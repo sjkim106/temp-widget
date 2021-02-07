@@ -1,0 +1,521 @@
+/*gisArea style*/
+.gis_area{
+    width: 57.031325vw;
+    height: 100vh;
+    max-height: 1032px;
+    background: url("../../../../static/image/dark/page/weatherStatus/img/img_bg_map.png") no-repeat;
+    background-size: 100%;
+    float: left;
+    position: relative;
+}
+.gis_rain{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gis_temp,
+.gis_wind,
+.gis_humidity{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+.loc_box{
+    width: 5.7292vw;
+    height: 11.62vh;
+    max-height: 120px;
+    position: absolute;
+}
+.gis_rain .loc_box{
+    background: url("../../../../static/image/dark/page/weatherStatus/img/img_card_1_rainfall.png") no-repeat;
+    background-size: 100%;
+}
+.gis_temp .loc_box{
+    background: url("../../../../static/image/dark/page/weatherStatus/img/img_card_2_temperature.png") no-repeat;
+    background-size: 100%;
+}
+.gis_wind .loc_box{
+    background: url("../../../../static/image/dark/page/weatherStatus/img/img_card_3_wind.png") no-repeat;
+    background-size: 100%;
+}
+.gis_humidity .loc_box{
+    background: url("../../../../static/image/dark/page/weatherStatus/img/img_card_4_humidity.png") no-repeat;
+    background-size: 100%;
+}
+.loc_box .loc_name{
+    width: 100%;
+    height: 2.32vh;
+    max-height: 24px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #ffffff;
+    line-height: 2.2vh;
+    margin-top: 1.95vh;    
+}
+.loc_box .rain_num{
+    width: 100%;
+    height: 1.25vh;
+    max-height: 13px;
+    font-family: "NotoSansCJKR";
+    font-size: 0.67vw;
+    color: #ffffff;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    padding-left: 2.53vw;
+    margin-top: 1vh;
+    margin-bottom: -0.1vh;
+    line-height: 1.2vh;
+    position: relative;
+}
+.loc_box .rain_num span{
+    font-family: "NotoSansCJKR";
+    font-size: 0.57vw;
+    letter-spacing: -0.01vw;
+    color: #b1adc0;
+    margin-left: 0.26vw;
+}
+.loc_box .rain_num.time_title::before{
+    content:"시계";
+    display: block;
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.01vw;
+    color: #b1adc0;
+    font-size: 0.57vw;
+    position: absolute;
+    top: 0;
+    left: 1.18vw;
+}
+.loc_box .rain_num.day_title::before{
+    content:"일계";
+    display: block;
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.01vw;
+    color: #b1adc0;
+    font-size: 0.57vw;
+    position: absolute;
+    top: 0;
+    left: 1.18vw;
+}
+.loc_box .temp_num{
+    width: 100%;
+    height: 2.42vh;
+    max-height: 25px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.88vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    line-height: 2.5vh;
+    color: #ffffff;
+    margin-top: 0.2vh;
+}
+.loc_box .temp_num span{
+    font-family: "NotoSansCJKR";
+    font-size: 0.57vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    color: #b1adc0;
+    margin-left: 0.11vw;
+}
+.loc_box .pressure_num{
+    width: 100%;
+    height: 1.25vh;
+    max-height: 13px;
+    font-family: "NotoSansCJKR";
+    font-size: 0.67vw;
+    color: #ffffff;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    padding-left: 2.53vw;
+    margin-top: 0.5vh;
+    line-height: 1.2vh;
+    position: relative;
+}
+.loc_box .pressure_num::before{
+    content:"기압";
+    display: block;
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.01vw;
+    color: #b1adc0;
+    font-size: 0.57vw;
+    position: absolute;
+    top: 0;
+    left: 1.18vw;
+}
+.loc_box .wind_num{
+    width: 100%;
+    height: 1.25vh;
+    max-height: 13px;
+    font-family: "NotoSansCJKR";
+    font-size: 0.67vw;
+    color: #ffffff;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    padding-left: 2.53vw;
+    margin-top: 0.6vh;
+    line-height: 1.2vh;
+    position: relative;
+}
+.loc_box .wind_num span{
+    font-family: "NotoSansCJKR";
+    font-size: 0.57vw;
+    letter-spacing: -0.01vw;
+    color: #b1adc0;
+    margin-left: 0.26vw;
+}
+.loc_box .wind_num.direct_title{
+    height: 2.51vh;
+    max-height: 26px;
+    line-height: 1.3vh;
+}
+.loc_box .wind_num.direct_title::before{
+    content:"풍향";
+    display: block;
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.01vw;
+    color: #b1adc0;
+    font-size: 0.57vw;
+    position: absolute;
+    top: 0;
+    left: 1.18vw;
+}
+.loc_box .wind_num.speed_title::before{
+    content:"풍속";
+    display: block;
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.01vw;
+    color: #b1adc0;
+    font-size: 0.57vw;
+    position: absolute;
+    top: 0;
+    left: 1.18vw;
+}
+.loc_box .gauge_chart{
+    width: 2.8125vw;
+    height: 0.3vh;
+    max-height: 3px;
+    margin: 1.33vh 0 0 1.45vw;
+    border-radius: 0.078125vw;
+    background-color: rgba(255,255,255,0.2);
+    position: relative;
+}
+.loc_box .gauge_chart .gauge_bar{
+    width: 47%;
+    height: 100%;
+    background-color: #9d85ff;
+    border-radius: 0.078125vw;
+}
+.loc_box .percent_num{
+    width: 100%;
+    height: 2.81vh;
+    max-height: 29px;
+    font-family: "NotoSansCJKM";
+    font-size: 1.04vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 0.31vh;
+    line-height: 2.6vh;
+}
+
+/*loc_box 위치*/
+.loc_1{
+    top: 6.49%;
+    left: 36.8%;
+}
+.loc_2{
+    top: 17.92%;
+    left: 25.29%;
+}
+.loc_3{
+    top: 25.19%;
+    left: 63.19%;
+}
+.loc_4{
+    top: 34.01%;
+    left: 16.43%;
+}
+.loc_5{
+    top: 37.59%;
+    left: 31.87%;
+}
+.loc_6{
+    top: 47.77%;
+    left: 66.39%;
+}
+.loc_7{
+    top: 52.42%;
+    left: 47.21%;
+}
+.loc_8{
+    top: 60.46%;
+    left: 28.12%;
+}
+.loc_9{
+    top: 69.08%;
+    left: 55.06%;
+}
+.loc_10{
+    top: 71.8%;
+    left: 70.95%;
+}
+
+
+/*1280x688 pc size 부분 커스텀*/
+@media only screen and (min-height: 517px) and (max-height: 688px) {
+    .loc_box .rain_num{
+        padding-left: 2.4vw;
+    }
+    .loc_box .rain_num.time_title::before,
+    .loc_box .rain_num.day_title::before,
+    .loc_box .pressure_num::before{
+        left: 0.7vw;
+    }
+    .loc_box .temp_num {
+        margin-top: 0.5vh;
+    }
+    .loc_box .wind_num.direct_title::before,
+    .loc_box .wind_num.speed_title::before{
+        left: 0.9vw;
+    }
+    .loc_box .wind_num.direct_title {
+        height: 2.8vh;
+        line-height: 1.5vh;
+    }
+    .loc_box .percent_num{
+        margin-top: 0.7vh;
+    }
+}
+
+/**lightmode style**/
+.lightmode .gis_area{
+    background: url("../../../../static/image/light/page/weatherStatus/img/img_bg_map.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_rain .loc_box{
+    background: url("../../../../static/image/light/page/weatherStatus/img/img_card_1_rainfall.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_temp .loc_box{
+    background: url("../../../../static/image/light/page/weatherStatus/img/img_card_2_temperature.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_wind .loc_box{
+    background: url("../../../../static/image/light/page/weatherStatus/img/img_card_3_wind.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_humidity .loc_box{
+    background: url("../../../../static/image/light/page/weatherStatus/img/img_card_4_humidity.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .loc_box .rain_num span{
+    color: #d9d5e6;
+}
+.lightmode .loc_box .rain_num.time_title::before{
+    color: #d9d5e6;
+}
+.lightmode .loc_box .rain_num.day_title::before{
+    color: #d9d5e6;
+}
+.lightmode .loc_box .temp_num span{
+    color: #d9d5e5;
+}
+.lightmode .loc_box .pressure_num::before{
+    color: #d9d5e5;
+}
+.lightmode .loc_box .wind_num.direct_title::before{
+    color: #d9d5e5;
+}
+.lightmode .loc_box .wind_num.speed_title::before{
+    color: #d9d5e5;
+}
+.lightmode .loc_box .gauge_chart .gauge_bar{
+    background-color: #ffffff;
+}
+
+/*960x516 pc size 부분 커스텀*/
+@media only screen and (min-height: 10px) and (max-height: 516px) {
+    .gis_area{
+        width: 81.875vw;
+        height: 100vh;
+        max-height: 516px;
+        background: url("../../../../static/image/dark/page/weatherStatus/img/img_bg_map_960.png") no-repeat;
+        background-size: 100%;
+    }
+    .loc_box{
+        width: 9.584vw;
+        height: 19.4vh;
+        max-height: 100px;
+        position: absolute;
+    }
+    .loc_box .loc_name{
+        height: 3.87vh;
+        max-height: 20px;
+        font-size: 1.40625vw;
+        letter-spacing: -0.03vw;      
+        line-height: 3.7vh;
+        margin-top: 3.21vh;    
+    }
+    .loc_box .rain_num{
+        height: 3.1vh;
+        max-height: 16px;
+        font-size: 1.14vw;
+        letter-spacing: -0.02vw;
+        padding-left: 4.5vw;
+        margin-top: 1.49vh;
+        margin-bottom: -1vh;
+        line-height: 3vh;
+    }
+    .loc_box .rain_num span{      
+        font-size: 1.04vw;
+        letter-spacing: -0.02vw;
+        margin-left: 0.2vw;
+    }
+    .loc_box .rain_num.time_title::before{
+        letter-spacing: -0.02vw;
+        font-size: 1.04vw;
+        left: 1.97vw;
+    }
+    .loc_box .rain_num.day_title::before{
+        letter-spacing: -0.02vw;
+        font-size: 1.04vw;
+        left: 1.97vw;
+    }
+    .loc_box .temp_num{
+        width: 100%;
+        height: 3vh;     
+        font-size: 1.7vw;      
+        line-height: 2.5vh;
+        margin-top: 1.3vh;
+    }
+    .loc_box .temp_num span{
+        font-size: 1.1vw;
+    }
+    .loc_box .pressure_num{
+        height: 3.1vh;
+        max-height: 16px;
+        font-size: 1.14vw;
+        letter-spacing: -0.02vw;
+        padding-left: 4.5vw;
+        line-height: 3vh;
+    }
+    .loc_box .pressure_num::before{
+        letter-spacing: -0.02vw;
+        font-size: 1.04vw;
+        left: 1.97vw;
+    }
+    .loc_box .wind_num{
+        height: 3.1vh;
+        max-height: 16px;
+        font-size: 1.14vw;
+        letter-spacing: -0.02vw;
+        padding-left: 4.5vw;
+        margin-top: 1vh;
+        margin-bottom: -0.5vh;
+        line-height: 3vh;
+    }
+    .loc_box .wind_num span{
+        font-size: 1.04vw;
+        letter-spacing: -0.02vw;
+        margin-left: 0.2vw;
+    }
+    .loc_box .wind_num.direct_title{
+        height: 4vh;
+        line-height: 2.2vh;
+    }
+    .loc_box .wind_num.direct_title::before{
+        letter-spacing: -0.02vw;
+        font-size: 1.04vw;
+        left: 1.97vw;
+    }
+    .loc_box .wind_num.speed_title::before{
+        letter-spacing: -0.02vw;
+        font-size: 1.04vw;
+        left: 1.97vw;
+    }
+    .loc_box .gauge_chart{
+        width: 2.8125vw;
+        height: 0.3vh;
+        max-height: 3px;
+        margin: 1.33vh 0 0 1.45vw;
+        border-radius: 0.078125vw;
+        position: relative;
+    }
+    .loc_box .gauge_chart .gauge_bar{
+        width: 47%;
+        height: 100%;
+        border-radius: 0.078125vw;
+    }
+    .loc_box .percent_num{
+        width: 100%;
+        height: 2.81vh;
+        max-height: 29px;
+        font-family: "NotoSansCJKM";
+        font-size: 1.04vw;
+        letter-spacing: -0.02vw;
+        text-align: center;
+        margin-top: 0.31vh;
+        line-height: 2.6vh;
+    }
+    .loc_box .gauge_chart{
+        width: 5.9vw;
+        height: 0.6vh;
+        max-height: 3px;
+        margin: 1.8vh 0 0 1.8vw;
+    }
+    .loc_box .percent_num{
+        font-size: 1.5vw;
+        margin-top: 2vh;
+    }
+
+    /*loc_box 위치*/
+    .loc_1{
+        top: 4.5%;
+        left: 34%;
+    }
+    .loc_2{
+        top: 14.5%;
+        left: 20.6%;
+    }
+    .loc_3{
+        top: 19%;
+        left: 54%;
+    }
+    .loc_4{
+        top: 37.5%;
+        left: 16.43%;
+    }
+    .loc_5{
+        top: 33.2%;
+        left: 32.87%;
+    }
+    .loc_6{
+        top: 45%;
+        left: 57.8%;
+    }
+    .loc_7{
+        top: 52.42%;
+        left: 39.21%;
+    }
+    .loc_8{
+        top: 62.46%;
+        left: 24.12%;
+    }
+    .loc_9{
+        top: 76.08%;
+        left: 45.06%;
+    }
+    .loc_10{
+        top: 71.8%;
+        left: 64%;
+    }
+
+    /**lightmode style**/
+    .lightmode .gis_area{
+        background: url("../../../../static/image/light/page/weatherStatus/img/img_bg_map_960.png") no-repeat;
+        background-size: 100%;
+    }
+}
+

@@ -1,0 +1,575 @@
+/*monitoring style*/
+.monitor_wrap {
+    width: 23.959vw;
+    height: 100vh;
+    max-height: 1032px;
+    box-shadow: 0.1vw 0 0.625vw 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: right 0.8s ease;
+    z-index: 5000;
+}
+.monitor_wrap .btn_tab {
+    width: 1.66vw;
+    height: 6.39vh;    
+    background: url("../../../../static/image/dark/page/gis/common/btn_slider_right_close_normal.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 46.6vh;
+    left: -1.19vw;
+}
+.monitor_wrap .btn_tab:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_slider_right_close_hover.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .open_tab {
+    background: url("../../../../static/image/dark/page/gis/common/btn_slider_right_open_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .open_tab:hover {
+    background: url("../../../../static/image/dark/page/gis/common/btn_slider_right_open_hover.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .monitor_area {
+    width: 23.959vw;
+    height: 100%;    
+    background-image: linear-gradient(to bottom, #1d1e21, #1d1e21);
+    padding-left: 1.5625vw;
+    position: absolute;
+    right: 0;
+}
+.monitor_wrap .gis_func_frame{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 1.06%;
+    right: 24.79vw;
+}
+.monitor_wrap .gis_func_frame .view_box{
+    width: 7.6vw;
+    height: 3.48vh;
+    max-height: 36px;
+    padding: 0.21vh 0.108vw 0 0.108vw;
+    border-radius: 0.36vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 0;
+    right: 9.47vw;
+}
+.monitor_wrap .gis_func_frame .view_box .btn_view{
+    height: 2.9vh;
+    max-height: 30px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.03125vw;
+    border-radius: 0.26vw;
+    text-align: center;
+    color: #7e8189;
+}
+.monitor_wrap .gis_func_frame .view_box .btn_view:hover{
+    color: #7e4cff;
+}
+.monitor_wrap .gis_func_frame .view_box .btn_view.active{
+    background-color: #7e4cff;
+    color: #ffffff;
+}
+.monitor_wrap .gis_func_frame .view_box .btn_view.map_view{
+    width: 3.125vw;
+    float: left;
+}
+.monitor_wrap .gis_func_frame .view_box .btn_view.sky_view{
+    width: 4.01vw;
+    float: right;
+}
+.monitor_wrap .gis_func_frame .zoom_box{
+    width: 3.55vw;
+    height: 3.48vh;
+    max-height: 36px;
+    padding: 0.21vh 0.108vw 0 0.108vw;
+    border-radius: 0.36vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 0;
+    right: 5.52vw;
+}
+.monitor_wrap .gis_func_frame .zoom_box .btn_plus{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_plus_normal.png") no-repeat;
+    background-size: 100%;
+    float: left;
+}
+.monitor_wrap .gis_func_frame .zoom_box .btn_plus:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_plus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .gis_func_frame .zoom_box .btn_minus{
+    width: 1.5625vw;
+    height: 2.9vh;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_minus_normal.png") no-repeat;
+    background-size: 100%;
+    float: right;
+}
+.monitor_wrap .gis_func_frame .zoom_box .btn_minus:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_minus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .gis_func_frame .func_box{
+    width: 5.1vw;
+    height: 3.48vh;
+    max-height: 36px;
+    padding: 0.21vh 0.108vw 0 0.108vw;
+    border-radius: 0.36vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.monitor_wrap .gis_func_frame .func_box .btn_area{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_area_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .gis_func_frame .func_box .btn_area:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_area_hover.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .gis_func_frame .func_box .btn_length{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_length_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .gis_func_frame .func_box .btn_length:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_length_hover.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .gis_func_frame .func_box .btn_radius{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_radius_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .gis_func_frame .func_box .btn_radius:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_radius_hover.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .monitor_header{
+    width: 100%;
+    height: 13.17vh;
+    max-height: 136px;
+    padding-top: 4.65vh;
+}
+.monitor_wrap .monitor_header .monitor_title{
+    width: auto;
+    height: 2.71vh;
+    font-family: "NotoSansCJKB";
+    font-size: 0.98vw;
+    letter-spacing: -0.049vw;
+    text-align: left;
+    color: #dddeed;
+    float: left;
+    position: relative;
+}
+.monitor_wrap .monitor_header .monitor_title::after{
+    content:"CCTV";
+    display: block;
+    font-family: "NotoSansR";
+    font-size: 1.2vw;
+    letter-spacing: -0.02vw;
+    color: #8878ff;
+    position: absolute;
+    top: -0.1vh;
+    left: 2.03125vw;
+}
+.monitor_area .monitor_header .monitor_loc{
+    width: auto;
+    height: 1.45vh;
+    font-family: "NotoSansCJKM";
+    font-size: 0.72vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    color: #dddeed;
+    padding-left: 0.88vw;
+    position: absolute;
+    top: 9.49vh;
+    left: 1.5625vw;
+}
+.monitor_area .monitor_header .monitor_loc::before{
+    content:"";
+    display: block;
+    width: 0.625vw;
+    height: 1.5vh;
+    background: url("../../../../static/image/dark/page/gis/main/icon/icon_location.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.monitor_wrap .small_monitor_area {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.monitor_wrap .small_monitor_area .cctv_box {
+    width: 10vw;
+    height: 13.18vh;
+    max-height: 136px;
+    margin: 0 0.625vw 1.16vh 0;
+    float: left;
+    cursor: pointer;
+    position: relative;
+}
+.monitor_wrap .small_monitor_area .cctv_box.active::after,
+.monitor_wrap .small_monitor_area .cctv_box.active:hover::after{
+    content:"";
+    display: block;
+    width: 10vw;
+    height: 10.46vh;
+    max-height: 108px;
+    position: absolute;
+    top: 2.63vh;
+    left: 0;
+    background-color: rgba(107, 0, 253,0.2);
+}
+.monitor_wrap .small_monitor_area .cctv_header {
+    width: 100%;
+    height: 2.71vh;
+    max-height: 28px;
+    background-color: #535875;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    color: #ffffff;
+    padding: 0.75vh 2.7vw 0 1.71875vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.monitor_wrap .small_monitor_area .cctv_box:hover .cctv_header{
+    background-color: #595799;
+}
+.monitor_wrap .small_monitor_area .cctv_box.active .cctv_header{
+    background-image: linear-gradient(to right,#5a47ba,#4a339e);
+}
+.monitor_wrap .small_monitor_area .cctv_header::before {
+    content: "";
+    display: block;
+    width: 0.72vw;
+    height: 1.25vh;
+    max-height: 13px;    
+    background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_header.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.77vh;
+    left: 0.67vw;
+}
+.monitor_wrap .small_monitor_area .cctv_header::after {
+    content: "";
+    display: block;
+    width: 2.08vw;
+    height: 2.71vh;     
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.monitor_wrap .small_monitor_area .cctv_header.cctv_1::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_1_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .small_monitor_area .cctv_header.cctv_2::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_2_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .small_monitor_area .cctv_header.cctv_3::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_3_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .small_monitor_area .cctv_header.cctv_4::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_4_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .small_monitor_area .cctv_header.cctv_5::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_5_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .small_monitor_area .cctv_header.cctv_6::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_6_normal.png") no-repeat;
+    background-size: 100%;
+}
+/* .monitor_wrap .small_monitor_area .cctv_header.cctv_7::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_7_normal.png") no-repeat;
+    background-size: 100%;
+} */
+/* .monitor_wrap .small_monitor_area .cctv_header.cctv_8::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_8_normal.png") no-repeat;
+    background-size: 100%;
+} */
+.monitor_wrap .small_monitor_area .cctv_box:hover .cctv_header.cctv_1::after,
+.monitor_wrap .small_monitor_area .cctv_box.active .cctv_header.cctv_1::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_1_active.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .small_monitor_area .cctv_box:hover .cctv_header.cctv_2::after,
+.monitor_wrap .small_monitor_area .cctv_box.active .cctv_header.cctv_2::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_2_active.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .small_monitor_area .cctv_box:hover .cctv_header.cctv_3::after,
+.monitor_wrap .small_monitor_area .cctv_box.active .cctv_header.cctv_3::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_3_active.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .small_monitor_area .cctv_box:hover .cctv_header.cctv_4::after,
+.monitor_wrap .small_monitor_area .cctv_box.active .cctv_header.cctv_4::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_4_active.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .small_monitor_area .cctv_box:hover .cctv_header.cctv_5::after,
+.monitor_wrap .small_monitor_area .cctv_box.active .cctv_header.cctv_5::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_5_active.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .small_monitor_area .cctv_box:hover .cctv_header.cctv_6::after,
+.monitor_wrap .small_monitor_area .cctv_box.active .cctv_header.cctv_6::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_6_active.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .small_monitor_area .cctv_view {
+    width: 100%;
+    height: 10.46vh;
+    max-height: 108px;
+    background: url("../../../../static/image/dark/page/gis/main/img/sample.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 2.63vh;
+    left: 0;
+}
+.monitor_wrap .big_monitor_area {
+    width: 20.625vw;
+    height: auto;
+    margin-top: 1.67vh;
+}
+.monitor_wrap .big_monitor_area .enlarge_txt{
+    width: 100%;
+    height: 1.84vh;
+    font-family: "NotoSansCJKR";
+    font-size: 0.67vw;
+    text-align: left;
+    color: #c1bec4;
+    padding: 0.15vh 0 0  0.9vw;
+    margin-bottom: 0.67vh;
+    position: relative;
+}
+.monitor_wrap .big_monitor_area .enlarge_txt::before{
+    content:"";
+    display: block;
+    width: 0.78125vw;
+    height: 1.5vh;
+    background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_view.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.monitor_wrap .big_monitor_area .cctv_box {
+    width: 20.625vw;
+    height: 25.09vh;
+    max-height: 259px;
+    position: relative;
+}
+.monitor_wrap .big_monitor_area .cctv_header {
+    width: 100%;
+    height: 3.48vh;
+    max-height: 36px;
+    background-image: linear-gradient(to right,#5a47ba,#4a339e);
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    color: #ffffff;
+    padding:1.2vh 2.7vw 0 1.71875vw;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.monitor_wrap .big_monitor_area .cctv_header::before {
+    content: "";
+    display: block;
+    width: 0.72vw;
+    height: 1.25vh;
+    max-height: 13px;    
+    background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_header.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.2vh;
+    left: 0.67vw;
+}
+.monitor_wrap .big_monitor_area .cctv_header::after {
+    content: "";
+    display: block;
+    width: 2.08vw;
+    height: 2.71vh;     
+    position: absolute;
+    top: 0.38vh;
+    right: 0.3125vw;
+}
+.monitor_wrap .big_monitor_area .cctv_view {
+    width: 20.625vw;
+    height: 21.6vh;
+    max-height: 223px;
+    background: url("../../../../static/image/dark/page/gis/main/img/sample.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 3.4vh;
+    left: 0;
+}
+.monitor_wrap .big_monitor_area .cctv_header.cctv_1::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_1_active.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .big_monitor_area .cctv_header.cctv_2::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_2_active.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .big_monitor_area .cctv_header.cctv_3::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_3_active.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .big_monitor_area .cctv_header.cctv_4::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_4_active.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .big_monitor_area .cctv_header.cctv_5::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_5_active.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_wrap .big_monitor_area .cctv_header.cctv_6::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_6_active.png") no-repeat;
+    background-size: 100%;
+}
+
+
+/**lightmode style**/
+.lightmode .monitor_wrap {
+    box-shadow: 0.1vw 0 0.625vw 0 rgba(0, 0, 0, 0.16);
+}
+.lightmode .monitor_wrap .btn_tab {
+    background: url("../../../../static/image/light/page/gis/common/btn_slider_right_close_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .btn_tab:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_slider_right_close_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .open_tab {
+    background: url("../../../../static/image/light/page/gis/common/btn_slider_right_open_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .open_tab:hover {
+    background: url("../../../../static/image/light/page/gis/common/btn_slider_right_open_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .monitor_area {
+    background-image: none;
+    background-color: #f6f9fd;
+}
+.lightmode .monitor_wrap .gis_func_frame .view_box{
+    border: solid 0.05vw #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .monitor_wrap .gis_func_frame .view_box .btn_view{
+    color: #716d8f;
+}
+.lightmode .monitor_wrap .gis_func_frame .view_box .btn_view:hover{
+    color: #7e4cff;
+    background-color: rgba(126, 76, 255,0.08);
+}
+.lightmode .monitor_wrap .gis_func_frame .view_box .btn_view.active{
+    background-color: #7e4cff;
+    color: #ffffff;
+}
+.lightmode .monitor_wrap .gis_func_frame .zoom_box{
+    border: solid 0.05vw #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .monitor_wrap .gis_func_frame .zoom_box .btn_plus{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_plus_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .gis_func_frame .zoom_box .btn_plus:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_plus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .gis_func_frame .zoom_box .btn_minus{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_minus_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .gis_func_frame .zoom_box .btn_minus:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_minus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .gis_func_frame .func_box{
+    border: solid 0.05vw #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .monitor_wrap .gis_func_frame .func_box .btn_area{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_area_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .gis_func_frame .func_box .btn_area:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_area_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .gis_func_frame .func_box .btn_length{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_length_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .gis_func_frame .func_box .btn_length:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_length_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .gis_func_frame .func_box .btn_radius{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_radius_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .gis_func_frame .func_box .btn_radius:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_radius_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .monitor_wrap .monitor_header .monitor_title{
+    color: #484752;
+}
+.lightmode .monitor_wrap .monitor_header .monitor_title::after{
+    color: #7e4cff;
+}
+.lightmode .monitor_area .monitor_header .monitor_loc{
+    color: #4e4875;
+}
+.lightmode .monitor_wrap .big_monitor_area .enlarge_txt{
+    color: #4e4875;
+}
+.lightmode .monitor_wrap .big_monitor_area .enlarge_txt::before{
+    background: url("../../../../static/image/light/page/gis/main/icon/icon_cctv_view.png") no-repeat;
+    background-size: 100%;
+}

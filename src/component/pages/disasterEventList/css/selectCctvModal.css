@@ -1,0 +1,318 @@
+/*selectCctvModal style*/
+.cctv_modal .modal-content {
+    width: 86.45vw;
+    height: 80.03vh;
+    max-height: 826px;
+    border-radius: 0.78125vw;
+    margin: 12.3vh 0 0 6.77vw;
+    border: none;
+    position: relative;
+    box-shadow: 0 0.3125vw 0.625vw 0 rgba(0, 0, 0, 0.12);
+    border-radius: 0.41vw;
+}
+.cctv_modal .modal-body {
+    width: 100%;
+    height: 76.55vh;
+    max-height: 790px;
+    position: relative;
+    padding: 0;
+}
+.cctv_modal .modal-header{
+    padding-left: 52.78vw;
+}
+.cctv_modal .content_area{
+    width: 35.2vw;
+    height: 100%;
+    padding: 4.45vh 0 0 42px;
+    float: right;
+}
+.cctv_modal .content_header{
+    width: 100%;
+    height: 2.71vh;
+    max-height: 28px;
+    position: relative;
+    padding-left: 1.4vw;
+    margin-bottom: 3.29vh;
+} 
+.cctv_modal .content_header::before{
+    content:"";
+    display: block;
+    width: 1.04vw;
+    height: 1.93vh;
+    max-height: 20px;
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_pop_title_event.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.48vh;
+    left: 0;
+}
+.cctv_modal .content_header .header_txt{
+    width: auto;
+    height: 100%;
+    max-width: 23.4375vw;
+    font-family: "NotoSansCJKB";
+    font-size: 1.14vw;
+    letter-spacing: -0.02vw;
+    text-align: left;
+    color: #f2f3f5;
+    line-height: 2.5vh;
+    float: left;
+    margin-right: 0.39vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.cctv_modal .content_header .type_name{
+    width: auto;
+    height: 2.71vh;
+    max-height: 28px;
+    border-radius: 0.3125vw;
+    border: solid 0.1 #b0335f;
+    padding: 0 0.57vw;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #e34285;
+    line-height: 2.3vh;
+    float: left;
+}
+.cctv_modal .content_row{
+    width: 100%;
+    height: 1.45vh;
+    max-height: 15px;
+    margin-bottom: 1.25vh;
+}
+.cctv_modal .content_row .content_name{
+    width: 5.57vw;
+    height: 100%;
+    font-family: "NotoSansCJKR";
+    font-size: 0.78125vw;
+    letter-spacing: -0.019vw;
+    text-align: left;
+    color: #a8abbd;
+    padding-left: 0.57vw;    
+    position: relative;
+    float: left;
+}
+.cctv_modal .content_row .content_name::before{
+    content:"";
+    display: block;
+    width: 0.26vw;
+    height: 0.48vh;
+    max-height: 5px;
+    background-color: #8554ff;
+    position: absolute;
+    top: 0.48vh;
+    left: 0;
+}
+.cctv_modal .content_row .content_txt{
+    width: 25.2vw;
+    height: 100%;
+    font-family: "NotoSansCJKM";
+    font-size: 0.78125vw;
+    letter-spacing: -0.019vw;
+    text-align: left;
+    color: #e6e7f5;
+    float: left;
+}
+.cctv_modal .cctv_header{
+    width: 100%;
+    height: 4.32vh;
+    max-height: 46px;
+    position: relative;
+    padding-left: 1.4vw;
+    margin-top: 4.16vh;
+    margin-bottom: 1.25vh;
+} 
+.cctv_modal .cctv_header::before{
+    content:"";
+    display: block;
+    width: 0.72vw;
+    height: 1.25vh;
+    max-height: 13px;
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_cctv_header.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.67vh;
+    left: 0.36vw;
+}
+.cctv_modal .cctv_header .header_txt{
+    width: 100%;
+    height: 2.32vh;
+    max-height: 24px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: left;
+    color: #ffffff;
+    line-height: 2.5vh;
+    float: left;
+    margin-right: 4.5vw;
+}
+.cctv_modal .cctv_header .hint_txt{
+    width: 100%;
+    height: 2.32vh;
+    max-height: 24px;
+    font-family: "NotoSansCJKR";
+    font-size: 0.625vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    color: #a8abbd;
+    line-height: 2.4vh;
+    float: left;
+}
+.cctv_modal .monitor_area {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.cctv_modal .monitor_area .cctv_box {
+    width: 15vw;
+    height: 18.41vh;
+    max-height: 190px;
+    margin: 0 0.83vw 1.55vh 0;
+    float: left;
+    cursor: pointer;
+    position: relative;
+}
+.cctv_modal .monitor_area .cctv_header {
+    width: 100%;
+    height: 2.71vh;
+    max-height: 28px;
+    background-color: #535875;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    color: #ffffff;
+    padding: 0.75vh 2.65vw 0 2.44vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cctv_modal .monitor_area .cctv_box:hover .cctv_header{
+    background-color: #535875;
+}
+.cctv_modal .monitor_area .cctv_header::after {
+    content: "";
+    display: block;
+    width: 2.08vw;
+    height: 2.71vh;     
+    position: absolute;
+    top: 0;
+    left: 0.2vw;
+}
+.cctv_modal .monitor_area .cctv_header.cctv_1::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_1_normal.png") no-repeat;
+    background-size: 100%;
+}
+.cctv_modal .monitor_area .cctv_header.cctv_2::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_2_normal.png") no-repeat;
+    background-size: 100%;
+}
+.cctv_modal .monitor_area .cctv_header.cctv_3::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_3_normal.png") no-repeat;
+    background-size: 100%;
+}
+.cctv_modal .monitor_area .cctv_header.cctv_4::after{
+    background: url("../../../../static/image/dark/page/gis/main/img/img_numbering_cctv_4_normal.png") no-repeat;
+    background-size: 100%;
+}
+.cctv_modal .monitor_area .cctv_header::before{
+    display: none;
+}
+.cctv_modal .monitor_area .cctv_view {
+    width: 100%;
+    height: 15.69vh;
+    max-height: 162px;
+    background-size: 100%;
+    background-color: rgba(32, 32, 60,0.5);
+    position: absolute;
+    top: 2.6vh;
+    left: 0;
+}
+.cctv_modal .monitor_area .btn_cctv_close{
+    width: 0.67vw;
+    height: 1.25vh;
+    max-height: 13px;
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_pop_close_normal.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.7vh;
+    right: 0.72vw;
+    z-index: 1;
+}
+.cctv_modal .monitor_area .btn_cctv_close:hover{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_pop_close_hover.png") no-repeat;
+    background-size: 100%;
+}
+.cctv_modal .gis_area{
+    width: 51.25vw;
+    height: 80.03vh;
+    max-height: 826px;
+    border-top-left-radius: 0.41vw;
+    border-bottom-left-radius: 0.41vw;
+    background-color: rgb(255,255,255);
+    position: absolute;
+    top: -3.3vh;
+    left: 0;
+}
+.cctv_modal .gis_area .gis_icon_area{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cctv_modal .gis_area .gis_in{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cctv_modal .btn-default{
+    width: 6.25vw;
+    height: 3.87vh;
+    max-height: 40px;
+    font-size: 0.83vw;
+    border-radius: 1.04vw;
+}
+.cctv_modal .spread{
+    top: 91%;
+    right: 2.1875vw;
+}
+
+/**lightmode style**/
+.lightmode .cctv_modal .modal-header{
+    background-color: #7f4cff;
+}
+.lightmode .cctv_modal .content_header .header_txt{
+    color: #484752;
+}
+.lightmode .cctv_modal .content_header .type_name{
+    border: solid 0.1vw #db397d;
+    color: #db397d;
+}
+.lightmode .cctv_modal .content_row .content_name{
+    color: #828698;
+}
+.lightmode .cctv_modal .content_row .content_txt{
+    color: #484752;
+}
+.lightmode .cctv_modal .cctv_header::before{
+    background: url("../../../../static/image/light/page/disasterList/icon/icon_cctv_header.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .cctv_modal .cctv_header .header_txt{
+    color: #484752;
+}
+.lightmode .cctv_modal .cctv_header .hint_txt{
+    color: #a8abbd;
+}

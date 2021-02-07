@@ -1,0 +1,5 @@
+/*04smartLamp style*/
+.dash_info_wrap .smartlamp_wrap .dash_body .list_box {
+    height: 12.6vh;
+    max-height: 130px;
+}

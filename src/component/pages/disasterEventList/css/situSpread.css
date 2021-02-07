@@ -1,0 +1,1017 @@
+/*situSpread style*/
+.situ_spread_wrap{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.situ_left_area{
+    width: 16.04vw;
+    height: 67.82vh;
+    max-height: 700px;
+    float: left;
+}
+.situ_left_area .btn_spread_add{
+    width: 14.58vw;
+    height: 3.87vh;
+    max-height: 40px;
+    border-radius: 1.04vw;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 5.32vw;
+    box-shadow: 0 0.15625vw 0.46875vw 0 rgba(123, 26, 255, 0.27);
+    border: solid 0.05vw #9c5eff;
+    background-color: #7a45ff;
+    margin-bottom: 4.06vh;
+    position: relative;
+}
+.situ_left_area .btn_spread_add:hover{
+    border: solid 0.05vw #a56eff;
+    background-color: #7c5bf5;
+}
+.situ_left_area .btn_spread_add::before{
+    content:"";
+    display: block;
+    width: 0.52vw;
+    height: 1vh;
+    max-height: 10px;
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_btn_plus.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.45vh;
+    left: 4.53125vw;
+}
+.situ_left_area .spread_list_area{
+    width: 100%;
+    height: 59.88vh;
+    max-height: 618px;
+    position: relative;
+}
+.situ_left_area .spread_list_area::before{
+    content:"전파 내역";
+    display: block;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    color: #86879c;
+    position: absolute;
+    top: -1.8vh;
+    left: 0.58vw;
+}
+.situ_left_area .spread_list_area .spread_box{
+    width: 14.58vw;
+    height: 8.13vh;
+    max-height: 84px;
+    border-radius: 0.625vw;
+    border: solid 0.15vw transparent;
+    background-color: #2e3036;
+    margin-bottom: 0.48vh;
+    padding: 1.35vh 0 0 1.04vw;
+    cursor: pointer;
+}
+.situ_left_area .spread_list_area .spread_box:hover{
+    background-color: #3a3c4a;
+}
+.situ_left_area .spread_list_area .spread_box.active{
+    border: solid 0.15vw #7e4cff;
+    background-color: #2d2948;
+}
+.situ_left_area .spread_list_area .spread_box .spread_row{
+    width: 100%;
+    height: 1.74vh;
+    max-height: 18px;
+    margin-bottom: 0.09vh;
+}
+.situ_left_area .spread_list_area .spread_box .spread_row.wide_size{
+    height: 31.97vh;
+    max-height: 330px;
+}
+.situ_left_area .spread_list_area .spread_box .spread_row .spread_name{
+    width: 3.90625vw;
+    height: 100%;
+    padding-left: 0.41vw;
+    font-family: "NotoSansCJKR";
+    font-size: 0.625vw;
+    letter-spacing: -0.015625vw;
+    text-align: left;
+    line-height: 1.3vh;
+    color: #9c9db5;
+    float: left;
+    position: relative;
+}
+.situ_left_area .spread_list_area .spread_box .spread_row .spread_name::before{
+    content:"";
+    display: block;
+    width: 0.15625vw;
+    height: 0.29vh;
+    max-height: 3px;
+    background-color: #7e4cff;
+    position: absolute;
+    top: 0.6vh;
+    left: 0;
+}
+.situ_left_area .spread_list_area .spread_box .spread_row .spread_txt{
+    width: 8.4375vw;
+    height: 100%;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.015625vw;
+    text-align: left;
+    line-height: 1.3vh;
+    color: #e6e7f5;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+}
+.situ_content_area{
+    width: 48.54vw;
+    height: 67.82vh;
+    max-height: 700px;
+    border-radius: 0.625vw;
+    background-color: #292a33;
+    float: left;
+}
+.situ_spread_wrap .situ_content_area .situ_header{
+    width: 100%;
+    height: 4.16vh;
+    max-height: 43px;
+    border-bottom: 0.05vw solid #15161a;
+    padding-left: 1.51vw;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area{
+    width: 100%;
+    height: 100%;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab{
+    width: 5.1vw;
+    height: 100%;
+    margin-right: 0.26vw;
+    float: left;
+    padding-left: 2.265625vw;
+    border-bottom: 0.1vw solid transparent;
+    font-family: "NotoSansCJKM";
+    font-size: 0.72vw;
+    padding-top: 0.5vh;
+    letter-spacing: -0.03vw;
+    text-align: left;
+    color: #707182;
+    position: relative;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab:hover{
+    color: #a2a5cb;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab.active{
+    border-bottom: 0.1vw solid #7e4cff;
+    color: #ffffff;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_sms::before{
+    content:"";
+    display: block;
+    width: 0.88vw;
+    height: 1.64vh;
+    max-height: 17px;
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_tap_sms_normal.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.35vh;
+    left: 1.19vw;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_sms.active::before,
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_sms.active:hover::before{
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_tap_sms_selected.png") no-repeat;
+    background-size: 100%;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_sms:hover::before{
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_tap_sms_hover.png") no-repeat;
+    background-size: 100%;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_share::before{
+    content:"";
+    display: block;
+    width: 0.88vw;
+    height: 1.64vh;
+    max-height: 17px;
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_tap_share_normal.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.35vh;
+    left: 1.19vw;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_share.active::before,
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_share.active:hover::before{
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_tap_share_selected.png") no-repeat;
+    background-size: 100%;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_share:hover::before{
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_tap_share_hover.png") no-repeat;
+    background-size: 100%;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_broadcast::before{
+    content:"";
+    display: block;
+    width: 0.88vw;
+    height: 1.64vh;
+    max-height: 17px;
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_tap_broadcast_normal.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.35vh;
+    left: 1.19vw;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_broadcast.active::before,
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_broadcast.active:hover::before{
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_tap_broadcast_selected.png") no-repeat;
+    background-size: 100%;
+}
+.situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_broadcast:hover::before{
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_tap_broadcast_hover.png") no-repeat;
+    background-size: 100%;
+}
+.situ_spread_wrap .situ_content_area .situ_body{
+    width: 100%;
+    height: 63.75vh;
+    max-height: 658px;
+    border-top: 0.05vw solid #41424c;
+    padding: 3.77vh 1.41vw 0 1.5625vw;
+}
+.situ_spread_wrap .situ_content_area .situ_body .sms_wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.situ_spread_wrap .situ_content_area .situ_body .share_wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+.situ_spread_wrap .situ_content_area .situ_body .broadcast_wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+.situ_spread_wrap .situ_content_area .situ_body .tree_area{
+    width: 14.58vw;
+    height: 56.97vh;
+    max-height: 588px;
+    border-radius: 0.625vw;    
+    padding: 2.4vh 0 0 1.5625vw;    
+    border: solid 0.05vw #1e1e24;
+    background-color: #26262e;
+    float: left;
+    position: relative;
+}
+.situ_spread_wrap .situ_content_area .situ_body .tree_area.active{
+    border: solid 0.05vw #14141a;
+    background-color: #1d1d24;
+}
+.situ_spread_wrap .situ_content_area .situ_body .tree_area::before{
+    content:"전파 대상 선택";
+    display: block;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    color: #b9bbd4;
+    position: absolute;
+    top: -1.9vh;
+    left: 0.6875vw;
+}
+.situ_spread_wrap .situ_content_area .situ_body .share_wrap .tree_area::before{
+    content:"공유 대상 선택";
+}
+.situ_spread_wrap .situ_content_area .situ_body .tree_in{
+    width: 100%;
+    height: 100%;
+}
+.situ_spread_wrap .situ_content_area .situ_body .right_area{
+    width: 29.375vw;
+    height: auto;
+    float: right;
+}
+.situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame{
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+}
+.situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame.spread_object::before{
+    content:"전파 대상";
+    display: block;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    color: #b9bbd4;
+    position: absolute;
+    top: -1.9vh;
+    left: 0.6875vw;
+}
+.situ_spread_wrap .situ_content_area .situ_body .share_wrap .right_area .spread_sms_frame.spread_object::before{
+    content:"공유 대상";
+}
+.situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame .spread_object_box{
+    width: 29.375vw;
+    height: 7.36vh;
+    max-height: 76px;
+    border-radius: 0.41vw;   
+    border: solid 0.05vw #1e1e24;
+    background-color: #26262e;
+    padding: 1.5vh 0 0 1.13vw;
+    margin-bottom: 0.77vh;
+}
+.situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame .spread_object_box.active{
+    background-color: #1f1f26;
+}
+.situ_spread_wrap .situ_content_area .situ_body .share_wrap .right_area .spread_sms_frame .spread_object_box{
+    height: 11.04vh;
+    max-height: 114px;
+}
+.situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame .spread_object_box .object_name{
+    width: auto;
+    height: 1.84vh;
+    max-height: 19px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    color: #e6e7f5;
+    margin-right:0.41vw;
+    float: left;
+}
+.situ_content_area .situ_body .spread_row{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.77vh;
+    overflow: auto;
+    overflow-y: hidden;
+}
+.situ_content_area .situ_body .object_input{
+    width: 14.47vw;
+    height: 3.68vh;
+    max-height: 38px;
+    border-radius: 0.41vw;
+    border: solid 0.05vw #1e1e24;
+    background-color: #26262e;
+    font-family: "NotoSansCJKR";
+    font-size: 0.67vw;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    color: #dddeed;
+    padding: 0 1.13vw;   
+    float: left;
+}
+.situ_spread_wrap .situ_content_area .situ_body .object_input.name_input{
+    float: left;
+}
+.situ_spread_wrap .situ_content_area .situ_body .object_input.number_input{
+    float: right;
+}
+.situ_spread_wrap .situ_content_area .situ_body .object_input.active{
+    width: 11.5625vw;
+    background-color: #1d1d24;
+    margin-right: 0.41vw;
+}
+.situ_spread_wrap .situ_content_area .situ_body .object_input.name_input.active,
+.situ_spread_wrap .situ_content_area .situ_body .object_input.number_input.active{
+    float: left;
+}
+.situ_content_area .situ_body .object_input:focus{
+    border: solid 0.05vw #7a45ff;
+    background-color: #17181c;
+}
+.situ_content_area .situ_body .object_input::-webkit-input-placeholder { /* Edge */
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.017vw;
+    color: #707182;
+    font-size: 0.67vw;
+}  
+.situ_content_area .situ_body .object_input::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.017vw;
+    color: #707182;
+    font-size: 0.67vw;
+}  
+.situ_content_area .situ_body .object_input::placeholder {
+    font-family: "NotoSansCJKR";
+    letter-spacing: -0.017vw;
+    color: #707182;
+    font-size: 0.67vw;
+}
+.situ_content_area .situ_body .object_box{
+    width: 20vw;
+    height: 3.68vh;
+    max-height: 38px;
+    border-radius: 0.41vw;
+    border: solid 0.05vw #1e1e24;
+    background-color: #26262e;
+    font-family: "NotoSansCJKR";
+    font-size: 0.67vw;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    color: #dddeed;
+    padding: 0 1.13vw;   
+    line-height: 3.4vh;
+    float: left;
+}
+.situ_content_area .situ_body .object_box.active{
+    background-color: #1f1f26;
+}
+.situ_spread_wrap .situ_content_area .situ_body .object_input.large_size{
+    width: 26.25vw;
+    margin-right: 0;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_add{
+    width: 5.2vw;
+    height: 3.68vh;
+    max-height: 38px;
+    border-radius: 0.41vw;
+    background-color: #7a45ff;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #ffffff;
+    margin-left: 0.2vw;
+    float: left;
+    display: none;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_add:hover{
+    background-color: #7c5bf5;
+}
+.situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame.spread_content{
+    margin-top: 4.06vh;
+}
+.situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame.spread_content::before{
+    content:"전파 내용";
+    display: block;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    color: #b9bbd4;
+    position: absolute;
+    top: -1.9vh;
+    left: 0.6875vw;
+}
+.situ_spread_wrap .situ_content_area .situ_body .share_wrap .right_area .spread_sms_frame.spread_content::before{
+    content:"공유 내용";
+}
+.situ_content_area .situ_body .spread_row .object_title{
+    width: 3.125vw;
+    height: 3.68vh;
+    max-height: 38px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    line-height: 3.5vh;
+    color: #a0a6b8;
+    padding-left: 0.89vw;
+    position: relative;
+    float: left;
+}
+.situ_content_area .situ_body .spread_row .object_title::before{
+    content:"";
+    display: block;
+    width: 0.52vw;
+    height: 1.3vh;
+    max-height: 10px;
+    background: url("../../../../static/image/dark/page/disasterList/img/img_item_deco.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.35vh;
+    left: 0;
+}
+.situ_content_area .situ_body .object_text{
+    width: 26.25vw;
+    height: 29.45vh;
+    max-height: 304px;
+    border-radius: 0.41vw;
+    font-family: "NotoSansCJKR";
+    font-size: 0.67vw;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    color: #dddeed;
+    border: solid 0.05vw #1e1e24;
+    background-color: #26262e;
+    line-height: 1.8vh;
+    padding: 1vh 1.14vw 0 1.14vw;
+    float: left;
+    resize: none;
+}
+.situ_content_area .situ_body .object_text.active{
+    border: solid 0.05vw transparent;
+    background-color: #1f1f26;
+}
+.situ_content_area .situ_body .object_text:focus{
+    border: solid 0.05vw #7a45ff;
+    background-color: #17181c;
+}
+.situ_content_area .situ_body .share_wrap .object_text{
+    height: 22.09vh;
+    max-height: 228px;
+}
+.situ_content_area .situ_body .byte_txt{
+    width: auto;
+    height: 1.45vh;
+    max-height: 15px;
+    font-family: "NotoSansCJKR";
+    font-size: 0.52vw;
+    letter-spacing: -0.013vw;
+    text-align: left;
+    color: #707182;
+    float: right;
+    margin-top: 0.5vh;
+    margin-right: 21.94vw;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_spread,
+.situ_spread_wrap .situ_content_area .situ_body .btn_share{
+    width: 6.45vw;
+    height: 3.87vh;
+    max-height: 40px;
+    border-radius: 1.04vw;
+    box-shadow: 0 0.15625vw 0.46875vw 0 rgba(123, 26, 255, 0.27);
+    border: solid 0.05vw #9c5eff;
+    background-color: #7a45ff;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #ffffff;
+    float: right;
+    display: none;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_share{
+    margin-top: 3.68vh;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_spread:hover,
+.situ_spread_wrap .situ_content_area .situ_body .btn_share:hover{
+    border: solid 0.05vw #a56eff;
+    background-color: #7c5bf5;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_cctv{
+    width: 5.83vw;
+    height: 3.68vh;
+    max-height: 38px;
+    border-radius: 0.41vw;
+    background-color: #3f4152;
+    font-family: "NotoSansCJKM";
+    font-size: 0.78125vw;
+    letter-spacing: -0.019vw;
+    text-align: center;
+    color: #ffffff;
+    float: right;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_cctv:hover{
+    background-color: #4f5163;
+}
+.situ_spread_wrap .situ_content_area .situ_body .spread_type_frame{
+    width: 100%;
+    height: 3.68vh;
+    max-height: 38px;
+    margin-bottom: 2.32vh;
+}
+.situ_spread_wrap .situ_content_area .situ_body .spread_type_frame::before{
+    content:"전파 타입";
+    display: block;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    color: #b9bbd4;
+    position: absolute;
+    top: -1.9vh;
+    left: 0.6875vw;
+}
+.situ_spread_wrap .situ_content_area .situ_body .spread_type_frame .btn_spread_type{
+    width: 8.95vw;
+    height: 3.68vh;
+    max-height: 38px;
+    border-radius: 0.41vw;
+    border: solid 0.07vw #63647d;
+    background-color: #40424f;
+    font-family: "NotoSansCJKM";
+    font-size: 0.78125vw;
+    letter-spacing: -0.019vw;
+    text-align: center;
+    color: #e6e7f5;
+    float: left;
+    margin-right: 0.41vw;
+    cursor: default;
+}
+.situ_spread_wrap .situ_content_area .situ_body .spread_type_frame .btn_spread_type:hover{
+    background-color: #4e5063;
+}
+.situ_spread_wrap .situ_content_area .situ_body .spread_type_frame .btn_spread_type.active{
+    border: solid 0.07vw #7a45ff;
+    background-color: #2d2948;
+}
+.situ_spread_wrap .situ_content_area .situ_body .voice_wrap{
+    width:100%;
+    height: auto;
+}
+.situ_spread_wrap .situ_content_area .situ_body .letter_wrap{
+    width:100%;
+    height: auto;
+    display: none;
+}
+.situ_spread_wrap .situ_content_area .situ_body .broadcast_wrap .spread_row{
+    margin-bottom: 1.35vh;
+    height: 3.68vh;
+    max-height: 38px;    
+    overflow: visible;
+    position: relative;
+}
+.situ_spread_wrap .situ_content_area .situ_body .broadcast_wrap .spread_row .object_title{
+    width: 6.25vw;
+}
+.situ_spread_wrap .situ_content_area .situ_body .broadcast_wrap .spread_row .object_box.middle_size{
+    width: 39.16vw;
+    margin-right: 0;
+}
+.situ_spread_wrap .situ_content_area .situ_body .broadcast_wrap .spread_row .object_box.middle_size.active{
+    width: 32.7vw;
+    margin-right: 0;
+}
+.situ_spread_wrap .situ_content_area .situ_body .broadcast_wrap .spread_row .object_input.super_size{
+    width: 39.16vw;
+    margin-right: 0;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_select{
+    width: 5.83vw;
+    height: 3.68vh;
+    max-height: 38px;
+    border-radius: 0.41vw;
+    background-color: #7a45ff;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    margin-left: 0.625vw;
+    text-align: center;
+    color: #ffffff;
+    float: left;
+    display: none;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_select:hover{
+    background-color: #7c5bf5;
+}
+.situ_spread_wrap .situ_content_area .situ_body .effect_area{
+    width: 45.41vw;
+    height: 20.93vh;
+    max-height: 216px;
+    border-top: 0.05vw solid #40424f;
+    border-bottom: 0.05vw solid #40424f;
+    padding-top: 3.48vh;
+    margin-top: 4.94vh;
+    margin-bottom: 6.1vh;
+    position: relative;
+}
+.situ_spread_wrap .situ_content_area .situ_body .effect_area::before{
+    content:"방송 효과";
+    display: block;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.017vw;
+    text-align: left;
+    color: #b9bbd4;
+    position: absolute;
+    top: -2.4vh;
+    left: 0.6875vw;
+}
+.situ_spread_wrap .situ_content_area .situ_body .seperate_area{
+    width: 22vw;
+    height: auto;
+}
+.situ_spread_wrap .situ_content_area .situ_body .broadcast_wrap .seperate_area .spread_row .object_title{
+    width: 6.5vw;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_broadcast{
+    width: 6.45vw;
+    height: 3.87vh;
+    max-height: 40px;
+    border-radius: 1.04vw;
+    box-shadow: 0 0.15625vw 0.46875vw 0 rgba(123, 26, 255, 0.27);
+    border: solid 0.05vw #9c5eff;
+    background-color: #7a45ff;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #ffffff;
+    float: right;
+    margin-left: 0.52vw;
+    display: none;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_broadcast:hover{
+    border: solid 0.05vw #a56eff;
+    background-color: #7c5bf5;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_listen{
+    width: 6.45vw;
+    height: 3.87vh;
+    max-height: 40px;
+    border-radius: 1.04vw;
+    box-shadow: 0 0.15625vw 0.46875vw 0 rgba(123, 26, 255, 0.27);
+    border: solid 0.05vw #7983f2;
+    background-color: #5c5ce5;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #ffffff;
+    float: right;
+}
+.situ_spread_wrap .situ_content_area .situ_body .btn_listen:hover{
+    border: solid 0.05vw #8892fc;
+    background-color: #7171f5;
+}
+.situ_spread_wrap .situ_content_area .situ_body .speaker_icon{
+    width: 0.78125vw;
+    height: 1.4vh;
+    max-height: 13px;
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_speaker.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.2vh;
+    left: 7vw;
+}
+.situ_left_area .btn_report_add{
+    width: 14.58vw;
+    height: 3.87vh;
+    max-height: 40px;
+    border-radius: 1.04vw;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 3.65625vw;
+    box-shadow: 0 0.15625vw 0.46875vw 0 rgba(123, 26, 255, 0.27);
+    border: solid 0.05vw #9c5eff;
+    background-color: #7a45ff;
+    margin-bottom: 4.06vh;
+    position: relative;
+}
+.situ_left_area .btn_report_add:hover{
+    border: solid 0.05vw #a56eff;
+    background-color: #7c5bf5;
+}
+.situ_left_area .btn_report_add::before{
+    content:"";
+    display: block;
+    width: 0.52vw;
+    height: 1vh;
+    max-height: 10px;
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_btn_plus.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.45vh;
+    left: 2.96875vw;
+}
+
+/*scroll style*/
+.spread_list_area .mCSB_scrollTools .mCSB_draggerContainer {
+    top: -1vh;
+    left: -1vw;
+    z-index: 0;
+}
+.spread_list_area .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.tree_area .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.spread_object_box .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 0.26vw;
+    border-radius: 0.13vw;
+    background-color: #585766;
+    height: 98%;
+}
+.spread_list_area .mCSB_scrollTools .mCSB_draggerRail,
+.tree_area .mCSB_scrollTools .mCSB_draggerRail,
+.spread_object_box .mCSB_scrollTools .mCSB_draggerRail{
+    background-color: #00ff0000;
+    height: 100%;
+}
+.tree_area .mCSB_scrollTools .mCSB_draggerContainer,
+.spread_object_box .mCSB_scrollTools .mCSB_draggerContainer  {
+    top: -1vh;
+    left: -0.2vw;
+    z-index: 0;
+}
+
+/*scroll style*/
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.3vw;
+}
+::-webkit-scrollbar-track {
+    background-color:transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color:#585766;
+    border-radius: 0.13vw;
+}
+
+/*1280x688 pc size 부분 커스텀*/
+@media only screen and (min-height: 10px) and (max-height: 688px) {
+    .situ_spread_wrap .situ_content_area .situ_body .byte_txt{
+        margin-right:19.94vw;
+    }
+}
+
+/**lightmode style**/
+.lightmode .situ_left_area .spread_list_area::before{
+    color: #86879c;
+}
+.lightmode .situ_left_area .spread_list_area .spread_box{
+    border: solid 0.15vw #d7dbde;
+    background-color: #ffffff;
+}
+.lightmode .situ_left_area .spread_list_area .spread_box:hover{
+    border: solid 0.15vw #9f83fa;
+    background-color: #fbfaff;
+}
+.lightmode .situ_left_area .spread_list_area .spread_box.active{
+    border: solid 0.15vw #7e4cff;
+    background-image: linear-gradient(278deg, #e5e1fc, #f4f2ff 99.1%);
+}
+.lightmode .situ_left_area .spread_list_area .spread_box .spread_row .spread_name{
+    color: #6f717d;
+}
+.lightmode .situ_left_area .spread_list_area .spread_box .spread_row .spread_txt{
+    color: #484752;
+}
+.lightmode .situ_content_area{
+    border: solid 0.05vw #d7dbde;
+    background-color: #ffffff;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_header{
+    border-bottom: 0.05vw solid #d7dbde;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab{
+    color: #9596a1;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab:hover{
+    color: #7269b8;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab.active{
+    border-bottom: 0.1vw solid transparent;
+    color: #7643f7;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_sms::before{
+    background: url("../../../../static/image/light/page/disasterList/icon/icon_tap_sms_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_sms.active::before,
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_sms.active:hover::before{
+    background: url("../../../../static/image/light/page/disasterList/icon/icon_tap_sms_selected.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_sms:hover::before{
+    background: url("../../../../static/image/light/page/disasterList/icon/icon_tap_sms_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_share::before{
+    background: url("../../../../static/image/light/page/disasterList/icon/icon_tap_share_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_share.active::before,
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_share.active:hover::before{
+    background: url("../../../../static/image/light/page/disasterList/icon/icon_tap_share_selected.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_share:hover::before{
+    background: url("../../../../static/image/light/page/disasterList/icon/icon_tap_share_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_broadcast::before{
+    background: url("../../../../static/image/light/page/disasterList/icon/icon_tap_broadcast_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_broadcast.active::before,
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_broadcast.active:hover::before{
+    background: url("../../../../static/image/light/page/disasterList/icon/icon_tap_broadcast_selected.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .situ_spread_wrap .situ_content_area .btn_tab_area .btn_tab_broadcast:hover::before{
+    background: url("../../../../static/image/light/page/disasterList/icon/icon_tap_broadcast_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body{
+    border-top: 0.05vw solid transparent;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .tree_area{ 
+    border: solid 0.05vw #f5f7fc;
+    background-color: #f5f7fc;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .tree_area.active{
+    border: solid 0.05vw  #e4e6eb;
+    background-color: #f5f6fa;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .tree_area::before{
+    color: #6f717d;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame.spread_object::before{
+    color: #6f717d;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame .spread_object_box{
+    border: solid 0.05vw #f5f7fc;
+    background-color: #f5f7fc;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame .spread_object_box.active{
+    border: solid 0.05vw  #e4e6eb;
+    background-color: #f5f6fa;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame .spread_object_box .object_name{
+    color: #4e4875;
+}
+.lightmode .situ_content_area .situ_body .object_input{
+    border: solid 0.05vw #f5f7fc;
+    background-color: #f5f7fc;
+    color: #4e4875;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .object_input.active{
+    border: solid 0.05vw #e4e6eb;
+    background-color: #f5f6fa;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .object_input.active:focus{
+    border: solid 0.05vw #7e4cff;
+    background-color: #ffffff;
+}
+.lightmode .situ_content_area .situ_body .object_input:focus{
+    border: solid 0.05vw #7e4cff;
+    background-color: #ffffff;
+}
+.lightmode .situ_content_area .situ_body .object_input::-webkit-input-placeholder { /* Edge */
+    color: #9596a1;
+}  
+.lightmode .situ_content_area .situ_body .object_input::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #9596a1;
+}  
+.lightmode .situ_content_area .situ_body .object_input::placeholder {
+    color: #9596a1;
+}
+.lightmode .situ_content_area .situ_body .object_box{
+    border: solid 0.05vw #f5f7fc;
+    background-color: #f5f7fc;
+    color: #4e4875;
+}
+.lightmode .situ_content_area .situ_body .object_box.active{
+    border: solid 0.05vw #e4e6eb;
+    background-color: #f5f6fa;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .right_area .spread_sms_frame.spread_content::before{
+    color: #6f717d;
+}
+.lightmode .situ_content_area .situ_body .spread_row .object_title{
+    color: #828698;
+}
+.lightmode .situ_content_area .situ_body .object_text{
+    color: #4e4875;
+    border: solid 0.05vw #f5f7fc;
+    background-color: #f5f7fc;
+}
+.lightmode .situ_content_area .situ_body .object_text.active{
+    border: solid 0.05vw #e4e6eb;
+    background-color: #f5f6fa;
+}
+.lightmode .situ_content_area .situ_body .object_text:focus{
+    border: solid 0.05vw #7e4cff;
+    background-color: #ffffff;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .btn_cctv{
+    background-color: #6c708d;
+    color: #ffffff;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .btn_cctv:hover{
+    background-color: #878ba8;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .spread_type_frame::before{
+    color: #6f717d;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .spread_type_frame .btn_spread_type{
+    border: solid 0.07vw #7a45ff;
+    background-color: #e5e1fd;
+    color: #7643f7;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .effect_area{
+    border-top: 0.05vw solid #e4e8eb;
+    border-bottom: 0.05vw solid #e4e8eb;
+}
+.lightmode .situ_spread_wrap .situ_content_area .situ_body .effect_area::before{
+    color: #6f717d;
+}
+/*scroll style*/
+.lightmode .spread_list_area .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.lightmode .tree_area .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.lightmode .spread_object_box .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #a5a7b5;
+}
+
+/*scroll style*/
+.lightmode ::-webkit-scrollbar-thumb {
+    background-color:#585766;
+}

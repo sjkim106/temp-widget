@@ -1,0 +1,345 @@
+/*disasterList style*/
+.dashWrap{
+    background-color: #15161a;
+}
+.dash_list_wrap {
+    width: 23.959vw;
+    height: 100vh;
+    max-height: 1032px;
+    box-shadow: 0.2vw 0 0.625vw 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to bottom, #1d1e21, #1d1e21);
+    float: left;
+}
+.dash_list_wrap .dash_header{
+    width: 100%;
+    height: 8.91vh;
+    max-height: 92px;
+    padding: 2.8vh 0 0 1.92vw;
+    font-family: "NotoSansCJKB";
+    font-size: 1.14vw;
+    letter-spacing: -0.02vw;
+    text-align: left;
+    color: #dddeed;
+    position: relative;
+}
+.dash_list_wrap .dash_header::before{
+    content:"List of Disaster Occurrences";
+    display: block; 
+    font-size: 0.83vw;
+    letter-spacing: 0.02vw;
+    text-align: left;
+    color: #8878ff;
+    font-family: "NotoSansL";
+    position: absolute;
+    top: 5.6vh;
+    left: 2vw;
+}
+.dash_list_wrap .dash_header::after{
+    content:"";
+    display: block;
+    width: 20.83vw;
+    height: 0.09vh;
+    max-height: 1px;
+    background-color: #313238;
+    position: absolute;
+    bottom: 0;
+    left: 1.5625vw;
+}
+.dash_list_wrap .dash_body{
+    width: 100%;
+    height: 91.08vh;
+    max-height: 940px;
+    padding: 2.03vh 0 0 1.40625vw;
+    position: relative;
+}
+.dash_list_wrap .dash_body .timeline_bar{
+    width: 0.15625vw;
+    height: 88.37vh;
+    max-height: 912px;
+    box-shadow: 0 0.15625vw 0.78125vw 0 rgba(0, 0, 0, 0.15);
+    background-color: #2d2f35;
+    position: absolute;
+    top: 2.71vh;
+    left: 2.03125vw;
+}
+.dash_list_wrap .list_area{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+.dash_list_wrap .list_area .list_frame{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-left: 1.875vw;  
+    margin-bottom: 4.06vh;
+}
+.dash_list_wrap .list_area .evt_figure{
+    width: 100%;
+    height: 2.61vh;
+    max-height: 27px;
+    position: absolute;
+    top: -2.81vh;
+    left: 0;
+}
+.dash_list_wrap .list_area .evt_figure .normal_circle{
+    width: 1.40625vw;
+    height: 2.61vh;
+    max-height: 27px;
+    background: url("../../../../static/image/dark/page/disasterList/img/img_timeLine_dot_normal.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: -1.875vw;
+}
+.dash_list_wrap .list_area .evt_figure .evt_circle{
+    width: 1.40625vw;
+    height: 2.61vh;
+    max-height: 27px;
+    background: url("../../../../static/image/dark/page/disasterList/img/img_timeLine_dot_event.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: -1.875vw;
+}
+.dash_list_wrap .list_area .evt_figure .history_circle{
+    width: 1.40625vw;
+    height: 2.61vh;
+    max-height: 27px;
+    background: url("../../../../static/image/dark/page/disasterList/img/img_timeLine_dot_history.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: -1.875vw;
+}
+.dash_list_wrap .list_area .evt_figure .time_txt{
+    width: auto;
+    height: 2.61vh;
+    max-height: 27px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: 0.01vw;
+    text-align: left;
+    color: #e1e2f0;
+    line-height: 2.5vh;
+    position: absolute;
+    top: 0;
+    left: 1vw;
+}
+.dash_list_wrap .list_area .list_box{
+    width: 18.75vw;
+    height: 11.62vh;
+    max-height: 120px;
+    border-radius: 0.83vw;
+    margin-top: 2.61vh;
+    background-color: #2e3036;   
+    border: solid 0.15vw transparent;
+    padding: 1.8vh 0 0 1.61vw; 
+    cursor: pointer;
+    position: relative;
+}
+.dash_list_wrap .list_area .list_box:hover{
+    background-color: #3a3c4a;
+}
+.dash_list_wrap .list_area .list_box.active{
+    border: solid 0.15vw #7e4cff;
+    background-color: #2d2948;
+}
+.dash_list_wrap .list_area .list_box.evt_occur{
+    border: solid 0.15vw #b0335f;
+    background-image: linear-gradient(285deg, #432635 99%, #432635 99%, #4c2a3c 1%);
+}
+.dash_list_wrap .list_area .list_box .evt_title{
+    width: 100%;
+    height: 2.32vh;
+    max-height: 24px;
+    font-family: "NotoSansCJKB";
+    font-size: 0.83vw;
+    letter-spacing: -0.04vw;
+    text-align: left;
+    color: #ffffff;
+    line-height: 2.2vh;
+    margin-bottom: 1.14vh;
+}
+.dash_list_wrap .list_area .btn_evtend{
+    width: 4.79vw;
+    height: 2.71vh;
+    max-height: 28px;
+    border-radius: 0.72vw;
+    box-shadow: 0 0.15625vw 0.625vw 0 rgba(0, 0, 0, 0.12);
+    border: solid 0.05vw #ed4e71;
+    background-color: #de3c5f;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.01vw;
+    text-align: center;
+    color: #f3f3f8;
+    position: absolute;
+    top: 6.5vh;
+    right: 1.35vw;
+}
+.dash_list_wrap .list_area .btn_evtend:hover{
+    background-color: #e34b6c;
+}
+.dash_list_wrap .list_area .btn_evtend.dimmed_state{
+    background-color: rgba(255,255,255,0.1);
+    border: solid 0.05vw rgba(0,0,0,0.1);
+    color:rgba(255,255,255,0.5);
+}
+.dash_list_wrap .list_area .list_box .list_row{
+    width: 100%;
+    height: 1.74vh;
+    max-height: 18px;
+    margin-bottom: 0.19vh;
+}
+.dash_list_wrap .list_area .list_box .list_row .list_name{
+    width: 4.0625vw;
+    height: 100%;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.015625vw;
+    text-align: left;
+    line-height: 1.8vh;
+    padding-left: 0.46875vw;
+    color: #ccbfd6;
+    float: left;
+    position: relative;
+}
+.dash_list_wrap .list_area .list_box .list_row .list_name::before{
+    content:"";
+    display: block;
+    width: 0.15625vw;
+    height: 0.4vh;
+    max-height: 3px;
+    background-color: #7e4cff;
+    position: absolute;
+    top: 0.76vh;
+    left:0;
+}
+.dash_list_wrap .list_area .list_box.evt_occur .list_row .list_name::before{
+    background-color: #b0335b;
+}
+.dash_list_wrap .list_area .list_box .list_row .list_txt{
+    width: auto;
+    height: 100%;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.015625vw;
+    text-align: left;
+    line-height: 1.8vh;
+    color: #ffffff;
+    float: left;
+}
+.dash_list_wrap .list_area .list_box .evt_txt{
+    width: auto;
+    height: 1.93vh;
+    max-height: 20px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.72vw;
+    letter-spacing: -0.03vw;
+    text-align: right;
+    color: #dd4e8a;
+    line-height: 1.3vh;
+    position: absolute;
+    top: 2.32vh;
+    right: 1.54vw;
+}
+
+/*scroll style*/
+.list_area .mCSB_scrollTools .mCSB_draggerContainer {
+    top: -0.75vh;
+    left: -1vw;
+    z-index: 0;
+}
+.list_area .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 0.3125vw;
+    border-radius: 0.15625vw;
+    background-color: #585766;
+    height: 98%;
+}
+.list_area .mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #00ff0000;
+    height: 100%;
+}
+
+/**lightmode style**/
+.lightmode .dashWrap{
+    background-color: #f0f2f7;
+}
+.lightmode .dash_list_wrap {
+    box-shadow: 0.2vw 0 0.625vw 0 rgba(0, 0, 0, 0.04);
+    background-image: linear-gradient(to top, #f5f8fc, #f5f8fc 80%, #fafcff);
+}
+.lightmode .dash_list_wrap .dash_header{
+    color: #484752;
+}
+.lightmode .dash_list_wrap .dash_header::before{
+    color: #7e4cff;
+}
+.lightmode .dash_list_wrap .dash_header::after{
+    background-color: #d7dade;
+}
+.lightmode .dash_list_wrap .dash_body .timeline_bar{
+    box-shadow: none;
+    background-color: #d7dade;
+}
+.lightmode .dash_list_wrap .list_area .evt_figure .normal_circle{
+    background: url("../../../../static/image/light/page/disasterList/img/img_timeLine_dot_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .dash_list_wrap .list_area .evt_figure .evt_circle{
+    background: url("../../../../static/image/light/page/disasterList/img/img_timeLine_dot_event.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .dash_list_wrap .list_area .evt_figure .history_circle{
+    background: url("../../../../static/image/light/page/disasterList/img/img_timeLine_dot_history.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .dash_list_wrap .list_area .evt_figure .time_txt{
+    color: #6f717d;
+}
+.lightmode .dash_list_wrap .list_area .list_box{
+    border: solid 0.15vw #d7dbde;
+    background-color:#ffffff; 
+}
+.lightmode .dash_list_wrap .list_area .list_box:hover{
+    border: solid 0.15vw #9f83fa;
+    background-color: #fbfaff;
+}
+.lightmode .dash_list_wrap .list_area .list_box.active{
+    border: solid 0.15vw #7e4cff;
+    background-image: linear-gradient(278deg, #e5e1fc, #f4f2ff 99.1%);
+}
+.lightmode .dash_list_wrap .list_area .list_box.evt_occur{
+    border: solid 0.15vw #de3c5f;
+    background-image: linear-gradient(278deg, #f2e1e4, #fff2f5 99.1%);
+}
+.lightmode .dash_list_wrap .list_area .list_box .evt_title{
+    color: #484752;
+}
+.lightmode .dash_list_wrap .list_area .btn_evtend{
+    box-shadow: 0 0.15625vw 0.625vw 0 rgba(0, 0, 0, 0.18);
+    border: solid 0.05vw #fc6384;
+    background-color: #de3c5f;
+    color: #f3f3f8;
+}
+.lightmode .dash_list_wrap .list_area .btn_evtend:hover{
+    background-color: #ee5274;
+}
+.lightmode .dash_list_wrap .list_area .btn_evtend.dimmed_state{
+    background-color: rgba(98, 51, 214,0.1);
+    border: solid 0.05vw transparent;
+    color: #7e4cff;
+    box-shadow: none;
+}
+.lightmode .dash_list_wrap .list_area .list_box .list_row .list_name{
+    color: #6f717d;
+}
+.lightmode .dash_list_wrap .list_area .list_box .list_row .list_txt{
+    color: #484752;
+}
+
+/*scroll style*/
+.lightmode .list_area .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #a5a7b5;
+}

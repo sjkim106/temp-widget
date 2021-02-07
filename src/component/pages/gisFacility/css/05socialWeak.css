@@ -1,0 +1,33 @@
+/*05socialWeak style*/
+.dash_info_wrap .socialweak_wrap .dash_body .list_box {
+    height: 12.6vh;
+    max-height: 130px;
+}
+.dash_info_wrap .socialweak_wrap .dash_body .list_box .list_name.sort_icon::before{
+    content:"";
+    display: block;
+    width: 0.78125vw;
+    height: 1.45vh;
+    max-height: 15px;
+    background: url("../../../../static/image/dark/page/gis/facility/05_socialWeak/icon_sort.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.2vh;
+    left: 0;
+}
+.dash_info_wrap .socialweak_wrap .dash_body .list_box .list_title{
+    width: auto;
+}
+.dash_info_wrap .socialweak_wrap .zone_txt{
+    width: auto;
+    height: 2.32vh;
+    max-height: 24px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.04vw;
+    text-align: left;
+    color: #7e4cff;
+    float: left;
+    line-height: 2.2vh;
+    margin-left: 0.625vw;
+}

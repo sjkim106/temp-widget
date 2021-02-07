@@ -1,0 +1,206 @@
+/*urlWeb style*/
+html,
+body { 
+    max-width: 1920px;
+    max-height: 1080px;
+    min-width: 1920px;
+}  
+.dashWrap {
+    max-width: 1920px;
+    max-height: 1080px;
+    min-width: 1920px;
+    background-image: linear-gradient(280deg, #39385c, #2d2c47 97.3%);
+}
+.url_content_area{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.content_title{
+    width: 100%;
+    height: 54px;
+    font-family: "NotoSansCJKB";
+    font-size: 36px;
+    letter-spacing: -0.9px;
+    text-align: center;
+    line-height: 1.5;
+    color: #f2f3f5;
+    margin-bottom: 4.9px;
+}
+.type_row{
+    width: 100%;
+    height: 34px;
+    margin-bottom: 45px;
+    position: relative;
+}
+.type_row .type_frame{
+    width: auto;
+    height: 34px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.type_row .type_txt{
+    width: auto;
+    height: 34px;
+    border-radius: 6px;
+    border: solid 2px #b0335f;
+    font-family: "NotoSansCJKM";
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    line-height: 1.5 ;
+    color: #e34285;
+    padding: 0 21px;
+    margin-right: 9px;
+    float: left;
+}
+.sub_txt{
+    width: 100%;
+    height: 33px;
+    font-family: "NotoSansCJKM";
+    font-size: 22px;
+    letter-spacing: -0.55px;
+    text-align: center;
+    color: #c8c9d7;
+    line-height: 1.4;
+    margin-bottom: 13px;
+}
+.occur_row{
+    width: 100%;
+    height: 24px;
+    padding-left: 653px;
+    margin-bottom: 58px;
+}
+.occur_row .occur_title{
+    width: auto;
+    height: 24px;
+    font-family: "NotoSansCJKR";
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    text-align: left;
+    color: #a8abbd;
+    padding-left: 12px;
+    line-height: 1.5;
+    position: relative;
+    float: left;
+    margin-right: 38px;
+}
+.occur_row .occur_title::before{
+    content:""; 
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #8554ff;
+}
+.occur_row .occur_txt{
+    width: auto;
+    height: 24px;
+    font-family: "NotoSansCJKM";
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    text-align: left;
+    line-height: 1.5;
+    color: #e6e7f5;
+    margin-right: 63px;
+    float: left;
+}
+.view_area{
+    width: 100%;
+    height: auto;
+    padding-left: 277px;
+}
+.gis_area{
+    width: 534px;
+    height: 534px;
+    background-color: rgba(255,255,255,0.1);
+    float: left;
+    position: relative;
+}
+.gis_area .gis_icon_area{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.gis_area .gis_in{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.monitor_area {
+    width: 832px;
+    height: auto;
+    overflow: auto;
+    float: left;
+}
+.monitor_area .cctv_box {
+    width: 400px;
+    height: 259px;
+    margin: 0 0 16px 16px;
+    float: left;
+    cursor: pointer;
+    position: relative;
+}
+.monitor_area .cctv_header {
+    width: 100%;
+    height: 34px;
+    background-image: linear-gradient(280deg, #454a69, #535875 74.26%);
+    font-family: "NotoSansCJKM";
+    font-size: 15px;
+    letter-spacing: -0.38px;
+    text-align: left;
+    color: #ffffff;
+    padding: 10px 21px 0 50px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.monitor_area .cctv_header::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 28px;     
+    position: absolute;
+    top: 4px;
+    left: 7px;
+}
+.monitor_area .cctv_header.cctv_1::after{
+    background: url("../../image/dark/page/gis/main/img/img_numbering_cctv_1_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_area .cctv_header.cctv_2::after{
+    background: url("../../image/dark/page/gis/main/img/img_numbering_cctv_2_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_area .cctv_header.cctv_3::after{
+    background: url("../../image/dark/page/gis/main/img/img_numbering_cctv_3_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_area .cctv_header.cctv_4::after{
+    background: url("../../image/dark/page/gis/main/img/img_numbering_cctv_4_normal.png") no-repeat;
+    background-size: 100%;
+}
+.monitor_area .cctv_view {
+    width: 100%;
+    height: 225px;
+    background: url("../../image/dark/page/gis/main/img/sample.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 34px;
+    left: 0;
+}

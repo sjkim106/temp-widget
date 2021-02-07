@@ -1,0 +1,233 @@
+/*02counter style*/
+.counter_wrap .legend_area{
+    width: 8vw;
+    height: 3.48vh;
+    max-height: 36px;
+    position: absolute;
+    top: 5.5vh;
+    right: -1.5vw;
+}
+.counter_wrap .legend_area li{
+    width: 8vw;
+    height: 1.64vh;
+    max-height: 17px;
+    padding-left: 0.7vw;
+    font-family: "NotoSansCJKR";
+    font-size: 0.57vw;
+    line-height: 1.6vh;
+    letter-spacing: -0.015vw;
+    text-align: left;
+    color: #7e8189;
+    margin-bottom: 0.19vh;
+    position: relative;
+}
+.counter_wrap .legend_area .legend_icon::before{
+    content:"";
+    display: block;
+    width: 0.57vw;
+    height: 1.06vh;
+    max-height: 11px;
+    position: absolute;
+    top: 0.3vh;
+    left: 0;
+}
+.counter_wrap .legend_area .legend_icon.icon_01::before{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/img_legend_graph_01.png") no-repeat;
+    background-size: 100%;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .count_num{
+    color: #7b48ff;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .list_txt.error_icon::before{
+    left: 1.7vw;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .list_txt.partialoff_icon::before{
+    content:"";
+    display: block;
+    width: 0.72vw;
+    height: 1.5vh;
+    max-height: 14px;
+    background: url("../../../../static/image/dark/page/gis/facility/img/img_sensor_partialOff.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.2vh;
+    left: 3vw;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box{
+    height: 25.19vh;
+    max-height: 260px;
+    position: relative;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .chart_in{
+    height: 11.53vh;
+    max-height: 119px;
+    position: relative;
+    float: left;
+}
+.counter_chart{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box.active{
+    height: auto;
+    max-height: 550px;
+    overflow: auto;
+    overflow-y: hidden;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box.active .list_row.sensor_count{
+    display: none;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .sensor_title{
+    width: 6vw;
+    height: 100%;
+    font-family: "NotoSansCJKR";
+    font-size: 0.625vw;
+    letter-spacing: -0.03125vw;
+    text-align: left;
+    color:  #dddeed;
+    line-height: 1.7vh;   
+    float: left;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .off_count{
+    width: auto;
+    height: 100%;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.03125vw;
+    text-align: left;
+    color: #dd4e8a;
+    line-height: 1.7vh;
+    padding-left: 0.57vw;   
+    float: right;
+    position: relative;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .off_count span,
+.dash_info_wrap .counter_wrap .dash_body .list_box .on_count span{
+    margin-left: 0.26vw;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .off_count::before{
+    content:"";
+    display: block;
+    width: 0.05vw;
+    height: 1.06vh;
+    max-height: 11px;
+    background-color: #696b82;
+    position: absolute;
+    top: 0.35vh;
+    left: 0;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .on_count{
+    width: auto;
+    height: 100%;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.03125vw;
+    text-align: left;
+    color: #12d685;
+    line-height: 1.7vh; 
+    float: right;
+    margin-right: 0.57vw;
+    position: relative;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .sensor_list_area{
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-left: -0.3125vw;
+    margin-bottom: 2.03vh;
+    display: none;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box.active .sensor_list_area{
+    display: block;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .sensor_list_area .sensor_title{
+    margin-left: 0.3125vw;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .sensor_list{
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-top: 0.55vh;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .sensor_box{
+    width: 18.22vw;
+    height: 3.68vh;
+    max-height: 38px;
+    border-radius: 0.3125vw;
+    border: solid 0.05vw #434261;
+    background-color: #3a3954;
+    padding: 0.85vh 0 0 1.05vw;
+    margin-bottom: 0.38vh;
+    cursor: pointer;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .sensor_box:hover{
+    background-color: #484766;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .sensor_box.active{
+    border: solid 0.05vw #957fff;
+    background-color: #7e4cff;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .sensor_name{
+    width: auto;
+    height: 1.74vh;
+    max-height: 18px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.03vw;
+    text-align: left;
+    line-height: 1.8vh;
+    color: #ffffff;
+    float: left;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .sensor_box .list_txt{
+    width: 3.2vw;
+    float: right;
+}
+.dash_info_wrap .counter_wrap .dash_body .list_box .sensor_box .list_txt.error_icon::before{
+    left: 1.44vw;
+}
+
+/*1280x688 pc size 부분 커스텀*/
+@media only screen and (min-height: 10px) and (max-height: 688px) {
+    .counter_wrap .legend_area{
+        right: 0;
+    }
+    .dash_info_wrap .counter_wrap .dash_body .list_box .list_txt.partialoff_icon::before{
+        left: 3.3vw;
+    }
+    .dash_info_wrap .counter_wrap .dash_body .list_box .sensor_box .list_txt.error_icon::before {
+        left: 1.7vw;
+    }
+}
+
+/**lightmode style**/
+.lightmode .dash_info_wrap .counter_wrap .dash_body .list_box .count_num{
+    color: #8359ff;
+}
+.lightmode .dash_info_wrap .counter_wrap .dash_body .list_box .sensor_title{
+    color: #484752;
+}
+.lightmode .dash_info_wrap .counter_wrap .dash_body .list_box .sensor_box{
+    border: solid 0.05vw #e4e7eb;
+    background-color: #ffffff;
+}
+.lightmode .dash_info_wrap .counter_wrap .dash_body .list_box .sensor_box:hover{
+    border: solid 0.05vw #9f83fa;
+    background-color: #fbfaff;
+}
+.lightmode .dash_info_wrap .counter_wrap .dash_body .list_box .sensor_box.active{
+    border: solid 0.05vw #6736e3;
+    background-color: #7e4cff;
+}
+.lightmode .dash_info_wrap .counter_wrap .dash_body .list_box .sensor_name{
+    color: #4e4875;
+}
+.lightmode .dash_info_wrap .counter_wrap .dash_body .list_box .sensor_box.active .sensor_name{
+    color: #ffffff;
+}
+.lightmode .dash_info_wrap .counter_wrap .dash_body .list_box .sensor_box.active .list_txt{
+    color: #ffffff;
+}

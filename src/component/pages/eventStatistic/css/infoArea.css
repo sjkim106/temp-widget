@@ -1,0 +1,304 @@
+/*infoArea style*/
+.info_area{
+    width: 33.646vw;
+    height: 100vh;
+    max-height: 1032px;
+    float: left;
+    padding-top: 7.7vh;
+}
+.info_title{
+    width: 100%;
+    height: 2.61vh;
+    max-height: 27px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.9375vw;
+    letter-spacing: -0.046875vw;
+    text-align: left;
+    color: #dddeed;
+    line-height: 2.6vh;
+    padding-left: 2.43vw;
+    position: relative;
+}
+.info_title.chart_icon{
+    width: 34%;
+    float: left;
+}
+.info_title.event_icon::before{
+    content:"";
+    display: block;
+    width: 1.45vw;
+    height: 2.71vh;
+    max-height: 28px;
+    background: url("../../../../static/image/dark/page/eventStatistics/icon/icon_title_event.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0.72vw;
+}
+.info_title.chart_icon::before{
+    content:"";
+    display: block;
+    width: 1.45vw;
+    height: 2.71vh;
+    max-height: 28px;
+    background: url("../../../../static/image/dark/page/eventStatistics/icon/icon_title_chart.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0.72vw;
+}
+.count_num{
+    width: 100%;
+    height: 6.97vh;
+    max-height: 72px;
+    padding-left: 2.27vw;
+    font-family: "NotoSansCJKB";
+    font-size: 3.75vw;
+    letter-spacing: -0.1875vw;
+    text-align: left;
+    color: #8352ff;
+    margin-top: 1.93vh;
+}
+.count_num .slash_txt{
+    font-family: "NotoSansCJKL";
+    font-size: 3.125vw;
+    color: #63647d;
+    letter-spacing: -0.15625vw;
+    margin: 0 0.9375vw;
+}
+.count_num .total_num{
+    color: #9595ab;
+}
+.loc_area{
+    width: 21.25vw;
+    height: auto;
+    margin-top: 5.62vh;
+    margin-bottom: 9.54vh;
+}
+.loc_area .loc_row{
+    width: 100%;
+    height: 3.87vh;
+    max-height: 40px;
+    margin-bottom: 0.58vh;
+    margin-left: 1.09375vw;
+}
+.loc_area .loc_row .loc_box{
+    width: 5vw;
+    height: 3.87vh;
+    max-height: 40px;
+    border-radius: 0.3125vw;
+    box-shadow: 0 0.2vw 0.625vw 0 rgba(0, 0, 0, 0.12);
+    border: solid 0.05vw #0e0f12;
+    background-image: linear-gradient(325deg, #212226, #2b2e33 79.21%);
+    font-family: "NotoSansCJKM";
+    font-size: 0.9375vw;
+    text-align: center;
+    line-height: 3.5vh;
+    color: #c5c6d4;
+    margin-right: 0.3125vw;
+    cursor: pointer;
+}
+.loc_area .loc_row .loc_box:hover{
+    background-image: linear-gradient(325deg, #383b45, #454952 79.21%);
+}
+.loc_area .loc_row .loc_box.active{
+    background-image: linear-gradient(315deg, #4f2ca8, #7f4cff 85.15%);
+    color: #ffffff;
+}
+.evt_btn_area{
+    width: auto;
+    height: 3.1vh;
+    max-height: 32px;
+    float: left;
+}
+.evt_btn_area .btn_evt{
+    width: auto;
+    height: 3.1vh;
+    max-height: 32px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    padding: 0 0.625vw;
+    text-align: center;
+    color: #6f717d;
+    float: left;
+}
+.evt_btn_area .btn_evt:hover{
+    color: #b5b3c9;
+}
+.evt_btn_area .btn_evt.active{
+    border-radius: 0.3125vw;
+    box-shadow: 0 0.1vw 0.1vw 0 rgba(0, 0, 0, 0.4);
+    background-color: #8352ff;
+    color: #ffffff;
+}
+.chart_area{
+    width: 31.25vw;
+    height: 31vh;
+    max-height: 320px;
+    border-radius: 0.83vw;
+    box-shadow: 0 0.2vw 0.625vw 0 rgba(0, 0, 0, 0.12);
+    border: solid 0.05vw #0e0f12;
+    background-image: linear-gradient(325deg, #1e2024,#25272b 84.16%);
+    margin-top: 1.3vh;
+    position: relative;
+    float: left;
+}
+.chart_in{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+/**lightmode style**/
+.lightmode .info_title{
+    color: #484752;
+}
+.lightmode .count_num .slash_txt{
+    color: #9595ab;
+}
+.lightmode .loc_area .loc_row .loc_box{
+    box-shadow: 0 0.2vw 0.625vw 0 rgba(0, 0, 0, 0.08);
+    border: solid 0.05vw #ffffff;
+    background-image: linear-gradient(325deg, #f0f1f7, #f7f8fc 79.21%);
+    color: #9595ab;
+}
+.lightmode .loc_area .loc_row .loc_box:hover{
+    background-image: none;
+    border: solid 0.05vw #7643f7;
+    background-color: #ffffff;
+    color: #7643f7;
+}
+.lightmode .loc_area .loc_row .loc_box.active{
+    background-image: linear-gradient(315deg, #4f2ca8, #7f4cff 85.15%);
+    border: solid 0.05vw #7643f7;
+    color: #ffffff;
+}
+.lightmode .evt_btn_area .btn_evt:hover{
+    color: #7643f7;
+}
+.lightmode .evt_btn_area .btn_evt.active{
+    box-shadow: 0 0.1vw 0.1vw 0 rgba(0, 0, 0, 0.2);
+    background-color: #8352ff;
+    color: #ffffff;
+}
+.lightmode .chart_area{
+    box-shadow: 0 0.2vw 0.625vw 0 rgba(0, 0, 0, 0.03);
+    border: solid 0.05vw #ffffff;
+    background-image: none;
+    background-color: #f7f8fa;
+}
+
+/*960x516 & 640x344 pc size 부분 커스텀*/
+@media only screen and (min-height: 10px) and (max-height: 516px) {
+    .content_area{
+        width: 79.584vw;
+        max-height: 516px;
+        padding: 6.78vh 0 0 4.375vw;
+        position: relative;
+    }
+    .info_area{
+        width: 75.2vw;
+        height: 100vh;
+        max-height: 1032px;
+        float: left;
+        padding-top: 0;
+    }
+    .info_title {
+        width: 39%;
+        height: 4.26vh;
+        font-size:1.5vw;
+        letter-spacing: -0.075vw;       
+        line-height: 2.6vh;
+        padding-left: 3.90625vw;
+    }
+    .info_title.event_icon::before{
+        width: 2.29vw;
+        height: 4.26vh;
+        top: -0.9vh;
+        left:1.14vw;
+    }
+    .info_title.chart_icon::before{
+        width: 2.29vw;
+        height: 4.26vh;
+        top: -0.9vh;
+        left:1.14vw;
+    }
+    .count_num{
+        width: 39%;
+        height: 11.24vh;
+        padding-left: 3.64vw;
+        font-size: 6.04vw;
+        margin-top: 1.93vh;
+        margin-bottom: 15.69vh;
+    }
+    .count_num .slash_txt{
+        font-size: 5vw;
+    }
+    .loc_area{
+        width: 34.0625vw;
+        height: auto;
+        margin:0;
+        position: absolute;
+        top: 4.45vh;
+        right: 3.85vw;        
+    }
+    .loc_area .loc_row{
+        width: 100%;
+        height: 6.2vh;
+        margin-bottom: 0.96vh;
+        margin-left: 0.52vw;
+    }
+    .loc_area .loc_row .loc_box{
+        width: 8vw;
+        height: 6.2vh;
+        border-radius: 0.625vw;
+        box-shadow: 0 0.4vw 1.25vw 0 rgba(0, 0, 0, 0.12);
+        border: solid 0.1vw #0e0f12;
+        font-size: 1.5vw;
+        line-height: 6vh;
+        margin-right: 0.52vw;
+        cursor: pointer;
+    }
+    .info_title.chart_icon{
+        width: 24%;
+    }
+    .evt_btn_area{
+        height: 4.96vh;
+        margin-top: -1vh;
+    }
+    .evt_btn_area .btn_evt{
+        height: 4.96vh;
+        font-size: 1.35vw;
+        padding: 0 1.0625vw;
+    }
+    .evt_btn_area .btn_evt.active{
+        border-radius: 0.625vw;
+        box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.4);
+    }
+    .chart_area{
+        width: 70.83vw;
+        height: 49.61vh;
+        border-radius: 1.66vw;
+        box-shadow: 0 0.4vw 1.25vw 0 rgba(0, 0, 0, 0.12);
+        border: solid 0.1vw #0e0f12;
+        position: absolute;
+        top: 44vh;
+        left: 4.375vw;
+    }
+
+    /**lightmode style**/
+    .lightmode .loc_area .loc_row .loc_box{
+        box-shadow: 0 0.4vw 1.25vw 0 rgba(0, 0, 0, 0.08);
+        border: solid 0.1vw #ffffff;
+    }
+    .lightmode .evt_btn_area .btn_evt.active{
+        box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.2);
+    }
+    .lightmode .chart_area{
+        box-shadow: 0 0.4vw 1.25vw 0 rgba(0, 0, 0, 0.03);
+        border: solid 0.1vw #ffffff;
+    }
+}
+

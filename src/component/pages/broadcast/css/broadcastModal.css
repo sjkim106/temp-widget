@@ -1,0 +1,189 @@
+/*broadcastModal style*/
+.broadcast_modal .modal-content {
+    width: 25vw;
+    height: 26.74vh;
+    max-height: 276px;
+    border-radius: 0.78125vw;
+    margin: 37.3vh 0 0 37.5vw;
+    border: none;
+    position: relative;
+    box-shadow: 0 0.3125vw 0.625vw 0 rgba(0, 0, 0, 0.12);
+    border-radius: 0.41vw;
+}
+.broadcast_modal .modal-body {
+    width: 100%;
+    height: 23.25vh;
+    max-height: 240px;
+    position: relative;
+    padding: 5vh 0 0 1.74vw;   
+}
+.broadcast_modal .modal-body::before{
+    content:"";
+    display: block;
+    width: 2.03125vw;
+    height: 1.64vh;
+    max-height: 17px;
+    background: url("../../../../static/image/dark/page/disasterList/img/img_pop_quotationMark.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 3.29vh;
+    left: 1.66vw;
+}
+.broadcast_modal .modal-body::after{
+    content:"";
+    display: block;
+    width: 8.02vw;
+    height: 11.43vh;
+    max-height: 118px;
+    background: url("../../../../static/image/dark/page/disasterList/img/img_pop_broadcast.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 3.29vh;
+    right: 1.77vw;
+}
+.broadcast_modal .end_title{
+    width: auto;
+    height: 4.55vh;
+    max-height: 49px;
+    font-family: "NotoSansCJKB";
+    font-size: 0.98vw;
+    letter-spacing: -0.025vw;
+    text-align: left;
+    line-height: 2.5vh;
+    color: #f2f3f5;
+    margin-bottom: 1.7vh;
+}
+.broadcast_modal .end_sub_txt{
+    width: 10vw;
+    height: 5vh;
+    max-height: 47px;    
+    font-family: "NotoSansCJKR";
+    font-size: 0.78125vw;
+    letter-spacing: -0.019vw;
+    line-height: 2.2vh;
+    text-align: left;
+    color: #f2f3f5;
+}
+.broadcast_modal .end_sub_txt span{
+    font-family: "NotoSansCJKB";
+    font-size: 0.88vw;
+    letter-spacing: -0.02vw;
+    color: #7e57ff;
+    margin-right: 0.26vw;
+}
+/*modal popup common style*/
+.modal-dialog {
+    width: auto;
+    margin: 0 auto;
+}
+.modal-content{
+    background-color: transparent;
+}
+.modal-header{
+    width: 100%;   
+    border-bottom: none;
+    position: relative;
+    padding: 0.77vh 0.83vw 0 0.9375vw;
+    background-color: #35344f;
+    height: 3.48vh;
+    max-height: 36px;
+    border-top-left-radius: 0.41vw;
+    border-top-right-radius: 0.41vw;
+}
+.modal-header .btn_close {
+    width: 1.19vw;
+    height: 2.4vh;
+    max-height: 23px;
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_pop_close_normal.png") no-repeat;
+    background-size: 100%;      
+    float: right;
+}
+.modal-header .btn_close:hover {
+    width: 1.19vw;
+    height: 2.4vh;
+    max-height: 23px;
+    background: url("../../../../static/image/dark/page/disasterList/btn/btn_pop_close_hover.png") no-repeat;
+    background-size: 100%;      
+}
+.modal-header .header_title{
+    width: auto;
+    height: 2.4vh;
+    max-height: 23px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.72vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    color: #fcfcfc;
+    float: left;
+    line-height: 2vh;
+}
+.modal-body{
+    background-image: linear-gradient(280deg,#39385c, #2d2c47 97.3%);
+    border-bottom-left-radius: 0.41vw;
+    border-bottom-right-radius: 0.41vw;
+}
+/*button style*/
+.btn-default{
+    width: 5.1vw;
+    height: 3.1vh;
+    max-height: 32px;
+    border-radius: 0.83vw;
+    box-shadow: 0 0.15625vw 0.625vw 0 rgba(0, 0, 0, 0.12);
+    font-family: "NotoSansCJKM";
+    font-size: 0.67vw;
+    letter-spacing: -0.01vw;
+    text-align: center;
+    color: #f3f3f8;
+}
+.btn-default:active,
+.btn-default:hover{
+    color: #ffffff;
+}
+.spread {
+    box-shadow: 0 0.15625vw 0.625vw 0 rgba(0, 0, 0, 0.12);
+    border: solid 0.05vw #9c5eff;
+    background-color: #7a45ff;
+    position: absolute;
+    top: 78%;
+    right: 1.04vw;
+}
+.spread:hover {
+    background-color: #7c5bf5;
+    border: solid 0.05vw #9c5eff;
+}
+
+/*1280x688 pc size 부분 커스텀*/
+@media only screen and (min-height: 10px) and (max-height: 688px) {
+    .btn-default{
+        line-height: 0;
+    }
+}
+
+/**lightmode style**/
+.lightmode .broadcast_modal .modal-body::before{
+    background: url("../../../../static/image/light/page/broadcast/img/img_pop_quotationMark.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .broadcast_modal .modal-body::after{
+    background: url("../../../../static/image/light/page/broadcast/img/img_pop_broadcast.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .broadcast_modal .end_title{
+    color: #484752;
+}
+.lightmode .broadcast_modal .end_sub_txt{
+    color: #484752;
+}
+.lightmode .broadcast_modal .end_sub_txt span{
+    color: #7e57ff;
+}
+/*modal popup common style*/
+.lightmode .modal-header{
+    background-color: #7e4cff;
+}
+.lightmode .modal-header .header_title{
+    color: #fcfcfc;
+}
+.lightmode .modal-body{
+    background-image: linear-gradient(280deg,#ffffff, #ebecf5 97.3%);
+}

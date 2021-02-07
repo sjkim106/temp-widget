@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../component/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../component/jquery/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="../component/jquery/selectric.css" />
+    <link rel="stylesheet" href="../component/jquery/simTree.css" />
+    <link rel="stylesheet" href="../common/css/reset.css" />
+    <link rel="stylesheet" href="../common/css/fontStyle.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/gisArea.css" />
+    <link rel="stylesheet" href="css/infoArea.css" />
+  </head>
+  <body class="namhae">
+    <section class="dashWrap">
+      <!--content area-->
+      <section class="content_area">
+        <div class="loc_txt">남해읍</div>
+        <!--gis area-->
+        <div class="gis_area">
+          <!--map box start-->
+          <div class="map_box loc_1" id="mapbg1">
+            <div class="loc_box" data-mapbg="mapbg1">설천면</div>
+          </div>
+          <div class="map_box loc_2" id="mapbg2">
+            <div class="loc_box" data-mapbg="mapbg2">고현면</div>
+          </div>
+          <div class="map_box loc_3" id="mapbg3">
+            <div class="loc_box" data-mapbg="mapbg3">서면</div>
+          </div>
+          <div class="map_box loc_4" id="mapbg4">
+            <div class="loc_box" data-mapbg="mapbg4">남해읍</div>
+          </div>
+          <div class="map_box loc_5" id="mapbg5">
+            <div class="loc_box" data-mapbg="mapbg5">남면</div>
+          </div>
+          <div class="map_box loc_6" id="mapbg6">
+            <div class="loc_box" data-mapbg="mapbg6">이동면</div>
+          </div>
+          <div class="map_box loc_7" id="mapbg7">
+            <div class="loc_box" data-mapbg="mapbg7">창선면</div>
+          </div>
+          <div class="map_box loc_8" id="mapbg8">
+            <div class="loc_box" data-mapbg="mapbg8">삼동면</div>
+          </div>
+          <div class="map_box loc_9" id="mapbg9">
+            <div class="loc_box" data-mapbg="mapbg9">상주면</div>
+          </div>
+          <div class="map_box loc_10" id="mapbg10">
+            <div class="loc_box" data-mapbg="mapbg10">미조면</div>
+          </div>
+        </div>
+
+        <!--info area-->
+        <div class="info_area">
+          <!--header-->
+          <header class="info_header">
+            <div class="info_title">시설물 현황</div>
+            <button type="button" class="btn_download">액셀 다운로드</button>
+          </header>
+
+          <!--pie chart area-->
+          <div class="pie_chart_area">
+            <!--chart 삽입-->
+            <div class="pie_chart" id="pieChart"></div>
+            <!--pie legend area-->
+            <div class="pie_legend_area">
+              <div class="legend_row">
+                <div class="legend_name purple_circle">CCTV</div>
+                <div class="legend_num">308 / 41.5%</div>
+              </div>
+              <div class="legend_row">
+                <div class="legend_name red_circle">공공와이파이</div>
+                <div class="legend_num">308 / 41.5%</div>
+              </div>
+              <div class="legend_row">
+                <div class="legend_name deepred_circle">스마트가로등</div>
+                <div class="legend_num">308 / 41.5%</div>
+              </div>
+              <div class="legend_row">
+                <div class="legend_name orange_circle">소화기</div>
+                <div class="legend_num">308 / 41.5%</div>
+              </div>
+              <div class="legend_row">
+                <div class="legend_name yellow_circle">공공화장실</div>
+                <div class="legend_num">308 / 41.5%</div>
+              </div>
+              <div class="legend_row">
+                <div class="legend_name green_circle">공공주차장</div>
+                <div class="legend_num">308 / 41.5%</div>
+              </div>
+              <div class="legend_row">
+                <div class="legend_name mint_circle">심장충격기</div>
+                <div class="legend_num">308 / 41.5%</div>
+              </div>
+              <div class="legend_row">
+                <div class="legend_name sky_circle">주유시설</div>
+                <div class="legend_num">308 / 41.5%</div>
+              </div>
+              <div class="legend_row">
+                <div class="legend_name violet_circle">차번호 인식 시스템</div>
+                <div class="legend_num">308 / 41.5%</div>
+              </div>
+            </div>
+          </div>
+
+          <!--facil info area-->
+          <div class="facil_info_area">
+            <div class="facil_slide_area">
+              <button type="button" class="btn_prev"></button>
+              <button type="button" class="btn_next"></button>
+              <div class="loc_name">남해읍</div>
+            </div>
+            <!--facil list area-->
+            <div class="facil_list_area">
+              <div class="facil_box mr266px">
+                <div class="facil_icon cctv_icon"></div>
+                <div class="facil_name">CCTV</div>
+                <div class="facil_num">178</div>
+              </div>
+              <div class="facil_box">
+                <div class="facil_icon wifi_icon"></div>
+                <div class="facil_name">공공와이파이</div>
+                <div class="facil_num">15</div>
+              </div>
+              <div class="facil_box">
+                <div class="facil_icon lamp_icon"></div>
+                <div class="facil_name">스마트가로등</div>
+                <div class="facil_num">16</div>
+              </div>
+              <div class="facil_box">
+                <div class="facil_icon fire_icon"></div>
+                <div class="facil_name">소화기</div>
+                <div class="facil_num">22</div>
+              </div>
+              <div class="facil_box">
+                <div class="facil_icon toilet_icon"></div>
+                <div class="facil_name">공공화장실</div>
+                <div class="facil_num">84</div>
+              </div>
+              <div class="facil_box">
+                <div class="facil_icon parking_icon"></div>
+                <div class="facil_name">공공주차장</div>
+                <div class="facil_num">17</div>
+              </div>
+              <div class="facil_box">
+                <div class="facil_icon aed_icon"></div>
+                <div class="facil_name">심장충격기</div>
+                <div class="facil_num">29</div>
+              </div>
+              <div class="facil_box">
+                <div class="facil_icon petrol_icon"></div>
+                <div class="facil_name">주유시설</div>
+                <div class="facil_num">8</div>
+              </div>
+              <div class="facil_box">
+                <div class="facil_icon stock_icon"></div>
+                <div class="facil_name">축산시설</div>
+                <div class="facil_num">33</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+  <script src="../component/jquery/jquery-3.3.1.min.js"></script>
+  <script src="../component/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../component/jquery/jquery.selectric.js"></script>
+  <script src="../component/jquery/simTree.js"></script>
+  <script src="../component/bootstrap/bootstrap.min.js"></script>
+  <script src="../component/highchart/highcharts.js"></script>
+  <script src="js/gisArea.js"></script>
+  <script src="js/facilityChart.js"></script>
+</html>

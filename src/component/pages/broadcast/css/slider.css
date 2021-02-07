@@ -1,0 +1,50 @@
+/*bootstrap slider style*/
+.slider.slider-horizontal .slider-track{
+    height: 0.58vh;
+    max-height: 6px;
+    border-radius: 0.078125vw;
+    border: solid 0.05vw #707070;
+    background-color: #1f1f26;
+    background-image: none;
+    margin-top: 0;
+}
+.slider.slider-horizontal{
+    width: 11.45vw;
+    height: 1.25vh;
+    max-height: 13px;
+    position: absolute;
+    top: 0.6vh;
+    left: 7.2vw;
+}
+.slider-handle.round{
+    width: 0.67vw;
+    height: 1.26vh;
+    max-height: 13px;
+    top: 0.29vh;
+    border: solid 0.05vw #977aff;
+    background-color: #7a45ff;
+    background-image: none;
+}
+.slider-handle.round:hover{
+    background-color: #977aff;
+}
+.slider-selection{
+    background-color: #7e4cff;
+    background-image: none;
+}
+#ex6CurrentSliderValLabel{
+    position: absolute;
+    top: 0.8vh;
+    right: 0.3vw;
+    font-family: "NotoSansCJKB";
+    font-size: 0.78125vw;
+    letter-spacing: -0.019vw;
+    text-align: left;
+    color: #7e57ff;
+}
+
+/**lightmode style**/
+.lightmode .slider.slider-horizontal .slider-track{
+    border: solid 0.05vw #a1a4b3;
+    background-color: #a1a4b3;
+}

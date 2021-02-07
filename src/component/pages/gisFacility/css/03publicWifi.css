@@ -1,0 +1,11 @@
+/*03publicWifi style*/
+.dash_info_wrap .wifi_wrap .dash_body .list_box {
+    height: 12.6vh;
+    max-height: 130px;
+}
+.dash_info_wrap .wifi_wrap .dash_body .list_box .count_num{
+    width: 1.66vw;
+}
+.dash_info_wrap .wifi_wrap .dash_body .list_box .list_title{
+    width: 9vw;
+}

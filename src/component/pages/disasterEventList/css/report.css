@@ -1,0 +1,156 @@
+/*report style*/
+.report_wrap{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.report_wrap .situ_left_area .spread_list_area::before{
+    content:"조치 및 보고서 내역­";
+}
+.report_wrap .situ_body{
+    width: 100%;
+    height: 100%;
+    padding: 3.75vh 1.4vw 0 1.5625vw;
+}
+.report_wrap .situ_content_area .situ_body .spread_row .object_title{
+    width: 4.6875vw;
+}
+.report_wrap .situ_content_area .situ_body .object_input.large_size{
+    width: 40.72vw;
+    margin-right: 0;
+}
+.report_wrap .situ_content_area .situ_body .object_box.middle_size{
+    width: 40.72vw;
+    margin-right: 0;
+}
+.report_wrap .situ_content_area .situ_body .object_box.middle_size.active{
+    width: 34.27vw;
+    margin-right: 0;
+}
+.report_wrap .situ_content_area .situ_body .object_input.small_size{
+    width: 16.66vw;
+    margin-right: 0;
+}
+.report_wrap .situ_content_area .situ_body .calen_input.calen_input{
+    width: 13.22vw;
+    margin-right: 0;
+}
+.report_wrap .situ_content_area .situ_body .spread_row{
+    margin-bottom: 1.35vh;
+    height: 3.68vh;
+    max-height: 38px;    
+    overflow: visible;
+    position: relative;
+}
+.report_wrap .situ_content_area .situ_body .spread_row.wide_size{
+    height: 30.91vh;
+    max-height: 319px;
+}
+.report_wrap .situ_content_area .situ_body .object_text{
+    width: 40.72vw;
+}
+.report_wrap .btn_file{
+    width: 5.83vw;
+    height: 3.68vh;
+    max-height: 38px;
+    border-radius: 0.41vw;
+    background-color: #3f4152;    
+    font-family: "NotoSansCJKM";
+    font-size: 0.78125vw;
+    letter-spacing: -0.019vw;
+    text-align: center;
+    color: #ffffff;
+    float: right;
+    display: none;
+}
+.report_wrap .btn_file:hover{
+    background-color: #4f5163;
+}
+.report_wrap .situ_content_area .situ_body .byte_txt{
+    margin-right: 36.42vw;
+}
+.report_wrap .situ_content_area .situ_body .btn_save{
+    width: 6.45vw;
+    height: 3.87vh;
+    max-height: 40px;
+    border-radius: 1.04vw;
+    box-shadow: 0 0.15625vw 0.46875vw 0 rgba(123, 26, 255, 0.27);
+    border: solid 0.05vw #9c5eff;
+    background-color: #7a45ff;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #ffffff;
+    float: right;
+    margin-left: 0.52vw;
+    margin-top: 4.45vh;
+    display: none;
+}
+.report_wrap .situ_content_area .situ_body .btn_save:hover{
+    border: solid 0.05vw #a56eff;
+    background-color: #7c5bf5;
+}
+.report_wrap .situ_content_area .situ_body .btn_report_down{
+    width: 8.54vw;
+    height: 3.87vh;
+    max-height: 40px;
+    border-radius: 1.04vw;
+    box-shadow: 0 0.15625vw 0.46875vw 0 rgba(123, 26, 255, 0.27);
+    border: solid 0.05vw #7983f2;
+    background-color: #5c5ce5;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #ffffff;
+    float: right;
+    margin-top: 4.45vh;
+}
+.report_wrap .situ_content_area .situ_body .btn_report_down:hover{
+    border: solid 0.05vw #8892fc;
+    background-color: #7171f5;
+}
+.report_wrap .situ_content_area .situ_body .object_input.active{
+    background-color: #1d1d24;
+}
+.report_wrap .spread_row.calen_icon::after{
+    content:"";
+    display: block;
+    width: 0.72vw;
+    height: 1.5vh;
+    max-height: 14px;
+    background: url("../../../../static/image/dark/page/disasterList/icon/icon_calendar.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.2vh;
+    left: 16.2vw;
+}
+
+/*1280x688 pc size 부분 커스텀*/
+@media only screen and (min-height: 10px) and (max-height: 688px) {
+    .report_wrap .situ_content_area .situ_body .byte_txt{
+        margin-right: 35vw;
+    }
+}
+
+/**lightmode style**/
+.lightmode .report_wrap .btn_file{
+    background-color: #6c708d;  
+    color: #ffffff;
+}
+.lightmode .report_wrap .btn_file:hover{
+    background-color: #878ba8;
+}
+.lightmode .report_wrap .situ_content_area .situ_body .object_input.active{
+    border: solid 0.05vw #e4e6eb;
+    background-color: #f0f2f7;
+}
+.lightmode .report_wrap .situ_content_area .situ_body .object_input.active:focus{
+    border: solid 0.05vw #7e4cff;
+    background-color: #ffffff;
+}
+.lightmode .report_wrap .spread_row.calen_icon::after{
+    background: url("../../../../static/image/light/page/disasterList/icon/icon_calendar.png") no-repeat;
+    background-size: 100%;
+}

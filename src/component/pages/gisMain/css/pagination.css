@@ -1,0 +1,132 @@
+/*pagination style*/
+.paging_wrap {
+    display: block;
+    margin: 1.45vh auto;
+    height: 1.55vh;
+    max-height: 16px;
+}
+.paging_wrap ul{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+.paging_wrap ul li{
+    float: left;
+}
+.paging_wrap ul li a {
+    width: 0.83vw;
+    height: 15.5vh;
+    max-height: 16px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.52vw;
+    color: #dddeed;
+    float: left;
+    padding: 0.29vh 0 0 0.26vw;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.paging_wrap ul li a:hover{
+    color: #8c5eff;
+}
+.paging_wrap ul li a:active,
+.paging_wrap ul li a:focus {
+    background-color: #804dff;
+    color: #dddeed;
+}
+.paging_wrap ul li a.btn_foremost:active,
+.paging_wrap ul li a.btn_foremost:focus,
+.paging_wrap ul li a.btn_prev:active,
+.paging_wrap ul li a.btn_prev:focus,
+.paging_wrap ul li a.btn_next:active,
+.paging_wrap ul li a.btn_next:focus,
+.paging_wrap ul li a.btn_last:active,
+.paging_wrap ul li a.btn_last:focus{
+    background-color: transparent;
+}
+.btn_prev{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_pagination_prev_normal.png") no-repeat;
+    background-size: 100%;
+}
+.btn_prev:hover{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_pagination_prev_hover.png") no-repeat;
+    background-size: 100%;
+}
+.btn_foremost{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_pagination_foreMost_normal.png") no-repeat;
+    background-size: 100%;
+}
+.btn_foremost:hover{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_pagination_foreMost_hover.png") no-repeat;
+    background-size: 100%;
+}
+.btn_next{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_pagination_next_normal.png") no-repeat;
+    background-size: 100%;
+}
+.btn_next:hover{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_pagination_next_hover.png") no-repeat;
+    background-size: 100%;
+}
+.btn_last{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_pagination_last_normal.png") no-repeat;
+    background-size: 100%;
+}
+.btn_last:hover{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_pagination_last_hover.png") no-repeat;
+    background-size: 100%;
+}
+
+/**lightmode style**/
+.lightmode .paging_wrap ul li a {
+    color: #867fa8;
+}
+.lightmode .paging_wrap ul li a:hover{
+    color: #804dff;
+}
+.lightmode .paging_wrap ul li a:active,
+.lightmode .paging_wrap ul li a:focus {
+    background-color: #804dff;
+    color: #ffffff;
+}
+.lightmode .paging_wrap ul li a.btn_foremost:active,
+.lightmode .paging_wrap ul li a.btn_foremost:focus,
+.lightmode .paging_wrap ul li a.btn_prev:active,
+.lightmode .paging_wrap ul li a.btn_prev:focus,
+.lightmode .paging_wrap ul li a.btn_next:active,
+.lightmode .paging_wrap ul li a.btn_next:focus,
+.lightmode .paging_wrap ul li a.btn_last:active,
+.lightmode .paging_wrap ul li a.btn_last:focus{
+    background-color: transparent;
+}
+.lightmode .btn_prev{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_pagination_prev_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .btn_prev:hover{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_pagination_prev_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .btn_foremost{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_pagination_foreMost_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .btn_foremost:hover{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_pagination_foreMost_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .btn_next{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_pagination_next_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .btn_next:hover{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_pagination_next_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .btn_last{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_pagination_last_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .btn_last:hover{
+    background: url("../../../../static/image/light/page/gis/main/btn/btn_pagination_last_hover.png") no-repeat;
+    background-size: 100%;
+}

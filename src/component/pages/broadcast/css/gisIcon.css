@@ -1,0 +1,115 @@
+/*gisIcon style*/
+.gis_area{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.gis_icon_area{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* z-index: 1; */
+}
+
+/*gis icon*/
+.gis_icon_area .gis_icon{
+    width: 1.92vw;
+    height: 5.5vh;
+    max-height: 53px;
+    cursor: pointer;    
+    position: absolute;
+}
+.gis_icon_area .gis_icon.voice_normal{
+    background: url("../../../../static/image/dark/page/broadcast/icon/gis/icon_gis_voice_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_icon.voice_normal:hover{
+    background: url("../../../../static/image/dark/page/broadcast/icon/gis/icon_gis_voice_normal_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_icon.voice_normal.active{
+    background: url("../../../../static/image/dark/page/broadcast/icon/gis/icon_gis_voice_active.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_icon.voice_normal.active:hover{
+    background: url("../../../../static/image/dark/page/broadcast/icon/gis/icon_gis_voice_active_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_icon.voice_error{
+    background: url("../../../../static/image/dark/page/broadcast/icon/gis/icon_gis_voice_error.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_icon.board_on{
+    background: url("../../../../static/image/dark/page/broadcast/icon/gis/icon_gis_board_on_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_icon.board_on:hover{
+    background: url("../../../../static/image/dark/page/broadcast/icon/gis/icon_gis_board_on_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_icon.board_on.active{
+    background: url("../../../../static/image/dark/page/broadcast/icon/gis/icon_gis_board_on_selected.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_icon.board_off{
+    background: url("../../../../static/image/dark/page/broadcast/icon/gis/icon_gis_board_off_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_icon.board_off:hover{
+    background: url("../../../../static/image/dark/page/broadcast/icon/gis/icon_gis_board_off_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_icon.board_off.active{
+    background: url("../../../../static/image/dark/page/broadcast/icon/gis/icon_gis_board_off_selected.png") no-repeat;
+    background-size: 100%;
+}
+
+/*gis legend*/
+.gis_icon_area .gis_legend{
+    width: 16.35vw;
+    height: 10.27vh;
+    max-height: 106px;
+    position: absolute;
+    bottom: 1.55%;
+    left: 25.41%;
+}
+.gis_icon_area .gis_legend.voice_legend{
+    background: url("../../../../static/image/dark/page/broadcast/img/img_legend_gis_voice.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_legend.board_legend{
+    width: 11.875vw;
+    background: url("../../../../static/image/dark/page/broadcast/img/img_legend_gis_board.png") no-repeat;
+    background-size: 100%;
+}
+
+/**lightmode style**/
+.lightmode .gis_icon_area .gis_legend.voice_legend{
+    background: url("../../../../static/image/light/page/broadcast/img/img_legend_gis_voice.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_icon_area .gis_legend.board_legend{
+    background: url("../../../../static/image/light/page/broadcast/img/img_legend_gis_board.png") no-repeat;
+    background-size: 100%;
+}
+
+
+/*임시위치*/
+.dashWrap .loc_1{
+    top: 10%;
+    left: 50%;
+}
+.dashWrap .loc_2{
+    top: 20%;
+    left: 50%;
+}
+.dashWrap .loc_3{
+    top: 30%;
+    left: 50%;
+}
+.dashWrap .loc_4{
+    top: 40%;
+    left: 50%;
+}
+
+

@@ -1,0 +1,784 @@
+/*gisIcon/gisWidget style*/
+.gis_area{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.gis_icon_area{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* z-index: 1; */
+}
+.gis_widget_area{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.gis_widget_area .loc_box{
+    width: 13.96vw;
+    height: 3.48vh;
+    max-height: 36px;
+    border-radius: 0.3125vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 1.06%;
+    left: 40.9375vw;
+    cursor: pointer;
+}
+.gis_widget_area .facil_select_area{
+    width: 10.52vw;
+    height: auto;
+    border-radius: 0.3125vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 1.06%;
+    left: 30vw;
+}
+.gis_widget_area .facil_select_area .facil_select_head{
+    width: 100%; 
+    height: 3.48vh;  
+    max-height: 34px;  
+    position: relative;
+}
+.gis_widget_area .facil_select_area .select_title{
+    width: auto; 
+    height: 100%;
+    font-family: "NotoSansCJKR";
+    font-size: 0.72vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    color: #e1e1e3;
+    padding-left: 1vw;
+    line-height: 3.2vh;
+    float: left;
+}
+.gis_widget_area .facil_select_area .select_num{
+    width: 0.83vw;
+    height: 1.55vh;
+    max-height: 16px;
+    background-color: #7e4cff;
+    border-radius: 50%;
+    font-family: "NotoSansCJKB";
+    font-size: 0.625vw;
+    letter-spacing: -0.015625vw;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.4vh;
+    float: left;
+    margin: 0.89vh 0 0 0.25vw;
+}
+.gis_widget_area .facil_select_area .btn_open{
+    width: 0.625vw;
+    height: 0.77vh;
+    max-height: 8px;
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_selectBox_down_normal.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.3vh;
+    right: 0.78125vw;
+}
+.gis_widget_area .facil_select_area .btn_open:hover{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_selectBox_down_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .facil_select_area .btn_close{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_selectBox_up_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .facil_select_area .btn_close:hover{
+    background: url("../../../../static/image/dark/page/gis/main/btn/btn_selectBox_up_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .facil_select_area .facil_select_body{
+    width: 100%; 
+    height: auto;   
+    padding: 0.5vh 0 1.5vh 1.09375vw;
+    position: relative;
+    display: none;
+}
+.gis_widget_area .gis_func_frame{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 1.06%;
+    right: 1.5625vw;
+}
+.gis_widget_area .gis_func_frame .view_box{
+    width: 7.6vw;
+    height: 3.48vh;
+    max-height: 36px;
+    padding: 0.21vh 0.108vw 0 0.108vw;
+    border-radius: 0.36vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 0;
+    right: 9.47vw;
+}
+.gis_widget_area .gis_func_frame .view_box .btn_view{
+    height: 2.9vh;
+    max-height: 30px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.625vw;
+    letter-spacing: -0.03125vw;
+    border-radius: 0.26vw;
+    text-align: center;
+    color: #7e8189;
+}
+.gis_widget_area .gis_func_frame .view_box .btn_view:hover{
+    color: #7e4cff;
+}
+.gis_widget_area .gis_func_frame .view_box .btn_view.active{
+    background-color: #7e4cff;
+    color: #ffffff;
+}
+.gis_widget_area .gis_func_frame .view_box .btn_view.map_view{
+    width: 3.125vw;
+    float: left;
+}
+.gis_widget_area .gis_func_frame .view_box .btn_view.sky_view{
+    width: 4.01vw;
+    float: right;
+}
+.gis_widget_area .gis_func_frame .zoom_box{
+    width: 3.55vw;
+    height: 3.48vh;
+    max-height: 36px;
+    padding: 0.21vh 0.108vw 0 0.108vw;
+    border-radius: 0.36vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 0;
+    right: 5.52vw;
+}
+.gis_widget_area .gis_func_frame .zoom_box .btn_plus{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_plus_normal.png") no-repeat;
+    background-size: 100%;
+    float: left;
+}
+.gis_widget_area .gis_func_frame .zoom_box .btn_plus:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_plus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .zoom_box .btn_minus{
+    width: 1.5625vw;
+    height: 2.9vh;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_minus_normal.png") no-repeat;
+    background-size: 100%;
+    float: right;
+}
+.gis_widget_area .gis_func_frame .zoom_box .btn_minus:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_minus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box{
+    width: 5.1vw;
+    height: 3.48vh;
+    max-height: 36px;
+    padding: 0.21vh 0.108vw 0 0.108vw;
+    border-radius: 0.36vw;
+    box-shadow: 0 0.2vw 0.41vw 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.05vw #13181e;
+    background-color: #222327;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_area{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_area_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_area:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_area_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_length{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_length_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_length:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_length_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_radius{
+    width: 1.5625vw;
+    height: 2.9vh;
+    max-height: 30px;
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_radius_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_widget_area .gis_func_frame .func_box .btn_radius:hover{
+    background: url("../../../../static/image/dark/page/gis/common/btn_map_radius_hover.png") no-repeat;
+    background-size: 100%;
+}
+
+/*gis icon*/
+.gis_icon_area .gis_icon{
+    width: 3.02vw;
+    height: 7vh;
+    max-height: 68px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+/**01waterLevel icon**/
+.gis_icon_area .gis_icon.water_normal{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_01_normality_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_normal:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_01_normality_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_normal.active{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_01_normality_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_warning{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_02_warning_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_warning:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_02_warning_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_warning.active{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_02_warning_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_vigilance{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_03_vigilance_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_vigilance:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_03_vigilance_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_vigilance.active{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_03_vigilance_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_danger{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_04_danger_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_danger:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_04_danger_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_danger.active{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_04_danger_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_none{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_05_none_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_none:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_05_none_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_none.active{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_05_none_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_error{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_06_error_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_error:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_06_error_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.water_error.active{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/icon_gis_06_error_selected.png") no-repeat;
+    background-size: 100%;
+} 
+
+/*counter icon*/
+.gis_icon_area .counter_icon{
+    width: 4.58vw;
+    height: 9vh;
+    max-height: 88px;
+    cursor: pointer;
+    font-family: "NotoSansCJKBL";
+    font-size: 0.9375vw;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: -0.04vw;
+    line-height: 8vh;
+    position: absolute;
+    z-index: 1;
+}
+.gis_icon_area .cicle_area{
+    width: 18.75vw;
+    height: 34.88vh;
+    max-height: 360px;
+    border: solid 0.1vw #a187ff;
+    border-radius: 50%;
+    background-color: rgba(126, 76, 255,0.2);
+    position: absolute;
+}
+.gis_icon_area .sensor_loc_icon{
+    width: 1.45vw;
+    height: 3vh;
+    cursor: pointer;
+    max-height: 28px;
+    position: absolute;
+    z-index: 1;
+}
+/**02counter icon**/
+.gis_icon_area .counter_icon.counter_20over{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_02_20pOver_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_20over:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_02_20pOver_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_20over.active{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_02_20pOver_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_50over{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_03_50pOver_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_50over:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_03_50pOver_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_50over.active{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_03_50pOver_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_100over{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_04_100pOver_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_100over:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_04_100pOver_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_100over.active{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_04_100pOver_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_20{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_01_20p_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_20:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_01_20p_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_20.active{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_01_20p_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_none{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_05_none_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_none:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_05_none_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .counter_icon.counter_none.active{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_gis_05_none_selected.png") no-repeat;
+    background-size: 100%;
+} 
+/**02sensor loc icon**/
+.gis_icon_area .sensor_loc_icon.sensor_on{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_sensor_location_on_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .sensor_loc_icon.sensor_on:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_sensor_location_on_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .sensor_loc_icon.sensor_on.active{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_sensor_location_on_selected.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .sensor_loc_icon.sensor_off{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_sensor_location_off_normal.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .sensor_loc_icon.sensor_off:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_sensor_location_off_hover.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .sensor_loc_icon.sensor_off.active{
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/icon_sensor_location_off_selected.png") no-repeat;
+    background-size: 100%;
+}
+
+/**03publickWifi icon**/
+.gis_icon_area .gis_icon.wifi_low{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_01_low_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.wifi_low:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_01_low_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.wifi_low.active{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_01_low_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.wifi_middle{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_02_middle_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.wifi_middle:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_02_middle_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.wifi_middle.active{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_02_middle_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.wifi_high{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_03_high_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.wifi_high:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_03_high_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.wifi_high.active{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_03_high_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.wifi_error{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_04_error_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.wifi_error:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_04_error_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.wifi_error.active{
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/icon_gis_04_error_selected.png") no-repeat;
+    background-size: 100%;
+} 
+/**04smartLamp icon**/
+.gis_icon_area .gis_icon.smartlamp_normal{
+    background: url("../../../../static/image/dark/page/gis/facility/04_smartStreetLamp/icon_gis_01_normality_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.smartlamp_normal:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/04_smartStreetLamp/icon_gis_01_normality_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.smartlamp_normal.active{
+    background: url("../../../../static/image/dark/page/gis/facility/04_smartStreetLamp/icon_gis_01_normality_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.smartlamp_error{
+    background: url("../../../../static/image/dark/page/gis/facility/04_smartStreetLamp/icon_gis_02_error_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.smartlamp_error:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/04_smartStreetLamp/icon_gis_02_error_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.smartlamp_error.active{
+    background: url("../../../../static/image/dark/page/gis/facility/04_smartStreetLamp/icon_gis_02_error_selected.png") no-repeat;
+    background-size: 100%;
+} 
+/**05socialWeak icon**/
+.gis_icon_area .gis_icon.socialweak_normal{
+    background: url("../../../../static/image/dark/page/gis/facility/05_socialWeak/icon_gis_sociallyWeak_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.socialweak_normal:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/05_socialWeak/icon_gis_sociallyWeak_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.socialweak_normal.active{
+    background: url("../../../../static/image/dark/page/gis/facility/05_socialWeak/icon_gis_sociallyWeak_selected.png") no-repeat;
+    background-size: 100%;
+} 
+/**06tidalObserve icon**/
+.gis_icon_area .gis_icon.tidal_underdl{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_01_underDl_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_underdl:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_01_underDl_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_underdl.active{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_01_underDl_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_dlmsl{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_02_dlMsl_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_dlmsl:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_02_dlMsl_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_dlmsl.active{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_02_dlMsl_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_mslhhw{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_03_mslHhw_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_mslhhw:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_03_mslHhw_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_mslhhw.active{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_03_mslHhw_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_hhwover{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_04_hhwOver_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_hhwover:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_04_hhwOver_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_hhwover.active{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_04_hhwOver_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_none{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_05_none_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_none:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_05_none_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_none.active{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_05_none_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_error{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_06_error_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_error:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_06_error_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.tidal_error.active{
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/icon_gis_06_error_selected.png") no-repeat;
+    background-size: 100%;
+}
+/**07earthquake icon**/
+.gis_icon_area .gis_icon.earthquake_normal{
+    background: url("../../../../static/image/dark/page/gis/facility/07_earthquake/icon_gis_01_normality_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.earthquake_normal:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/07_earthquake/icon_gis_01_normality_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.earthquake_normal.active{
+    background: url("../../../../static/image/dark/page/gis/facility/07_earthquake/icon_gis_01_normality_selected.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.earthquake_error{
+    background: url("../../../../static/image/dark/page/gis/facility/07_earthquake/icon_gis_02_error_normal.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.earthquake_error:hover{
+    background: url("../../../../static/image/dark/page/gis/facility/07_earthquake/icon_gis_02_error_hover.png") no-repeat;
+    background-size: 100%;
+} 
+.gis_icon_area .gis_icon.earthquake_error.active{
+    background: url("../../../../static/image/dark/page/gis/facility/07_earthquake/icon_gis_02_error_selected.png") no-repeat;
+    background-size: 100%;
+} 
+
+/*gis legend*/
+.gis_icon_area .gis_legend{
+    width: 24.48vw;
+    height: 10.27vh;
+    max-height: 106px;
+    position: absolute;
+    bottom: 1.55%;
+    left: 30%;
+}
+.gis_icon_area .gis_legend.water_legend{
+    background: url("../../../../static/image/dark/page/gis/facility/01_waterLevel/img_legend_gis.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_legend.counter_legend{
+    width: 25.52vw;
+    background: url("../../../../static/image/dark/page/gis/facility/02_counter/img_legend_gis.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_legend.wifi_legend{
+    width: 15.57vw;
+    background: url("../../../../static/image/dark/page/gis/facility/03_publicWifi/img_legend_gis.png") no-repeat;
+    background-size: 100%;
+}
+.gis_icon_area .gis_legend.tidal_legend{
+    width: 28.33vw;
+    background: url("../../../../static/image/dark/page/gis/facility/06_tidalObserve/img_legend_gis.png") no-repeat;
+    background-size: 100%;
+}
+
+/**lightmode style**/
+.lightmode .gis_widget_area .loc_box{
+    border: solid 0.05vw  #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .gis_widget_area .facil_select_area{
+    border: solid 0.05vw  #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .gis_widget_area .facil_select_area .select_title{
+    color: #676382;
+}
+.lightmode .gis_widget_area .gis_func_frame .view_box{
+    border: solid 0.05vw #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .gis_widget_area .gis_func_frame .view_box .btn_view{
+    color: #716d8f;
+}
+.lightmode .gis_widget_area .gis_func_frame .view_box .btn_view:hover{
+    background-color: rgba(126, 76, 255,0.08);
+    color: #7e4cff;
+}
+.lightmode .gis_widget_area .gis_func_frame .view_box .btn_view.active{
+    background-color: #7e4cff;
+    color: #ffffff;
+}
+.lightmode .gis_widget_area .gis_func_frame .zoom_box{
+    border: solid 0.05vw #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .gis_widget_area .gis_func_frame .zoom_box .btn_plus{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_plus_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .zoom_box .btn_plus:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_plus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .zoom_box .btn_minus{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_minus_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .zoom_box .btn_minus:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_minus_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box{
+    border: solid 0.05vw #ffffff;
+    background-color: #f5f6fc;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_area{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_area_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_area:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_area_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_length{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_length_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_length:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_length_hover.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_radius{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_radius_normal.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_widget_area .gis_func_frame .func_box .btn_radius:hover{
+    background: url("../../../../static/image/light/page/gis/common/btn_map_radius_hover.png") no-repeat;
+    background-size: 100%;
+}
+/*gis legend*/
+.lightmode .gis_icon_area .gis_legend.water_legend{
+    background: url("../../../../static/image/light/page/gis/facility/01_waterLevel/img_legend_gis.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_icon_area .gis_legend.counter_legend{
+    background: url("../../../../static/image/light/page/gis/facility/02_counter/img_legend_gis.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_icon_area .gis_legend.wifi_legend{
+    background: url("../../../../static/image/light/page/gis/facility/03_publicWifi/img_legend_gis.png") no-repeat;
+    background-size: 100%;
+}
+.lightmode .gis_icon_area .gis_legend.tidal_legend{
+    background: url("../../../../static/image/light/page/gis/facility/06_tidalObserve/img_legend_gis.png") no-repeat;
+    background-size: 100%;
+}
+
+/*임시위치*/
+.dashWrap .loc_1{
+    top: 10%;
+    left: 50%;
+}
+.dashWrap .loc_2{
+    top: 20%;
+    left: 50%;
+}
+.dashWrap .loc_3{
+    top: 30%;
+    left: 50%;
+}
+.dashWrap .loc_4{
+    top: 40%;
+    left: 50%;
+}
+.dashWrap .loc_5{
+    top: 50%;
+    left: 50%;
+}
+.dashWrap .loc_6{
+    top: 60%;
+    left: 50%;
+}     
+.dashWrap .loc_7{
+    top: 20%;
+    left: 70%;
+}  
+.dashWrap .loc_8{
+    top: 7%;
+    left: 63%;
+}  
+.dashWrap .loc_9{
+    top: 17%;
+    left: 63%;
+}  
+.dashWrap .loc_10{
+    top: 27%;
+    left: 63%;
+}  

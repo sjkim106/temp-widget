@@ -1,0 +1,32 @@
+/*dashboard commmon style*/
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  max-height: 1032px;
+  min-width: 960px;
+  min-height: 516px;
+  overflow: hidden;
+}  
+.dashWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  max-height: 1032px;
+  min-width: 960px;
+  min-height: 516px;
+  margin: 0 auto;  
+}
+
+
+/*float*/
+.dashWrap .ftL {
+  float: left;
+}
+.dashWrap .ftR {
+  float: right;
+}

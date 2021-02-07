@@ -1,0 +1,563 @@
+/*rightArea style*/
+.right_area{
+    width: 75.78vw;
+    height: 100vh;
+    max-height: 1032px;
+    background-color: #15161a;
+    padding: 4.74vh 0 0 3.8vw;
+    float: left;
+}
+.loc_txt{
+    width: auto;
+    height: 3.48vh;
+    max-height: 36px;
+    font-size: 1.25vw;
+    letter-spacing: -0.03125vw;
+    font-family: "NotoSansCJKB";
+    text-align: left;
+    color: #ffffff;
+    line-height: 3.2vh;
+    padding-left: 1.9375vw;
+    position: relative;
+    margin-bottom: 2.61vh;
+}
+.loc_txt::before{
+    content:"";
+    display: block;
+    width: 1.09375vw;
+    height: 2.03vh;
+    max-height: 21px;
+    background: url("airQualityStatus/icon/icon_region.png") no-repeat;
+
+    background-size: 100%;
+    position: absolute;
+    top: 0.86vh;
+    left: 0.57vw;
+}
+/*실시간 대기질 현황 영역*/
+.realtime_area{
+    width: 100%;
+    height: 31vh;
+    max-height: 334.5px;
+    margin-bottom: 6vh;
+}
+.title_txt{
+    width: 100%;
+    height: 2.32vh;
+    max-height: 24px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: left;
+    color: #dddeed;
+    padding-left: 1.83vw;
+    position: relative;
+    line-height: 1.8vh;
+    margin-bottom: 1vh;
+}
+.title_txt span{
+    font-family: "NotoSansCJKR";
+    color: #7f68db;
+    margin-left: 0.36vw;
+}
+.title_txt::before{
+    content:"";
+    display: block;
+    width: 0.57vw;
+    height: 1.06vh;
+    border-radius: 50%;
+    border: solid 0.13vw #8139e5;
+    position: absolute;
+    top: 0.4vh;
+    left: 0.83vw;
+}
+.total_area{
+    width: 18.64vw;
+    height: 27.87vh;
+    max-height: 298px;
+    background-color: #1c1c21;
+    border: solid 0.05vw #2e3036;
+    padding-top: 2.61vh;
+    position: relative;
+    float: left;
+}
+.total_area .total_title{
+    width: 100%;
+    height: 2.61vh;
+    max-height: 27px;
+    font-family: "NotoSansCJKR";
+    font-size: 0.9375vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #dddeed;
+    margin-bottom: 1.25vh;
+}
+.total_area .total_value{
+    width: 8.334vw;
+    height: 10.5vh;
+    max-height: 160px;
+    border-radius: 50%;
+    border: solid 0.2vw;
+    margin-left: 5.15625vw;
+    font-family: "NotoSansCJKBL";
+    font-size: 1.875vw;
+    letter-spacing: -0.04vw;
+    padding-top: 4.5vh;
+    text-align: center;
+    position: relative;
+}
+.total_area .total_value::before{
+    content:"㎍/㎥";
+    display: block;
+    font-family: "NotoSansCJKL";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    color: #777996;
+    position: absolute;
+    top: 8.52vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.state_txt{
+    width: auto;
+    height: 2.81vh;
+    max-height: 29px;
+    font-family: "NotoSansCJKB";
+    font-size: 1.04vw;
+    letter-spacing: -0.02vw;
+    text-align: left;
+    padding-left: 1.25vw;
+    line-height: 2.6vh;
+}
+.state_txt.soso_face::before{
+    content:"";
+    display: block;
+    width: 1.04vw;
+    height: 2.2vh;
+    max-height: 20px;
+    background: url("airQualityStatus/icon/icon_face_2_soso.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.5vh;
+    left: 0;
+}
+.state_txt.good_face::before{
+    content:"";
+    display: block;
+    width: 1.04vw;
+    height: 2.2vh;
+    max-height: 20px;
+    background: url("airQualityStatus/icon/icon_face_1_good.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.5vh;
+    left: 0;
+}
+.state_txt.bad_face::before{
+    content:"";
+    display: block;
+    width: 1.04vw;
+    height: 2.2vh;
+    max-height: 20px;
+    background: url("airQualityStatus/icon/icon_face_3_bad.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.5vh;
+    left: 0;
+}
+.state_txt.terrible_face::before{
+    content:"";
+    display: block;
+    width: 1.04vw;
+    height: 2.2vh;
+    max-height: 20px;
+    background: url("airQualityStatus/icon/icon_face_4_terrible.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.5vh;
+    left: 0;
+}
+.total_area .state_txt{
+    position: absolute;
+    top: 24.96vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.air_area{
+    width: 14.77vw;
+    height: 11.37vh;
+    max-height: 138px;
+    background-color: #1c1c21;
+    border: solid 0.05vw #2e3036;
+    float: left;
+    margin: 0 0 2.13vh 1.14vw;
+    padding: 2.61vh 0 0 1.97vw;
+}
+.air_area .r_value{
+    width: 4.375vw;
+    height: 6.13vh;
+    max-height: 84px;
+    border: solid 0.2vw;
+    border-radius: 50%;
+    font-family: "NotoSansCJKB";
+    font-size: 1.04vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    padding-top: 2vh;
+    float: left;
+    position: relative;
+}
+.air_area .air_info{
+    width: 7.8125vw;
+    height: auto;
+    float: left;
+    margin-left: 1.5625vw;
+}
+.air_area .air_info .air_name{
+    width: auto;
+    height: 3.48vh;
+    max-height: 36px;
+    font-family: "NotoSansCJKR";
+    font-size: 1.25vw;
+    letter-spacing: -0.03125vw;
+    text-align: left;
+    color: #dddeed;
+    margin-top: 1.2vh;
+    line-height: 3.5vh;
+    position: relative;
+}
+.air_area .air_info .air_name::before{
+    content:"";
+    display: block;
+    width: 1.04vw;
+    height: 0.19vh;
+    max-height: 2px;
+    background-color: #646570;
+    position: absolute;
+    top: -0.48vh;
+    left: 0.03vw;
+}
+.air_area .air_info .state_txt{
+    position: relative;
+    float: left;
+    line-height: 2.9vh;
+}
+.air_area.dust_unit .r_value::before{
+    content:"㎍/㎥";
+    display: block;
+    width: 100%;
+    font-family: "NotoSansCJKL";
+    font-size: 0.625vw;
+    letter-spacing: -0.015vw;
+    text-align: center;
+    color: #777996;
+    position: absolute;
+    top: 4.2vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.air_area.air_unit .r_value::before{
+    content:"ppm";
+    display: block;
+    width: 100%;
+    font-family: "NotoSansCJKL";
+    font-size: 0.625vw;
+    letter-spacing: -0.015vw;
+    text-align: center;
+    color: #777996;
+    position: absolute;
+    top: 4.2vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*시간별 대기질 현황 영역*/
+.hourly_area{
+    width: 100%;
+    height: 43vh;
+    max-height: 463px;
+}
+.chart_info{
+    width: 23.22vw;
+    height: 18.21vh;
+    max-height: 188px;
+    border: solid 0.05vw #2e3036;
+    background-color: #1c1c21;
+    margin: 0 1.35vw 2.13vh 0;
+    float: left;
+    position: relative;
+}
+.detail_info{
+    width: 3.85vw;
+    height: 100%;
+    margin: 2.5vh 1.44vw 0 1.54vw;
+    float: left;
+}
+.detail_title{
+    width: 100%;
+    height: 2.22vh;
+    max-height: 23px;
+    font-family: "NotoSansCJKM";
+    font-size: 0.83vw;
+    letter-spacing: -0.02vw;
+    text-align: center;
+    line-height: 2.3vh;
+    color: #cbccda;
+}
+.c_value{
+    width: 2.5525vw;
+    height: 4.4vh;
+    max-height: 49px;
+    border-radius:50%;
+    border:0.2vw solid;
+    margin: 1.16vh 0 1.55vh 0.57vw;
+    font-family: "NotoSansCJKB";
+    font-size: 0.98375vw;
+    letter-spacing: -0.04vw;
+    line-height: 4vh;
+    text-align: center;
+}
+.c_unit{
+    font-family: "NotoSansCJKL";
+    font-size: 0.625vw;
+    letter-spacing: -0.015vw;
+    text-align: center;
+    color: #c5c6d4;
+    width: 100%;
+    height: 1.74vh;
+    max-height: 18px;
+}
+.chart_in{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*960x516 & 640x344 pc size 부분 커스텀*/
+@media only screen and (min-height: 10px) and (max-height: 516px) {
+    .right_area{
+        width: 100%;
+        padding: 7.42vh 0 0 5vw;
+    }
+    .hourly_area{
+        display: none;
+    }
+    .loc_txt{
+        width: auto;
+        height: 5.42vh;
+        font-size: 1.97vw;
+        line-height: 5vh;
+        padding-left: 2.1875vw;
+        margin-bottom: 2.32vh;
+    }
+    .loc_txt::before{
+        width: 1.77vw;
+        height: 3.29vh;
+        top: 1vh;
+        left: 0;
+    }
+    .realtime_area{
+        height: auto;
+        margin-left: 2.29vw;
+        margin-bottom: 0;
+    }
+    .title_txt{
+        height: 3.68vh;
+        font-size: 1.35vw;
+        padding-left: 2.9375vw;
+        line-height: 3.5vh;
+        margin-bottom: 2.09vh;
+    }
+    .title_txt span{
+        margin-left: 0.5625vw;
+    }
+    .title_txt::before{
+        width: 0.9375vw;
+        height: 1.74vh;
+        border: solid 0.3vw #8139e5;
+        top: 1.1vh;
+        left: 1.33vw;
+    }
+    .total_area{
+        width: 29.79vw;
+        height: 70.54vh;
+        max-height: 364px;
+        border: solid 0.1vw #2e3036;
+        padding-top: 6.31vh;
+    }
+    .total_area .total_title{
+        height: 5.23vh;
+        font-size: 1.875vw;
+        margin-bottom: 11.27vh;
+        line-height: 5vh;
+    }
+    .total_area .total_value{
+        width: 13.33vw;
+        height: 24.8vh;
+        border: solid 0.3125vw;
+        margin-left: 8.25vw;
+        font-size: 3.02vw;
+        padding-top: 6.78vh;
+    }
+    .total_area .total_value::before{
+        font-size: 1.35vw;
+        top: 13.68vh;
+    }
+    .state_txt{
+        height: 4.65vh;
+        font-size: 1.66vw;
+        padding-left: 2.02vw;
+        line-height: 4.4vh;
+    }
+    .state_txt.soso_face::before{
+        width: 1.66vw;
+        height: 3.1vh;
+        top: 0.5vh;
+    }
+    .state_txt.good_face::before{
+        width: 1.66vw;
+        height: 3.1vh;
+        top: 0.5vh;
+    }
+    .state_txt.bad_face::before{
+        width: 1.66vw;
+        height: 3.1vh;
+        top: 0.5vh;
+    }
+    .state_txt.terrible_face::before{
+        width: 1.66vw;
+        height: 3.1vh;
+        top: 0.5vh;
+    }
+    .total_area .state_txt{
+        top: 56.04vh;
+    }
+    .air_area{
+        width: 26.83vw;
+        height: 21.39vh;
+        border: solid 0.1vw #2e3036;
+        margin: 0 0 3.2vh 2.29vw;
+        padding: 4.18vh 0 0 3.16vw;
+    }
+    .air_area .r_value{
+        width: 6.97vw;
+        height: 12.98vh;
+        border: solid 0.3125vw;
+        font-size: 1.66vw;
+        padding-top: 3.5vh;
+    }
+    .air_area .air_info{
+        width: 13.54vw;
+        margin-left: 2.52vw;
+    }
+    .air_area .air_info .air_name{
+        height: 5.42vh;
+        font-size: 1.97vw;
+        margin-top: 2.1vh;
+        line-height: 5.4vh;
+    }
+    .air_area .air_info .air_name::before{
+        width: 1.66vw;
+        height: 0.38vh;
+        top: -0.93vh;
+        left: 0.0625vw;
+    }
+    .air_area .air_info .state_txt{
+        line-height: 4.4vh;
+    }
+    .air_area.dust_unit .r_value::before{
+        font-size: 1.04vw;
+        top: 6.8vh;
+    }
+    .air_area.air_unit .r_value::before{
+        font-size: 1.04vw;
+        top: 6.8vh;
+    }
+
+    /**lightmode style**/
+    .lightmode .total_area{
+        border: solid 0.1vw #ffffff;
+    }
+    .lightmode .air_area{
+        border: solid 0.1vw #ffffff;
+    }
+}
+
+/**lightmode style**/
+.lightmode .right_area{
+    background-color: #e9edf2;
+}
+.lightmode .loc_txt{
+    color: #484752;
+}
+/*실시간 대기질 현황 영역*/
+.lightmode .title_txt{
+    color: #484752;
+}
+.lightmode .total_area{
+    background-color:  #f7f8fc;
+    border: solid 0.05vw #ffffff;
+}
+.lightmode .total_area .total_title{
+    color: #484752;
+}
+.lightmode .air_area{
+    background-color:  #f7f8fc;
+    border: solid 0.05vw #ffffff;
+}
+.lightmode .air_area .air_info .air_name{
+    color: #484752;
+}
+.lightmode .air_area .air_info .air_name::before{
+    background-color: #dfe3e8;
+}
+/*시간별 대기질 현황 영역*/
+.lightmode .chart_info{
+    border: solid 0.05vw #ffffff;
+    background-color: #f7f8fc;
+}
+.lightmode .detail_title{
+    color: #484752;
+}
+.lightmode .c_unit{
+    color: #777996;
+}
+
+/*border-color*/
+.bdCloud{
+    border-color: #45abff;
+}
+.bdGreen{
+    border-color: #69e359;
+}
+.bdOrange{
+    border-color: #e86c1a;
+}
+.bdRed{
+    border-color: #e8314f;
+}
+.lightmode .bdGreen{
+    border-color: #49b83b;
+}
+
+/*text color*/
+.tCloud{
+    color: #45abff;
+}
+.tGreen{
+    color: #69e359;
+}
+.tOrange{
+    color: #e86c1a;
+}
+.tRed{
+    color: #e8314f;
+}
+.lightmode .tGreen{
+    color: #49b83b;
+}
+.lightmode .state_txt.tGreen{
+    color: #69e359;
+}

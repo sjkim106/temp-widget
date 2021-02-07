@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../component/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../component/jquery/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="../component/jquery/selectric.css" />
+    <link rel="stylesheet" href="../component/jquery/simTree.css" />
+    <link rel="stylesheet" href="../common/css/reset.css" />
+    <link rel="stylesheet" href="../common/css/fontStyle.css" />
+    <link rel="stylesheet" href="../common/css/common.css" />
+    <link rel="stylesheet" href="css/menuArea.css" />
+    <link rel="stylesheet" href="css/gisArea.css" />
+    <link rel="stylesheet" href="css/infoArea.css" />
+  </head>
+  <body class="namhae">
+    <section class="dashWrap">
+      <!--menu area-->
+      <ul class="menu_area">
+        <li class="btn_menu btn_rainfall active" data-menu="menu1"></li>
+        <li class="btn_menu btn_temp" data-menu="menu2"></li>
+        <li class="btn_menu btn_wind" data-menu="menu3"></li>
+        <li class="btn_menu btn_humidity" data-menu="menu4"></li>
+      </ul>
+
+      <!--gis area-->
+      <div class="gis_area">
+        <!--강수량-->
+        <div class="gis_info gis_rain" id="menu1">
+          <div class="loc_box loc_1">
+            <div class="loc_name">설천면</div>
+            <div class="rain_num time_title">15<span>mm</span></div>
+            <div class="rain_num day_title">25<span>mm</span></div>
+          </div>
+          <div class="loc_box loc_2">
+            <div class="loc_name">고현면</div>
+            <div class="rain_num time_title">15<span>mm</span></div>
+            <div class="rain_num day_title">25<span>mm</span></div>
+          </div>
+          <div class="loc_box loc_3">
+            <div class="loc_name">창선면</div>
+            <div class="rain_num time_title">15<span>mm</span></div>
+            <div class="rain_num day_title">25<span>mm</span></div>
+          </div>
+          <div class="loc_box loc_4">
+            <div class="loc_name">서면</div>
+            <div class="rain_num time_title">15<span>mm</span></div>
+            <div class="rain_num day_title">25<span>mm</span></div>
+          </div>
+          <div class="loc_box loc_5">
+            <div class="loc_name">남해읍</div>
+            <div class="rain_num time_title">15<span>mm</span></div>
+            <div class="rain_num day_title">25<span>mm</span></div>
+          </div>
+          <div class="loc_box loc_6">
+            <div class="loc_name">삼동면</div>
+            <div class="rain_num time_title">15<span>mm</span></div>
+            <div class="rain_num day_title">25<span>mm</span></div>
+          </div>
+          <div class="loc_box loc_7">
+            <div class="loc_name">이동면</div>
+            <div class="rain_num time_title">15<span>mm</span></div>
+            <div class="rain_num day_title">25<span>mm</span></div>
+          </div>
+          <div class="loc_box loc_8">
+            <div class="loc_name">남면</div>
+            <div class="rain_num time_title">15<span>mm</span></div>
+            <div class="rain_num day_title">25<span>mm</span></div>
+          </div>
+          <div class="loc_box loc_9">
+            <div class="loc_name">상주면</div>
+            <div class="rain_num time_title">15<span>mm</span></div>
+            <div class="rain_num day_title">25<span>mm</span></div>
+          </div>
+          <div class="loc_box loc_10">
+            <div class="loc_name">미조면</div>
+            <div class="rain_num time_title">15<span>mm</span></div>
+            <div class="rain_num day_title">25<span>mm</span></div>
+          </div>
+        </div>
+
+        <!--기온기압-->
+        <div class="gis_info gis_temp" id="menu2">
+          <div class="loc_box loc_1">
+            <div class="loc_name">설천면</div>
+            <div class="temp_num">-1<sup><span>℃</span></sup></div>
+            <div class="pressure_num">1020.5</div>
+          </div>
+          <div class="loc_box loc_2">
+            <div class="loc_name">고현면</div>
+            <div class="temp_num">-1<sup><span>℃</span></sup></div>
+            <div class="pressure_num">1020.5</div>
+          </div>
+          <div class="loc_box loc_3">
+            <div class="loc_name">창선면</div>
+            <div class="temp_num">-1<sup><span>℃</span></sup></div>
+            <div class="pressure_num">1020.5</div>
+          </div>
+          <div class="loc_box loc_4">
+            <div class="loc_name">서면</div>
+            <div class="temp_num">-1<sup><span>℃</span></sup></div>
+            <div class="pressure_num">1020.5</div>
+          </div>
+          <div class="loc_box loc_5">
+            <div class="loc_name">남해읍</div>
+            <div class="temp_num">-1<sup><span>℃</span></sup></div>
+            <div class="pressure_num">1020.5</div>
+          </div>
+          <div class="loc_box loc_6">
+            <div class="loc_name">삼동면</div>
+            <div class="temp_num">-1<sup><span>℃</span></sup></div>
+            <div class="pressure_num">1020.5</div>
+          </div>
+          <div class="loc_box loc_7">
+            <div class="loc_name">이동면</div>
+            <div class="temp_num">-1<sup><span>℃</span></sup></div>
+            <div class="pressure_num">1020.5</div>
+          </div>
+          <div class="loc_box loc_8">
+            <div class="loc_name">남면</div>
+            <div class="temp_num">-1<sup><span>℃</span></sup></div>
+            <div class="pressure_num">1020.5</div>
+          </div>
+          <div class="loc_box loc_9">
+            <div class="loc_name">상주면</div>
+            <div class="temp_num">-1<sup><span>℃</span></sup></div>
+            <div class="pressure_num">1020.5</div>
+          </div>
+          <div class="loc_box loc_10">
+            <div class="loc_name">미조면</div>
+            <div class="temp_num">-1<sup><span>℃</span></sup></div>
+            <div class="pressure_num">1020.5</div>
+          </div>
+        </div>
+
+        <!--풍향풍속-->
+        <div class="gis_info gis_wind" id="menu3">
+          <div class="loc_box loc_1">
+            <div class="loc_name">설천면</div>
+            <div class="wind_num direct_title">160.1<br>SEE</div>
+            <div class="wind_num speed_title">0.8</div>
+          </div>
+          <div class="loc_box loc_2">
+            <div class="loc_name">고현면</div>
+            <div class="wind_num direct_title">160.1<br>SEE</div>
+            <div class="wind_num speed_title">0.8</div>
+          </div>
+          <div class="loc_box loc_3">
+            <div class="loc_name">창선면</div>
+            <div class="wind_num direct_title">160.1<br>SEE</div>
+            <div class="wind_num speed_title">0.8</div>
+          </div>
+          <div class="loc_box loc_4">
+            <div class="loc_name">서면</div>
+            <div class="wind_num direct_title">160.1<br>SEE</div>
+            <div class="wind_num speed_title">0.8</div>
+          </div>
+          <div class="loc_box loc_5">
+            <div class="loc_name">남해읍</div>
+            <div class="wind_num direct_title">160.1<br>SEE</div>
+            <div class="wind_num speed_title">0.8</div>
+          </div>
+          <div class="loc_box loc_6">
+            <div class="loc_name">삼동면</div>
+            <div class="wind_num direct_title">160.1<br>SEE</div>
+            <div class="wind_num speed_title">0.8</div>
+          </div>
+          <div class="loc_box loc_7">
+            <div class="loc_name">이동면</div>
+            <div class="wind_num direct_title">160.1<br>SEE</div>
+            <div class="wind_num speed_title">0.8</div>
+          </div>
+          <div class="loc_box loc_8">
+            <div class="loc_name">남면</div>
+            <div class="wind_num direct_title">160.1<br>SEE</div>
+            <div class="wind_num speed_title">0.8</div>
+          </div>
+          <div class="loc_box loc_9">
+            <div class="loc_name">상주면</div>
+            <div class="wind_num direct_title">160.1<br>SEE</div>
+            <div class="wind_num speed_title">0.8</div>
+          </div>
+          <div class="loc_box loc_10">
+            <div class="loc_name">미조면</div>
+            <div class="wind_num direct_title">160.1<br>SEE</div>
+            <div class="wind_num speed_title">0.8</div>
+          </div>
+        </div>
+
+        <!--습도-->
+        <div class="gis_info gis_humidity" id="menu4">
+          <div class="loc_box loc_1">
+            <div class="loc_name">설천면</div>
+            <div class="gauge_chart">
+              <div class="gauge_bar"></div>
+            </div>
+            <div class="percent_num">47%</div>
+          </div>
+          <div class="loc_box loc_2">
+            <div class="loc_name">고현면</div>
+            <div class="gauge_chart">
+              <div class="gauge_bar"></div>
+            </div>
+            <div class="percent_num">47%</div>
+          </div>
+          <div class="loc_box loc_3">
+            <div class="loc_name">창선면</div>
+            <div class="gauge_chart">
+              <div class="gauge_bar"></div>
+            </div>
+            <div class="percent_num">47%</div>
+          </div>
+          <div class="loc_box loc_4">
+            <div class="loc_name">서면</div>
+            <div class="gauge_chart">
+              <div class="gauge_bar"></div>
+            </div>
+            <div class="percent_num">47%</div>
+          </div>
+          <div class="loc_box loc_5">
+            <div class="loc_name">남해읍</div>
+            <div class="gauge_chart">
+              <div class="gauge_bar"></div>
+            </div>
+            <div class="percent_num">47%</div>
+          </div>
+          <div class="loc_box loc_6">
+            <div class="loc_name">삼동면</div>
+            <div class="gauge_chart">
+              <div class="gauge_bar"></div>
+            </div>
+            <div class="percent_num">47%</div>
+          </div>
+          <div class="loc_box loc_7">
+            <div class="loc_name">이동면</div>
+            <div class="gauge_chart">
+              <div class="gauge_bar"></div>
+            </div>
+            <div class="percent_num">47%</div>
+          </div>
+          <div class="loc_box loc_8">
+            <div class="loc_name">남면</div>
+            <div class="gauge_chart">
+              <div class="gauge_bar"></div>
+            </div>
+            <div class="percent_num">47%</div>
+          </div>
+          <div class="loc_box loc_9">
+            <div class="loc_name">상주면</div>
+            <div class="gauge_chart">
+              <div class="gauge_bar"></div>
+            </div>
+            <div class="percent_num">47%</div>
+          </div>
+          <div class="loc_box loc_10">
+            <div class="loc_name">미조면</div>
+            <div class="gauge_chart">
+              <div class="gauge_bar"></div>
+            </div>
+            <div class="percent_num">47%</div>
+          </div>
+        </div>
+      </div>
+    
+      <!--info area-->
+      <div class="info_area">
+         <!--강우 현황-->
+        <div class="info_title rain_icon">강우 현황</div>
+        <div class="table_in">
+          <!-- table 영역-->
+          <table class="list_table">
+            <colgroup>
+              <col width="28.57%" />
+              <col width="13.86%" />
+              <col width="13.86%" />
+              <col width="13.86%" />
+              <col width="13.86%" />
+              <col width="15.99%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <td>지역</td>
+                <td>전시간</td>
+                <td>시간</td>
+                <td>금일</td>
+                <td>전일</td>
+                <td>월간</td>
+              </tr>          
+            </thead>
+            <tbody>
+              <tr>
+                <td>설천면</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>    
+              <tr>
+                <td>고현면</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>서면</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>남해읍</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>이동면</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>남면</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>상주면</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>미조면</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>삼동면</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>창선면</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!--풍향/풍속-->
+        <div class="info_title wind_icon">풍향·풍속</div>
+        <div class="table_in">
+          <!-- table 영역-->
+          <table class="list_table">
+            <colgroup>
+              <col width="28.57%" />
+              <col width="20.79%" />
+              <col width="20.79%" />
+              <col width="14.86%" />
+              <col width="14.99%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <td>지역</td>
+                <td>전시간(풍향)</td>
+                <td>시간(풍향)</td>
+                <td>전시간(풍속)</td>
+                <td>시간(풍속)</td>
+              </tr>          
+            </thead>
+            <tbody>
+              <tr>
+                <td>설천면</td>
+                <td>160.1 / SSE</td>
+                <td>160.1 / SSE</td>
+                <td>0.8</td>
+                <td>0.8</td>
+              </tr>    
+              <tr>
+                <td>고현면</td>
+                <td>160.1 / SSE</td>
+                <td>160.1 / SSE</td>
+                <td>0.8</td>
+                <td>0.8</td>
+              </tr>
+              <tr>
+                <td>서면</td>
+                <td>160.1 / SSE</td>
+                <td>160.1 / SSE</td>
+                <td>0.8</td>
+                <td>0.8</td>
+              </tr>
+              <tr>
+                <td>남해읍</td>
+                <td>160.1 / SSE</td>
+                <td>160.1 / SSE</td>
+                <td>0.8</td>
+                <td>0.8</td>
+              </tr>
+              <tr>
+                <td>이동면</td>
+                <td>160.1 / SSE</td>
+                <td>160.1 / SSE</td>
+                <td>0.8</td>
+                <td>0.8</td>
+              </tr>
+              <tr>
+                <td>남면</td>
+                <td>160.1 / SSE</td>
+                <td>160.1 / SSE</td>
+                <td>0.8</td>
+                <td>0.8</td>
+              </tr>
+              <tr>
+                <td>상주면</td>
+                <td>160.1 / SSE</td>
+                <td>160.1 / SSE</td>
+                <td>0.8</td>
+                <td>0.8</td>
+              </tr>
+              <tr>
+                <td>미조면</td>
+                <td>160.1 / SSE</td>
+                <td>160.1 / SSE</td>
+                <td>0.8</td>
+                <td>0.8</td>
+              </tr>
+              <tr>
+                <td>삼동면</td>
+                <td>160.1 / SSE</td>
+                <td>160.1 / SSE</td>
+                <td>0.8</td>
+                <td>0.8</td>
+              </tr>
+              <tr>
+                <td>창선면</td>
+                <td>160.1 / SSE</td>
+                <td>160.1 / SSE</td>
+                <td>0.8</td>
+                <td>0.8</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+  </body>
+  <script src="../component/jquery/jquery-3.3.1.min.js"></script>
+  <script src="../component/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../component/jquery/jquery.selectric.js"></script>
+  <script src="../component/jquery/simTree.js"></script>
+  <script src="../component/bootstrap/bootstrap.min.js"></script>
+  <script src="js/menuArea.js"></script>
+</html>

@@ -1,0 +1,67 @@
+/*writeModal style*/
+.write_modal .modal-content {
+    width: 30.72vw;
+    height: 52.13vh;
+    max-height: 538px;
+    border-radius: 0.78125vw;
+    margin: 25.5vh 0 0 34.6vw;
+    border: none;
+    position: relative;
+    box-shadow: 0 0.3125vw 0.625vw 0 rgba(0, 0, 0, 0.12);
+    border-radius: 0.41vw;
+}
+.write_modal .modal-body {
+    width: 100%;
+    height: 48.64vh;
+    max-height: 502px;
+    position: relative;
+    padding: 2.42vh 0 0 1.04vw;   
+}
+.write_modal .broadcast_text{
+    width: 28.64vw;
+    height: 38.75vh;
+    max-height: 400px;
+    border-radius: 0.625vw;
+    font-family: "NotoSansCJKR";
+    font-size: 0.72vw;
+    letter-spacing: -0.018vw;
+    text-align: left;
+    color: #fefefe;
+    border: solid 0.05vw #26253b;
+    background-color: #444369;
+    line-height: 2.5vh;
+    padding: 2.7vh 1.64vw 0 1.64vw;
+    float: left;
+    resize: none;
+}
+.write_modal .byte_txt{
+    width: auto;
+    height: 1.64vh;
+    max-height: 17px;
+    font-family: "NotoSansCJKR";
+    font-size: 0.57vw;
+    letter-spacing: -0.01vw;
+    text-align: left;
+    color: #707182;
+    line-height: 1.5vh;
+    float: left;
+    margin-top: 0.33vh;
+    padding-left: 0.5625vw;
+}
+.write_modal .byte_txt span{
+    color: #a7a8c2;
+    margin-right: 0.26vw;
+}
+.write_modal .spread{
+    top: 89%;
+}
+
+/**lightmode style**/
+.lightmode .write_modal .broadcast_text{
+    color: #484752;
+    border: solid 0.05vw #d7dade;
+    background-color: #e9edf2;
+}
+.lightmode .write_modal .byte_txt span{
+    color: #7a45ff;
+}
