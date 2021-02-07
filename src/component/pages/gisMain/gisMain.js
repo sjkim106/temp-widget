@@ -6,6 +6,8 @@ import EventListPanelComponent from './js/panel/eventListPanelComponent';
 import CctvListPanelComponent from './js/panel/cctvListPanelComponent';
 import LegendListPanelComponent from './js/panel/legendListPanelComponent';
 
+import CctvViewerComponent from './js/viewer/cctvViewerComponent';
+
 import '../../common/css/fontStyle.css';
 import '../../common/css/reset.css';
 
@@ -27,8 +29,62 @@ const GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT = "GIS_MAIN_VIEW_STATUS_LEFT_PANEL_E
 const GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV = "GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV";
 const GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND = "GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND";
 
-const CCTV_LIST_DUMMY = [
 
+const CCTV_LIST_DUMMY =  [
+  {
+    id : "CTV0032687",
+    index : "1",
+    position : {
+      lat : "34.840866",
+      lon : "127.8924234"
+    },
+    url : ""
+  },
+  {
+    id : "CTV0032680",
+    index : "2",
+    position : {
+      lat : "34.840866",
+      lon : "127.8924234"
+    },
+    url : ""
+  },
+  {
+    id : "CTV0032666",
+    index : "3",
+    position : {
+      lat : "34.840866",
+      lon : "127.8924234"
+    },
+    url : ""
+  },
+  {
+    id : "CTV0032755",
+    index : "4",
+    position : {
+      lat : "34.840866",
+      lon : "127.8924234"
+    },
+    url : ""
+  },
+  {
+    id : "CTV0032664",
+    index : "5",
+    position : {
+      lat : "34.840866",
+      lon : "127.8924234"
+    },
+    url : ""
+  },
+  {
+    id : "CTV0032774",
+    index : "6",
+    position : {
+      lat : "34.840866",
+      lon : "127.8924234"
+    },
+    url : ""
+  },
 ]
 
 const EVENT_LIST_DUMMY = [
@@ -44,63 +100,7 @@ const EVENT_LIST_DUMMY = [
     title : "남해읍 침수 발생",
     contents : `OOOO 건물 침수발생 / 건물내 화재 발생 / 119 출동 요청 대기중
     OOOO 건물 침수발생 / 건물내 화재 발생 / 119 출동 요청 대기중
-    OOOO 건물 침수발생 / 건물내 화재 발생 / 119 출동 요청 대기중`,
-    cctvList : [
-      {
-        id : "1",
-        index : "1",
-        position : {
-          lat : "",
-          lon : ""
-        },
-        url : ""
-      },
-      {
-        id : "2",
-        index : "2",
-        position : {
-          lat : "",
-          lon : ""
-        },
-        url : ""
-      },
-      {
-        id : "3",
-        index : "3",
-        position : {
-          lat : "",
-          lon : ""
-        },
-        url : ""
-      },
-      {
-        id : "4",
-        index : "4",
-        position : {
-          lat : "",
-          lon : ""
-        },
-        url : ""
-      },
-      {
-        id : "5",
-        index : "5",
-        position : {
-          lat : "",
-          lon : ""
-        },
-        url : ""
-      },
-      {
-        id : "6",
-        index : "6",
-        position : {
-          lat : "",
-          lon : ""
-        },
-        url : ""
-      },
-    ]
+    OOOO 건물 침수발생 / 건물내 화재 발생 / 119 출동 요청 대기중`
   },
   {
     type : "침수",
@@ -144,15 +144,16 @@ class GisMain extends Component {
     this.state = {
       currentWidget : GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT,
       eventList : EVENT_LIST_DUMMY,
-      currentEventFocus : "",
-      currentCctvFocus : "",
+      currentEventFocus : "0",
+      currentCctvFocus : "0",
       mapControlState : {
         type : MAP_TYPE_BASIC,
         
       },
       facilityList : [
 
-      ]
+      ],
+      cctvList : CCTV_LIST_DUMMY
     };
 
     this.checkCurrentPanel = this.checkCurrentPanel.bind(this);
@@ -288,38 +289,16 @@ class GisMain extends Component {
             </header>
             
             <div className="small_monitor_area">
-              <div className="cctv_box">
-                <header className="cctv_header cctv_1">CCTV_A223CCTV_A223CCTV_A223CCTV_A223CCTV_A223</header>
-                <div className="cctv_view"></div>
-              </div>
-              <div className="cctv_box">
-                <header className="cctv_header cctv_2">CCTV 002</header>
-                <div className="cctv_view"></div>
-              </div>
-              <div className="cctv_box">
-                <header className="cctv_header cctv_3">CCTV 003</header>
-                <div className="cctv_view"></div>
-              </div>
-              <div className="cctv_box">
-                <header className="cctv_header cctv_4">CCTV 004</header>
-                <div className="cctv_view"></div>
-              </div>
-              <div className="cctv_box">
-                <header className="cctv_header cctv_5">CCTV 005</header>
-                <div className="cctv_view"></div>
-              </div>
-              <div className="cctv_box">
-                <header className="cctv_header cctv_6">CCTV 006</header>
-                <div className="cctv_view"></div>
-              </div>
+              {
+                this.state.cctvList.map((_item, _index) => {
+                  return <CctvViewerComponent index={_index} itemData={_item}/>
+                })
+              }         
             </div>
             
             <div className="big_monitor_area">
               <div className="enlarge_txt">확대 View</div>
-              <div className="cctv_box">
-                <header className="cctv_header cctv_4">CCTV 004</header>
-                <div className="cctv_view"></div>
-              </div>
+              <CctvViewerComponent index={this.state.currentCctvFocus} itemData={this.state.cctvList[this.state.currentCctvFocus]} isLarge={true}/>
             </div> 
           </div>
         </section>     
