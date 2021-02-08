@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 // import GisMain from "./component/pages/gisMain/gisMain";
-import GisFacility from "./component/pages/gisFacility/gisFacility";
-// import Weather from "./component/pages/weather/weather";
+// import GisFacility from "./component/pages/gisFacility/gisFacility";
+import Weather from "./component/pages/weather/weather";
 // import AirCondition from "./component/pages/airCondition/airCondition";
 // import BroadcastComponent from "./component/pages/broadcast/broadcast";
 // import EventStatisticComponent from "./component/pages/eventStatistic/eventStatisticComponent";
@@ -18,9 +18,9 @@ ReactDOM.render(
     
     {/*<App />*/}
     {/* <GisMain /> */}
-    <GisFacility />
+    {/* <GisFacility /> */}
     {/* <AirCondition /> */}
-    {/* <Weather /> */}
+    <Weather />
     {/* <BroadcastComponent /> */}
     {/* <EventStatisticComponent /> */}
     {/* <DisasterEventListComponent /> */}

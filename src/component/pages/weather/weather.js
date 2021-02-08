@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 
-import $ from 'jquery';
-import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
+import RainGroupComponet from './js/group/rainGroupComponent';
+import TemperatureGroupComponet from './js/group/temperatureGroupComponent';
+import WindGroupComponet from './js/group/windGroupComponent';
+import HuminityGroupComponent from './js/group/huminityGroupComponent';
 
-// import LeafletMapComponent from './js/map/leaflet/leafletMapComponent';
 
 import '../../common/css/fontStyle.css';
 import '../../common/css/reset.css';
@@ -13,17 +14,40 @@ import './css/menuArea.css'
 import './css/gisArea.css'
 import './css/infoArea.css'
 
-class Weather extends Component {
+
+const WEATHER_TYPE_RAIN = "WEATHER_TYPE_RAIN";
+const WEATHER_TYPE_HIMINITY = "WEATHER_TYPE_HIMINITY";
+const WEATHER_TYPE_TEMPERATURE = "WEATHER_TYPE_TEMPERATURE";
+const WEATHER_TYPE_GROUP = "WEATHER_TYPE_GROUP";
+
+class Weather extends Component { 
 
   constructor(_props){
     super(_props);
     this.state = {
-
+        type : WEATHER_TYPE_RAIN
     };
+
+    this.changeCurrentType = this.changeCurrentType.bind(this);
+
+    this.renderMapGroup = this.renderMapGroup.bind(this);
   }
 
   componentDidMount() {
 
+  }
+
+  changeCurrentType (_type) {
+    this.setState({
+        type : _type
+    })
+  }
+
+  renderMapGroup () {
+    if (this.state.type == WEATHER_TYPE_RAIN) return <RainGroupComponet />
+    else if (this.state.type == WEATHER_TYPE_HIMINITY) return <TemperatureGroupComponet />
+    else if (this.state.type == WEATHER_TYPE_TEMPERATURE) return <WindGroupComponet />
+    else if (this.state.type == WEATHER_TYPE_GROUP) return <HuminityGroupComponent />
   }
 
   render() {
@@ -31,249 +55,31 @@ class Weather extends Component {
       <section className="dashWrap">
       
       <ul className="menu_area">
-        <li className="btn_menu btn_rainfall active" data-menu="menu1"></li>
-        <li className="btn_menu btn_temp" data-menu="menu2"></li>
-        <li className="btn_menu btn_wind" data-menu="menu3"></li>
-        <li className="btn_menu btn_humidity" data-menu="menu4"></li>
+        <li 
+            className={"btn_menu btn_rainfall " + ((this.state.type == WEATHER_TYPE_RAIN ) ? "active" : "") }
+            data-menu="menu1"
+            onClick={() => { this.changeCurrentType(WEATHER_TYPE_RAIN)}}>
+        </li>
+        <li 
+            className={"btn_menu btn_temp " + ((this.state.type == WEATHER_TYPE_HIMINITY ) ? "active" : "") }
+            data-menu="menu2"
+            onClick={() => { this.changeCurrentType(WEATHER_TYPE_HIMINITY)}}>
+        </li>
+        <li 
+            className={"btn_menu btn_wind " + ((this.state.type == WEATHER_TYPE_TEMPERATURE ) ? "active" : "") }
+            data-menu="menu3"
+            onClick={() => { this.changeCurrentType(WEATHER_TYPE_TEMPERATURE)}}>
+        </li>
+        <li 
+            className={"btn_menu btn_humidity " + ((this.state.type == WEATHER_TYPE_GROUP ) ? "active" : "") }
+            data-menu="menu4"
+            onClick={() => { this.changeCurrentType(WEATHER_TYPE_GROUP)}}>
+        </li>
       </ul>
 
       
       <div className="gis_area">
-        
-        <div className="gis_info gis_rain" id="menu1">
-          <div className="loc_box loc_1">
-            <div className="loc_name">설천면</div>
-            <div className="rain_num time_title">15<span>mm</span></div>
-            <div className="rain_num day_title">25<span>mm</span></div>
-          </div>
-          <div className="loc_box loc_2">
-            <div className="loc_name">고현면</div>
-            <div className="rain_num time_title">15<span>mm</span></div>
-            <div className="rain_num day_title">25<span>mm</span></div>
-          </div>
-          <div className="loc_box loc_3">
-            <div className="loc_name">창선면</div>
-            <div className="rain_num time_title">15<span>mm</span></div>
-            <div className="rain_num day_title">25<span>mm</span></div>
-          </div>
-          <div className="loc_box loc_4">
-            <div className="loc_name">서면</div>
-            <div className="rain_num time_title">15<span>mm</span></div>
-            <div className="rain_num day_title">25<span>mm</span></div>
-          </div>
-          <div className="loc_box loc_5">
-            <div className="loc_name">남해읍</div>
-            <div className="rain_num time_title">15<span>mm</span></div>
-            <div className="rain_num day_title">25<span>mm</span></div>
-          </div>
-          <div className="loc_box loc_6">
-            <div className="loc_name">삼동면</div>
-            <div className="rain_num time_title">15<span>mm</span></div>
-            <div className="rain_num day_title">25<span>mm</span></div>
-          </div>
-          <div className="loc_box loc_7">
-            <div className="loc_name">이동면</div>
-            <div className="rain_num time_title">15<span>mm</span></div>
-            <div className="rain_num day_title">25<span>mm</span></div>
-          </div>
-          <div className="loc_box loc_8">
-            <div className="loc_name">남면</div>
-            <div className="rain_num time_title">15<span>mm</span></div>
-            <div className="rain_num day_title">25<span>mm</span></div>
-          </div>
-          <div className="loc_box loc_9">
-            <div className="loc_name">상주면</div>
-            <div className="rain_num time_title">15<span>mm</span></div>
-            <div className="rain_num day_title">25<span>mm</span></div>
-          </div>
-          <div className="loc_box loc_10">
-            <div className="loc_name">미조면</div>
-            <div className="rain_num time_title">15<span>mm</span></div>
-            <div className="rain_num day_title">25<span>mm</span></div>
-          </div>
-        </div>
-
-        
-        <div className="gis_info gis_temp" id="menu2">
-          <div className="loc_box loc_1">
-            <div className="loc_name">설천면</div>
-            <div className="temp_num">-1<sup><span>℃</span></sup></div>
-            <div className="pressure_num">1020.5</div>
-          </div>
-          <div className="loc_box loc_2">
-            <div className="loc_name">고현면</div>
-            <div className="temp_num">-1<sup><span>℃</span></sup></div>
-            <div className="pressure_num">1020.5</div>
-          </div>
-          <div className="loc_box loc_3">
-            <div className="loc_name">창선면</div>
-            <div className="temp_num">-1<sup><span>℃</span></sup></div>
-            <div className="pressure_num">1020.5</div>
-          </div>
-          <div className="loc_box loc_4">
-            <div className="loc_name">서면</div>
-            <div className="temp_num">-1<sup><span>℃</span></sup></div>
-            <div className="pressure_num">1020.5</div>
-          </div>
-          <div className="loc_box loc_5">
-            <div className="loc_name">남해읍</div>
-            <div className="temp_num">-1<sup><span>℃</span></sup></div>
-            <div className="pressure_num">1020.5</div>
-          </div>
-          <div className="loc_box loc_6">
-            <div className="loc_name">삼동면</div>
-            <div className="temp_num">-1<sup><span>℃</span></sup></div>
-            <div className="pressure_num">1020.5</div>
-          </div>
-          <div className="loc_box loc_7">
-            <div className="loc_name">이동면</div>
-            <div className="temp_num">-1<sup><span>℃</span></sup></div>
-            <div className="pressure_num">1020.5</div>
-          </div>
-          <div className="loc_box loc_8">
-            <div className="loc_name">남면</div>
-            <div className="temp_num">-1<sup><span>℃</span></sup></div>
-            <div className="pressure_num">1020.5</div>
-          </div>
-          <div className="loc_box loc_9">
-            <div className="loc_name">상주면</div>
-            <div className="temp_num">-1<sup><span>℃</span></sup></div>
-            <div className="pressure_num">1020.5</div>
-          </div>
-          <div className="loc_box loc_10">
-            <div className="loc_name">미조면</div>
-            <div className="temp_num">-1<sup><span>℃</span></sup></div>
-            <div className="pressure_num">1020.5</div>
-          </div>
-        </div>
-
-        
-        <div className="gis_info gis_wind" id="menu3">
-          <div className="loc_box loc_1">
-            <div className="loc_name">설천면</div>
-            <div className="wind_num direct_title">160.1<br/>SEE</div>
-            <div className="wind_num speed_title">0.8</div>
-          </div>
-          <div className="loc_box loc_2">
-            <div className="loc_name">고현면</div>
-            <div className="wind_num direct_title">160.1<br/>SEE</div>
-            <div className="wind_num speed_title">0.8</div>
-          </div>
-          <div className="loc_box loc_3">
-            <div className="loc_name">창선면</div>
-            <div className="wind_num direct_title">160.1<br/>SEE</div>
-            <div className="wind_num speed_title">0.8</div>
-          </div>
-          <div className="loc_box loc_4">
-            <div className="loc_name">서면</div>
-            <div className="wind_num direct_title">160.1<br/>SEE</div>
-            <div className="wind_num speed_title">0.8</div>
-          </div>
-          <div className="loc_box loc_5">
-            <div className="loc_name">남해읍</div>
-            <div className="wind_num direct_title">160.1<br/>SEE</div>
-            <div className="wind_num speed_title">0.8</div>
-          </div>
-          <div className="loc_box loc_6">
-            <div className="loc_name">삼동면</div>
-            <div className="wind_num direct_title">160.1<br/>SEE</div>
-            <div className="wind_num speed_title">0.8</div>
-          </div>
-          <div className="loc_box loc_7">
-            <div className="loc_name">이동면</div>
-            <div className="wind_num direct_title">160.1<br/>SEE</div>
-            <div className="wind_num speed_title">0.8</div>
-          </div>
-          <div className="loc_box loc_8">
-            <div className="loc_name">남면</div>
-            <div className="wind_num direct_title">160.1<br/>SEE</div>
-            <div className="wind_num speed_title">0.8</div>
-          </div>
-          <div className="loc_box loc_9">
-            <div className="loc_name">상주면</div>
-            <div className="wind_num direct_title">160.1<br/>SEE</div>
-            <div className="wind_num speed_title">0.8</div>
-          </div>
-          <div className="loc_box loc_10">
-            <div className="loc_name">미조면</div>
-            <div className="wind_num direct_title">160.1<br/>SEE</div>
-            <div className="wind_num speed_title">0.8</div>
-          </div>
-        </div>
-
-        
-        <div className="gis_info gis_humidity" id="menu4">
-          <div className="loc_box loc_1">
-            <div className="loc_name">설천면</div>
-            <div className="gauge_chart">
-              <div className="gauge_bar"></div>
-            </div>
-            <div className="percent_num">47%</div>
-          </div>
-          <div className="loc_box loc_2">
-            <div className="loc_name">고현면</div>
-            <div className="gauge_chart">
-              <div className="gauge_bar"></div>
-            </div>
-            <div className="percent_num">47%</div>
-          </div>
-          <div className="loc_box loc_3">
-            <div className="loc_name">창선면</div>
-            <div className="gauge_chart">
-              <div className="gauge_bar"></div>
-            </div>
-            <div className="percent_num">47%</div>
-          </div>
-          <div className="loc_box loc_4">
-            <div className="loc_name">서면</div>
-            <div className="gauge_chart">
-              <div className="gauge_bar"></div>
-            </div>
-            <div className="percent_num">47%</div>
-          </div>
-          <div className="loc_box loc_5">
-            <div className="loc_name">남해읍</div>
-            <div className="gauge_chart">
-              <div className="gauge_bar"></div>
-            </div>
-            <div className="percent_num">47%</div>
-          </div>
-          <div className="loc_box loc_6">
-            <div className="loc_name">삼동면</div>
-            <div className="gauge_chart">
-              <div className="gauge_bar"></div>
-            </div>
-            <div className="percent_num">47%</div>
-          </div>
-          <div className="loc_box loc_7">
-            <div className="loc_name">이동면</div>
-            <div className="gauge_chart">
-              <div className="gauge_bar"></div>
-            </div>
-            <div className="percent_num">47%</div>
-          </div>
-          <div className="loc_box loc_8">
-            <div className="loc_name">남면</div>
-            <div className="gauge_chart">
-              <div className="gauge_bar"></div>
-            </div>
-            <div className="percent_num">47%</div>
-          </div>
-          <div className="loc_box loc_9">
-            <div className="loc_name">상주면</div>
-            <div className="gauge_chart">
-              <div className="gauge_bar"></div>
-            </div>
-            <div className="percent_num">47%</div>
-          </div>
-          <div className="loc_box loc_10">
-            <div className="loc_name">미조면</div>
-            <div className="gauge_chart">
-              <div className="gauge_bar"></div>
-            </div>
-            <div className="percent_num">47%</div>
-          </div>
-        </div>
+        { this.renderMapGroup() }
       </div>
     
       
