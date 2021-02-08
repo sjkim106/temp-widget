@@ -9,13 +9,20 @@ class CctvViewerComponent extends Component {
       index : _props.index
     }
     this.player = React.createRef();
-    
+    this.xeusPlayer = null;
   }
 
   componentDidMount() {
     console.log(this.props.id);
-    XeusPlayer("ws://118.37.153.251:18080/xeus-gateway/stream", this.props.itemData.id, this.player.current.id, false)
+    this.xeusPlayer = XeusPlayer("ws://118.37.153.251:18080/xeus-gateway/stream", this.props.itemData.id, this.player.current.id, false)
   }
+
+  componentWillUnmount() {
+    if (this.xeusPlayer != null) {
+      this.xeusPlayer.destroy();
+    }
+  }
+
 
   render() {
     return (

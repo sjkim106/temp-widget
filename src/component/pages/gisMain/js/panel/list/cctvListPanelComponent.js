@@ -2,8 +2,11 @@ import React, {Component} from 'react';
 
 import $ from 'jquery';
 import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
+import selectric from 'jquery-selectric';
 
 import CctvItemCard from './item/cctvItemCard';
+
+
 
 class CctvListPanelComponent extends Component {
 
@@ -17,10 +20,16 @@ class CctvListPanelComponent extends Component {
 
     this.itemClickEvent = this.itemClickEvent.bind(this);
     this.checkCurrentFocus = this.checkCurrentFocus.bind(this);
+
+    this.typeSelectric = React.createRef();
+    this.areaSelectric = React.createRef();
+    this.purposeSelectric = React.createRef();
   }
 
   componentDidMount() {
-
+    let typeSelect = $("#" + this.typeSelectric.current.id).selectric();
+    let areaSelect = $("#" + this.areaSelectric.current.id).selectric();
+    let purposeSelect = $("#" + this.purposeSelectric.current.id).selectric();
   }
 
   checkCurrentFocus (_index) {
@@ -41,7 +50,7 @@ class CctvListPanelComponent extends Component {
           <div className="search_frame">
             <div className="search_row">
               <div className="search_name">분류타입</div>
-              <select className="select_search" id="selectType">
+              <select className="select_search" id="selectType" ref={this.typeSelectric}>
                 <option value="1">CCTV(차량)</option>
                 <option value="2">CCTV(방범)</option>
                 <option value="3">CCTV(재난)</option>
@@ -51,7 +60,7 @@ class CctvListPanelComponent extends Component {
             </div>
             <div className="search_row">
               <div className="search_name">행정구역</div>
-              <select className="select_search" id="selectArea">
+              <select className="select_search" id="selectArea"  ref={this.areaSelectric}>
                 {
                   this.props.areaList.map((_item, _index) => {
                     return <option value={_index}>{_item.name}</option>
@@ -61,7 +70,7 @@ class CctvListPanelComponent extends Component {
             </div>
             <div className="search_row">
               <div className="search_name">설치목적</div>
-              <select className="select_search" id="selectPurpose">
+              <select className="select_search" id="selectPurpose" ref={this.purposeSelectric}>
                 <option value="1">방범</option>
                 <option value="2">다목적</option>                
               </select>

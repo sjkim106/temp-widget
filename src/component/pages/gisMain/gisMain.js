@@ -8,6 +8,7 @@ import LegendListPanelComponent from './js/panel/list/legendListPanelComponent';
 
 import CctvViewerComponent from './js/viewer/cctvViewerComponent';
 
+import './css/selectric.css';
 import '../../common/css/fontStyle.css';
 import '../../common/css/reset.css';
 
@@ -23,7 +24,11 @@ import './css/pagination.css';
 import './css/tree.css';
 
 
-const GIS_MAIN_VIEW_STATUS_LEFT_PANEL_NONE = "GIS_MAIN_VIEW_STATUS_LEFT_PANEL_NONE";
+const GIS_MAIN_VIEW_STATUS_LEFT_PANEL_SHOW = "GIS_MAIN_VIEW_STATUS_LEFT_PANEL_SHOW";
+const GIS_MAIN_VIEW_STATUS_LEFT_PANEL_HIDE = "GIS_MAIN_VIEW_STATUS_LEFT_PANEL_HIDE";
+
+const GIS_MAIN_VIEW_STATUS_RIGHT_PANEL_SHOW = "GIS_MAIN_VIEW_STATUS_RIGHT_PANEL_SHOW";
+const GIS_MAIN_VIEW_STATUS_RIGHT_PANEL_HIDE = "GIS_MAIN_VIEW_STATUS_RIGHT_PANEL_HIDE";
 
 const GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT = "GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT";
 const GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV = "GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV";
@@ -176,23 +181,30 @@ const EVENT_LIST_DUMMY = [
   }
 ];
 
-const MAP_TYPE_BASIC = "MAP_TYPE_BASIC";
-const MAP_TYPE_STELLITE = "MAP_TYPE_STELLITE";
-const MAP_TYPE_NIGHT = "MAP_TYPE_NIGHT";
-const MAP_TYPE_GRAY = "MAP_TYPE_GRAY";
+
+const MAP_TYPE_KAKAO = "MAP_TYPE_KAKAO";
+const MAP_TYPE_VWORLD = "MAP_TYPE_VWORLD";
+const MAP_TYPE_GOOGLE = "MAP_TYPE_GOOGLE";
+
+
+const MAP_STYLE_STELLITE = "MAP_STYLE_STELLITE";
+const MAP_STYLE_BASIC = "MAP_STYLE_BASIC";
 
 class GisMain extends Component {
 
   constructor(_props){
     super(_props);
     this.state = {
+      currentShowLeft : GIS_MAIN_VIEW_STATUS_LEFT_PANEL_SHOW,
+      currentShowRight : GIS_MAIN_VIEW_STATUS_RIGHT_PANEL_SHOW,
       currentWidget : GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT,
       eventList : EVENT_LIST_DUMMY,
       currentEventFocus : "0",
       currentCctvFocus : "0",
       mapControlState : {
-        type : MAP_TYPE_BASIC,
-        
+        type : MAP_TYPE_VWORLD,
+        style : MAP_STYLE_BASIC,
+        level : 13
       },
       facilityList : [
 
@@ -203,12 +215,22 @@ class GisMain extends Component {
 
     this.checkCurrentPanel = this.checkCurrentPanel.bind(this);
 
-    this.changeCurrentFocus = this.changeCurrentFocus.bind(this);
+    this.changeCurrentWidget = this.changeCurrentWidget.bind(this);
 
     this.drawCurrentPanel = this.drawCurrentPanel.bind(this);
 
     this.changeCurrentCctv = this.changeCurrentCctv.bind(this);
-  }
+
+    this.changeCurrentMap = this.changeCurrentMap.bind(this);
+
+    this.changeCurrentMapStyle = this.changeCurrentMapStyle.bind(this);
+
+    this.changeCurrentMapLevel = this.changeCurrentMapLevel.bind(this);
+
+    this.changeShowAndHideLeftPanel = this.changeShowAndHideLeftPanel.bind(this);
+
+    this.changeShowAndHideRightPanel = this.changeShowAndHideRightPanel.bind(this);
+  }  
 
   componentDidMount() {
 
@@ -218,7 +240,7 @@ class GisMain extends Component {
     return (this.state.currentWidget == _type) ? "active" : "";
   }
 
-  changeCurrentFocus (_type) {
+  changeCurrentWidget (_type) {
     this.setState({
       currentWidget : _type
     })
@@ -230,13 +252,62 @@ class GisMain extends Component {
     })
   }
 
+  changeCurrentMapLevel (_type) {
+    let mapControlState = this.state.mapControlState;
+    let currentLevel = mapControlState.level;
+
+    if (_type) currentLevel++;
+    else currentLevel--;
+
+    if (currentLevel > 15) currentLevel = 15;
+    if (currentLevel < 9) currentLevel = 9;
+    
+    mapControlState.level = currentLevel;
+    console.log(mapControlState);
+    this.setState({
+      mapControlState : mapControlState
+    })
+  }
+
+  changeCurrentMap (_type) {
+    let mapControlState = this.state.mapControlState;
+    mapControlState.type = _type
+    this.setState({
+      mapControlState : mapControlState
+    })
+  }
+
+  changeCurrentMapStyle (_style) {
+    let mapControlState = this.state.mapControlState;
+    mapControlState.style = _style
+    this.setState({
+      mapControlState : mapControlState
+    })
+  }
+
   drawCurrentPanel () {
     if (this.state.currentWidget ==  GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT) 
       return  <EventListPanelComponent list={this.state.eventList}/>
     else if (this.state.currentWidget ==  GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV) 
       return  <CctvListPanelComponent list={this.state.cctvList} areaList={this.state.areaList}/>
     else if (this.state.currentWidget ==  GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND) 
-      return  <LegendListPanelComponent list={this.state.eventList}/>
+      return  <LegendListPanelComponent 
+        list={this.state.eventList} 
+        mapType={this.state.mapControlState.type} 
+        changeCurrentMap={this.changeCurrentMap}
+        />
+  }
+
+  changeShowAndHideLeftPanel (_type) {
+    this.setState({
+      currentShowLeft : _type
+    })
+  }
+
+  changeShowAndHideRightPanel (_type) {
+    this.setState({
+      currentShowRight : _type
+    })
   }
 
   render() {
@@ -247,6 +318,9 @@ class GisMain extends Component {
           <LeafletMapComponent 
             eventList={this.state.eventList}
             cctvList={this.state.cctvList}
+            mapType={this.state.mapControlState.type}
+            mapStyle={this.state.mapControlState.style}
+            mapLevel={this.state.mapControlState.level}
           />
         </div>
         
@@ -255,17 +329,17 @@ class GisMain extends Component {
           <button 
             type="button" 
             className={"btn_evtlist " + this.checkCurrentPanel(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT)}
-            onClick={()=>{ this.changeCurrentFocus(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT)}}>
+            onClick={()=>{ this.changeCurrentWidget(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT)}}>
           </button>
           <button 
             type="button" 
             className={"btn_search " + this.checkCurrentPanel(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV)}
-            onClick={()=>{ this.changeCurrentFocus(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV)}}>
+            onClick={()=>{ this.changeCurrentWidget(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV)}}>
           </button>
           <button 
             type="button" 
             className={"btn_legend " + this.checkCurrentPanel(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND)}
-            onClick={()=>{ this.changeCurrentFocus(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND)}}>
+            onClick={()=>{ this.changeCurrentWidget(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND)}}>
           </button>
           
           <div className="loc_box">
@@ -284,51 +358,97 @@ class GisMain extends Component {
             </select>
           </div>            
         </div>
-
         
-        
-        <section className="dash_info_wrap">
+        <section 
+          className="dash_info_wrap" 
+          style={(this.state.currentShowLeft == GIS_MAIN_VIEW_STATUS_LEFT_PANEL_HIDE) ? {left : "-23.54vw"} : {left : "0vw"}}>
           
-          <button type="button" className="btn_tab"></button>
+          <button 
+            type="button" 
+            className="btn_tab"
+            onClick={() => {
+              if (this.state.currentShowLeft == GIS_MAIN_VIEW_STATUS_LEFT_PANEL_HIDE) {
+                this.changeShowAndHideLeftPanel(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_SHOW)
+              } else {
+                this.changeShowAndHideLeftPanel(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_HIDE)
+              }
+              
+            }}>
+          </button>
           
-          <button type="button" className="btn_dash_close"></button>
+          <button 
+            type="button" 
+            className="btn_dash_close"
+            onClick={()=>{
+              this.changeShowAndHideLeftPanel(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_HIDE)
+            }}
+            >
+          </button>
 
           <header className="dash_header">재난관제</header>
           
           <ul className="menu_btn_area">
             <li className={"btn_menu btn_evtlist " + this.checkCurrentPanel(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT) } 
               data-menu="menu1"
-              onClick={()=>{ this.changeCurrentFocus(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT)}}>이벤트 리스트</li>
+              onClick={()=>{ this.changeCurrentWidget(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT)}}>이벤트 리스트</li>
             <li className={"btn_menu btn_search " + this.checkCurrentPanel(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV) } 
               data-menu="menu2"
-              onClick={()=>{ this.changeCurrentFocus(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV)}}>검색</li>
+              onClick={()=>{ this.changeCurrentWidget(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV)}}>검색</li>
             <li className={"btn_menu btn_legend " + this.checkCurrentPanel(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND) } 
               data-menu="menu3"
-              onClick={()=>{ this.changeCurrentFocus(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND)}}>범례</li>
+              onClick={()=>{ this.changeCurrentWidget(GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND)}}>범례</li>
           </ul>
-
           
-          
-          { this.drawCurrentPanel()}
+          { this.drawCurrentPanel() }
           
         </section>
 
         
-        <section className="monitor_wrap">
+        <section 
+          className="monitor_wrap"
+          style={(this.state.currentShowRight == GIS_MAIN_VIEW_STATUS_RIGHT_PANEL_HIDE) ? {right : "-23.54vw"} : {right : "0vw"}}>
           
-          <button type="button" className="btn_tab"></button>
-
+          <button 
+            type="button" 
+            className="btn_tab"
+            onClick={() => {
+              console.log(this.state.currentShowRight);
+              if (this.state.currentShowRight == GIS_MAIN_VIEW_STATUS_RIGHT_PANEL_HIDE) {
+                this.changeShowAndHideRightPanel(GIS_MAIN_VIEW_STATUS_RIGHT_PANEL_SHOW)
+              } else {
+                this.changeShowAndHideRightPanel(GIS_MAIN_VIEW_STATUS_RIGHT_PANEL_HIDE)
+              }
+            }}>
+          </button>
           
           <div className="gis_func_frame">
             
             <div className="view_box">
-              <button type="button" className="btn_view map_view active">지도</button>
-              <button type="button" className="btn_view sky_view">스카이뷰</button>
+              <button 
+                type="button" 
+                className={"btn_view map_view " + ((this.state.mapControlState.style == MAP_STYLE_BASIC) ? "active" : "")}
+                onClick={()=>{this.changeCurrentMapStyle(MAP_STYLE_BASIC)}}
+                >지도</button>
+              <button 
+                type="button" 
+                className={"btn_view sky_view " + ((this.state.mapControlState.style == MAP_STYLE_STELLITE)  ? "active" : "")}
+                onClick={()=>{this.changeCurrentMapStyle(MAP_STYLE_STELLITE)}}
+                >스카이뷰</button>
             </div>
             
             <div className="zoom_box">
-              <button type="button" className="btn_plus active"></button>
-              <button type="button" className="btn_minus"></button>
+              <button 
+                type="button" 
+                className="btn_plus"
+                onClick={()=>{this.changeCurrentMapLevel(true)}}
+                >                
+              </button>
+              <button 
+                type="button" 
+                className="btn_minus"
+                onClick={()=>{this.changeCurrentMapLevel(false)}}
+                >                
+              </button>
             </div>
             
             <div className="func_box">
