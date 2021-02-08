@@ -9,7 +9,7 @@ import GisMain from "./component/pages/gisMain/gisMain";
 // import AirCondition from "./component/pages/airCondition/airCondition";
 // import BroadcastComponent from "./component/pages/broadcast/broadcast";
 // import EventStatisticComponent from "./component/pages/eventStatistic/eventStatisticComponent";
-// import FacilityStatisticComponent from "./component/pages/facilityStatistic/facilityStatisticComponent";
+import FacilityStatisticComponent from "./component/pages/facilityStatistic/facilityStatisticComponent";
 // import DisasterEventListComponent from "./component/pages/disasterEventList/disasterEventListComponent";
 import reportWebVitals from './reportWebVitals';
 
@@ -23,6 +23,7 @@ ReactDOM.render(
     {/* <Weather /> */}
     {/* <BroadcastComponent /> */}
     {/* <EventStatisticComponent /> */}
+    <FacilityStatisticComponent />
     {/* <DisasterEventListComponent /> */}
     {/* 
     <Route exactpath="/gisMain" component={GisMain}/>
