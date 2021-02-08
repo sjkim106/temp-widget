@@ -3,8 +3,7 @@ function EventItemCard(_props) {
     console.log(_props);
     const isDisplay = (_props.isClicked == "active") ? "block" : "none";
     return (
-        <div className={"list_card " + _props.isClicked } onClick={() => _props.itemEvent(_props.itemIndex)}>
-                        
+        <div className={"list_card " + _props.isClicked } onClick={() => _props.itemEvent(_props.itemIndex)}>                        
             <button type="button" className="btn_show"></button>
             <div className="card_head">
             <div className="card_head_txt">{_props.itemData.type}</div>

@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 
 import LeafletMapComponent from './js/map/leaflet/leafletMapComponent';
 
-import EventListPanelComponent from './js/panel/eventListPanelComponent';
-import CctvListPanelComponent from './js/panel/cctvListPanelComponent';
-import LegendListPanelComponent from './js/panel/legendListPanelComponent';
+import EventListPanelComponent from './js/panel/list/eventListPanelComponent';
+import CctvListPanelComponent from './js/panel/list/cctvListPanelComponent';
+import LegendListPanelComponent from './js/panel/list/legendListPanelComponent';
 
 import CctvViewerComponent from './js/viewer/cctvViewerComponent';
 
@@ -29,14 +29,58 @@ const GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT = "GIS_MAIN_VIEW_STATUS_LEFT_PANEL_E
 const GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV = "GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV";
 const GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND = "GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND";
 
+const AREA_LIST = [
+  {
+    index : 0,
+    name : "설천면"
+  },
+  {
+    index : 1,
+    name : "고현면"
+  },
+  {
+    index : 2,
+    name : "서면"
+  },
+  {
+    index : 3,
+    name : "남해읍"
+  },
+  {
+    index : 4,
+    name : "남면"
+  },
+  {
+    index : 5,
+    name : "이동면"
+  },
+  {
+    index : 6,
+    name : "창선면"
+  },
+  {
+    index : 7,
+    name : "삼동면"
+  },
+  {
+    index : 8,
+    name : "상주면"
+  },
+  {
+    index : 9,
+    name : "미조면"
+  },
+]
+
+
 
 const CCTV_LIST_DUMMY =  [
   {
     id : "CTV0032687",
     index : "1",
     position : {
-      lat : "34.840866",
-      lon : "127.8924234"
+      lat : "34.892971264777344",
+      lon : "127.88463592529298"
     },
     url : ""
   },
@@ -44,8 +88,8 @@ const CCTV_LIST_DUMMY =  [
     id : "CTV0032680",
     index : "2",
     position : {
-      lat : "34.840866",
-      lon : "127.8924234"
+      lat : "34.84733925602843",
+      lon : "127.84652709960939"
     },
     url : ""
   },
@@ -53,8 +97,8 @@ const CCTV_LIST_DUMMY =  [
     id : "CTV0032666",
     index : "3",
     position : {
-      lat : "34.840866",
-      lon : "127.8924234"
+      lat : "34.801681929887756",
+      lon : "127.88635253906251"
     },
     url : ""
   },
@@ -62,8 +106,8 @@ const CCTV_LIST_DUMMY =  [
     id : "CTV0032755",
     index : "4",
     position : {
-      lat : "34.840866",
-      lon : "127.8924234"
+      lat : "34.79660733149717",
+      lon : "127.93304443359376"
     },
     url : ""
   },
@@ -71,8 +115,8 @@ const CCTV_LIST_DUMMY =  [
     id : "CTV0032664",
     index : "5",
     position : {
-      lat : "34.840866",
-      lon : "127.8924234"
+      lat : "34.77517780602819",
+      lon : "127.99072265625001"
     },
     url : ""
   },
@@ -80,8 +124,8 @@ const CCTV_LIST_DUMMY =  [
     id : "CTV0032774",
     index : "6",
     position : {
-      lat : "34.840866",
-      lon : "127.8924234"
+      lat: "34.86339785041955",
+      lng: "128.05664062500003"
     },
     url : ""
   },
@@ -153,7 +197,8 @@ class GisMain extends Component {
       facilityList : [
 
       ],
-      cctvList : CCTV_LIST_DUMMY
+      cctvList : CCTV_LIST_DUMMY,
+      areaList : AREA_LIST
     };
 
     this.checkCurrentPanel = this.checkCurrentPanel.bind(this);
@@ -161,6 +206,8 @@ class GisMain extends Component {
     this.changeCurrentFocus = this.changeCurrentFocus.bind(this);
 
     this.drawCurrentPanel = this.drawCurrentPanel.bind(this);
+
+    this.changeCurrentCctv = this.changeCurrentCctv.bind(this);
   }
 
   componentDidMount() {
@@ -177,10 +224,19 @@ class GisMain extends Component {
     })
   }
 
+  changeCurrentCctv (_index) {
+    this.setState({
+      currentCctvFocus : _index
+    })
+  }
+
   drawCurrentPanel () {
-    if (this.state.currentWidget ==  GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT) return  <EventListPanelComponent list={this.state.eventList}/>
-    else if (this.state.currentWidget ==  GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV) return  <CctvListPanelComponent list={this.state.cctvList}/>
-    else if (this.state.currentWidget ==  GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND) return  <LegendListPanelComponent list={this.state.eventList}/>
+    if (this.state.currentWidget ==  GIS_MAIN_VIEW_STATUS_LEFT_PANEL_EVENT) 
+      return  <EventListPanelComponent list={this.state.eventList}/>
+    else if (this.state.currentWidget ==  GIS_MAIN_VIEW_STATUS_LEFT_PANEL_CCTV) 
+      return  <CctvListPanelComponent list={this.state.cctvList} areaList={this.state.areaList}/>
+    else if (this.state.currentWidget ==  GIS_MAIN_VIEW_STATUS_LEFT_PANEL_LEGEND) 
+      return  <LegendListPanelComponent list={this.state.eventList}/>
   }
 
   render() {
@@ -188,7 +244,10 @@ class GisMain extends Component {
     <div>
       <section className="dashWrap">
         <div className="gis_area">
-          <LeafletMapComponent />
+          <LeafletMapComponent 
+            eventList={this.state.eventList}
+            cctvList={this.state.cctvList}
+          />
         </div>
         
         <div className="gis_widget_area">
@@ -211,19 +270,17 @@ class GisMain extends Component {
           
           <div className="loc_box">
             <select className="select_loc" id="selectDo">
-              <option value="1">경상남도</option>
-              <option value="1">경상북도</option>
-              <option value="1">충청북도</option>
+              <option value="1">경상남도</option>              
             </select>
             <select className="select_loc" id="selectGun">
-              <option value="1">남해군</option>
-              <option value="1">남해군</option>
-              <option value="1">남해군</option>
+              <option value="1">남해군</option>              
             </select>
             <select className="select_loc" id="selectEup">
-              <option value="1">남해읍</option>
-              <option value="1">남해읍</option>
-              <option value="1">남해읍</option>
+            {
+              this.state.areaList.map((_item, _index)=>{
+                return <option value={_index}>{_item.name}</option>;
+              })
+            }
             </select>
           </div>            
         </div>
@@ -291,14 +348,21 @@ class GisMain extends Component {
             <div className="small_monitor_area">
               {
                 this.state.cctvList.map((_item, _index) => {
-                  return <CctvViewerComponent index={_index} itemData={_item}/>
+                  return <CctvViewerComponent 
+                    clickEvent={this.changeCurrentCctv}
+                    isActive={(_index == this.state.currentCctvFocus) ? "active" : ""}
+                    index={_index} 
+                    itemData={_item}/>
                 })
               }         
             </div>
             
             <div className="big_monitor_area">
               <div className="enlarge_txt">확대 View</div>
-              <CctvViewerComponent index={this.state.currentCctvFocus} itemData={this.state.cctvList[this.state.currentCctvFocus]} isLarge={true}/>
+              <CctvViewerComponent                 
+                index={this.state.currentCctvFocus} 
+                itemData={this.state.cctvList[this.state.currentCctvFocus]} 
+                isLarge={true}/>
             </div> 
           </div>
         </section>     

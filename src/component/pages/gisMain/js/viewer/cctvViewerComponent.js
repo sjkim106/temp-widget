@@ -19,10 +19,13 @@ class CctvViewerComponent extends Component {
 
   render() {
     return (
-      <div className="cctv_box" key={"cctvViewer" + this.props.index}>
+      <div 
+        onClick={()=>{  this.props.clickEvent(this.props.index) }}
+        className={"cctv_box " + this.props.isActive} 
+        key={"cctvViewer" + this.props.index}>
         <header className={"cctv_header cctv_" + (this.props.index + 1)}>{this.props.itemData.id}</header>
         <div 
-          className="cctv_view" 
+          className="cctv_view " 
           ref={this.player} 
           id={(this.props.isLarge)? ("cctvPlayerLarge") : ("cctvPlayer" + this.props.index)}>
         </div>

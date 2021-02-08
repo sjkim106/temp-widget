@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import $ from 'jquery';
 import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
 
+import CctvItemCard from './item/cctvItemCard';
 
 class CctvListPanelComponent extends Component {
 
@@ -28,7 +29,7 @@ class CctvListPanelComponent extends Component {
 
   itemClickEvent (_index) {
     this.setState({
-        currentFocus : _index
+        currentFocus : _index,      
     });
   }
   
@@ -42,26 +43,27 @@ class CctvListPanelComponent extends Component {
               <div className="search_name">분류타입</div>
               <select className="select_search" id="selectType">
                 <option value="1">CCTV(차량)</option>
-                <option value="1">CCTV(방범)</option>
-                <option value="1">CCTV(재난)</option>
-                <option value="1">CCTV(방범)</option>
-                <option value="1">CCTV(재난)</option>
+                <option value="2">CCTV(방범)</option>
+                <option value="3">CCTV(재난)</option>
+                <option value="4">CCTV(방범)</option>
+                <option value="5">CCTV(재난)</option>
               </select>
             </div>
             <div className="search_row">
               <div className="search_name">행정구역</div>
               <select className="select_search" id="selectArea">
-                <option value="1">남해읍</option>
-                <option value="1">남해읍</option>
-                <option value="1">남해읍</option>
+                {
+                  this.props.areaList.map((_item, _index) => {
+                    return <option value={_index}>{_item.name}</option>
+                  })
+                }
               </select>
             </div>
             <div className="search_row">
               <div className="search_name">설치목적</div>
               <select className="select_search" id="selectPurpose">
                 <option value="1">방범</option>
-                <option value="1">방범</option>
-                <option value="1">방범</option>
+                <option value="2">다목적</option>                
               </select>
             </div>
             <div className="search_row">
@@ -78,46 +80,11 @@ class CctvListPanelComponent extends Component {
             <div className="list_head">명칭</div>
           </div>
           <div className="list_body">
-            
-            <div className="list_card">
-              <div className="card_txt">1</div>
-              <div className="card_txt">재난</div>
-              <div className="card_txt">재난 CCTV 남해읍 3FD-cvt-9610</div>
-              <button type="button" className="btn_cctvnet"></button>
-              <button type="button" className="btn_expansion"></button>
-            </div>
-            
-            <div className="list_card">
-              <div className="card_txt">1</div>
-              <div className="card_txt">재난</div>
-              <div className="card_txt">재난 CCTV 남해읍 3FD-cvt-9610</div>
-              <button type="button" className="btn_cctvnet"></button>
-              <button type="button" className="btn_expansion"></button>
-            </div>
-            
-            <div className="list_card">
-              <div className="card_txt">1</div>
-              <div className="card_txt">재난</div>
-              <div className="card_txt">재난 CCTV 남해읍 3FD-cvt-9610</div>
-              <button type="button" className="btn_cctvnet"></button>
-              <button type="button" className="btn_expansion"></button>
-            </div>
-            
-            <div className="list_card">
-              <div className="card_txt">1</div>
-              <div className="card_txt">재난</div>
-              <div className="card_txt">재난 CCTV 남해읍 3FD-cvt-9610</div>
-              <button type="button" className="btn_cctvnet"></button>
-              <button type="button" className="btn_expansion"></button>
-            </div>
-            
-            <div className="list_card">
-              <div className="card_txt">1</div>
-              <div className="card_txt">재난</div>
-              <div className="card_txt">재난 CCTV 남해읍 3FD-cvt-9610</div>
-              <button type="button" className="btn_cctvnet"></button>
-              <button type="button" className="btn_expansion"></button>
-            </div>
+            {
+              this.state.cctvList.map((_item, _index) => {
+                return <CctvItemCard itemData={_item} index={_index}/>
+              })
+            }            
           </div>
           
           <div className="paging_wrap">
