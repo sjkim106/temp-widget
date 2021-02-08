@@ -5,6 +5,8 @@ import React, {Component} from 'react';
 
 // import LeafletMapComponent from './js/map/leaflet/leafletMapComponent';
 
+import FacilityRateChartComponent from './js/chart/facilityRateChartComponent';
+
 import '../../common/css/fontStyle.css';
 import '../../common/css/reset.css';
 import '../../common/css/common.css';
@@ -13,18 +15,83 @@ import "./css/common.css"
 import "./css/gisArea.css"
 import "./css/infoArea.css"
 
+const dummyData = [{
+  name : "설천면",
+  index : 1
+},
+{
+  name : "고현면",
+  index : 2
+},
+{
+  name : "서면",
+  index : 3
+},
+{
+  name : "남해읍",
+  index : 4
+},
+{
+  name : "남면",
+  index : 5
+},
+{
+  name : "이동면",
+  index : 6
+},
+{
+  name : "창선면",
+  index : 7
+},
+{
+  name : "삼동면",
+  index : 8
+},
+{
+  name : "상주면",
+  index : 9
+},
+{
+  name : "미조면",
+  index : 10
+}];
 
 class FacilityStatisticComponent extends Component {
 
   constructor(_props){
     super(_props);
     this.state = {
-
+      areaList : dummyData.map((_item) => {
+        let item = _item;
+        item.facilityList = {
+          "cctv": parseInt(Math.random() * 100),
+          "wifi": parseInt(Math.random() * 100),
+          "lamp": parseInt(Math.random() * 100),
+          "extinguisher": parseInt(Math.random() * 100),
+          "toilet": parseInt(Math.random() * 100),
+          "parkingLot": parseInt(Math.random() * 100),
+          "radian": parseInt(Math.random() * 100),
+          "oil": parseInt(Math.random() * 100),
+          "farm": parseInt(Math.random() * 100),
+        }
+        return item;
+      }),
+      currentFocusArea : 1
     };
+
+    this.changeFocusArea = this.changeFocusArea.bind(this);
   }
 
   componentDidMount() {
 
+  }
+
+  changeFocusArea (_index) {
+    if (_index == 0) _index = this.state.areaList.length;
+    else if (_index > this.state.areaList.length) _index = 1;
+    this.setState({
+      currentFocusArea : _index
+    })
   }
 
   render() {
@@ -36,37 +103,17 @@ class FacilityStatisticComponent extends Component {
         <div className="loc_txt">남해읍</div>
         
         <div className="gis_area">
-          
-          <div className="map_box loc_1" id="mapbg1">
-            <div className="loc_box" data-mapbg="mapbg1">설천면</div>
-          </div>
-          <div className="map_box loc_2" id="mapbg2">
-            <div className="loc_box" data-mapbg="mapbg2">고현면</div>
-          </div>
-          <div className="map_box loc_3" id="mapbg3">
-            <div className="loc_box" data-mapbg="mapbg3">서면</div>
-          </div>
-          <div className="map_box loc_4" id="mapbg4">
-            <div className="loc_box" data-mapbg="mapbg4">남해읍</div>
-          </div>
-          <div className="map_box loc_5" id="mapbg5">
-            <div className="loc_box" data-mapbg="mapbg5">남면</div>
-          </div>
-          <div className="map_box loc_6" id="mapbg6">
-            <div className="loc_box" data-mapbg="mapbg6">이동면</div>
-          </div>
-          <div className="map_box loc_7" id="mapbg7">
-            <div className="loc_box" data-mapbg="mapbg7">창선면</div>
-          </div>
-          <div className="map_box loc_8" id="mapbg8">
-            <div className="loc_box" data-mapbg="mapbg8">삼동면</div>
-          </div>
-          <div className="map_box loc_9" id="mapbg9">
-            <div className="loc_box" data-mapbg="mapbg9">상주면</div>
-          </div>
-          <div className="map_box loc_10" id="mapbg10">
-            <div className="loc_box" data-mapbg="mapbg10">미조면</div>
-          </div>
+          {this.state.areaList.map((_item, _index)=>{
+            let isActive = (_item.index == this.state.currentFocusArea) ? " active" : ""
+            return (
+            <div className={"map_box loc_" + _item.index + isActive} id={"mapbg" + _item.index}>
+              <div 
+                className="loc_box" 
+                data-mapbg={"mapbg" + _item.index}
+                onClick={()=>{this.changeFocusArea(_item.index)}}
+                >{_item.name}</div>
+            </div>);
+          })}
         </div>
 
         
@@ -80,7 +127,9 @@ class FacilityStatisticComponent extends Component {
           
           <div className="pie_chart_area">
             
-            <div className="pie_chart" id="pieChart"></div>
+            <div className="pie_chart" id="pieChart">
+              <FacilityRateChartComponent seriesData={this.state.areaList[(this.state.currentFocusArea - 1)].facilityList}/>
+            </div>
             
             <div className="pie_legend_area">
               <div className="legend_row">
@@ -125,56 +174,62 @@ class FacilityStatisticComponent extends Component {
           
           <div className="facil_info_area">
             <div className="facil_slide_area">
-              <button type="button" className="btn_prev"></button>
-              <button type="button" className="btn_next"></button>
-              <div className="loc_name">남해읍</div>
+              <button 
+                type="button" 
+                className="btn_prev"
+                onClick={()=>{this.changeFocusArea(this.state.currentFocusArea - 1)}}></button>
+              <button 
+                type="button" 
+                className="btn_next"
+                onClick={()=>{this.changeFocusArea(this.state.currentFocusArea + 1)}}></button>
+              <div className="loc_name">{this.state.areaList[(this.state.currentFocusArea - 1)].name}</div>
             </div>
             
             <div className="facil_list_area">
               <div className="facil_box mr266px">
                 <div className="facil_icon cctv_icon"></div>
                 <div className="facil_name">CCTV</div>
-                <div className="facil_num">178</div>
+                <div className="facil_num">{this.state.areaList[(this.state.currentFocusArea - 1)].facilityList.cctv}</div>
               </div>
               <div className="facil_box">
                 <div className="facil_icon wifi_icon"></div>
                 <div className="facil_name">공공와이파이</div>
-                <div className="facil_num">15</div>
+                <div className="facil_num">{this.state.areaList[(this.state.currentFocusArea - 1)].facilityList.wifi}</div>
               </div>
               <div className="facil_box">
                 <div className="facil_icon lamp_icon"></div>
                 <div className="facil_name">스마트가로등</div>
-                <div className="facil_num">16</div>
+                <div className="facil_num">{this.state.areaList[(this.state.currentFocusArea - 1)].facilityList.lamp}</div>
               </div>
               <div className="facil_box">
                 <div className="facil_icon fire_icon"></div>
                 <div className="facil_name">소화기</div>
-                <div className="facil_num">22</div>
+                <div className="facil_num">{this.state.areaList[(this.state.currentFocusArea - 1)].facilityList.extinguisher}</div>
               </div>
               <div className="facil_box">
                 <div className="facil_icon toilet_icon"></div>
                 <div className="facil_name">공공화장실</div>
-                <div className="facil_num">84</div>
+                <div className="facil_num">{this.state.areaList[(this.state.currentFocusArea - 1)].facilityList.toilet}</div>
               </div>
               <div className="facil_box">
                 <div className="facil_icon parking_icon"></div>
                 <div className="facil_name">공공주차장</div>
-                <div className="facil_num">17</div>
+                <div className="facil_num">{this.state.areaList[(this.state.currentFocusArea - 1)].facilityList.parkingLot}</div>
               </div>
               <div className="facil_box">
                 <div className="facil_icon aed_icon"></div>
                 <div className="facil_name">심장충격기</div>
-                <div className="facil_num">29</div>
+                <div className="facil_num">{this.state.areaList[(this.state.currentFocusArea - 1)].facilityList.radian}</div>
               </div>
               <div className="facil_box">
                 <div className="facil_icon petrol_icon"></div>
                 <div className="facil_name">주유시설</div>
-                <div className="facil_num">8</div>
+                <div className="facil_num">{this.state.areaList[(this.state.currentFocusArea - 1)].facilityList.oil}</div>
               </div>
               <div className="facil_box">
                 <div className="facil_icon stock_icon"></div>
                 <div className="facil_name">축산시설</div>
-                <div className="facil_num">33</div>
+                <div className="facil_num">{this.state.areaList[(this.state.currentFocusArea - 1)].facilityList.farm}</div>
               </div>
             </div>
           </div>
