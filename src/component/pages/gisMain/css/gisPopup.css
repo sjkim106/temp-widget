@@ -1,6 +1,11 @@
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background: transparent;
+    color: transparent;
+    box-shadow: none;
+}
 /*gisPopup style*/
 /**gis icon popup**/
-.gis_icon_area .gis_icon .cctv_name{
+  .cctv_name{
     width: auto;
     height: 2.81vh;
     max-height: 29px;
@@ -22,13 +27,13 @@
     z-index: 1;
     display: none;
 }
-.gis_icon_area .gis_icon:hover .cctv_name{
+.cctv_name{
     display: block;
 }
-.gis_icon_area .gis_icon .cctv_name.error_state{
+.cctv_name.error_state{
     color: #f23d5b;
 }
-.gis_icon_area .gis_icon .cctv_popup{
+.cctv_popup{
     width: 10.42vw;
     height: 5.91vh;   
     max-height: 61px;    
@@ -38,10 +43,10 @@
     z-index: 1;
     display: none;
 }
-.gis_icon_area .gis_icon.active .cctv_popup{
+.cctv_popup{
     display: block;
 }
-.gis_icon_area .gis_icon .cctv_popup .popup_header{
+.cctv_popup .popup_header{
     width: 10.42vw;
     height: 2.32vh;   
     max-height: 24px;
@@ -50,7 +55,7 @@
     border-top-right-radius: 0.42vw;
     padding: 0.58vh 0.52vw 0 0;
 }
-.gis_icon_area .gis_icon .cctv_popup .popup_header .btn_close{
+.cctv_popup .popup_header .btn_close{
     width: 0.67vw;
     height: 1.28vh;
     max-height: 13px;
@@ -58,11 +63,11 @@
     background-size: 100%;
     float: right;
 }
-.gis_icon_area .gis_icon .cctv_popup .popup_header .btn_close:hover{
+.cctv_popup .popup_header .btn_close:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_pop_close_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon .cctv_popup .popup_body{
+.cctv_popup .popup_body{
     width: 10.42vw;
     height: 3.58vh;   
     max-height: 37px;
@@ -71,7 +76,7 @@
     border-bottom-right-radius: 0.42vw;
     box-shadow: 0 0.3125vw 0.625vw 0 rgba(0, 0, 0, 0.12);
 }
-.gis_icon_area .gis_icon .cctv_popup .popup_body .cctv_title{
+.cctv_popup .popup_body .cctv_title{
     width: 5.88vw;
     height: 1.94vh;
     max-height: 20px;
@@ -87,10 +92,10 @@
     margin: 0.77vh 0.49vw 0 0.65vw;
     float: left;
 }
-.gis_icon_area .gis_icon .cctv_popup .popup_body .cctv_title.error_state{
+.cctv_popup .popup_body .cctv_title.error_state{
     color: #f23d5b;
 }
-.gis_icon_area .gis_icon .cctv_popup .popup_body .btn_cctvnet{
+.cctv_popup .popup_body .btn_cctvnet{
     width: 1.25vw;
     height: 2.6vh;
     max-height: 24px;
@@ -99,11 +104,11 @@
     margin: 0.56vh 0.26vw 0 0;
     float:left;
 }
-.gis_icon_area .gis_icon .cctv_popup .popup_body .btn_cctvnet:hover{
+.cctv_popup .popup_body .btn_cctvnet:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_cctvNet_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon .cctv_popup .popup_body .btn_expansion{
+.cctv_popup .popup_body .btn_expansion{
     width: 1.25vw;
     height: 2.6vh;
     max-height: 24px;
@@ -112,12 +117,12 @@
     margin-top: 0.56vh;
     float:left;
 }
-.gis_icon_area .gis_icon .cctv_popup .popup_body .btn_expansion:hover{
+.cctv_popup .popup_body .btn_expansion:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_expansion_hover.png") no-repeat;
     background-size: 100%;
 }
 /**facility icon & zoom icon popup**/
-.gis_icon_area .facility_icon .facility_popup{
+.facility_popup{
     width: auto;
     min-width: 7.08vw;
     height: auto;   
@@ -132,7 +137,7 @@
     z-index: 1;
     display: none;
 }
-.gis_icon_area .zoom_icon .facility_popup{
+.facility_popup{
     width: auto;
     min-width: 14.6875vw;
     height: auto;   
@@ -147,12 +152,12 @@
     z-index: 1;
     display: none;
 }
-.gis_icon_area .facility_icon:hover .facility_popup,
-.gis_icon_area .zoom_icon:hover .facility_popup{
+.facility_popup,
+.facility_popup{
     display: block;
 }
-.gis_icon_area .facility_icon .facility_popup .facility_title,
-.gis_icon_area .zoom_icon .facility_popup .facility_title{
+.facility_popup .facility_title,
+.facility_popup .facility_title{
     width: 100%;
     height: 1.36vh;
     max-height: 14px;
@@ -166,16 +171,16 @@
     color: #fcfcfc;
     float: left;
 }
-.gis_icon_area .facility_icon .facility_popup .facility_row,
-.gis_icon_area .zoom_icon .facility_popup .facility_row{
+  .facility_popup .facility_row,
+  .facility_popup .facility_row{
     width: 100%;
     height: 1.5vh;
     max-height: 12px;
     margin-bottom: 0.87vh;
     float: left;
 }
-.gis_icon_area .facility_icon .facility_popup .facility_row .facility_name,
-.gis_icon_area .zoom_icon .facility_popup .facility_row .facility_name{    
+  .facility_popup .facility_row .facility_name,
+  .facility_popup .facility_row .facility_name{    
     width: 2.4vw;
     height:100%;
     margin-right: 0.59vw;
@@ -186,7 +191,7 @@
     color: #868c96;
     float: left;
 }
-.gis_icon_area .facility_icon .facility_popup .facility_row .facility_txt{
+  .facility_popup .facility_row .facility_txt{
     width: auto;
     height:100%;
     font-family: "NotoSansCJKB";
@@ -197,7 +202,7 @@
     float: left;
     position: relative;
 }
-.gis_icon_area .zoom_icon .facility_popup .facility_row .facility_txt{
+  .facility_popup .facility_row .facility_txt{
     width: auto;
     max-width: 9.84375vw;
     height:100%;
@@ -209,13 +214,13 @@
     float: left;
     position: relative;
 }
-.gis_icon_area .zoom_icon .facility_popup .facility_row .facility_txt.loc_txt{
+  .facility_popup .facility_row .facility_txt.loc_txt{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
-.gis_icon_area .facility_icon .facility_popup .facility_row .facility_txt.normal_icon::before,
-.gis_icon_area .zoom_icon .facility_popup .facility_row .facility_txt.normal_icon::before{
+  .facility_popup .facility_row .facility_txt.normal_icon::before,
+  .facility_popup .facility_row .facility_txt.normal_icon::before{
     content:"";
     display: block;
     width: 0.72vw;
@@ -227,8 +232,8 @@
     top: -0.1vh;
     left: 1.46vw;
 }
-.gis_icon_area .facility_icon .facility_popup .facility_row .facility_txt.error_icon::before,
-.gis_icon_area .zoom_icon .facility_popup .facility_row .facility_txt.error_icon::before{
+  .facility_popup .facility_row .facility_txt.error_icon::before,
+  .facility_popup .facility_row .facility_txt.error_icon::before{
     content:"";
     display: block;
     width: 0.72vw;
@@ -242,7 +247,7 @@
 }
 
 /**cluster icon popup**/
-.gis_icon_area .cluster_icon .cluster_popup{
+ .cluster_icon .cluster_popup{
     width: 10.2vw;
     height: 16.67vh;   
     max-height: 172px;    
@@ -252,10 +257,10 @@
     z-index: 1;
     display: none;
 }
-.gis_icon_area .cluster_icon.active .cluster_popup{
+ .cluster_icon.active .cluster_popup{
     display: block;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_header{
+ .cluster_icon .cluster_popup .popup_header{
     width: 10.2vw;
     height: 2.32vh;   
     max-height: 24px;
@@ -264,7 +269,7 @@
     border-top-right-radius: 0.42vw;
     padding: 0.58vh 0.52vw 0 0.625vw;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_header .list_num_txt{
+ .cluster_icon .cluster_popup .popup_header .list_num_txt{
     width: auto;
     height: 100%;
     font-family: "NotoSansCJKB";
@@ -275,10 +280,10 @@
     color: #fcfcfc;
     float: left;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_header .list_num_txt span{
+ .cluster_icon .cluster_popup .popup_header .list_num_txt span{
     margin-left: 0.2vw;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_header .btn_close{
+ .cluster_icon .cluster_popup .popup_header .btn_close{
     width: 0.67vw;
     height: 1.28vh;
     max-height: 13px;
@@ -286,11 +291,11 @@
     background-size: 100%;
     float: right;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_header .btn_close:hover{
+ .cluster_icon .cluster_popup .popup_header .btn_close:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_pop_close_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body{
+ .cluster_icon .cluster_popup .popup_body{
     width: 10.2vw;
     height: 14.34vh;   
     max-height: 148px;
@@ -300,24 +305,24 @@
     box-shadow: 0 0.3125vw 0.625vw 0 rgba(0, 0, 0, 0.12);
     padding-bottom: 0.77vh;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .list_row{
+ .cluster_icon .cluster_popup .popup_body .list_row{
     width: 100%;
     height: 2.71vh;
     max-height: 28px;
     padding: 0.48vh 0 0 0.4vw;
     cursor: pointer;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .list_row:hover{
+ .cluster_icon .cluster_popup .popup_body .list_row:hover{
     background-color: #414069;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon{
     width: 0.98vw;
     height: 1.84vh;
     max-height: 19px;
     float: left;
     margin-right: 0.078125vw;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .list_txt{
+ .cluster_icon .cluster_popup .popup_body .list_txt{
     width: 7.29vw;
     height: 1.84vh;
     max-height: 19px;
@@ -332,64 +337,64 @@
     overflow: hidden;
     float: left;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_01{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_01{
     background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_mini_01.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_02{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_02{
     background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_mini_02.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_03{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_03{
     background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_mini_03.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_04{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_04{
     background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_mini_04.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_05{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_05{
     background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_mini_05.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_06{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_06{
     background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_mini_06.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_07{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_07{
     background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_mini_07.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_08{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_08{
     background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_mini_08.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_09{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_09{
     background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_mini_09.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_10{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_10{
     background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_mini_10.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_11{
+ .cluster_icon .cluster_popup .popup_body .cctv_icon.mini_11{
     background: url("../../../../static/image/dark/page/gis/main/icon/icon_cctv_mini_11.png") no-repeat;
     background-size: 100%;
 }
 
 /**일반 cctv 카메라 popup**/
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup{
+  .cctv_camera_popup{
     width: 12.5vw;  
-    position: absolute;
-    top: 0;
-    left: 2.4vw;
+    /* position: absolute; */
+    /* top: 0;
+    left: 2.4vw; */
     z-index: 1;
     display: none;
 }
-.gis_icon_area .gis_icon.cctv_normal.active .cctv_camera_popup{
+ .cctv_camera_popup{
     display: block;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_header{
+  .cctv_camera_popup .popup_header{
     width: 12.5vw;
     height: 2.32vh;   
     max-height: 24px;
@@ -398,7 +403,7 @@
     border-top-right-radius: 0.42vw;
     padding: 0.58vh 0.52vw 0 0.625vw;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_header .popup_title{
+  .cctv_camera_popup .popup_header .popup_title{
     width: 7.92vw;
     height: 100%;
     font-family: "NotoSansCJKB";
@@ -412,7 +417,7 @@
     overflow: hidden;
     float: left;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_header .btn_close{
+  .cctv_camera_popup .popup_header .btn_close{
     width: 0.67vw;
     height: 1.28vh;
     max-height: 13px;
@@ -420,11 +425,11 @@
     background-size: 100%;
     float: right;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_header .btn_close:hover{
+  .cctv_camera_popup .popup_header .btn_close:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_pop_close_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_header .btn_expansion{
+  .cctv_camera_popup .popup_header .btn_expansion{
     width: 0.67vw;
     height: 1.28vh;
     max-height: 13px;
@@ -433,11 +438,11 @@
     float: right;
     margin-right: 0.41vw;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_header .btn_expansion:hover{
+  .cctv_camera_popup .popup_header .btn_expansion:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_pop_expansion_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body{
+  .cctv_camera_popup .popup_body{
     width: 12.5vw;
     background-image: linear-gradient(280deg, #39385c, #2d2c47 100.0%);
     border-bottom-left-radius: 0.42vw;
@@ -445,29 +450,29 @@
     box-shadow: 0 0.3125vw 0.625vw 0 rgba(0, 0, 0, 0.12);
     padding-bottom: 0.77vh;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body .cctv_area{
+  .cctv_camera_popup .popup_body .cctv_area{
     width: 100%;
     height: 13.08vh;
     max-height: 135px;
     background: url("../../../../static/image/dark/page/gis/main/img/sample.jpg") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body .cctv_info_area{
+  .cctv_camera_popup .popup_body .cctv_info_area{
     width: 100%;
     height: auto;
     padding: 0.87vh 0 0 0.859375vw;
     overflow: auto;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body .cctv_row{
+  .cctv_camera_popup .popup_body .cctv_row{
     width: 100%;
     height: 1.5vh;
     max-height: 11px;
     margin-bottom: 0.77vh;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body .cctv_row.wide_size{
+  .cctv_camera_popup .popup_body .cctv_row.wide_size{
     height: auto;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body .cctv_info_name{
+  .cctv_camera_popup .popup_body .cctv_info_name{
     width: 2.8125vw;
     height: 100%;
     font-family: "NotoSansCJKR";
@@ -477,7 +482,7 @@
     color: #868c96;
     float: left;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body .cctv_info_txt{
+  .cctv_camera_popup .popup_body .cctv_info_txt{
     width: 7.91vw;
     height: 100%;
     font-family: "NotoSansCJKR";
@@ -490,13 +495,13 @@
     white-space: nowrap;
     overflow: hidden;
 }
-.gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body .cctv_row.wide_size .cctv_info_txt{
+  .cctv_camera_popup .popup_body .cctv_row.wide_size .cctv_info_txt{
     line-height: 1.5vh;
     margin-top: -0.3vh;
 }
 
 /**ptz cctv 카메라 popup**/
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup{
+ .cctv_ptz .cctv_ptz_popup{
     width: 12.5vw;  
     position: absolute;
     top: 0;
@@ -504,10 +509,10 @@
     z-index: 1;
     display: none;
 }
-.gis_icon_area .gis_icon.cctv_ptz.active .cctv_ptz_popup{
+ .cctv_ptz.active .cctv_ptz_popup{
     display: block;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_header{
+ .cctv_ptz .cctv_ptz_popup .popup_header{
     width: 12.5vw;
     height: 2.32vh;   
     max-height: 24px;
@@ -516,7 +521,7 @@
     border-top-right-radius: 0.42vw;
     padding: 0.58vh 0.52vw 0 0.625vw;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_header .popup_title{
+ .cctv_ptz .cctv_ptz_popup .popup_header .popup_title{
     width: 7.92vw;
     height: 100%;
     font-family: "NotoSansCJKB";
@@ -530,7 +535,7 @@
     overflow: hidden;
     float: left;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_header .btn_close{
+ .cctv_ptz .cctv_ptz_popup .popup_header .btn_close{
     width: 0.67vw;
     height: 1.28vh;
     max-height: 13px;
@@ -538,11 +543,11 @@
     background-size: 100%;
     float: right;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_header .btn_close:hover{
+ .cctv_ptz .cctv_ptz_popup .popup_header .btn_close:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_pop_close_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_header .btn_expansion{
+ .cctv_ptz .cctv_ptz_popup .popup_header .btn_expansion{
     width: 0.67vw;
     height: 1.28vh;
     max-height: 13px;
@@ -551,11 +556,11 @@
     float: right;
     margin-right: 0.41vw;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_header .btn_expansion:hover{
+ .cctv_ptz .cctv_ptz_popup .popup_header .btn_expansion:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_pop_expansion_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body{
+ .cctv_ptz .cctv_ptz_popup .popup_body{
     width: 12.5vw;
     background-image: linear-gradient(280deg, #39385c, #2d2c47 100.0%);
     border-bottom-left-radius: 0.42vw;
@@ -563,20 +568,20 @@
     box-shadow: 0 0.3125vw 0.625vw 0 rgba(0, 0, 0, 0.12);
     padding-bottom: 0.77vh;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .cctv_area{
+ .cctv_ptz .cctv_ptz_popup .popup_body .cctv_area{
     width: 100%;
     height: 13.08vh;
     max-height: 135px;
     background: url("../../../../static/image/dark/page/gis/main/img/sample.jpg") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area{
     width: 100%;
     height: 2.81vh;
     max-height: 29px;
     padding-left: 0.83vw;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab{
     width:auto;
     height: 100%;
     font-family: "NotoSansCJKB";
@@ -590,29 +595,29 @@
     line-height: 3.2vh;
     border-bottom: 0.1vw solid transparent;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab:hover{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab:hover{
     color: #b2b2db;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab.active{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab.active{
     border-bottom: 0.1vw solid #7e4cff;
     color: #ffffff;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_area{
+ .cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_area{
     width: 100%;
     height: auto;
     padding: 0.87vh 0 0 0.859375vw;
     overflow: auto;    
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .cctv_row{
+ .cctv_ptz .cctv_ptz_popup .popup_body .cctv_row{
     width: 100%;
     height: 1.5vh;
     max-height: 11px;
     margin-bottom: 0.77vh;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .cctv_row.wide_size{
+ .cctv_ptz .cctv_ptz_popup .popup_body .cctv_row.wide_size{
     height: auto;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_name{
+ .cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_name{
     width: 2.8125vw;
     height: 100%;
     font-family: "NotoSansCJKR";
@@ -622,7 +627,7 @@
     color: #868c96;
     float: left;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_txt{
+ .cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_txt{
     width: 7.91vw;
     height: 100%;
     font-family: "NotoSansCJKR";
@@ -635,18 +640,18 @@
     white-space: nowrap;
     overflow: hidden;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .cctv_row.wide_size .cctv_info_txt{
+ .cctv_ptz .cctv_ptz_popup .popup_body .cctv_row.wide_size .cctv_info_txt{
     line-height: 1.5vh;
     margin-top: -0.3vh;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area{
     width: 100%;
     height: auto;
     padding: 0.8vh 0 0 1.04vw;
     position:relative;
     display: none;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control{
     width: 4.27vw;
     height: 8.8vh;
     max-height: 82px;
@@ -654,69 +659,69 @@
     background-size: 100%;
     position:relative;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz{
     width: 1.04vw;
     height: 1.94vh;
     max-height: 20px;
     position: absolute;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_up_normal.png") no-repeat;
     background-size: 100%;
     top: 0.58vh;
     left: 1.61vw;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up:hover{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_up_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up:active{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up:active{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_up_pressed.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_down_normal.png") no-repeat;
     background-size: 100%;
     bottom: 0.58vh;
     left: 1.61vw;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down:hover{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_down_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down:active{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down:active{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_down_pressed.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_left_normal.png") no-repeat;
     background-size: 100%;
     top: 37.8%;
     left: 0.3125vw;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left:hover{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_left_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left:active{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left:active{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_left_pressed.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_right_normal.png") no-repeat;
     background-size: 100%;
     top: 37.8%;
     right: 0.3125vw;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right:hover{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_right_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right:active{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right:active{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_right_pressed.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin{
     width: 1.77vw;
     height: 3.3vh;
     max-height: 34px;
@@ -726,15 +731,15 @@
     top: 1.35vh;
     left: 6.14vw;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin:hover{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_zoomIn_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin:active{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin:active{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_zoomIn_pressed.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout{
     width: 1.77vw;
     height: 3.3vh;
     max-height: 34px;
@@ -744,15 +749,15 @@
     top: 4.65vh;
     left: 6.14vw;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout:hover{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout:hover{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_zoomOut_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout:active{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout:active{
     background: url("../../../../static/image/dark/page/gis/main/btn/btn_ptz_zoomOut_pressed.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin::after{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin::after{
     content:"Zoom In";
     display: block;
     font-family: "NotoSansB";
@@ -766,7 +771,7 @@
     top: 1.05vh;
     left: 2.1vw;
 }
-.gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout::after{
+ .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout::after{
     content:"Zoom Out";
     display: block;
     font-family: "NotoSansB";
@@ -800,217 +805,217 @@
 
 /*1280x688 pc size 부분 커스텀*/
 @media only screen and (min-height: 10px) and (max-height: 688px) {
-    .gis_icon_area .facility_icon .facility_popup .facility_row .facility_txt.normal_icon::before,
-    .gis_icon_area .zoom_icon .facility_popup .facility_row .facility_txt.normal_icon::before{
+      .facility_popup .facility_row .facility_txt.normal_icon::before,
+      .facility_popup .facility_row .facility_txt.normal_icon::before{
         top: 0;
         left: 1.7vw;
     }
-    .gis_icon_area .facility_icon .facility_popup .facility_row .facility_txt.error_icon::before,
-    .gis_icon_area .zoom_icon .facility_popup .facility_row .facility_txt.error_icon::before{
+      .facility_popup .facility_row .facility_txt.error_icon::before,
+      .facility_popup .facility_row .facility_txt.error_icon::before{
         top: 0.1vh;
         left: 2.3vw;
     }
-    .gis_icon_area .zoom_icon .facility_popup .facility_row .facility_name{    
+      .facility_popup .facility_row .facility_name{    
         width: 3.2vw;
     }
-    .gis_icon_area .zoom_icon .facility_popup .facility_row .facility_txt{
+      .facility_popup .facility_row .facility_txt{
         max-width: 9vw;
     }
-    .gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body .cctv_info_name {
+      .cctv_camera_popup .popup_body .cctv_info_name {
         width: 2.9vw;
     }
-    .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_name {
+     .cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_name {
         width: 2.9vw;
     }
 }
 
 /**lightmode style**/
 /**gis icon popup**/
-.lightmode .gis_icon_area .gis_icon .cctv_name{
+.lightmode   .cctv_name{
     background-image: linear-gradient(340deg, #e1e2f0, #f6f9fd 71.29%);
     border: solid 0.05vw #ffffff;
     color: #50428f;
 }
-.lightmode .gis_icon_area .gis_icon .cctv_name.error_state{
+.lightmode   .cctv_name.error_state{
     color: #f23d5b;
 }
-.lightmode .gis_icon_area .gis_icon .cctv_popup .popup_header{
+.lightmode   .cctv_popup .popup_header{
     background-color: #7e4cff;
 }
-.lightmode .gis_icon_area .gis_icon .cctv_popup .popup_body{
+.lightmode   .cctv_popup .popup_body{
     background-image: linear-gradient(280deg, #ffffff, #ebecf5 100.0%);
 }
-.lightmode .gis_icon_area .gis_icon .cctv_popup .popup_body .cctv_title{
+.lightmode   .cctv_popup .popup_body .cctv_title{
     color: #50428f;
 }
-.lightmode .gis_icon_area .gis_icon .cctv_popup .popup_body .cctv_title.error_state{
+.lightmode   .cctv_popup .popup_body .cctv_title.error_state{
     color: #f23d5b;
 }
 /**facility icon & zoom icon popup**/
-.lightmode .gis_icon_area .facility_icon .facility_popup{
+.lightmode   .facility_popup{
     background-image: linear-gradient(340deg, #e1e2f0, #f6f9fd 78.21%);
     border: solid 0.05vw #ffffff;
 }
-.lightmode .gis_icon_area .zoom_icon .facility_popup{
+.lightmode   .facility_popup{
     background-image: linear-gradient(340deg, #e1e2f0, #f6f9fd 78.21%);
     border: solid 0.05vw #ffffff;
 }
-.lightmode .gis_icon_area .facility_icon .facility_popup .facility_title,
-.lightmode .gis_icon_area .zoom_icon .facility_popup .facility_title{
+.lightmode   .facility_popup .facility_title,
+.lightmode   .facility_popup .facility_title{
     color: #50428f;
 }
-.lightmode .gis_icon_area .facility_icon .facility_popup .facility_row .facility_name,
-.lightmode .gis_icon_area .zoom_icon .facility_popup .facility_row .facility_name{    
+.lightmode   .facility_popup .facility_row .facility_name,
+.lightmode   .facility_popup .facility_row .facility_name{    
     color: #7a71a3;
 }
-.lightmode .gis_icon_area .facility_icon .facility_popup .facility_row .facility_txt{
+.lightmode   .facility_popup .facility_row .facility_txt{
     color: #50428f;
 }
-.lightmode .gis_icon_area .zoom_icon .facility_popup .facility_row .facility_txt{
+.lightmode   .facility_popup .facility_row .facility_txt{
     color: #50428f;
 }
 
 /**cluster icon popup**/
-.lightmode .gis_icon_area .cluster_icon .cluster_popup .popup_header{
+.lightmode  .cluster_icon .cluster_popup .popup_header{
     background-color: #7e4cff;
 }
-.lightmode .gis_icon_area .cluster_icon .cluster_popup .popup_body{
+.lightmode  .cluster_icon .cluster_popup .popup_body{
     background-image: linear-gradient(280deg, #ffffff, #ebecf5 95.5%);
 }
-.lightmode .gis_icon_area .cluster_icon .cluster_popup .popup_body .list_row:hover{
+.lightmode  .cluster_icon .cluster_popup .popup_body .list_row:hover{
     background-color: #ecebf0;
 }
-.lightmode .gis_icon_area .cluster_icon .cluster_popup .popup_body .list_txt{
+.lightmode  .cluster_icon .cluster_popup .popup_body .list_txt{
     color: #50428f;
 }
 
 /**일반 cctv 카메라 popup**/
-.lightmode .gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_header{
+.lightmode   .cctv_camera_popup .popup_header{
     background-color: #7e4cff;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_header .popup_title{
+.lightmode   .cctv_camera_popup .popup_header .popup_title{
     color: #fcfcfc;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body{
+.lightmode   .cctv_camera_popup .popup_body{
     background-image: linear-gradient(280deg, #ffffff, #ebecf5 94.6%);
 }
-.lightmode .gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body .cctv_area{
+.lightmode   .cctv_camera_popup .popup_body .cctv_area{
     background: url("../../../../static/image/dark/page/gis/main/img/sample.jpg") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body .cctv_info_name{
+.lightmode   .cctv_camera_popup .popup_body .cctv_info_name{
     color: #7a71a3;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_normal .cctv_camera_popup .popup_body .cctv_info_txt{
+.lightmode   .cctv_camera_popup .popup_body .cctv_info_txt{
     color: #50428f;
 }
 
 /**ptz cctv 카메라 popup**/
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_header{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_header{
     background-color: #7e4cff;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_header .popup_title{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_header .popup_title{
     color: #fcfcfc;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body{
     background-image: linear-gradient(280deg, #ffffff, #ebecf5 93.7%);
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab{
     color: #9d9eb0;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab:hover{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab:hover{
     color: #8782b0;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab.active{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_tab_area .btn_ptztab.active{
     border-bottom: 0.1vw solid #7e4cff;
     color: #7e4cff;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_name{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_name{
     color: #7a71a3;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_txt{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .cctv_info_txt{
     color: #50428f;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control{
     background: url("../../../../static/image/light/page/gis/main/img/img_ptz_controller_bg.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_up_normal.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up:hover{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up:hover{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_up_hover.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up:active{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_up:active{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_up_pressed.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_down_normal.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down:hover{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down:hover{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_down_hover.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down:active{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_down:active{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_down_pressed.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_left_normal.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left:hover{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left:hover{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_left_hover.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left:active{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_left:active{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_left_pressed.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_right_normal.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right:hover{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right:hover{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_right_hover.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right:active{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .ptz_control .btn_ptz.ptz_right:active{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_right_pressed.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_zoomIn_normal.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin:hover{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin:hover{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_zoomIn_hover.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin:active{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin:active{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_zoomIn_pressed.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_zoomOut_normal.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout:hover{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout:hover{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_zoomOut_hover.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout:active{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout:active{
     background: url("../../../../static/image/light/page/gis/main/btn/btn_ptz_zoomOut_pressed.png") no-repeat;
     background-size: 100%;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin::after{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomin::after{
     color: #a5a3cc;
 }
-.lightmode .gis_icon_area .gis_icon.cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout::after{
+.lightmode  .cctv_ptz .cctv_ptz_popup .popup_body .ptz_control_area .btn_zoomout::after{
     color: #a5a3cc;
 }
 

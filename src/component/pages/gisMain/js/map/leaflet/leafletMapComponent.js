@@ -3,6 +3,9 @@ import React, {Component, useEffect, useRef} from 'react';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, MapConsumer, TileLayer, FeatureGroup, useMapEvents} from 'react-leaflet'
 
+
+import CctvMarkerComponent from '../../../../../common/js/map/marker/cctvMarkerComponent';
+
 function EventComponent() {
   const map = useMapEvents({
     click: (_event) => {
@@ -119,6 +122,7 @@ class LeafletMapComponent extends Component {
           }}
         </MapConsumer>
         <CctvMarkerFeatureGroup  list={this.props.cctvList} />
+        <CctvMarkerComponent />
       </MapContainer>
     );
   }

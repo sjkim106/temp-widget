@@ -4,12 +4,7 @@
     height: 100%;
     position: absolute;
 }
-.gis_icon_area{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    /* z-index: 1; */
-}
+
 .gis_widget_area{
     position: absolute;
 }
@@ -79,193 +74,193 @@
 }
 
 /*gis icon*/
-.gis_icon_area .gis_icon{
+.gis_icon{
     width: 2.4vw;
     height: 5.2vh;
     max-height: 47px;
     cursor: pointer;    
     position: absolute;
 }
-.gis_icon_area .gis_icon.cctv_normal,
-.gis_icon_area .gis_icon.cctv_ptz{
+.gis_icon.cctv_normal,
+.gis_icon.cctv_ptz{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_normality_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_normal:hover,
-.gis_icon_area .gis_icon.cctv_ptz:hover{
+.gis_icon.cctv_normal:hover,
+.gis_icon.cctv_ptz:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_normality_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_normal.active,
-.gis_icon_area .gis_icon.cctv_ptz.active{
+.gis_icon.cctv_normal.active,
+.gis_icon.cctv_ptz.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_normality_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_life{
+.gis_icon.cctv_life{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_01_life_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_life:hover{
+.gis_icon.cctv_life:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_01_life_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_life.active{
+.gis_icon.cctv_life.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_01_life_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_error{
+.gis_icon.cctv_error{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_error_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_error:hover{
+.gis_icon.cctv_error:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_error_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_error.active{
+.gis_icon.cctv_error.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_error_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_park{
+.gis_icon.cctv_park{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_02_park_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_park:hover{
+.gis_icon.cctv_park:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_02_park_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_park.active{
+.gis_icon.cctv_park.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_02_park_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_carnumber{
+.gis_icon.cctv_carnumber{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_03_carNumber_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_carnumber:hover{
+.gis_icon.cctv_carnumber:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_03_carNumber_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_carnumber.active{
+.gis_icon.cctv_carnumber.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_03_carNumber_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_safechild{
+.gis_icon.cctv_safechild{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_04_safeChildren_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_safechild:hover{
+.gis_icon.cctv_safechild:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_04_safeChildren_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_safechild.active{
+.gis_icon.cctv_safechild.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_04_safeChildren_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_daycarechild{
+.gis_icon.cctv_daycarechild{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_05_daycareChild_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_daycarechild:hover{
+.gis_icon.cctv_daycarechild:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_05_daycareChild_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_daycarechild.active{
+.gis_icon.cctv_daycarechild.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_05_daycareChild_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_school{
+.gis_icon.cctv_school{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_06_elementarySchool_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_school:hover{
+.gis_icon.cctv_school:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_06_elementarySchool_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_school.active{
+.gis_icon.cctv_school.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_06_elementarySchool_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_forestfire{
+.gis_icon.cctv_forestfire{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_07_forestFire_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_forestfire:hover{
+.gis_icon.cctv_forestfire:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_07_forestFire_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_forestfire.active{
+.gis_icon.cctv_forestfire.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_07_forestFire_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_disaster{
+.gis_icon.cctv_disaster{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_08_disaster_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_disaster:hover{
+.gis_icon.cctv_disaster:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_08_disaster_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_disaster.active{
+.gis_icon.cctv_disaster.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_08_disaster_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_nolittering{
+.gis_icon.cctv_nolittering{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_09_noLittering_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_nolittering:hover{
+.gis_icon.cctv_nolittering:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_09_noLittering_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_nolittering.active{
+.gis_icon.cctv_nolittering.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_09_noLittering_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_marinegarbage{
+.gis_icon.cctv_marinegarbage{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_10_marineGarbage_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_marinegarbage:hover{
+.gis_icon.cctv_marinegarbage:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_10_marineGarbage_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_marinegarbage.active{
+.gis_icon.cctv_marinegarbage.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_10_marineGarbage_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_facility{
+.gis_icon.cctv_facility{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_11_facility_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_facility:hover{
+.gis_icon.cctv_facility:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_11_facility_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_facility.active{
+.gis_icon.cctv_facility.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_11_facility_selected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_parking{
+.gis_icon.cctv_parking{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_12_parking_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_parking:hover{
+.gis_icon.cctv_parking:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_12_parking_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .gis_icon.cctv_parking.active{
+.gis_icon.cctv_parking.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_12_parking_selected.png") no-repeat;
     background-size: 100%;
 } 
 /*cluster icon*/
-.gis_icon_area .cluster_icon{
+.cluster_icon{
     width: 2.4vw;
     height: 5vh;
     max-height: 46px;
     cursor: pointer;    
     position: absolute;
 }
-.gis_icon_area .cluster_icon .cluster_num{
+.cluster_icon .cluster_num{
     width: 1.25vw;
     height: 2.32vh;
     max-height: 24px;
@@ -282,19 +277,19 @@
     top: -0.87vh;
     left: 1.40625vw;
 }
-.gis_icon_area .cluster_icon.active .cluster_num{
+.cluster_icon.active .cluster_num{
     display: none;
 }
-.gis_icon_area .cluster_icon.cctv_cluster{
+.cluster_icon.cctv_cluster{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_clustering_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .cluster_icon.cctv_cluster:hover,
-.gis_icon_area .cluster_icon.cctv_cluster.active{
+.cluster_icon.cctv_cluster:hover,
+.cluster_icon.cctv_cluster.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_clustering_hoverSelected.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .castnet_icon{
+.castnet_icon{
     width: 2.65625vw;
     height: 5.5vh;
     max-height: 51px;
@@ -307,146 +302,146 @@
     line-height: 5.5vh;
     position: absolute;
 }
-.gis_icon_area .castnet_icon.active{
+.castnet_icon.active{
     line-height: 5.1vh;
 }
-.gis_icon_area .castnet_icon.cctv_castnet{
+.castnet_icon.cctv_castnet{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_castNet_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .castnet_icon.cctv_castnet:hover{
+.castnet_icon.cctv_castnet:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_castNet_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .castnet_icon.cctv_castnet.active{
+.castnet_icon.cctv_castnet.active{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_cctv_castNet_selected.png") no-repeat;
     background-size: 100%;
 } 
 /*facility icon*/
-.gis_icon_area .facility_icon{
+.facility_icon{
     width: 1.71875vw;
     height: 3.3vh;
     max-height: 33px;
     cursor: pointer;    
     position: absolute;
 }
-.gis_icon_area .facility_icon.facility_waterlevel{
+.facility_icon.facility_waterlevel{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_01_waterLevel_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .facility_icon.facility_waterlevel:hover{
+.facility_icon.facility_waterlevel:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_01_waterLevel_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .facility_icon.facility_counter{
+.facility_icon.facility_counter{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_02_unmannedCounter_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .facility_icon.facility_counter:hover{
+.facility_icon.facility_counter:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_02_unmannedCounter_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .facility_icon.facility_publicwifi{
+.facility_icon.facility_publicwifi{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_03_publicWifi_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .facility_icon.facility_publicwifi:hover{
+.facility_icon.facility_publicwifi:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_03_publicWifi_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .facility_icon.facility_smartlamp{
+.facility_icon.facility_smartlamp{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_04_smartStreetLamp_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .facility_icon.facility_smartlamp:hover{
+.facility_icon.facility_smartlamp:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_04_smartStreetLamp_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .facility_icon.facility_socialweak{
+.facility_icon.facility_socialweak{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_05_theSociallyWeak_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .facility_icon.facility_socialweak:hover{
+.facility_icon.facility_socialweak:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_05_theSociallyWeak_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .facility_icon.facility_tidalobserve{
+.facility_icon.facility_tidalobserve{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_06_tidalObservation_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .facility_icon.facility_tidalobserve:hover{
+.facility_icon.facility_tidalobserve:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_06_tidalObservation_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .facility_icon.facility_earthquake{
+.facility_icon.facility_earthquake{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_07_earthquake_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .facility_icon.facility_earthquake:hover{
+.facility_icon.facility_earthquake:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_07_earthquake_hover.png") no-repeat;
     background-size: 100%;
 }
 /*zoom icon*/
-.gis_icon_area .zoom_icon{
+.zoom_icon{
     width: 0.625vw;
     height: 1.3vh;
     max-height: 12px;
     cursor: pointer;    
     position: absolute;
 }
-.gis_icon_area .zoom_icon.facility_waterlevel{
+.zoom_icon.facility_waterlevel{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_01_waterLevel_zoom_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .zoom_icon.facility_waterlevel:hover{
+.zoom_icon.facility_waterlevel:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_01_waterLevel_zoom_hover.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .zoom_icon.facility_counter{
+.zoom_icon.facility_counter{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_02_unmannedCounter_zoom_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .zoom_icon.facility_counter:hover{
+.zoom_icon.facility_counter:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_02_unmannedCounter_zoom_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .zoom_icon.facility_publicwifi{
+.zoom_icon.facility_publicwifi{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_03_publicWifi_zoom_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .zoom_icon.facility_publicwifi:hover{
+.zoom_icon.facility_publicwifi:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_03_publicWifi_zoom_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .zoom_icon.facility_smartlamp{
+.zoom_icon.facility_smartlamp{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_04_smartStreetLamp_zoom_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .zoom_icon.facility_smartlamp:hover{
+.zoom_icon.facility_smartlamp:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_04_smartStreetLamp_zoom_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .zoom_icon.facility_socialweak{
+.zoom_icon.facility_socialweak{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_05_theSociallyWeak_zoom_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .zoom_icon.facility_socialweak:hover{
+.zoom_icon.facility_socialweak:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_05_theSociallyWeak_zoom_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .zoom_icon.facility_tidalobserve{
+.zoom_icon.facility_tidalobserve{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_06_tidalObservation_zoom_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .zoom_icon.facility_tidalobserve:hover{
+.zoom_icon.facility_tidalobserve:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_06_tidalObservation_zoom_hover.png") no-repeat;
     background-size: 100%;
 }
-.gis_icon_area .zoom_icon.facility_earthquake{
+.zoom_icon.facility_earthquake{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_07_earthquake_zoom_normal.png") no-repeat;
     background-size: 100%;
 } 
-.gis_icon_area .zoom_icon.facility_earthquake:hover{
+.zoom_icon.facility_earthquake:hover{
     background: url("../../../../static/image/dark/page/gis/main/icon/gisIcon/icon_gis_facility_07_earthquake_zoom_hover.png") no-repeat;
     background-size: 100%;
 }
