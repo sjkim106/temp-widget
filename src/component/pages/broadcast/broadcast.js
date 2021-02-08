@@ -1,13 +1,20 @@
 import React, {Component} from 'react';
 
-// import $ from 'jquery';
-// import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
+import $ from 'jquery';
+import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
+import selectric from 'jquery-selectric';
 
 import LeafletMapComponent from './js/map/leaflet/leafletMapComponent';
+
+import TextBroadcastPanelComponent from './js/panel/textBroadcastPanelComponent'
+import AudioBroadcastPanelComponent from './js/panel/audioBroadcastPanelComponent'
+
 
 import '../../common/css/fontStyle.css';
 import '../../common/css/reset.css';
 import '../../common/css/common.css';
+
+import '../../common/css/selectric.css';
 
 import "./css/common.css";
 import "./css/gisIcon.css";
@@ -20,17 +27,31 @@ import "./css/tree.css";
 import "./css/broadcastModal.css";
 import "./css/writeModal.css";
 
+const BROADCAST_PANEL_AUDIO = "BROADCAST_PANEL_AUDIO";
+const BROADCAST_PANEL_TEXT = "BROADCAST_PANEL_TEXT";
+
 class BroadcastComponent extends Component {
 
   constructor(_props){
     super(_props);
     this.state = {
-
+      currentPanel : BROADCAST_PANEL_AUDIO
     };
+
+    
+    
+
+    this.changeCurrentPanel = this.changeCurrentPanel.bind(this);
   }
 
   componentDidMount() {
 
+  }
+
+  changeCurrentPanel(_type) {
+    this.setState({
+      currentPanel : _type
+    })
   }
 
   render() {
@@ -99,446 +120,24 @@ class BroadcastComponent extends Component {
         <section className="dash_info_wrap">
           
           <ul className="menu_btn_area">
-            <li className="btn_menu btn_broadcast active" data-menu="menu1">음성 방송</li>
-            <li className="btn_menu btn_board" data-menu="menu2">문자 전광판</li>
+            <li 
+              className={"btn_menu btn_broadcast " + ((this.state.currentPanel == BROADCAST_PANEL_AUDIO)? "active": "") }
+              data-menu="menu1"
+              onClick={()=>{
+                this.changeCurrentPanel(BROADCAST_PANEL_AUDIO)
+              }}
+              >음성 방송</li>
+            <li 
+              className={"btn_menu btn_board " + ((this.state.currentPanel == BROADCAST_PANEL_TEXT)? "active": "") }
+              data-menu="menu2"
+              onClick={()=>{
+                this.changeCurrentPanel(BROADCAST_PANEL_TEXT)
+              }}
+              >문자 전광판</li>
           </ul>
 
           <div className="dash_body">
-            
-            <div className="menu_info broadcast_wrap" id="menu1">
-              
-              <div className="tab_area">
-                <button type="button" className="btn_tab active" data-tab="tab1">신규 방송 전파</button>
-                <button type="button" className="btn_tab" data-tab="tab2">방송 전파 내역</button>
-              </div>
-              
-              <div className="tab_info new_broadcast_wrap" id="tab1">
-                <header className="info_header">
-                  <div className="info_title">방송지역 선택</div>
-                </header>
-                <div className="broadcast_frame">
-                  <div className="tree_in" id="tree"></div>
-                </div>
-                <header className="info_header">
-                  <div className="info_title">방송 종류 선택</div>
-                  <button type="button" className="btn_write" data-toggle="modal" data-target="#writeModal">직접 작성</button>
-                </header>
-                <div className="broadcast_frame large_size">
-                  <div className="type_box">문자 강풍 경보</div>
-                  <div className="type_box">문자 호우 주의보</div>
-                  <div className="type_box">문자 강풍 예비 특보</div>
-                  <div className="type_box">문자 태풍 주의보</div>
-                  <div className="type_box">미세먼지 주의 경보</div>
-                  <div className="type_box">문자 강풍 경보</div>
-                </div>
-                <header className="info_header">
-                  <div className="info_title">방송 효과 설정</div>
-                  <button type="button" className="btn_listen">미리듣기</button>
-                </header>
-                <div className="effect_area">
-                  <div className="effect_row">
-                    <div className="effect_title">방송제목</div>
-                    <input type="text" className="effect_input"></input>
-                  </div>
-                  <div className="effect_row">
-                    <div className="effect_title">시작 효과음</div>
-                    <select className="select_sound" id="selectStartSound">
-                      <option value="1">start_music_0000</option>
-                      <option value="1">start_music_0000</option>
-                      <option value="1">start_music_0000</option>
-                    </select>
-                    <select className="select_sound ftR" id="selectStartRepeat">
-                      <option value="1">1회 반복</option>
-                      <option value="1">2회 반복</option>
-                      <option value="1">3회 반복</option>
-                    </select>
-                  </div>
-                  <div className="effect_row">
-                    <div className="effect_title">종료 효과음</div>
-                    <select className="select_sound" id="selectEndSound">
-                      <option value="1">start_music_0000</option>
-                      <option value="1">start_music_0000</option>
-                      <option value="1">start_music_0000</option>
-                    </select>
-                    <select className="select_sound ftR" id="selectEndRepeat">
-                      <option value="1">1회 반복</option>
-                      <option value="1">2회 반복</option>
-                      <option value="1">3회 반복</option>
-                    </select>
-                  </div>
-                  <div className="effect_row">
-                    <div className="effect_title">방송내용 반복</div>
-                    <select className="select_repeat" id="selectRepeat">
-                      <option value="1">1회 반복</option>
-                      <option value="1">2회 반복</option>
-                      <option value="1">3회 반복</option>
-                    </select>
-                  </div>
-                  <div className="effect_row">
-                    <div className="effect_title">볼륨 조절</div>
-                    
-                    <div className="speaker_icon"></div>
-                    <input id="ex6" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="3"/>
-                    <span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">3</span></span>
-                  </div>
-                </div>
-                
-                <button type="button" className="btn_broadcast" data-toggle="modal" data-target="#broadcastModal">방송하기</button>
-              </div>
-              
-              <div className="tab_info broadcast_list_wrap" id="tab2">
-                <div className="list_area">
-                  
-                  <div className="list_box active">
-                    <div className="list_row">
-                      <div className="list_title">방송 제목</div>
-                      <div className="list_txt">코로나 1.5 단계 모임 자제</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 대상</div>
-                      <div className="list_txt">남해읍 전체, 고현면 전체, 서면 전체</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 일시</div>
-                      <div className="list_txt">2021-01-20   17:42:36</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 종류</div>
-                      <div className="list_txt">코로나</div>
-                    </div>
-                    <div className="effect_info">
-                      <div className="effect_info_title">적용 방송 효과</div>
-                      <div className="list_row">
-                        <div className="list_title">시작 효과음</div>
-                        <div className="list_txt">start_music_0012.wmv  /  2회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">종료 효과음</div>
-                        <div className="list_txt">end_music_0232.wmv  /  1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">방송내용 반복</div>
-                        <div className="list_txt">1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">송출 볼륨</div>
-                        <div className="list_txt">62</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="list_box">
-                    <div className="list_row">
-                      <div className="list_title">방송 제목</div>
-                      <div className="list_txt">코로나 1.5 단계 모임 자제</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 대상</div>
-                      <div className="list_txt">남해읍 전체, 고현면 전체, 서면 전체</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 일시</div>
-                      <div className="list_txt">2021-01-20   17:42:36</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 종류</div>
-                      <div className="list_txt">코로나</div>
-                    </div>
-                    <div className="effect_info">
-                      <div className="effect_info_title">적용 방송 효과</div>
-                      <div className="list_row">
-                        <div className="list_title">시작 효과음</div>
-                        <div className="list_txt">start_music_0012.wmv  /  2회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">종료 효과음</div>
-                        <div className="list_txt">end_music_0232.wmv  /  1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">방송내용 반복</div>
-                        <div className="list_txt">1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">송출 볼륨</div>
-                        <div className="list_txt">62</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="list_box">
-                    <div className="list_row">
-                      <div className="list_title">방송 제목</div>
-                      <div className="list_txt">코로나 1.5 단계 모임 자제</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 대상</div>
-                      <div className="list_txt">남해읍 전체, 고현면 전체, 서면 전체</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 일시</div>
-                      <div className="list_txt">2021-01-20   17:42:36</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 종류</div>
-                      <div className="list_txt">코로나</div>
-                    </div>
-                    <div className="effect_info">
-                      <div className="effect_info_title">적용 방송 효과</div>
-                      <div className="list_row">
-                        <div className="list_title">시작 효과음</div>
-                        <div className="list_txt">start_music_0012.wmv  /  2회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">종료 효과음</div>
-                        <div className="list_txt">end_music_0232.wmv  /  1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">방송내용 반복</div>
-                        <div className="list_txt">1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">송출 볼륨</div>
-                        <div className="list_txt">62</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="list_box">
-                    <div className="list_row">
-                      <div className="list_title">방송 제목</div>
-                      <div className="list_txt">코로나 1.5 단계 모임 자제</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 대상</div>
-                      <div className="list_txt">남해읍 전체, 고현면 전체, 서면 전체</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 일시</div>
-                      <div className="list_txt">2021-01-20   17:42:36</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 종류</div>
-                      <div className="list_txt">코로나</div>
-                    </div>
-                    <div className="effect_info">
-                      <div className="effect_info_title">적용 방송 효과</div>
-                      <div className="list_row">
-                        <div className="list_title">시작 효과음</div>
-                        <div className="list_txt">start_music_0012.wmv  /  2회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">종료 효과음</div>
-                        <div className="list_txt">end_music_0232.wmv  /  1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">방송내용 반복</div>
-                        <div className="list_txt">1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">송출 볼륨</div>
-                        <div className="list_txt">62</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="list_box">
-                    <div className="list_row">
-                      <div className="list_title">방송 제목</div>
-                      <div className="list_txt">코로나 1.5 단계 모임 자제</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 대상</div>
-                      <div className="list_txt">남해읍 전체, 고현면 전체, 서면 전체</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 일시</div>
-                      <div className="list_txt">2021-01-20   17:42:36</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 종류</div>
-                      <div className="list_txt">코로나</div>
-                    </div>
-                    <div className="effect_info">
-                      <div className="effect_info_title">적용 방송 효과</div>
-                      <div className="list_row">
-                        <div className="list_title">시작 효과음</div>
-                        <div className="list_txt">start_music_0012.wmv  /  2회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">종료 효과음</div>
-                        <div className="list_txt">end_music_0232.wmv  /  1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">방송내용 반복</div>
-                        <div className="list_txt">1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">송출 볼륨</div>
-                        <div className="list_txt">62</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="list_box">
-                    <div className="list_row">
-                      <div className="list_title">방송 제목</div>
-                      <div className="list_txt">코로나 1.5 단계 모임 자제</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 대상</div>
-                      <div className="list_txt">남해읍 전체, 고현면 전체, 서면 전체</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 일시</div>
-                      <div className="list_txt">2021-01-20   17:42:36</div>
-                    </div>
-                    <div className="list_row">
-                      <div className="list_title">방송 종류</div>
-                      <div className="list_txt">코로나</div>
-                    </div>
-                    <div className="effect_info">
-                      <div className="effect_info_title">적용 방송 효과</div>
-                      <div className="list_row">
-                        <div className="list_title">시작 효과음</div>
-                        <div className="list_txt">start_music_0012.wmv  /  2회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">종료 효과음</div>
-                        <div className="list_txt">end_music_0232.wmv  /  1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">방송내용 반복</div>
-                        <div className="list_txt">1회 반복</div>
-                      </div>
-                      <div className="list_row">
-                        <div className="list_title">송출 볼륨</div>
-                        <div className="list_txt">62</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            
-            <div className="menu_info letter_board_wrap" id="menu2">
-              <div className="letter_title">문자 전광판<span>List</span></div>
-              <div className="list_area">
-                
-                <div className="list_box active">
-                  <div className="board_name">문자 전광판 </div>
-                  <div className="letter_state">문자 표출중</div>
-                  <div className="board_row">
-                    <div className="board_title loc_icon">위치</div>
-                    <div className="board_txt">경남 남해군 남해읍 화전로95번길 21</div>
-                  </div>
-                  <div className="board_row">
-                    <div className="board_title state_icon">상태</div>
-                    <div className="board_txt normal_icon">ON</div>
-                  </div>
-                  <div className="realtime_area">
-                    <div className="realtime_title">실시간 표출 문구</div>
-                    <div className="realtime_box">
-                      <div className="realtime_txt">불법 주정차 단속중.<br/>신속히 차량이동 바랍니다.</div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="list_box">
-                  <div className="board_name">문자 전광판 </div>
-                  <div className="board_row">
-                    <div className="board_title loc_icon">위치</div>
-                    <div className="board_txt">경남 남해군 남해읍 화전로95번길 21</div>
-                  </div>
-                  <div className="board_row">
-                    <div className="board_title state_icon">상태</div>
-                    <div className="board_txt error_icon">OFF</div>
-                  </div>   
-                  <div className="realtime_area">
-                    <div className="realtime_title">실시간 표출 문구</div>
-                    <div className="realtime_box">
-                      <div className="realtime_txt">불법 주정차 단속중.<br/>신속히 차량이동 바랍니다.</div>
-                    </div>
-                  </div>             
-                </div>
-                
-                <div className="list_box">
-                  <div className="board_name">문자 전광판 </div>
-                  <div className="letter_state">문자 표출중</div>
-                  <div className="board_row">
-                    <div className="board_title loc_icon">위치</div>
-                    <div className="board_txt">경남 남해군 남해읍 화전로95번길 21</div>
-                  </div>
-                  <div className="board_row">
-                    <div className="board_title state_icon">상태</div>
-                    <div className="board_txt error_icon">OFF</div>
-                  </div>   
-                  <div className="realtime_area">
-                    <div className="realtime_title">실시간 표출 문구</div>
-                    <div className="realtime_box">
-                      <div className="realtime_txt">불법 주정차 단속중.<br/>신속히 차량이동 바랍니다.</div>
-                    </div>
-                  </div>             
-                </div>
-                
-                <div className="list_box">
-                  <div className="board_name">문자 전광판 </div>
-                  <div className="letter_state">문자 표출중</div>
-                  <div className="board_row">
-                    <div className="board_title loc_icon">위치</div>
-                    <div className="board_txt">경남 남해군 남해읍 화전로95번길 21</div>
-                  </div>
-                  <div className="board_row">
-                    <div className="board_title state_icon">상태</div>
-                    <div className="board_txt error_icon">OFF</div>
-                  </div>   
-                  <div className="realtime_area">
-                    <div className="realtime_title">실시간 표출 문구</div>
-                    <div className="realtime_box">
-                      <div className="realtime_txt">불법 주정차 단속중.<br/>신속히 차량이동 바랍니다.</div>
-                    </div>
-                  </div>             
-                </div>
-                
-                <div className="list_box">
-                  <div className="board_name">문자 전광판 </div>
-                  <div className="letter_state">문자 표출중</div>
-                  <div className="board_row">
-                    <div className="board_title loc_icon">위치</div>
-                    <div className="board_txt">경남 남해군 남해읍 화전로95번길 21</div>
-                  </div>
-                  <div className="board_row">
-                    <div className="board_title state_icon">상태</div>
-                    <div className="board_txt error_icon">OFF</div>
-                  </div>   
-                  <div className="realtime_area">
-                    <div className="realtime_title">실시간 표출 문구</div>
-                    <div className="realtime_box">
-                      <div className="realtime_txt">불법 주정차 단속중.<br/>신속히 차량이동 바랍니다.</div>
-                    </div>
-                  </div>             
-                </div>
-                
-                <div className="list_box">
-                  <div className="board_name">문자 전광판 </div>
-                  <div className="letter_state">문자 표출중</div>
-                  <div className="board_row">
-                    <div className="board_title loc_icon">위치</div>
-                    <div className="board_txt">경남 남해군 남해읍 화전로95번길 21</div>
-                  </div>
-                  <div className="board_row">
-                    <div className="board_title state_icon">상태</div>
-                    <div className="board_txt error_icon">OFF</div>
-                  </div>   
-                  <div className="realtime_area">
-                    <div className="realtime_title">실시간 표출 문구</div>
-                    <div className="realtime_box">
-                      <div className="realtime_txt">불법 주정차 단속중.<br/>신속히 차량이동 바랍니다.</div>
-                    </div>
-                  </div>             
-                </div>
-              </div>
-            </div>
+            {(this.state.currentPanel == BROADCAST_PANEL_AUDIO) ? <AudioBroadcastPanelComponent /> : <TextBroadcastPanelComponent />}
           </div>
         </section>
 

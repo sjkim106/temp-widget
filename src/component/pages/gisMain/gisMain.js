@@ -8,7 +8,7 @@ import LegendListPanelComponent from './js/panel/list/legendListPanelComponent';
 
 import CctvViewerComponent from './js/viewer/cctvViewerComponent';
 
-import './css/selectric.css';
+import '../../common/css/selectric.css';
 import '../../common/css/fontStyle.css';
 import '../../common/css/reset.css';
 

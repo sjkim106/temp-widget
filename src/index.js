@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import GisMain from "./component/pages/gisMain/gisMain";
 // import GisFacility from "./component/pages/gisFacility/gisFacility";
-import Weather from "./component/pages/weather/weather";
+// import Weather from "./component/pages/weather/weather";
 // import AirCondition from "./component/pages/airCondition/airCondition";
-// import BroadcastComponent from "./component/pages/broadcast/broadcast";
+import BroadcastComponent from "./component/pages/broadcast/broadcast";
 // import EventStatisticComponent from "./component/pages/eventStatistic/eventStatisticComponent";
 // import FacilityStatisticComponent from "./component/pages/facilityStatistic/facilityStatisticComponent";
 // import DisasterEventListComponent from "./component/pages/disasterEventList/disasterEventListComponent";
@@ -20,11 +20,10 @@ ReactDOM.render(
     {/* <GisMain /> */}
     {/* <GisFacility /> */}
     {/* <AirCondition /> */}
-    <Weather />
-    {/* <BroadcastComponent /> */}
+    {/* <Weather /> */}
+    <BroadcastComponent />
     {/* <EventStatisticComponent /> */}
     {/* <DisasterEventListComponent /> */}
-    {/* <GisFacility /> */}
     {/* 
     <Route exactpath="/gisMain" component={GisMain}/>
     <Route path="/gisFacility" component={GisFacility}/>
