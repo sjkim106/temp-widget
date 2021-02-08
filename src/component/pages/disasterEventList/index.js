@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../../index.css';
-import AirCondition from "./AirCondition";
+import DisasterEventListComponent from "./disasterEventListComponent";
 import reportWebVitals from '../../../reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AirCondition />
+    <DisasterEventListComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );

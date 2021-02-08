@@ -101,6 +101,12 @@ module.exports = function (proxy, allowedHost) {
       rewrites: [
         { from : /^\/airCondition/, to: '/airCondition.html'},
         { from : /^\/gisMain/, to: '/gisMain.html'},
+        { from : /^\/gisFacility/, to: '/gisFacility.html'},
+        { from : /^\/broadcast/, to: '/broadcast.html'},
+        { from : /^\/disasterEventList/, to: '/disasterEventList.html'},
+        { from : /^\/eventStatistic/, to: '/eventStatistic.html'},
+        { from : /^\/facilityStatistic/, to: '/facilityStatistic.html'},
+        { from : /^\/weather/, to: '/weather.html'},
       ]
     },
     public: allowedHost,

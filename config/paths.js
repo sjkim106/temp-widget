@@ -68,10 +68,28 @@ module.exports = {
   publicUrlOrPath,
 
   appAirConditionIndexJs : resolveModule(resolveApp, 'src/component/pages/airCondition/index'),
-  appAirConditionHtml: resolveApp('public/pages/airCondition/index.html'),
+  appAirConditionHtml: resolveApp('public/index.html'),
 
   appGisMainIndexJs : resolveModule(resolveApp, 'src/component/pages/gisMain/index'),
-  appGisMainHtml: resolveApp('public/gisMain.html'),
+  appGisMainHtml: resolveApp('public/index.html'),
+
+  appGisFacilityIndexJs : resolveModule(resolveApp, 'src/component/pages/gisFacility/index'),
+  appGisFacilityHtml: resolveApp('public/index.html'),
+
+  appBroadcastIndexJs : resolveModule(resolveApp, 'src/component/pages/broadcast/index'),
+  appBroadcastHtml: resolveApp('public/index.html'),
+
+  appDisasterEventListIndexJs : resolveModule(resolveApp, 'src/component/pages/disasterEventList/index'),
+  appDisasterEventListHtml: resolveApp('public/index.html'),
+
+  appEventStatisticIndexJs : resolveModule(resolveApp, 'src/component/pages/eventStatistic/index'),
+  appEventStatisticHtml: resolveApp('public/index.html'),
+
+  appFacilityStatisticIndexJs : resolveModule(resolveApp, 'src/component/pages/facilityStatistic/index'),
+  appFacilityStatisticHtml: resolveApp('public/index.html'),
+
+  appWeatherIndexJs : resolveModule(resolveApp, 'src/component/pages/weather/index'),
+  appWeatherHtml: resolveApp('public/index.html'),
 };
 
 

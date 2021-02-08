@@ -16,6 +16,7 @@ const dummyData = [
         dataType : util.TYPE_OF_AIR_CONDITION_FINE_DUST,
         dataTitle : "미세먼지",
         dataValue : 35
+
     },
     {
         dataType : util.TYPE_OF_AIR_CONDITION_ULTRA_DUST,
@@ -46,34 +47,40 @@ const dummyData = [
 
 const chartData = [
     {
-        dataType : util.TYPE_OF_AIR_CONDITION_FINE_DUST,
-        dataTitle : "미세먼지",
-        dataValue : 35
+        dataType: util.TYPE_OF_AIR_CONDITION_FINE_DUST,
+        dataTitle: "미세먼지",
+        dataValue: 35,
+        data: [31, 51, 50]
     },
     {
         dataType : util.TYPE_OF_AIR_CONDITION_ULTRA_DUST,
         dataTitle : "초미세먼지",
-        dataValue : 101
+        dataValue : 101,
+        data : [100,131,150]
     },
     {
         dataType : util.TYPE_OF_AIR_CONDITION_SO2,
         dataTitle : "아황산가스",
-        dataValue : 0.02
+        dataValue : 0.02,
+        data : [100,131,150]
     },
     {
         dataType : util.TYPE_OF_AIR_CONDITION_CO,
         dataTitle : "일산화탄소",
-        dataValue : 10
+        dataValue : 10,
+        data : [100,131,150]
     },
     {
         dataType : util.TYPE_OF_AIR_CONDITION_OZONE,
         dataTitle : "오존",
-        dataValue : 0.15
+        dataValue : 0.15,
+        data : [100,131,150]
     },
     {
         dataType : util.TYPE_OF_AIR_CONDITION_NO2,
         dataTitle : "이산화질소",
-        dataValue : 0
+        dataValue : 0,
+        data : [100,131,150]
     }
 ]
 
@@ -109,7 +116,7 @@ class RightPanel extends Component {
                     </div>
                     {
                         this.state.chartData.map((_item, _index)=> {
-                            return <AirConditionChartComponent dataType={_item.dataType} dataTitle={_item.dataTitle} dataValue={_item.dataValue} />;
+                            return <AirConditionChartComponent dataType={_item.dataType} dataTitle={_item.dataTitle} dataValue={_item.dataValue} data={_item.data} />;
                         })
                     }
                 </div>

@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
+
+
 import '../../common/css/fontStyle.css';
 import '../../common/css/reset.css';
+import '../../common/css/common.css';
+
 import Title from './js/title';
 import RightPanel from './js/rightPanel';
 

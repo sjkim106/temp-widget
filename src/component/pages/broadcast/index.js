@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../../index.css';
-import AirCondition from "./AirCondition";
+import BroadcastComponent from "./broadcast";
 import reportWebVitals from '../../../reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AirCondition />
+    <BroadcastComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );

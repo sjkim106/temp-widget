@@ -9,6 +9,7 @@ const percent = width / 1920
 class High extends Component {
 
     render() {
+        const series2 = this.props.data;
         const options = {
             chart: {
                 type: 'column',
@@ -76,26 +77,8 @@ class High extends Component {
             },
             series: [{
                 name: null,
-                data: [31, 31, 50]
-            }, {
-                name: null,
-                data: [170, 31, 31]
-            },{
-                name: null,
-                data: [70, 31, 31]
-            },{
-                name: null,
-                data: [70, 40, 28]
-            },{
-                name: null,
-                data: [70, 28, 28]
-            },{
-                name: null,
-                data: [20, 25, 31]
-            },{
-                name: null,
-                data: [25, 28, 34]
-            }],
+                data: series2}
+            ],
             plotOptions: {
                 column: {
                     borderWidth: 0,

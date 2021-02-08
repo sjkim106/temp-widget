@@ -175,10 +175,35 @@ module.exports = function (webpackEnv) {
         isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient'),
         paths.appAirConditionIndexJs,
       ].filter(Boolean),
-      gitMain :[
+      gisMain :[
         isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient'),
         paths.appGisMainIndexJs,
       ].filter(Boolean),
+      gisFacility :[
+        isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient'),
+        paths.appGisFacilityIndexJs,
+      ].filter(Boolean),
+      broadcast :[
+        isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient'),
+        paths.appBroadcastIndexJs,
+      ].filter(Boolean),
+      disasterEventList :[
+        isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient'),
+        paths.appDisasterEventListIndexJs,
+      ].filter(Boolean),
+      eventStatistic :[
+        isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient'),
+        paths.appEventStatisticIndexJs,
+      ].filter(Boolean),
+      facilityStatistic :[
+        isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient'),
+        paths.appFacilityStatisticIndexJs,
+      ].filter(Boolean),
+      weather :[
+        isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient'),
+        paths.appWeatherIndexJs,
+      ].filter(Boolean),
+      
     },
     output: {
       // The build folder.
@@ -603,9 +628,171 @@ module.exports = function (webpackEnv) {
           {},
           {            
             inject: true,
+            chunks: ['gisFacility'],
+            template: paths.appGisFacilityHtml,
+            filename: 'gisFacility.html'
+          },
+          isEnvProduction
+            ? {
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
+            : undefined
+        )
+      ),
+      new HtmlWebpackPlugin(
+        Object.assign(
+          {},
+          {            
+            inject: true,
             chunks: ['airCondition'],
             template: paths.appAirConditionHtml,
             filename: 'airCondition.html'
+          },
+          isEnvProduction
+            ? {
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
+            : undefined
+        )
+      ),
+      new HtmlWebpackPlugin(
+        Object.assign(
+          {},
+          {            
+            inject: true,
+            chunks: ['broadcast'],
+            template: paths.appBroadcastHtml,
+            filename: 'broadcast.html'
+          },
+          isEnvProduction
+            ? {
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
+            : undefined
+        )
+      ),
+      new HtmlWebpackPlugin(
+        Object.assign(
+          {},
+          {            
+            inject: true,
+            chunks: ['disasterEventList'],
+            template: paths.appDisasterEventListHtml,
+            filename: 'disasterEventList.html'
+          },
+          isEnvProduction
+            ? {
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
+            : undefined
+        )
+      ),
+      new HtmlWebpackPlugin(
+        Object.assign(
+          {},
+          {            
+            inject: true,
+            chunks: ['eventStatistic'],
+            template: paths.appEventStatisticHtml,
+            filename: 'eventStatistic.html'
+          },
+          isEnvProduction
+            ? {
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
+            : undefined
+        )
+      ),
+      new HtmlWebpackPlugin(
+        Object.assign(
+          {},
+          {            
+            inject: true,
+            chunks: ['facilityStatistic'],
+            template: paths.appFacilityStatisticHtml,
+            filename: 'facilityStatistic.html'
+          },
+          isEnvProduction
+            ? {
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
+            : undefined
+        )
+      ),
+      new HtmlWebpackPlugin(
+        Object.assign(
+          {},
+          {            
+            inject: true,
+            chunks: ['weather'],
+            template: paths.appWeatherHtml,
+            filename: 'weather.html'
           },
           isEnvProduction
             ? {

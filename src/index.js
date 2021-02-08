@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 // import { BrowserRouter, Route } from 'react-router-dom';
 
 import './index.css';
-import GisMain from "./component/pages/gisMain/gisMain";
-// import GisFacility from "./component/pages/gisFacility/gisFacility";
+// import GisMain from "./component/pages/gisMain/gisMain";
+import GisFacility from "./component/pages/gisFacility/gisFacility";
 // import Weather from "./component/pages/weather/weather";
 // import AirCondition from "./component/pages/airCondition/airCondition";
 // import BroadcastComponent from "./component/pages/broadcast/broadcast";
 // import EventStatisticComponent from "./component/pages/eventStatistic/eventStatisticComponent";
-import FacilityStatisticComponent from "./component/pages/facilityStatistic/facilityStatisticComponent";
+// import FacilityStatisticComponent from "./component/pages/facilityStatistic/facilityStatisticComponent";
 // import DisasterEventListComponent from "./component/pages/disasterEventList/disasterEventListComponent";
 import reportWebVitals from './reportWebVitals';
 
@@ -17,13 +17,13 @@ ReactDOM.render(
   <React.StrictMode>
     
     {/*<App />*/}
-    <GisMain />
-    {/* <GisFacility /> */}
+    {/* <GisMain /> */}
+    <GisFacility /> 
     {/* <AirCondition /> */}
     {/* <Weather /> */}
     {/* <BroadcastComponent /> */}
     {/* <EventStatisticComponent /> */}
-    <FacilityStatisticComponent />
+    {/* <FacilityStatisticComponent /> */}
     {/* <DisasterEventListComponent /> */}
     {/* 
     <Route exactpath="/gisMain" component={GisMain}/>

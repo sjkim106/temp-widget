@@ -34,17 +34,7 @@ class LampPanelComponent extends Component {
               <div className="list_txt normal_icon">정상</div>
             </div>              
           </div>          
-          <div className="list_box">
-            <div className="list_title">S-가로등 001</div>
-            <div className="list_row">
-              <div className="list_name loc_icon">위치</div>
-              <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-            </div>
-            <div className="list_row">
-              <div className="list_name sensor_icon">센서 상태</div>
-              <div className="list_txt normal_icon">정상</div>
-            </div>              
-          </div>          
+               
           <div className="list_box">
             <div className="list_title">S-가로등 001</div>
             <div className="list_row">
@@ -56,50 +46,7 @@ class LampPanelComponent extends Component {
               <div className="list_txt error_icon">비정상</div>
             </div>              
           </div>          
-          <div className="list_box">
-            <div className="list_title">S-가로등 001</div>
-            <div className="list_row">
-              <div className="list_name loc_icon">위치</div>
-              <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-            </div>
-            <div className="list_row">
-              <div className="list_name sensor_icon">센서 상태</div>
-              <div className="list_txt normal_icon">정상</div>
-            </div>              
-          </div>          
-          <div className="list_box">
-            <div className="list_title">S-가로등 001</div>
-            <div className="list_row">
-              <div className="list_name loc_icon">위치</div>
-              <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-            </div>
-            <div className="list_row">
-              <div className="list_name sensor_icon">센서 상태</div>
-              <div className="list_txt normal_icon">정상</div>
-            </div>              
-          </div>          
-          <div className="list_box">
-            <div className="list_title">S-가로등 001</div>
-            <div className="list_row">
-              <div className="list_name loc_icon">위치</div>
-              <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-            </div>
-            <div className="list_row">
-              <div className="list_name sensor_icon">센서 상태</div>
-              <div className="list_txt normal_icon">정상</div>
-            </div>              
-          </div>          
-          <div className="list_box">
-            <div className="list_title">S-가로등 001</div>
-            <div className="list_row">
-              <div className="list_name loc_icon">위치</div>
-              <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-            </div>
-            <div className="list_row">
-              <div className="list_name sensor_icon">센서 상태</div>
-              <div className="list_txt normal_icon">정상</div>
-            </div>              
-          </div>
+          
         </div>
       </div>  
     </section>

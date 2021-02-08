@@ -1,6 +1,6 @@
 /*rightArea style*/
 .right_area{
-    width: 75.78vw;
+    width: 75.756vw;
     height: 100vh;
     max-height: 1032px;
     background-color: #15161a;
@@ -27,7 +27,7 @@
     width: 1.09375vw;
     height: 2.03vh;
     max-height: 21px;
-    background: url("airQualityStatus/icon/icon_region.png") no-repeat;
+    background: url("icon/icon_region.png") no-repeat;
 
     background-size: 100%;
     position: absolute;
@@ -136,7 +136,7 @@
     width: 1.04vw;
     height: 2.2vh;
     max-height: 20px;
-    background: url("airQualityStatus/icon/icon_face_2_soso.png") no-repeat;
+    background: url("icon/icon_face_2_soso.png") no-repeat;
     background-size: 100%;
     position: absolute;
     top: 0.5vh;
@@ -148,7 +148,7 @@
     width: 1.04vw;
     height: 2.2vh;
     max-height: 20px;
-    background: url("airQualityStatus/icon/icon_face_1_good.png") no-repeat;
+    background: url("icon/icon_face_1_good.png") no-repeat;
     background-size: 100%;
     position: absolute;
     top: 0.5vh;
@@ -160,7 +160,7 @@
     width: 1.04vw;
     height: 2.2vh;
     max-height: 20px;
-    background: url("airQualityStatus/icon/icon_face_3_bad.png") no-repeat;
+    background: url("icon/icon_face_3_bad.png") no-repeat;
     background-size: 100%;
     position: absolute;
     top: 0.5vh;
@@ -172,7 +172,7 @@
     width: 1.04vw;
     height: 2.2vh;
     max-height: 20px;
-    background: url("airQualityStatus/icon/icon_face_4_terrible.png") no-repeat;
+    background: url("icon/icon_face_4_terrible.png") no-repeat;
     background-size: 100%;
     position: absolute;
     top: 0.5vh;
@@ -382,7 +382,7 @@
     }
     .total_area{
         width: 29.79vw;
-        height: 70.54vh;
+        height: 68.54vh;
         max-height: 364px;
         border: solid 0.1vw #2e3036;
         padding-top: 6.31vh;
@@ -395,7 +395,7 @@
     }
     .total_area .total_value{
         width: 13.33vw;
-        height: 24.8vh;
+        height: 16.8vh;
         border: solid 0.3125vw;
         margin-left: 8.25vw;
         font-size: 3.02vw;
@@ -435,15 +435,15 @@
         top: 56.04vh;
     }
     .air_area{
-        width: 26.83vw;
-        height: 21.39vh;
+        width: 23.83vw;
+        height: 18.39vh;
         border: solid 0.1vw #2e3036;
         margin: 0 0 3.2vh 2.29vw;
         padding: 4.18vh 0 0 3.16vw;
     }
     .air_area .r_value{
         width: 6.97vw;
-        height: 12.98vh;
+        height: 8.98vh;
         border: solid 0.3125vw;
         font-size: 1.66vw;
         padding-top: 3.5vh;

@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import * as util from "../../../common/js/util";
 import High from "./High";
 
-
 class AirConditionChartComponent extends Component {
 
     constructor(props) {
@@ -15,7 +14,8 @@ class AirConditionChartComponent extends Component {
             circleClass : "",
             unitClass : "",
             chartClass : "",
-            unit : ""
+            unit : "",
+            data : this.props.data
         }
     }
 
@@ -42,7 +42,7 @@ class AirConditionChartComponent extends Component {
                         <div className={this.state.chartClass}>{this.state.value}</div>
                         <p className="c_unit">{this.state.unit}</p>
                     </div>
-                    <High />
+                    <High data = {this.state.data} />
                 </div>
             </div>
         );

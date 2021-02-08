@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import TidalChartComponent from '../chart/tidalChartComponent';
 
 
 class TidalPanelComponent extends Component {
@@ -41,7 +42,9 @@ class TidalPanelComponent extends Component {
               <div class="list_name loc_icon">위치</div>
               <div class="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
             </div>             
-            <div class="chart_in" id="tidalLinecht"></div>
+            <div class="chart_in" id="tidalLinecht">
+              <TidalChartComponent />
+            </div>
           </div>
           
           <div class="list_box">
@@ -50,7 +53,9 @@ class TidalPanelComponent extends Component {
               <div class="list_name loc_icon">위치</div>
               <div class="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
             </div>             
-            <div class="chart_in" id=""></div>
+            <div class="chart_in" >
+              <TidalChartComponent />
+            </div>
           </div>
           
           <div class="list_box">
@@ -59,7 +64,9 @@ class TidalPanelComponent extends Component {
               <div class="list_name loc_icon">위치</div>
               <div class="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
             </div>             
-            <div class="chart_in" id=""></div>
+            <div class="chart_in" >
+              <TidalChartComponent />
+            </div>
           </div>
         </div>
       </div>  

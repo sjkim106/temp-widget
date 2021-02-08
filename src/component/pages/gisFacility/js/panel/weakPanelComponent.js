@@ -47,66 +47,6 @@ class WeakPanelComponent extends Component {
               <div className="list_txt">청각장애인</div>
             </div>              
           </div>          
-          <div className="list_box">
-            <div className="list_title">홍길동</div>
-            <div className="zone_txt">0000관할구역</div>
-            <div className="list_row">
-              <div className="list_name loc_icon">위치</div>
-              <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-            </div>
-            <div className="list_row">
-              <div className="list_name sort_icon">관제분류</div>
-              <div className="list_txt">청각장애인</div>
-            </div>              
-          </div>          
-          <div className="list_box">
-            <div className="list_title">홍길동</div>
-            <div className="zone_txt">0000관할구역</div>
-            <div className="list_row">
-              <div className="list_name loc_icon">위치</div>
-              <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-            </div>
-            <div className="list_row">
-              <div className="list_name sort_icon">관제분류</div>
-              <div className="list_txt">청각장애인</div>
-            </div>              
-          </div>          
-          <div className="list_box">
-            <div className="list_title">홍길동</div>
-            <div className="zone_txt">0000관할구역</div>
-            <div className="list_row">
-              <div className="list_name loc_icon">위치</div>
-              <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-            </div>
-            <div className="list_row">
-              <div className="list_name sort_icon">관제분류</div>
-              <div className="list_txt">청각장애인</div>
-            </div>              
-          </div>          
-          <div className="list_box">
-            <div className="list_title">홍길동</div>
-            <div className="zone_txt">0000관할구역</div>
-            <div className="list_row">
-              <div className="list_name loc_icon">위치</div>
-              <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-            </div>
-            <div className="list_row">
-              <div className="list_name sort_icon">관제분류</div>
-              <div className="list_txt">청각장애인</div>
-            </div>              
-          </div>          
-          <div className="list_box">
-            <div className="list_title">홍길동</div>
-            <div className="zone_txt">0000관할구역</div>
-            <div className="list_row">
-              <div className="list_name loc_icon">위치</div>
-              <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-            </div>
-            <div className="list_row">
-              <div className="list_name sort_icon">관제분류</div>
-              <div className="list_txt">청각장애인</div>
-            </div>              
-          </div>
         </div>
       </div>  
     </section>
