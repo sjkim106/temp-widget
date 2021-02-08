@@ -7,8 +7,8 @@ import './index.css';
 // import GisFacility from "./component/pages/gisFacility/gisFacility";
 // import Weather from "./component/pages/weather/weather";
 // import AirCondition from "./component/pages/airCondition/airCondition";
-import BroadcastComponent from "./component/pages/broadcast/broadcast";
-// import EventStatisticComponent from "./component/pages/eventStatistic/eventStatisticComponent";
+// import BroadcastComponent from "./component/pages/broadcast/broadcast";
+import EventStatisticComponent from "./component/pages/eventStatistic/eventStatisticComponent";
 // import FacilityStatisticComponent from "./component/pages/facilityStatistic/facilityStatisticComponent";
 // import DisasterEventListComponent from "./component/pages/disasterEventList/disasterEventListComponent";
 import reportWebVitals from './reportWebVitals';
@@ -21,8 +21,8 @@ ReactDOM.render(
     {/* <GisFacility /> */}
     {/* <AirCondition /> */}
     {/* <Weather /> */}
-    <BroadcastComponent />
-    {/* <EventStatisticComponent /> */}
+    {/* <BroadcastComponent /> */}
+    <EventStatisticComponent />
     {/* <DisasterEventListComponent /> */}
     {/* 
     <Route exactpath="/gisMain" component={GisMain}/>
