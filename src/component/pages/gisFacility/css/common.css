@@ -112,6 +112,7 @@
     position: absolute;
     top: 0;
     left: 4.58vw;
+    z-index: 4000;
 }
 .dash_info_wrap .dash_header{
     width: 100%;

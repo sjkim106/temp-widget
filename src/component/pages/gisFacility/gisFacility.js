@@ -4,10 +4,18 @@ import $ from 'jquery';
 import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
 
 import LeafletMapComponent from './js/map/leaflet/leafletMapComponent';
+import NavigatorComponent from './js/navigator/navigatorComponent';
+
+import WaterLevelPanelComponent from './js/panel/waterLevelPanelComponent';
+import CounterPanelComponent from './js/panel/counterPanelComponent';
+import WifiPanelComponent from './js/panel/wifiPanelComponent';
+import LampPanelComponent from './js/panel/lampPanelComponent';
+import WeakPanelComponent from './js/panel/weakPanelComponent';
+import TidalPanelComponent from './js/panel/tidalPanelComponent';
+import EarthquakePanelComponent from './js/panel/earthquakePanelComponent';
 
 import '../../common/css/fontStyle.css';
 import '../../common/css/reset.css';
-
 
 import './css/common.css';
 import './css/seletBox.css';
@@ -20,17 +28,53 @@ import './css/04smartLamp.css';
 import './css/05socialWeak.css';
 import './css/06tidalObserve.css';
 
+const FACILITY_TYPE_WATERLEVEL = "FACILITY_TYPE_WATERLEVEL";
+const FACILITY_TYPE_COUNTER = "FACILITY_TYPE_COUNTER";
+const FACILITY_TYPE_WIFI = "FACILITY_TYPE_WIFI";
+const FACILITY_TYPE_LAMP = "FACILITY_TYPE_LAMP";
+const FACILITY_TYPE_WEAK = "FACILITY_TYPE_WEAK";
+const FACILITY_TYPE_TIDAL = "FACILITY_TYPE_TIDAL";
+const FACILITY_TYPE_EARTHQUAKE = "FACILITY_TYPE_EARTHQUAKE";
+
 class GisFacility extends Component {
 
   constructor(_props){
     super(_props);
     this.state = {
-
+      currentType : FACILITY_TYPE_WATERLEVEL,
+      currentFocus : "",
     };
+
+    this.renderPanel = this.renderPanel.bind(this);
+
+    this.changeCurrentType = this.changeCurrentType.bind(this);
   }
 
   componentDidMount() {
 
+  }
+
+  changeCurrentType (_type) {
+    this.setState({
+      currentType : _type
+    })
+  }
+
+  renderPanel() {
+    if (FACILITY_TYPE_WATERLEVEL == this.state.currentType) 
+      return <WaterLevelPanelComponent focus={this.state.currentFocus} />
+    else if (FACILITY_TYPE_COUNTER == this.state.currentType) 
+      return <CounterPanelComponent focus={this.state.currentFocus} />
+    else if (FACILITY_TYPE_WIFI == this.state.currentType) 
+      return <WifiPanelComponent focus={this.state.currentFocus} />
+    else if (FACILITY_TYPE_LAMP == this.state.currentType) 
+      return <LampPanelComponent focus={this.state.currentFocus} />
+    else if (FACILITY_TYPE_WEAK == this.state.currentType) 
+      return <WeakPanelComponent focus={this.state.currentFocus} />
+    else if (FACILITY_TYPE_TIDAL == this.state.currentType) 
+      return <TidalPanelComponent focus={this.state.currentFocus} />
+    else if (FACILITY_TYPE_EARTHQUAKE == this.state.currentType) 
+      return <EarthquakePanelComponent focus={this.state.currentFocus} />
   }
 
   render() {
@@ -106,91 +150,10 @@ class GisFacility extends Component {
         </div> */}
 
         
-        <ul className="menu_btn_area">
-          <li className="btn_menu btn_waterlevel active"></li>
-          <li className="btn_menu btn_counter"></li>
-          <li className="btn_menu btn_wifi"></li>
-          <li className="btn_menu btn_lamp"></li>
-          <li className="btn_menu btn_weak"></li>
-          <li className="btn_menu btn_tidal"></li>
-          <li className="btn_menu btn_earthquake"></li>
-        </ul>
+       <NavigatorComponent changeCurrentType={this.changeCurrentType} focus={this.state.currentType}/>
 
+       {this.renderPanel()}
         
-        
-        <section className="dash_info_wrap">               
-          
-          <div className="menu_info waterlevel_wrap">
-            <header className="dash_header">
-              <div className="dash_title">수위계측</div>
-              <div className="dash_sub_title">Water Level Measurement</div>
-              <ul className="legend_area">
-                <li className="legend_icon icon_01">최고치</li>
-                <li className="legend_icon icon_04">주의</li>
-                <li className="legend_icon icon_07">실측</li>
-                <li className="legend_icon icon_02">최저치</li>
-                <li className="legend_icon icon_05">경계</li>
-                <li className="legend_icon icon_08">예측</li>
-                <li className="legend_icon icon_03">보통</li>   
-                <li className="legend_icon icon_06">위험</li>
-              </ul>
-            </header> 
-            <div className="dash_body">
-              
-              <div className="list_box">
-                <div className="list_title">수위계측 센서001</div>
-                <div className="list_row">
-                  <div className="list_name loc_icon">위치</div>
-                  <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-                </div>
-                <div className="list_row">
-                  <div className="list_name sensor_icon">센서 상태</div>
-                  <div className="list_txt normal_icon">정상</div>
-                </div>              
-                <div className="chart_in" id="waterLinecht"></div>
-              </div>
-              
-              <div className="list_box">
-                <div className="list_title">수위계측 센서001</div>
-                <div className="list_row">
-                  <div className="list_name loc_icon">위치</div>
-                  <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-                </div>
-                <div className="list_row">
-                  <div className="list_name sensor_icon">센서 상태</div>
-                  <div className="list_txt error_icon">비정상</div>
-                </div>              
-                <div className="chart_in" id=""></div>
-              </div>
-              
-              <div className="list_box">
-                <div className="list_title">수위계측 센서001</div>
-                <div className="list_row">
-                  <div className="list_name loc_icon">위치</div>
-                  <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-                </div>
-                <div className="list_row">
-                  <div className="list_name sensor_icon">센서 상태</div>
-                  <div className="list_txt normal_icon">정상</div>
-                </div>              
-                <div className="chart_in" id=""></div>
-              </div>
-              
-              <div className="list_box">
-                <div className="list_title">수위계측 센서001</div>
-                <div className="list_row">
-                  <div className="list_name loc_icon">위치</div>
-                  <div className="list_txt">경남 남해군 남해읍 화전로95번길 21</div>
-                </div>
-                <div className="list_row">
-                  <div className="list_name sensor_icon">센서 상태</div>
-                  <div className="list_txt normal_icon">정상</div>
-                </div>              
-                <div className="chart_in" id=""></div>
-              </div>
-            </div>
-          </div>  
-        </section>
       </section>
     </div>
     );
