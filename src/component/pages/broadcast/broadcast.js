@@ -27,6 +27,9 @@ import "./css/tree.css";
 import "./css/broadcastModal.css";
 import "./css/writeModal.css";
 
+import BroadcastConfirmModal from './js/modal/broadcastConfirmModal';
+import BroadcastTextModal from './js/modal/broadcastTextModal';
+
 const BROADCAST_PANEL_AUDIO = "BROADCAST_PANEL_AUDIO";
 const BROADCAST_PANEL_TEXT = "BROADCAST_PANEL_TEXT";
 
@@ -37,9 +40,6 @@ class BroadcastComponent extends Component {
     this.state = {
       currentPanel : BROADCAST_PANEL_AUDIO
     };
-
-    
-    
 
     this.changeCurrentPanel = this.changeCurrentPanel.bind(this);
   }
@@ -140,52 +140,8 @@ class BroadcastComponent extends Component {
             {(this.state.currentPanel == BROADCAST_PANEL_AUDIO) ? <AudioBroadcastPanelComponent /> : <TextBroadcastPanelComponent />}
           </div>
         </section>
-
-      
-        <div className="modal fade broadcast_modal" id="broadcastModal" role="dialog">
-          <div className="modal-dialog">
-            
-            <div className="modal-content">
-              <div className="modal-header">
-                <div className="header_title">방송 전파 하기</div>
-                <button
-                  type="button"
-                  className="btn_close"
-                  data-dismiss="modal"
-                ></button>
-              </div>
-              <div className="modal-body">
-                <div className="end_title">2021년 1월(대한) - 호우 주의보<br/>음성방송</div>
-                <div className="end_sub_txt">선택하신 지역에<br/><span>방송</span>을 하시겠습니까?</div>
-                
-                <button type="button" className="btn btn-default spread" data-dismiss="modal" data-toggle="modal">방송하기</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      
-        <div className="modal fade write_modal" id="writeModal" role="dialog">
-          <div className="modal-dialog">
-            
-            <div className="modal-content">
-              <div className="modal-header">
-                <div className="header_title">방송 전파 내용 직접 작성</div>
-                <button
-                  type="button"
-                  className="btn_close"
-                  data-dismiss="modal"
-                ></button>
-              </div>
-              <div className="modal-body">
-                <textarea className="broadcast_text"></textarea>
-                <div className="byte_txt"><span>60</span>/ 1000 byte</div>
-                
-                <button type="button" className="btn btn-default spread" data-dismiss="modal" data-toggle="modal">적용</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <BroadcastConfirmModal />
+        <BroadcastTextModal />
       </section>
     </div>
     );

@@ -100,7 +100,7 @@ class FacilityStatisticComponent extends Component {
       <section className="dashWrap">
       
       <section className="content_area">
-        <div className="loc_txt">남해읍</div>
+        <div className="loc_txt">{this.state.areaList[(this.state.currentFocusArea - 1)].name}</div>
         
         <div className="gis_area">
           {this.state.areaList.map((_item, _index)=>{

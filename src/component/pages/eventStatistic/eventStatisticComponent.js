@@ -18,6 +18,8 @@ import "./css/gisArea.css";
 import "./css/infoArea.css";
 import "./css/selectBox.css";
 
+import EventChartComponent from './js/chart/eventChartComponent';
+
 
 const EVENT_TYPE_POLICE = "EVENT_TYPE_POLICE" ;
 const EVENT_TYPE_VEHICLE = "EVENT_TYPE_VEHICLE";
@@ -136,7 +138,10 @@ const dummyData = [
 // 
 // 
 // 
-
+const EVENT_LEVEL_0 = 0;
+const EVENT_LEVEL_1 = 1;
+const EVENT_LEVEL_2 = 2;
+const EVENT_LEVEL_3 = 3;
 
 
 class EventStatisticComponent extends Component {
@@ -147,6 +152,7 @@ class EventStatisticComponent extends Component {
       currentEventType : EVENT_TYPE_POLICE,
       areaList : dummyData,
       currentFocusArea : 0,
+      currentEventLevel : 0,
     };
 
     this.changeFocusEvent = this.changeFocusEvent.bind(this);
@@ -171,6 +177,12 @@ class EventStatisticComponent extends Component {
   changeFocusArea (_index) {
     this.setState({
       currentFocusArea : _index
+    })
+  }
+
+  changeEventLevel (_index) {
+    this.setState({
+      currentEventLevel : _index
     })
   }
 
@@ -232,7 +244,11 @@ class EventStatisticComponent extends Component {
         <div className="info_area">
           
           <div className="info_title event_icon">일 / 총 이벤트 현황</div>
-          <div className="count_num">31<span className="slash_txt">/</span><span className="total_num">109</span></div>
+          <div className="count_num">
+            {this.state.areaList[this.state.currentFocusArea].event[this.getCurrentEventName()]}
+            <span className="slash_txt">/</span>
+            <span className="total_num">109</span>
+          </div>
           <div className="loc_area">
             <div className="loc_row">
               <div 
@@ -289,9 +305,26 @@ class EventStatisticComponent extends Component {
           
           <div className="info_title chart_icon">기간별 이벤트 그래프</div>
           <div className="evt_btn_area">
-            <button type="button" className="btn_evt">이벤트 1</button>
-            <button type="button" className="btn_evt">이벤트 2</button>
-            <button type="button" className="btn_evt">이벤트 3</button>
+            <button 
+              type="button" 
+              className={"btn_evt" + ((this.state.currentEventLevel == EVENT_LEVEL_0) ? " active" : "")}
+              onClick={() => {this.changeEventLevel(EVENT_LEVEL_0)}}
+              >Code 0</button>
+            <button 
+              type="button" 
+              className={"btn_evt" + ((this.state.currentEventLevel == EVENT_LEVEL_1) ? " active" : "")}
+              onClick={() => {this.changeEventLevel(EVENT_LEVEL_1)}}
+              >Code 1</button>
+            <button 
+              type="button" 
+              className={"btn_evt" + ((this.state.currentEventLevel == EVENT_LEVEL_2) ? " active" : "")}
+              onClick={() => {this.changeEventLevel(EVENT_LEVEL_2)}}
+              >Code 2</button>
+            <button 
+              type="button" 
+              className={"btn_evt" + ((this.state.currentEventLevel == EVENT_LEVEL_3) ? " active" : "")}
+              onClick={() => {this.changeEventLevel(EVENT_LEVEL_3)}}
+              >Code 3</button>
           </div>
           <div className="chart_area">
             <select className="select_period" id="selectPeriod" ref={this.selectriRef}>
@@ -299,7 +332,9 @@ class EventStatisticComponent extends Component {
               <option value="1">일별</option>
             </select>
             
-            <div className="chart_in" id="evtColumncht"></div>
+            <div className="chart_in" id="evtColumncht">
+              <EventChartComponent />
+            </div>
           </div>
         </div>
       </section>
